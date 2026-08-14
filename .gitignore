@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+dist/
+.astro/
+sofi-pipeline/data/era5/
+.DS_Store
+*.log

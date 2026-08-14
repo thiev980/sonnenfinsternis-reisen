@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import orte from '../data/orte.json';
+import pfad from '../data/pfad.json';
+---
+<Base
+  title="Interaktive Karte: Totalitätszone der Sonnenfinsternis 2027"
+  description="Kernschatten, Zentrallinie und 56 berechnete Orte der Sonnenfinsternis vom 2. August 2027 auf einer interaktiven Karte – mit Totalitätsdauer und Lokalzeiten."
+>
+  <h1>Die Totalitätszone auf der Karte</h1>
+  <p class="lead">
+    Das dunkle Band ist der Kernschatten am 2. August 2027, die goldene Linie die Zentrallinie
+    (maximale Dauer). Punkte anklicken für Zeiten und Dauer – Farbe = Totalitätsdauer,
+    hohle Ringe = nur partiell.
+  </p>
+  <div id="map"></div>
+  <p class="quelle">
+    Zonengrenzen ±1–2 km (Mond-Limb-Profil) – an der Kante zählt jeder Kilometer.
+    Eigene Berechnung, <a href="/methodik">Methodik</a>.
+  </p>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <script is:inline define:vars={{ orte, pfad }}>
+    window.__ORTE__ = orte;
+    window.__PFAD__ = pfad;
+  </script>
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script is:inline>
+    const map = L.map('map', { zoomSnap: 0.5, scrollWheelZoom: false }).setView([30.5, 14], 4.5);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+      { attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 18 }).addTo(map);
+    const PF = window.__PFAD__, OR = window.__ORTE__;
+    L.geoJSON(PF.features[0], { style: { color: '#14183C', weight: 1, fillColor: '#14183C', fillOpacity: 0.28 } }).addTo(map);
+    L.geoJSON(PF.features[1], { style: { color: '#E8B44F', weight: 2.5 } }).addTo(map);
+    function farbe(s) {
+      const st = [[60,[243,212,143]],[200,[201,130,46]],[310,[109,79,163]],[390,[20,24,60]]];
+      if (s <= st[0][0]) return `rgb(${st[0][1]})`;
+      for (let i = 1; i < st.length; i++) if (s <= st[i][0]) {
+        const [s0,c0] = st[i-1], [s1,c1] = st[i], t = (s-s0)/(s1-s0);
+        return `rgb(${c0.map((v,k)=>Math.round(v+(c1[k]-v)*t))})`;
+      }
+      return `rgb(${st[3][1]})`;
+    }
+    OR.forEach(p => {
+      const opt = p.is_total
+        ? { radius: 7, fillColor: farbe(p.totality_s), fillOpacity: 0.95, color: '#fff', weight: 1.5 }
+        : { radius: 5, fillColor: '#fff', fillOpacity: 0.9, color: '#8A8F9C', weight: 2 };
+      const info = p.is_total
+        ? `<strong>${p.totality_str}</strong> Totalität · ${p.c2_local.slice(0,5)}–${p.c3_local.slice(0,5)} Uhr`
+        : `partiell ${String(p.obscuration_pct).replace('.', ',')} %`;
+      L.circleMarker([p.lat, p.lon], opt).addTo(map)
+        .bindPopup(`<strong>${p.name}</strong> (${p.country})<br>${info}<br><a href="/orte/${p.slug}">Zur Detailseite →</a>`);
+    });
+  </script>
+</Base>
+<style>
+  h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
+  .lead { max-width: 680px; margin-bottom: 20px; }
+  #map { height: 66vh; min-height: 420px; border-radius: 12px; border: 1px solid var(--linie); }
+  .quelle { margin-top: 12px; font-size: 13.5px; color: var(--grau); }
+</style>

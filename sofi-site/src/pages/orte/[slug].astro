@@ -1,0 +1,237 @@
+---
+import Base from '../../layouts/Base.astro';
+import orte from '../../data/orte.json';
+
+export function getStaticPaths() {
+  return orte.map((ort) => ({ params: { slug: ort.slug }, props: { ort } }));
+}
+
+const { ort } = Astro.props;
+const totalOrte = orte.filter((o) => o.is_total).sort((a, b) => b.totality_s - a.totality_s);
+
+// Nachbarn: gleiche Region (Land), nach Dauer sortiert, ohne den Ort selbst
+const nachbarn = orte
+  .filter((o) => o.country === ort.country && o.slug !== ort.slug)
+  .slice(0, 6);
+// Beste Alternative in der Naehe, falls der Ort nur partiell ist
+const alternative = ort.is_total
+  ? null
+  : totalOrte
+      .map((o) => ({ o, d: Math.hypot(o.lat - ort.lat, o.lon - ort.lon) }))
+      .sort((a, b) => a.d - b.d)[0]?.o;
+
+const titel = ort.is_total
+  ? `Sonnenfinsternis 2027 in ${ort.name}: ${ort.totality_str} Totalität – Uhrzeiten & Planung`
+  : `Sonnenfinsternis 2027 in ${ort.name}: nur partiell (${ort.obscuration_pct} %) – die Alternativen`;
+const beschreibung = ort.is_total
+  ? `${ort.name} liegt in der Totalitätszone: ${ort.totality_str} totale Dunkelheit am 2.8.2027, Maximum um ${ort.max_local.slice(0, 5)} Uhr. Alle Kontaktzeiten, Sonnenstand und Planungs-Tipps.`
+  : `${ort.name} liegt knapp ausserhalb der Totalitätszone (${ort.obscuration_pct} % Bedeckung). Warum sich der Transfer in die Zone lohnt – und wohin.`;
+
+const faq = ort.is_total
+  ? [
+      {
+        f: `Wie lange dauert die totale Sonnenfinsternis in ${ort.name}?`,
+        a: `Die Totalität dauert in ${ort.name} ${ort.totality_str} – von ${ort.c2_local.slice(0, 5)} bis ${ort.c3_local.slice(0, 5)} Uhr Ortszeit (2. August 2027).`,
+      },
+      {
+        f: `Um wie viel Uhr ist die Sonnenfinsternis in ${ort.name} am 2. August 2027?`,
+        a: `Die partielle Phase beginnt um ${ort.c1_local.slice(0, 5)} Uhr, das Maximum ist um ${ort.max_local.slice(0, 5)} Uhr, Ende um ${ort.c4_local.slice(0, 5)} Uhr Ortszeit.`,
+      },
+      {
+        f: `Wie hoch steht die Sonne während der Finsternis in ${ort.name}?`,
+        a: `Zum Maximum steht die Sonne ${ort.sun_alt_max_deg}° über dem Horizont (Azimut ${ort.sun_az_max_deg}°). Ein freier Blick in diese Richtung genügt – Hochhäuser oder Berge direkt davor vermeiden.`,
+      },
+    ]
+  : [
+      {
+        f: `Ist die Sonnenfinsternis 2027 in ${ort.name} total?`,
+        a: `Nein. ${ort.name} liegt ausserhalb der Totalitätszone; die Sonne wird zu ${ort.obscuration_pct} % bedeckt. Korona und Dunkelheit gibt es nur innerhalb der Zone${alternative ? `, z. B. in ${alternative.name} (${alternative.totality_str})` : ''}.`,
+      },
+      {
+        f: `Um wie viel Uhr ist das Maximum der Finsternis in ${ort.name}?`,
+        a: `Das Maximum der partiellen Finsternis ist um ${ort.max_local.slice(0, 5)} Uhr Ortszeit am 2. August 2027.`,
+      },
+    ];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: `Sonnenfinsternis am 2. August 2027 in ${ort.name}`,
+    startDate: '2027-08-02',
+    eventStatus: 'https://schema.org/EventScheduled',
+    location: {
+      '@type': 'Place',
+      name: ort.name,
+      address: ort.country,
+      geo: { '@type': 'GeoCoordinates', latitude: ort.lat, longitude: ort.lon },
+    },
+    description: beschreibung,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((q) => ({
+      '@type': 'Question',
+      name: q.f,
+      acceptedAnswer: { '@type': 'Answer', text: q.a },
+    })),
+  },
+];
+---
+<Base title={titel} description={beschreibung} schema={schema}>
+  <article>
+    <p class="brotkrumen"><a href="/orte">Alle Orte</a> → {ort.name}</p>
+    <h1>Sonnenfinsternis 2027 in {ort.name}</h1>
+    <p class="untertitel">
+      {ort.country} · 2. August 2027 ·
+      {ort.is_total
+        ? <span class="badge-total">TOTAL · {ort.totality_str} · Rang {ort.duration_rank} von 34</span>
+        : <span class="badge-partiell">nur partiell · {ort.obscuration_pct} % Bedeckung</span>}
+    </p>
+
+    {ort.is_total ? (
+      <>
+        <p class="lead">
+          {ort.name} liegt in der Totalitätszone: Um <strong>{ort.c2_local.slice(0, 5)} Uhr</strong>
+          {' '}Ortszeit verschwindet die Sonne für <strong>{ort.totality_str}</strong> vollständig
+          hinter dem Mond – Korona, Planeten und ein 360°-Dämmerungshorizont inklusive.
+        </p>
+        <h2>Alle Zeiten für {ort.name} (Ortszeit)</h2>
+        <table class="daten">
+          <tbody>
+            <tr><th>Beginn partielle Phase (1. Kontakt)</th><td>{ort.c1_local.slice(0, 5)} Uhr</td></tr>
+            <tr><th>Beginn Totalität (2. Kontakt)</th><td><strong>{ort.c2_local.slice(0, 5)} Uhr</strong></td></tr>
+            <tr><th>Maximum</th><td>{ort.max_local.slice(0, 5)} Uhr</td></tr>
+            <tr><th>Ende Totalität (3. Kontakt)</th><td><strong>{ort.c3_local.slice(0, 5)} Uhr</strong></td></tr>
+            <tr><th>Ende partielle Phase (4. Kontakt)</th><td>{ort.c4_local.slice(0, 5)} Uhr</td></tr>
+            <tr><th>Dauer der Totalität</th><td><strong>{ort.totality_str}</strong></td></tr>
+            <tr><th>Sonnenhöhe / Richtung am Maximum</th><td>{ort.sun_alt_max_deg}° / Azimut {ort.sun_az_max_deg}°</td></tr>
+          </tbody>
+        </table>
+        <div class="hinweisbox">
+          Ausserhalb der {ort.totality_str} Totalität braucht es durchgehend eine
+          zertifizierte SoFi-Brille (ISO 12312-2). Nur während der Totalität selbst
+          darf ohne Schutz geschaut werden.
+        </div>
+      </>
+    ) : (
+      <>
+        <p class="lead">
+          Ehrliche Antwort vorweg: In {ort.name} wird die Finsternis <strong>nicht total</strong>.
+          Die Sonne wird zu {ort.obscuration_pct} % bedeckt – viel, aber der entscheidende
+          Unterschied fehlt: Es wird nicht dunkel, die Korona bleibt unsichtbar.
+          {alternative && (
+            <>
+              {' '}Die gute Nachricht: <a href={`/orte/${alternative.slug}`}>{alternative.name}</a>
+              {' '}liegt in der Zone ({alternative.totality_str} Totalität) und ist
+              von {ort.name} aus erreichbar.
+            </>
+          )}
+        </p>
+        <h2>Zeiten der partiellen Finsternis in {ort.name} (Ortszeit)</h2>
+        <table class="daten">
+          <tbody>
+            <tr><th>Beginn</th><td>{ort.c1_local.slice(0, 5)} Uhr</td></tr>
+            <tr><th>Maximum ({ort.obscuration_pct} % Bedeckung)</th><td>{ort.max_local.slice(0, 5)} Uhr</td></tr>
+            <tr><th>Ende</th><td>{ort.c4_local.slice(0, 5)} Uhr</td></tr>
+            <tr><th>Sonnenhöhe am Maximum</th><td>{ort.sun_alt_max_deg}°</td></tr>
+          </tbody>
+        </table>
+      </>
+    )}
+
+    {ort.cloud && (
+      <section class="wolken">
+        <h2>Wie stehen die Chancen auf klaren Himmel?</h2>
+        <p>
+          Aus 30 Jahren ERA5-Wetterdaten (1995–2024, jeweils Ende Juli bis Anfang August,
+          zur Finsternis-Uhrzeit) ergibt sich für {ort.name}:
+        </p>
+        <div class="karten">
+          <div class="kachel">
+            <span class="zahl">{Math.round(ort.cloud.p_clear * 100)} %</span>
+            <span class="lbl">praktisch klarer Himmel</span>
+          </div>
+          <div class="kachel">
+            <span class="zahl">{Math.round(ort.cloud.p_ok * 100)} %</span>
+            <span class="lbl">Sonne gut sichtbar</span>
+          </div>
+          <div class="kachel">
+            <span class="zahl">{Math.round(ort.cloud.mean_tcc * 100)} %</span>
+            <span class="lbl">mittlere Bewölkung</span>
+          </div>
+        </div>
+        {ort.is_total && ort.sofi_score && (
+          <p class="score">
+            <strong>SoFi-Score: {ort.sofi_score}</strong> – der Erwartungswert an tatsächlich
+            erlebten Totalitäts-Minuten (Dauer × Wahrscheinlichkeit für klaren Himmel).
+            {' '}<a href="/orte">Alle Orte nach Score vergleichen →</a>
+          </p>
+        )}
+        <p class="klein">
+          Klimatologie, keine Vorhersage: Die Zahlen sagen, wie oft der Himmel an diesen
+          Kalendertagen historisch klar war – nicht, wie das Wetter am 2. August 2027 wird.
+        </p>
+      </section>
+    )}
+
+    <!-- TODO Monetarisierung: Stay22-Widget (Hotels) -->
+    <!-- TODO Monetarisierung: GetYourGuide-Widget (Touren/Aktivitäten) -->
+
+    {nachbarn.length > 0 && (
+      <section style="margin-top:36px">
+        <h2>Weitere Orte in {ort.country === 'Gibraltar' ? 'der Region' : ort.country}</h2>
+        <ul>
+          {nachbarn.map((n) => (
+            <li>
+              <a href={`/orte/${n.slug}`}>{n.name}</a> –{' '}
+              {n.is_total ? `${n.totality_str} Totalität` : `partiell (${n.obscuration_pct} %)`}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section style="margin-top:28px">
+      <h2>Häufige Fragen</h2>
+      {faq.map((q) => (
+        <details>
+          <summary>{q.f}</summary>
+          <p>{q.a}</p>
+        </details>
+      ))}
+    </section>
+
+    <p class="quelle">
+      Zeiten aus eigener Berechnung (skyfield / JPL-Ephemeride DE421), auf ±wenige Sekunden
+      validiert gegen NASA-Referenzwerte. Randlagen beachten: Die Zonengrenze hat durch das
+      Mondprofil ±1–2 km Unschärfe. <a href="/methodik">Methodik im Detail</a>.
+    </p>
+  </article>
+</Base>
+
+<style>
+  .brotkrumen { font-size: 13.5px; color: var(--grau); margin-bottom: 10px; }
+  h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
+  .untertitel { color: var(--grau); margin-bottom: 18px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .lead { font-size: 17.5px; max-width: 660px; margin-bottom: 24px; }
+  h2 { font-size: 21px; margin: 26px 0 12px; }
+  details { border-bottom: 1px solid var(--linie); padding: 10px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { padding: 8px 0 4px; }
+  .wolken { margin-top: 34px; }
+  .karten { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0 14px; }
+  .kachel {
+    background: var(--karte-bg); border-radius: 10px; padding: 14px 18px;
+    min-width: 150px; flex: 1;
+  }
+  .kachel .zahl {
+    display: block; font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: 26px; color: var(--nacht);
+  }
+  .kachel .lbl { font-size: 13.5px; color: var(--grau); }
+  .score { font-size: 15.5px; }
+  .klein { font-size: 13.5px; color: var(--grau); margin-top: 10px; }
+  .quelle { margin-top: 34px; font-size: 13.5px; color: var(--grau); }
+</style>

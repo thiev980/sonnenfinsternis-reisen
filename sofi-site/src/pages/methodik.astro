@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Methodik: So berechnen wir die Sonnenfinsternis-Daten"
+  description="Wie die Zeiten, Totalitätsdauern und Wolkenwahrscheinlichkeiten auf sonnenfinsternis-reisen.de entstehen: skyfield, JPL DE421, ERA5 – transparent erklärt."
+>
+  <h1>Methodik &amp; Quellen</h1>
+  <p class="lead">Alle Zahlen auf dieser Seite stammen aus einer eigenen, offenen Berechnungs-Pipeline – keine abgeschriebenen Werte.</p>
+
+  <h2>Finsternis-Geometrie</h2>
+  <p>
+    Kontaktzeiten, Totalitätsdauer, Sonnenstand und Bedeckungsgrad berechnen wir pro Ort mit der
+    Astronomie-Bibliothek <em>skyfield</em> auf Basis der JPL-Ephemeride DE421: topozentrische,
+    scheinbare Positionen von Sonne und Mond, Kontakte per Bisektion auf ~0,05 s verfeinert.
+    Validierung gegen NASA/Espenak-Referenzwerte: Abweichungen ±1–2 Sekunden (wir rechnen ohne
+    Mond-Limb-Profil). Für Orte nahe der Zonengrenze bedeutet das Profil zudem ±1–2 km Unschärfe
+    der Kante – wer dort steht, sollte ein paar Kilometer Richtung Zentrallinie einplanen.
+  </p>
+
+  <h2>Wolkenklimatologie</h2>
+  <p>
+    Die Wolkenwahrscheinlichkeiten basieren auf ERA5-Reanalysedaten (Total Cloud Cover) des
+    Copernicus Climate Change Service: 30 Jahre (1995–2024), jeweils 26. Juli bis 9. August,
+    08–11 UTC – also genau das Zeitfenster der Finsternis entlang des Pfads.
+    Enthält modifizierte Copernicus Climate Change Service Informationen; weder die Europäische
+    Kommission noch ECMWF sind für die hier gezeigte Verwendung verantwortlich.
+  </p>
+
+  <h2>Was das für deine Planung heisst</h2>
+  <p>
+    Klimatologie ist keine Wettervorhersage: Sie sagt, wie oft der Himmel an diesem Kalendertag
+    historisch klar war – nicht, wie er am 2. August 2027 sein wird. Für die Standortwahl ist
+    sie trotzdem das beste verfügbare Werkzeug; die konkrete Vorhersage gibt es erst wenige
+    Tage vorher.
+  </p>
+</Base>
+<style>
+  h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
+  .lead { max-width: 640px; margin-bottom: 24px; }
+  h2 { font-size: 21px; margin: 24px 0 10px; }
+  p { max-width: 720px; }
+</style>

@@ -1,0 +1,82 @@
+---
+import Base from '../../layouts/Base.astro';
+import orte from '../../data/orte.json';
+const total = orte.filter(o => o.is_total).sort((a, b) => b.totality_s - a.totality_s);
+const hatWolken = orte.some(o => o.cloud);
+const nachScore = hatWolken
+  ? orte.filter(o => o.is_total && o.sofi_score).sort((a, b) => b.sofi_score - a.sofi_score)
+  : [];
+const partiell = orte.filter(o => !o.is_total).sort((a, b) => b.obscuration_pct - a.obscuration_pct);
+---
+<Base
+  title="Sonnenfinsternis 2027: alle 56 Orte im Vergleich – Dauer & Uhrzeiten"
+  description="Totalitätsdauer und Uhrzeiten der Sonnenfinsternis vom 2.8.2027 für 56 Orte – von Tarifa über Chefchaouen bis Luxor, selbst berechnet und NASA-validiert."
+>
+  <h1>Alle Orte im Vergleich</h1>
+  <p class="lead">34 Orte in der Totalitätszone, sortiert nach Dauer – plus die wichtigsten Randlagen, die viele fälschlich für Totalitäts-Orte halten.</p>
+
+  {nachScore.length > 0 && (
+    <section>
+      <h2>Ranking nach SoFi-Score</h2>
+      <p class="erklaer">
+        Totalitätsdauer allein entscheidet nicht – sechs Minuten hinter Wolken sind weniger
+        wert als vier bei klarem Himmel. Der SoFi-Score multipliziert die Dauer (in Minuten)
+        mit der historischen Wahrscheinlichkeit für klaren Himmel: der Erwartungswert an
+        tatsächlich erlebten Totalitäts-Minuten.
+      </p>
+      <table class="daten">
+        <thead><tr><th>#</th><th>Ort</th><th>Land</th><th>Score</th><th>Dauer</th><th>P(klar)</th></tr></thead>
+        <tbody>
+          {nachScore.map((o, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+              <td>{o.country}</td>
+              <td><strong>{o.sofi_score}</strong></td>
+              <td>{o.totality_str}</td>
+              <td>{Math.round(o.cloud.p_clear * 100)} %</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  )}
+
+  <h2 style="margin-top:36px">In der Totalitätszone</h2>
+  <table class="daten">
+    <thead><tr><th>#</th><th>Ort</th><th>Land</th><th>Totalität</th><th>von–bis (lokal)</th><th>Sonnenhöhe</th></tr></thead>
+    <tbody>
+      {total.map(o => (
+        <tr>
+          <td>{o.duration_rank}</td>
+          <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+          <td>{o.country}</td>
+          <td><strong>{o.totality_str}</strong></td>
+          <td>{o.c2_local.slice(0,5)}–{o.c3_local.slice(0,5)}</td>
+          <td>{o.sun_alt_max_deg}°</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <h2 style="margin-top:36px">Ausserhalb der Zone (nur partiell)</h2>
+  <table class="daten">
+    <thead><tr><th>Ort</th><th>Land</th><th>Bedeckung</th><th>Maximum (lokal)</th></tr></thead>
+    <tbody>
+      {partiell.map(o => (
+        <tr>
+          <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+          <td>{o.country}</td>
+          <td>{o.obscuration_pct} %</td>
+          <td>{o.max_local.slice(0,5)} Uhr</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</Base>
+<style>
+  h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
+  .lead { max-width: 640px; margin-bottom: 24px; }
+  h2 { font-size: 22px; margin-bottom: 12px; }
+  .erklaer { max-width: 680px; margin-bottom: 16px; font-size: 15.5px; }
+</style>

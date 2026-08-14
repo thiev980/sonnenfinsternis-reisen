@@ -1,0 +1,124 @@
+---
+import Base from '../layouts/Base.astro';
+import orte from '../data/orte.json';
+
+const totalOrte = orte
+  .filter((o) => o.is_total)
+  .sort((a, b) => b.totality_s - a.totality_s);
+const top = totalOrte.slice(0, 8);
+const spanien = totalOrte.filter((o) => o.country === 'Spanien' || o.country === 'Gibraltar');
+
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'Totale Sonnenfinsternis vom 2. August 2027',
+  startDate: '2027-08-02',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: { '@type': 'Place', name: 'Südspanien, Nordafrika, Arabische Halbinsel' },
+  description: 'Die längste an Land beobachtbare totale Sonnenfinsternis des 21. Jahrhunderts – bis zu 6 Minuten 23 Sekunden Totalität.',
+}];
+---
+<Base
+  title="Sonnenfinsternis 2. August 2027: Orte, Zeiten, Reiseplanung"
+  description="Wo die totale Sonnenfinsternis 2027 wie lange dauert – selbst berechnete Zeiten und Totalitätsdauern für 56 Orte von Cádiz bis Luxor, mit interaktiver Karte."
+  schema={schema}
+>
+  <section class="hero">
+    <p class="eyebrow">Montag, 2. August 2027 · Südspanien → Nordafrika → Arabien</p>
+    <h1>Die Jahrhundert&shy;finsternis.<br />Und wo du sie am besten erlebst.</h1>
+    <p class="lead">
+      Bis zu <strong>6 Minuten 23 Sekunden</strong> totale Dunkelheit – die längste an Land
+      beobachtbare Sonnenfinsternis des 21.&nbsp;Jahrhunderts. Wir haben Zeiten,
+      Totalitätsdauer und Sonnenstand für 56 Orte entlang des Pfads selbst berechnet
+      (validiert gegen NASA-Daten) – damit du weisst, wohin sich die Reise lohnt.
+    </p>
+    <div class="countdown display" id="countdown" aria-live="polite"></div>
+    <div class="cta">
+      <a class="btn primär" href="/karte">Zur interaktiven Karte</a>
+      <a class="btn" href="/orte">Alle 56 Orte im Vergleich</a>
+      <a class="btn" href="/guides/spanien-marokko-oder-aegypten">Spanien, Marokko oder Ägypten?</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Die längste Totalität: Top-Orte</h2>
+    <table class="daten">
+      <thead><tr><th>Ort</th><th>Land</th><th>Totalität</th><th>Maximum (lokal)</th></tr></thead>
+      <tbody>
+        {top.map((o) => (
+          <tr>
+            <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+            <td>{o.country}</td>
+            <td><strong>{o.totality_str}</strong></td>
+            <td>{o.max_local.slice(0, 5)} Uhr</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <section style="margin-top:40px">
+    <h2>Nächster Weg zur Totalität: Andalusien &amp; Gibraltar</h2>
+    <p>
+      Für alle, die nicht fliegen wollen: Die Totalitätszone erreicht Europa in der Provinz
+      Cádiz – mit dem Auto oder Zug erreichbar. Die Dauer variiert stark:
+      {' '}<a href={`/orte/tarifa`}>Tarifa</a> bekommt 4m&nbsp;39s,
+      {' '}<a href={`/orte/malaga`}>Málaga</a> nur 1m&nbsp;51s – die Nordgrenze der Zone
+      verläuft dort nur 9&nbsp;km nördlich der Stadt.
+    </p>
+    <table class="daten">
+      <thead><tr><th>Ort</th><th>Totalität</th><th>Totalität von–bis (lokal)</th></tr></thead>
+      <tbody>
+        {spanien.map((o) => (
+          <tr>
+            <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+            <td><strong>{o.totality_str}</strong></td>
+            <td>{o.c2_local.slice(0, 5)}–{o.c3_local.slice(0, 5)} Uhr</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <div class="hinweisbox">
+      <strong>Achtung Randlagen:</strong> Sevilla, Hurghada, El Gouna und Kairo liegen
+      <em>ausserhalb</em> der Totalitätszone – dort bleibt es bei einer partiellen Finsternis
+      von 94–99&nbsp;%. Das klingt nach viel, ist aber ein völlig anderes Erlebnis:
+      Korona, Dunkelheit und Sterne gibt es nur in der Zone.
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding: 8px 0 40px; }
+  .eyebrow { color: var(--grau); font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+  h1 { font-size: clamp(30px, 5.5vw, 48px); line-height: 1.08; margin-bottom: 18px; }
+  .lead { font-size: 18px; max-width: 640px; }
+  .countdown { margin: 26px 0 6px; font-size: clamp(20px, 4vw, 30px); font-weight: 700; color: var(--nacht); min-height: 1.3em; }
+  .countdown :global(.einheit) { color: var(--grau); font-size: 0.55em; font-weight: 500; margin-right: 14px; }
+  .cta { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 11px 20px; border-radius: 9px; text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15.5px;
+    border: 1.5px solid var(--nacht); color: var(--nacht);
+  }
+  .btn.primär { background: var(--nacht); color: #fff; }
+  section h2 { font-size: 24px; margin-bottom: 14px; }
+</style>
+
+<script>
+  // Countdown bis zum Beginn der Totalität in Europa (Cádiz/Tarifa ~08:45 UTC)
+  const ziel = Date.parse('2027-08-02T08:45:00Z');
+  const el = document.getElementById('countdown');
+  function tick() {
+    const d = ziel - Date.now();
+    if (d <= 0) { el.textContent = 'Der Kernschatten ist da.'; return; }
+    const t = Math.floor(d / 86400000);
+    const h = Math.floor(d / 3600000) % 24;
+    const m = Math.floor(d / 60000) % 60;
+    const s = Math.floor(d / 1000) % 60;
+    el.innerHTML =
+      `${t}<span class="einheit">Tage</span>${h}<span class="einheit">Std</span>` +
+      `${m}<span class="einheit">Min</span>${s}<span class="einheit">Sek</span>`;
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>

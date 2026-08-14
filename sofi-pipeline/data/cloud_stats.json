@@ -1,0 +1,282 @@
+{
+  "tarifa": {
+    "mean_tcc": 0.208,
+    "p_clear": 0.674,
+    "p_ok": 0.837
+  },
+  "cadiz": {
+    "mean_tcc": 0.15,
+    "p_clear": 0.791,
+    "p_ok": 0.875
+  },
+  "jerez": {
+    "mean_tcc": 0.132,
+    "p_clear": 0.818,
+    "p_ok": 0.887
+  },
+  "conil": {
+    "mean_tcc": 0.2,
+    "p_clear": 0.706,
+    "p_ok": 0.841
+  },
+  "vejer": {
+    "mean_tcc": 0.2,
+    "p_clear": 0.706,
+    "p_ok": 0.841
+  },
+  "zahara": {
+    "mean_tcc": 0.185,
+    "p_clear": 0.724,
+    "p_ok": 0.867
+  },
+  "algeciras": {
+    "mean_tcc": 0.175,
+    "p_clear": 0.729,
+    "p_ok": 0.872
+  },
+  "gibraltar": {
+    "mean_tcc": 0.164,
+    "p_clear": 0.749,
+    "p_ok": 0.884
+  },
+  "estepona": {
+    "mean_tcc": 0.122,
+    "p_clear": 0.821,
+    "p_ok": 0.92
+  },
+  "marbella": {
+    "mean_tcc": 0.126,
+    "p_clear": 0.822,
+    "p_ok": 0.914
+  },
+  "fuengirola": {
+    "mean_tcc": 0.135,
+    "p_clear": 0.798,
+    "p_ok": 0.902
+  },
+  "malaga": {
+    "mean_tcc": 0.152,
+    "p_clear": 0.769,
+    "p_ok": 0.871
+  },
+  "ronda": {
+    "mean_tcc": 0.125,
+    "p_clear": 0.816,
+    "p_ok": 0.904
+  },
+  "sevilla": {
+    "mean_tcc": 0.12,
+    "p_clear": 0.831,
+    "p_ok": 0.892
+  },
+  "granada": {
+    "mean_tcc": 0.112,
+    "p_clear": 0.841,
+    "p_ok": 0.914
+  },
+  "almeria": {
+    "mean_tcc": 0.14,
+    "p_clear": 0.793,
+    "p_ok": 0.901
+  },
+  "ceuta": {
+    "mean_tcc": 0.216,
+    "p_clear": 0.677,
+    "p_ok": 0.826
+  },
+  "melilla": {
+    "mean_tcc": 0.203,
+    "p_clear": 0.718,
+    "p_ok": 0.826
+  },
+  "palma": {
+    "mean_tcc": 0.197,
+    "p_clear": 0.711,
+    "p_ok": 0.837
+  },
+  "tanger": {
+    "mean_tcc": 0.21,
+    "p_clear": 0.684,
+    "p_ok": 0.835
+  },
+  "asilah": {
+    "mean_tcc": 0.222,
+    "p_clear": 0.689,
+    "p_ok": 0.783
+  },
+  "tetouan": {
+    "mean_tcc": 0.204,
+    "p_clear": 0.698,
+    "p_ok": 0.823
+  },
+  "chefchaouen": {
+    "mean_tcc": 0.149,
+    "p_clear": 0.763,
+    "p_ok": 0.888
+  },
+  "al-hoceima": {
+    "mean_tcc": 0.172,
+    "p_clear": 0.733,
+    "p_ok": 0.875
+  },
+  "nador": {
+    "mean_tcc": 0.203,
+    "p_clear": 0.718,
+    "p_ok": 0.826
+  },
+  "fes": {
+    "mean_tcc": 0.125,
+    "p_clear": 0.81,
+    "p_ok": 0.912
+  },
+  "oran": {
+    "mean_tcc": 0.203,
+    "p_clear": 0.679,
+    "p_ok": 0.847
+  },
+  "algier": {
+    "mean_tcc": 0.149,
+    "p_clear": 0.797,
+    "p_ok": 0.889
+  },
+  "tunis": {
+    "mean_tcc": 0.089,
+    "p_clear": 0.876,
+    "p_ok": 0.943
+  },
+  "kairouan": {
+    "mean_tcc": 0.077,
+    "p_clear": 0.891,
+    "p_ok": 0.948
+  },
+  "sousse": {
+    "mean_tcc": 0.067,
+    "p_clear": 0.904,
+    "p_ok": 0.959
+  },
+  "monastir": {
+    "mean_tcc": 0.067,
+    "p_clear": 0.904,
+    "p_ok": 0.959
+  },
+  "sfax": {
+    "mean_tcc": 0.054,
+    "p_clear": 0.934,
+    "p_ok": 0.973
+  },
+  "djerba": {
+    "mean_tcc": 0.04,
+    "p_clear": 0.956,
+    "p_ok": 0.984
+  },
+  "lampedusa": {
+    "mean_tcc": 0.07,
+    "p_clear": 0.903,
+    "p_ok": 0.969
+  },
+  "benghazi": {
+    "mean_tcc": 0.069,
+    "p_clear": 0.919,
+    "p_ok": 0.982
+  },
+  "siwa": {
+    "mean_tcc": 0.005,
+    "p_clear": 0.992,
+    "p_ok": 0.999
+  },
+  "kairo": {
+    "mean_tcc": 0.012,
+    "p_clear": 0.991,
+    "p_ok": 0.997
+  },
+  "sohag": {
+    "mean_tcc": 0.017,
+    "p_clear": 0.976,
+    "p_ok": 0.992
+  },
+  "girga": {
+    "mean_tcc": 0.017,
+    "p_clear": 0.976,
+    "p_ok": 0.988
+  },
+  "qena": {
+    "mean_tcc": 0.019,
+    "p_clear": 0.972,
+    "p_ok": 0.988
+  },
+  "luxor": {
+    "mean_tcc": 0.026,
+    "p_clear": 0.96,
+    "p_ok": 0.985
+  },
+  "hurghada": {
+    "mean_tcc": 0.016,
+    "p_clear": 0.979,
+    "p_ok": 0.991
+  },
+  "el-gouna": {
+    "mean_tcc": 0.012,
+    "p_clear": 0.983,
+    "p_ok": 0.993
+  },
+  "safaga": {
+    "mean_tcc": 0.019,
+    "p_clear": 0.974,
+    "p_ok": 0.987
+  },
+  "marsa-alam": {
+    "mean_tcc": 0.057,
+    "p_clear": 0.913,
+    "p_ok": 0.965
+  },
+  "assuan": {
+    "mean_tcc": 0.065,
+    "p_clear": 0.906,
+    "p_ok": 0.958
+  },
+  "dschidda": {
+    "mean_tcc": 0.226,
+    "p_clear": 0.672,
+    "p_ok": 0.805
+  },
+  "mekka": {
+    "mean_tcc": 0.245,
+    "p_clear": 0.648,
+    "p_ok": 0.79
+  },
+  "zuerich": {
+    "mean_tcc": 0.502,
+    "p_clear": 0.287,
+    "p_ok": 0.514
+  },
+  "bern": {
+    "mean_tcc": 0.506,
+    "p_clear": 0.324,
+    "p_ok": 0.497
+  },
+  "muenchen": {
+    "mean_tcc": 0.504,
+    "p_clear": 0.256,
+    "p_ok": 0.514
+  },
+  "frankfurt": {
+    "mean_tcc": 0.473,
+    "p_clear": 0.331,
+    "p_ok": 0.549
+  },
+  "berlin": {
+    "mean_tcc": 0.392,
+    "p_clear": 0.461,
+    "p_ok": 0.642
+  },
+  "wien": {
+    "mean_tcc": 0.459,
+    "p_clear": 0.389,
+    "p_ok": 0.577
+  },
+  "rom": {
+    "mean_tcc": 0.183,
+    "p_clear": 0.726,
+    "p_ok": 0.871
+  }
+}

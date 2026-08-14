@@ -1,0 +1,91 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides', ({ data }) => !data.draft);
+  return guides.map((guide) => ({ params: { slug: guide.id }, props: { guide } }));
+}
+
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+const d = guide.data;
+
+const fmt = (x: Date) =>
+  x.toLocaleDateString('de-CH', { day: '2-digit', month: 'long', year: 'numeric' });
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: d.heading ?? d.title,
+    description: d.description,
+    datePublished: d.pubDate.toISOString(),
+    dateModified: (d.updatedDate ?? d.pubDate).toISOString(),
+    author: { '@type': 'Organization', name: 'sonnenfinsternis-reisen.de' },
+  },
+  ...(d.faq.length
+    ? [{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: d.faq.map((q) => ({
+          '@type': 'Question',
+          name: q.f,
+          acceptedAnswer: { '@type': 'Answer', text: q.a },
+        })),
+      }]
+    : []),
+];
+---
+<Base title={d.title} description={d.description} schema={schema}>
+  <article class="guide">
+    <p class="brotkrumen"><a href="/guides">Guides</a> → {d.heading ?? d.title}</p>
+    <h1>{d.heading ?? d.title}</h1>
+    <p class="meta">
+      Veröffentlicht {fmt(d.pubDate)}
+      {d.updatedDate && <> · zuletzt aktualisiert {fmt(d.updatedDate)}</>}
+    </p>
+    {d.tldr && <div class="tldr"><strong>Kurz gesagt:</strong> {d.tldr}</div>}
+
+    <Content />
+
+    {d.faq.length > 0 && (
+      <section class="faq">
+        <h2>Häufige Fragen</h2>
+        {d.faq.map((q) => (
+          <details>
+            <summary>{q.f}</summary>
+            <p>{q.a}</p>
+          </details>
+        ))}
+      </section>
+    )}
+  </article>
+</Base>
+
+<style>
+  .guide { max-width: 720px; }
+  .brotkrumen { font-size: 13.5px; color: var(--grau); margin-bottom: 10px; }
+  h1 { font-size: clamp(26px, 4.5vw, 40px); line-height: 1.15; margin-bottom: 10px; }
+  .meta { color: var(--grau); font-size: 13.5px; margin-bottom: 20px; }
+  .tldr {
+    background: var(--karte-bg); border-left: 3px solid var(--gold);
+    padding: 14px 18px; border-radius: 0 8px 8px 0; margin-bottom: 26px; font-size: 16px;
+  }
+  .guide :global(h2) { font-size: 24px; margin: 34px 0 12px; }
+  .guide :global(h3) { font-size: 19px; margin: 26px 0 8px; }
+  .guide :global(p) { margin-bottom: 15px; }
+  .guide :global(ul), .guide :global(ol) { margin: 0 0 16px 22px; }
+  .guide :global(li) { margin-bottom: 6px; }
+  .guide :global(table) { border-collapse: collapse; width: 100%; font-size: 15px; margin: 18px 0 24px; }
+  .guide :global(th), .guide :global(td) { text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--linie); }
+  .guide :global(th) { color: var(--grau); font-weight: 600; font-size: 13.5px; }
+  .guide :global(blockquote) {
+    border-left: 3px solid var(--linie); padding-left: 16px; color: var(--grau); margin: 18px 0;
+  }
+  .faq { margin-top: 36px; }
+  .faq h2 { font-size: 22px; margin-bottom: 10px; }
+  details { border-bottom: 1px solid var(--linie); padding: 10px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { padding: 8px 0 4px; }
+</style>
