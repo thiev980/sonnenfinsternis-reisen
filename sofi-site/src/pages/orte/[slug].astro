@@ -53,17 +53,27 @@ const faq = ort.is_total
       },
     ];
 
+// Kontaktzeiten in UTC als ISO-Zeitstempel fuer das Event-Schema
+const startDate = ort.c1_utc ? `2027-08-02T${ort.c1_utc}+00:00` : '2027-08-02';
+const endDate = ort.c4_utc ? `2027-08-02T${ort.c4_utc}+00:00` : '2027-08-02';
+
 const schema = [
   {
     '@context': 'https://schema.org',
     '@type': 'Event',
     name: `Sonnenfinsternis am 2. August 2027 in ${ort.name}`,
-    startDate: '2027-08-02',
+    startDate,
+    endDate,
     eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     location: {
       '@type': 'Place',
       name: ort.name,
-      address: ort.country,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: ort.name,
+        addressCountry: ort.country,
+      },
       geo: { '@type': 'GeoCoordinates', latitude: ort.lat, longitude: ort.lon },
     },
     description: beschreibung,
