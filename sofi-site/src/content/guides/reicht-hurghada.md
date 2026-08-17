@@ -15,7 +15,7 @@ faq:
     a: "Das Maximum mit 98,5 % Bedeckung fällt in Hurghada auf 13:05 Uhr Ortszeit. In Luxor dauert die Totalität von 13:02 bis 13:08 Uhr, in Marsa Alam von 13:08 bis 13:14 Uhr."
   - f: "Braucht man in Hurghada eine Sonnenfinsternisbrille?"
     a: "Ja, durchgehend. Weil die Sonne nie vollständig bedeckt wird, darf man in Hurghada zu keinem Zeitpunkt ohne zertifizierten Filter hinsehen – anders als in der Totalitätszone, wo während der Totalität der Blick mit blossem Auge möglich ist."
-draft: true
+draft: false
 ---
 
 Wer für den 2. August 2027 nach Ägypten schaut, landet schnell bei Hurghada. Direktflüge ab Zürich, München und Wien, Hotels in jeder Preisklasse, und die Zahl, die überall auftaucht, klingt beruhigend: 98,5 % Bedeckung.
