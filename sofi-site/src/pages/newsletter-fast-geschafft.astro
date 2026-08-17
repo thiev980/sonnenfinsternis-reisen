@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Fast geschafft – bitte E-Mail bestätigen"
+  description="Nur noch ein Klick: Bestätige deine Anmeldung zum SoFi-2027-Countdown."
+  noindex
+>
+  <article class="mitte">
+    <p class="icon">✉️</p>
+    <h1>Fast geschafft!</h1>
+    <p class="lead">
+      Ich habe dir eine E-Mail geschickt. Klick auf den Bestätigungslink darin –
+      erst dann bist du angemeldet.
+    </p>
+    <div class="hinweisbox">
+      Keine E-Mail erhalten? Schau bitte im Spam-Ordner nach. Sie kommt von
+      <strong>kontakt@sonnenfinsternis-reisen.de</strong>.
+    </div>
+    <p class="weiter">
+      Bis dahin: <a href="/karte">die Totalitätszone auf der Karte</a> ·
+      <a href="/guides/spanien-marokko-oder-aegypten">Spanien, Marokko oder Ägypten?</a> ·
+      <a href="/orte">alle 56 Orte im Vergleich</a>
+    </p>
+  </article>
+</Base>
+<style>
+  .mitte { max-width: 620px; margin: 0 auto; text-align: center; padding: 30px 0; }
+  .icon { font-size: 44px; margin-bottom: 10px; }
+  h1 { font-size: clamp(28px, 5vw, 40px); margin-bottom: 14px; }
+  .lead { font-size: 18px; margin-bottom: 22px; }
+  .hinweisbox { text-align: left; }
+  .weiter { margin-top: 28px; font-size: 15px; color: var(--grau); }
+</style>
