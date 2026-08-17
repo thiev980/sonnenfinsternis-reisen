@@ -13,7 +13,7 @@
 // --- Konfiguration ----------------------------------------------------------
 // TODO: eigene Affiliate-ID aus dem Stay22-Hub eintragen (hub.stay22.com).
 // Solange hier der Platzhalter steht, wird das Widget gar nicht gerendert.
-const AID = 'sonnenfinsternisreis';
+const AID = 'DEINE_STAY22_AID';
 
 // Anreise Freitag, Abreise Mittwoch – die Finsternis ist an einem Montag.
 // Zwei Puffertage davor sind bei Finsternisreisen üblich, weil man bei
@@ -65,12 +65,20 @@ const aktiv = AID !== 'DEINE_STAY22_AID';
     </p>
 
     <div class="s22-box">
-      <p class="s22-hinweis">
-        Die Karte wird von <strong>Stay22</strong> geladen. Erst beim Klick werden Daten
-        (u. a. deine IP-Adresse) an Stay22 übertragen. Mehr dazu in der{' '}
-        <a href="/datenschutz">Datenschutzerklärung</a>.
-      </p>
-      <button type="button" class="s22-btn">Unterkünfte auf der Karte anzeigen</button>
+      <div class="s22-inhalt">
+        <svg class="s22-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.5" aria-hidden="true">
+          <path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5v-13L15 6.5 9 4Z" />
+          <path d="M9 4v13M15 6.5v13" />
+        </svg>
+        <p class="s22-titel">Hotels und Preise für den 2. August 2027</p>
+        <p class="s22-hinweis">
+          Die Karte wird von <strong>Stay22</strong> geladen. Erst beim Klick werden Daten
+          (u. a. deine IP-Adresse) an Stay22 übertragen. Mehr dazu in der{' '}
+          <a href="/datenschutz">Datenschutzerklärung</a>.
+        </p>
+        <button type="button" class="s22-btn">Unterkünfte auf der Karte anzeigen</button>
+      </div>
     </div>
 
     <p class="s22-klein">
@@ -108,14 +116,32 @@ const aktiv = AID !== 'DEINE_STAY22_AID';
 
 <style>
   .s22 { margin-top: 36px; }
+  /* Gleiche Hoehe wie das spaetere Iframe: So springt beim Klick nichts,
+     und der Platzhalter wirkt als Blickfang statt als Fussnote. */
   .s22-box {
     border: 1px solid rgba(20, 24, 60, 0.18);
     border-radius: 10px;
-    padding: 28px 20px;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
     text-align: center;
-    background: var(--papier, #FBFAF7);
+    background-color: var(--papier, #FBFAF7);
+    background-image:
+      linear-gradient(rgba(20, 24, 60, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20, 24, 60, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
   }
-  .s22-hinweis { font-size: 0.9rem; margin: 0 0 16px; opacity: 0.8; }
+  .s22-inhalt { max-width: 420px; }
+  .s22-icon { width: 40px; height: 40px; color: var(--nacht, #14183C); opacity: 0.45; }
+  .s22-titel {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 10px 0 6px;
+  }
+  .s22-hinweis { font-size: 0.9rem; margin: 0 0 18px; opacity: 0.8; }
   .s22-btn {
     background: var(--nacht, #14183C);
     color: var(--gold, #E8B44F);
