@@ -9,8 +9,8 @@ faq:
     a: "Bei Girga in Ägypten: 6 Minuten 23 Sekunden – das globale Maximum. Luxor liegt mit 6:20 knapp dahinter."
   - f: "Kann ich die Totalität 2027 ohne Flugzeug erreichen?"
     a: "Ja – Südandalusien (Provinz Cádiz bis Málaga) liegt in der Zone und ist per Auto oder Zug erreichbar. Beste Dauer an der Küste: Tarifa mit 4m 39s."
-  - f: "Ist die Sonnenfinsternis in Hurghada total?"
-    a: "Nein. Hurghada erreicht 98,5 % Bedeckung – viel, aber ohne Dunkelheit und Korona. Für die Totalität braucht es einen Ausflug in die Zone oder gleich ein Hotel in Marsa Alam (5m 28s Totalität)."
+  - f: "Welches Reiseziel hat das kleinste Wetterrisiko?"
+    a: "Das ägyptische Niltal. Luxor kommt in meiner Auswertung von 30 Jahren ERA5-Daten auf 96 %, Sohag und Girga auf 98 % Wahrscheinlichkeit für klaren Himmel. Djerba liegt mit 96 % gleichauf, Andalusien je nach Ort nur bei 67 bis 82 %."
   - f: "Wann muss ich buchen?"
     a: "Früh. Nach der Finsternis vom August 2026 hat die Buchungswelle für 2027 eingesetzt; einzelne Pauschalangebote und kleine Orte sind bereits knapp. Mit flexiblen Stornobedingungen ist frühes Buchen risikolos."
 draft: false
@@ -167,13 +167,13 @@ Und jetzt die Warnung, die in kaum einem Reiseartikel steht: **Die grossen
 Badeorte am Roten Meer liegen ausserhalb der Totalitätszone.** Meine Berechnung:
 Hurghada 98,5 % partiell, El Gouna 98,4 %, Safaga 99,6 %, auch Kairo (94,8 %) und
 Assuan (99,8 %) verpassen die Totalität. 98 % klingt nach fast total – ist es aber
-nicht: Es wird nicht dunkel, keine Korona, keine Sterne. Wer ein Hotel in Hurghada
-bucht und am 2. August am Pool bleibt, verpasst das Jahrhundertereignis um
-Kilometer. Die Lösung ist einfach, muss aber geplant werden: ein organisierter
-Tagesausflug in die Zone (Richtung Luxor oder in die Wüste westlich der Küste) –
-oder gleich in Marsa Alam buchen, das mit 5m 28s *innerhalb* der Zone liegt und
-Strand plus Totalität kombiniert. Das ist der vielleicht beste Familien-Kompromiss
-in ganz Ägypten.
+nicht: Es wird nicht dunkel, keine Korona, keine Sterne.
+
+Weil das der häufigste und teuerste Irrtum bei dieser Finsternis ist, habe ich ihm
+einen eigenen Artikel gewidmet – mit beiden Auswegen im Vergleich:
+**[Reicht Hurghada?](/guides/reicht-hurghada)** Die Kurzfassung: Tagesausflug nach
+Luxor oder gleich in Marsa Alam buchen, das mit 5m 28s *innerhalb* der Zone liegt
+und Strand plus Totalität kombiniert.
 
 <!-- TODO Monetarisierung: GetYourGuide "Ausflüge Luxor / Rotes Meer" -->
 

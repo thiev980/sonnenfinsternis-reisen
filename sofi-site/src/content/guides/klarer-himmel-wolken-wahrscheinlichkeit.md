@@ -126,14 +126,17 @@ Zwei Details, die in der Planung oft untergehen:
 
 **Die südliche Rotmeerküste ist wolkiger als das Niltal.** Marsa Alam kommt auf 91 %,
 Luxor auf 96 %. Weiter nördlich ist es paradoxerweise klarer – Hurghada und El Gouna
-erreichen 98 %, liegen aber ausserhalb der Totalitätszone. Für alle, die Strandurlaub mit
-Totalität kombinieren wollen, bleibt Marsa Alam trotzdem die beste Wahl: Es ist der einzige
-grosse Badeort *innerhalb* der Zone.
+erreichen 98 %, liegen aber ausserhalb der Totalitätszone. Auch Safaga, 60 Kilometer 
+südlich von Hurghada, kommt auf 97 % klaren Himmel – und mit 99,6 % Bedeckung trotzdem 
+nicht in die Zone. Für alle, die Strandurlaub mit Totalität kombinieren wollen, bleibt 
+Marsa Alam die beste Wahl: Es ist der einzige grosse Badeort innerhalb der Zone. Warum 
+98,5 % keine Finsternis sind und welche zwei Auswege es von Hurghada aus gibt,
+steht in [Reicht Hurghada?](/guides/reicht-hurghada).
 
 **Djerba ist der stille Gewinner.** 96 % klarer Himmel, 4m 42s Totalität, Charterflüge
 und Hotelkapazität – und damit ein besserer Erwartungswert als jeder Ort in Spanien
 oder Marokko. Die tunesischen Bade-Hochburgen Sousse und Monastir liegen dagegen knapp
-ausserhalb der Zone (99,9 Prozent – und trotzdem keine Totalität); von dort ist es eine 
+ausserhalb der Zone (99,9 % – und trotzdem keine Totalität); von dort ist es eine 
 kurze Fahrt südwärts.
 
 ## Und zu Hause?
