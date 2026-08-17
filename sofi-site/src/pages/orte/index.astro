@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import orte from '../../data/orte.json';
+import { zahl, score } from '../../lib/format.js';
 const total = orte.filter(o => o.is_total).sort((a, b) => b.totality_s - a.totality_s);
 const hatWolken = orte.some(o => o.cloud);
 const nachScore = hatWolken
@@ -32,7 +33,7 @@ const partiell = orte.filter(o => !o.is_total).sort((a, b) => b.obscuration_pct 
               <td>{i + 1}</td>
               <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
               <td>{o.country}</td>
-              <td><strong>{o.sofi_score}</strong></td>
+              <td><strong>{score(o.sofi_score)}</strong></td>
               <td>{o.totality_str}</td>
               <td>{Math.round(o.cloud.p_clear * 100)} %</td>
             </tr>
@@ -67,7 +68,7 @@ const partiell = orte.filter(o => !o.is_total).sort((a, b) => b.obscuration_pct 
         <tr>
           <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
           <td>{o.country}</td>
-          <td>{o.obscuration_pct} %</td>
+          <td>{zahl(o.obscuration_pct)} %</td>
           <td>{o.max_local.slice(0,5)} Uhr</td>
         </tr>
       ))}

@@ -1,0 +1,124 @@
+---
+/**
+ * Stay22-Unterkunftskarte als Zwei-Klick-Lösung.
+ *
+ * Das Iframe wird NICHT beim Seitenaufruf geladen, sondern erst, wenn der
+ * Besucher den Button drückt. Vorher geht keine einzige Anfrage an stay22.com,
+ * es wird also keine IP-Adresse an einen Dritten übertragen. Genau deshalb
+ * kommt die Seite weiterhin ohne Consent-Banner aus.
+ *
+ * Doku der Parameter: https://group.stay22.com/docs/
+ */
+
+// --- Konfiguration ----------------------------------------------------------
+// TODO: eigene Affiliate-ID aus dem Stay22-Hub eintragen (hub.stay22.com).
+// Solange hier der Platzhalter steht, wird das Widget gar nicht gerendert.
+const AID = 'DEINE_STAY22_AID';
+
+// Anreise Freitag, Abreise Mittwoch – die Finsternis ist an einem Montag.
+// Zwei Puffertage davor sind bei Finsternisreisen üblich, weil man bei
+// schlechter Prognose kurzfristig verlegen können will.
+const CHECKIN = '2027-07-30';
+const CHECKOUT = '2027-08-04';
+
+const MAINCOLOR = '14183C'; // --nacht, ohne #
+
+interface Props {
+  ort: {
+    slug: string;
+    name: string;
+    country: string;
+    lat: number;
+    lon: number;
+    is_total: boolean;
+    totality_str?: string;
+  };
+}
+
+const { ort } = Astro.props;
+
+const params = new URLSearchParams({
+  aid: AID,
+  lat: String(ort.lat),
+  lng: String(ort.lon),
+  checkin: CHECKIN,
+  checkout: CHECKOUT,
+  venue: ort.name,
+  maincolor: MAINCOLOR,
+});
+// campaign darf mehrfach vorkommen – so lässt sich im Hub nach Platzierung
+// und nach Ort getrennt auswerten.
+params.append('campaign', 'ortsseite');
+params.append('campaign', ort.slug);
+
+const src = `https://www.stay22.com/embed/gm?${params.toString()}`;
+const aktiv = AID !== 'DEINE_STAY22_AID';
+---
+
+{aktiv && (
+  <section class="s22" data-stay22 data-src={src}>
+    <h2>Unterkünfte in {ort.name}</h2>
+    <p>
+      {ort.is_total
+        ? `Wer die ${ort.totality_str} Totalität in ${ort.name} sehen will, sollte früh buchen – die Zimmerkontingente in der Zone sind endlich.`
+        : `Übernachtungen in ${ort.name} und Umgebung, mit Preisen für die Nächte um den 2. August 2027.`}
+    </p>
+
+    <div class="s22-box">
+      <p class="s22-hinweis">
+        Die Karte wird von <strong>Stay22</strong> geladen. Erst beim Klick werden Daten
+        (u. a. deine IP-Adresse) an Stay22 übertragen. Mehr dazu in der{' '}
+        <a href="/datenschutz">Datenschutzerklärung</a>.
+      </p>
+      <button type="button" class="s22-btn">Unterkünfte auf der Karte anzeigen</button>
+    </div>
+
+    <p class="s22-klein">
+      Affiliate-Link: Buchst du darüber, erhalte ich eine Provision. Für dich
+      ändert sich am Preis nichts, und die Auswahl beeinflusst es nicht.
+    </p>
+  </section>
+)}
+
+<script>
+  document.querySelectorAll('[data-stay22]').forEach((box) => {
+    const btn = box.querySelector('.s22-btn');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const ziel = box.querySelector('.s22-box');
+      const src = box.getAttribute('data-src');
+      if (!ziel || !src) return;
+      const iframe = document.createElement('iframe');
+      iframe.src = src;
+      iframe.title = 'Unterkunftskarte von Stay22';
+      iframe.loading = 'lazy';
+      iframe.className = 's22-frame';
+      ziel.replaceWith(iframe);
+    }, { once: true });
+  });
+</script>
+
+<style>
+  .s22 { margin-top: 36px; }
+  .s22-box {
+    border: 1px solid rgba(20, 24, 60, 0.18);
+    border-radius: 10px;
+    padding: 28px 20px;
+    text-align: center;
+    background: var(--papier, #FBFAF7);
+  }
+  .s22-hinweis { font-size: 0.9rem; margin: 0 0 16px; opacity: 0.8; }
+  .s22-btn {
+    background: var(--nacht, #14183C);
+    color: var(--gold, #E8B44F);
+    border: 0;
+    border-radius: 6px;
+    padding: 12px 22px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .s22-btn:hover { opacity: 0.9; }
+  .s22-frame { width: 100%; height: 460px; border: 0; border-radius: 10px; }
+  .s22-klein { font-size: 0.85rem; opacity: 0.7; margin-top: 10px; }
+</style>

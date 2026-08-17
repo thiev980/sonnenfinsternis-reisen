@@ -1,6 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import orte from '../../data/orte.json';
+import { zahl, score } from '../../lib/format.js';
+import Stay22Karte from '../../components/Stay22Karte.astro';
 
 export function getStaticPaths() {
   return orte.map((ort) => ({ params: { slug: ort.slug }, props: { ort } }));
@@ -22,10 +24,10 @@ const alternative = ort.is_total
 
 const titel = ort.is_total
   ? `Sonnenfinsternis 2027 in ${ort.name}: ${ort.totality_str} Totalität – Uhrzeiten & Planung`
-  : `Sonnenfinsternis 2027 in ${ort.name}: nur partiell (${ort.obscuration_pct} %) – die Alternativen`;
+  : `Sonnenfinsternis 2027 in ${ort.name}: nur partiell (${zahl(ort.obscuration_pct)} %) – die Alternativen`;
 const beschreibung = ort.is_total
   ? `${ort.name} liegt in der Totalitätszone: ${ort.totality_str} totale Dunkelheit am 2.8.2027, Maximum um ${ort.max_local.slice(0, 5)} Uhr. Alle Kontaktzeiten, Sonnenstand und Planungs-Tipps.`
-  : `${ort.name} liegt knapp ausserhalb der Totalitätszone (${ort.obscuration_pct} % Bedeckung). Warum sich der Transfer in die Zone lohnt – und wohin.`;
+  : `${ort.name} liegt knapp ausserhalb der Totalitätszone (${zahl(ort.obscuration_pct)} % Bedeckung). Warum sich der Transfer in die Zone lohnt – und wohin.`;
 
 const faq = ort.is_total
   ? [
@@ -45,7 +47,7 @@ const faq = ort.is_total
   : [
       {
         f: `Ist die Sonnenfinsternis 2027 in ${ort.name} total?`,
-        a: `Nein. ${ort.name} liegt ausserhalb der Totalitätszone; die Sonne wird zu ${ort.obscuration_pct} % bedeckt. Korona und Dunkelheit gibt es nur innerhalb der Zone${alternative ? `, z. B. in ${alternative.name} (${alternative.totality_str})` : ''}.`,
+        a: `Nein. ${ort.name} liegt ausserhalb der Totalitätszone; die Sonne wird zu ${zahl(ort.obscuration_pct)} % bedeckt. Korona und Dunkelheit gibt es nur innerhalb der Zone${alternative ? `, z. B. in ${alternative.name} (${alternative.totality_str})` : ''}.`,
       },
       {
         f: `Um wie viel Uhr ist das Maximum der Finsternis in ${ort.name}?`,
@@ -97,7 +99,7 @@ const schema = [
       {ort.country} · 2. August 2027 ·
       {ort.is_total
         ? <span class="badge-total">TOTAL · {ort.totality_str} · Rang {ort.duration_rank} von 34</span>
-        : <span class="badge-partiell">nur partiell · {ort.obscuration_pct} % Bedeckung</span>}
+        : <span class="badge-partiell">nur partiell · {zahl(ort.obscuration_pct)} % Bedeckung</span>}
     </p>
 
     {ort.is_total ? (
@@ -129,7 +131,7 @@ const schema = [
       <>
         <p class="lead">
           Ehrliche Antwort vorweg: In {ort.name} wird die Finsternis <strong>nicht total</strong>.
-          Die Sonne wird zu {ort.obscuration_pct} % bedeckt – viel, aber der entscheidende
+          Die Sonne wird zu {zahl(ort.obscuration_pct)} % bedeckt – viel, aber der entscheidende
           Unterschied fehlt: Es wird nicht dunkel, die Korona bleibt unsichtbar.
           {alternative && (
             <>
@@ -143,7 +145,7 @@ const schema = [
         <table class="daten">
           <tbody>
             <tr><th>Beginn</th><td>{ort.c1_local.slice(0, 5)} Uhr</td></tr>
-            <tr><th>Maximum ({ort.obscuration_pct} % Bedeckung)</th><td>{ort.max_local.slice(0, 5)} Uhr</td></tr>
+            <tr><th>Maximum ({zahl(ort.obscuration_pct)} % Bedeckung)</th><td>{ort.max_local.slice(0, 5)} Uhr</td></tr>
             <tr><th>Ende</th><td>{ort.c4_local.slice(0, 5)} Uhr</td></tr>
             <tr><th>Sonnenhöhe am Maximum</th><td>{ort.sun_alt_max_deg}°</td></tr>
           </tbody>
@@ -174,7 +176,7 @@ const schema = [
         </div>
         {ort.is_total && ort.sofi_score && (
           <p class="score">
-            <strong>SoFi-Score: {ort.sofi_score}</strong> – der Erwartungswert an tatsächlich
+            <strong>SoFi-Score: {score(ort.sofi_score)}</strong> – der Erwartungswert an tatsächlich
             erlebten Totalitäts-Minuten (Dauer × Wahrscheinlichkeit für klaren Himmel).
             {' '}<a href="/orte">Alle Orte nach Score vergleichen →</a>
           </p>
@@ -186,7 +188,10 @@ const schema = [
       </section>
     )}
 
-    <!-- TODO Monetarisierung: Stay22-Widget (Hotels) -->
+    {/* Unterkünfte nur dort, wo jemand wegen der Finsternis übernachten würde.
+        Fällt damit bei Zürich, Berlin, Wien & Co. weg - dort wohnt man schon. */}
+    {ort.category !== 'partiell' && <Stay22Karte ort={ort} />}
+
     <!-- TODO Monetarisierung: GetYourGuide-Widget (Touren/Aktivitäten) -->
 
     {nachbarn.length > 0 && (
@@ -196,7 +201,7 @@ const schema = [
           {nachbarn.map((n) => (
             <li>
               <a href={`/orte/${n.slug}`}>{n.name}</a> –{' '}
-              {n.is_total ? `${n.totality_str} Totalität` : `partiell (${n.obscuration_pct} %)`}
+              {n.is_total ? `${n.totality_str} Totalität` : `partiell (${zahl(n.obscuration_pct)} %)`}
             </li>
           ))}
         </ul>
