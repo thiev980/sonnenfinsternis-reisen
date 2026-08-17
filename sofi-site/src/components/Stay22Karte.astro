@@ -46,10 +46,10 @@ const params = new URLSearchParams({
   venue: ort.name,
   maincolor: MAINCOLOR,
 });
-// campaign darf mehrfach vorkommen – so lässt sich im Hub nach Platzierung
-// und nach Ort getrennt auswerten.
-params.append('campaign', 'ortsseite');
-params.append('campaign', ort.slug);
+// EIN campaign-Wert, Platzierung und Ort mit Bindestrich kombiniert.
+// Zwei separate campaign-Parameter kamen im Hub nicht an - dort stand danach
+// nur "No Campaign ID" zur Auswahl.
+params.set('campaign', `ortsseite-${ort.slug}`);
 
 const src = `https://www.stay22.com/embed/gm?${params.toString()}`;
 const aktiv = AID !== 'DEINE_STAY22_AID';
@@ -94,8 +94,14 @@ const aktiv = AID !== 'DEINE_STAY22_AID';
     if (!btn) return;
     btn.addEventListener('click', () => {
       const ziel = box.querySelector('.s22-box');
-      const src = box.getAttribute('data-src');
+      let src = box.getAttribute('data-src');
       if (!ziel || !src) return;
+      // Eigene Tests aus der Statistik heraushalten: Seite mit ?s22test
+      // aufrufen, dann laufen Load und Klick unter einer eigenen Campaign,
+      // die sich im Hub wegfiltern lässt.
+      if (new URLSearchParams(location.search).has('s22test')) {
+        src = src.replace(/([?&]campaign=)[^&]*/, '$1intern-test');
+      }
       const iframe = document.createElement('iframe');
       iframe.src = src;
       iframe.title = 'Unterkunftskarte von Stay22';
