@@ -64,7 +64,7 @@ Die Totalität fällt auf 13:02 bis 13:08 Uhr Ortszeit, die Sonne steht dabei fa
 
 Der Haken ist die Logistik, nicht die Astronomie. Die Strecke Hurghada–Luxor ist eine gängige Ausflugsroute, aber an diesem einen Tag werden zehntausende Menschen dieselbe Idee haben. Wer das plant, sollte den Transfer verbindlich vorbuchen und nicht darauf setzen, ihn spontan an der Hotelrezeption zu bekommen.
 
-Wer das Risiko ganz vermeiden will, übernachtet vor Ort statt hin- und herzufahren: <a href="https://www.stay22.com/allez/roam?aid=DEINE_STAY22_AID&lat=25.687&lng=32.64&campaign=hurghada-artikel-luxor" rel="sponsored nofollow noopener" target="_blank">Unterkünfte in Luxor</a> für die Nacht vom 1. auf den 2. August. Dann beginnt der Finsternistag mit einem Frühstück statt mit einer vierstündigen Anfahrt.
+Wer das Risiko ganz vermeiden will, übernachtet vor Ort statt hin- und herzufahren: <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=25.687&lng=32.64&checkin=2027-07-30&checkout=2027-08-04&campaign=hurghada-artikel-luxor" rel="sponsored nofollow noopener" target="_blank">Unterkünfte in Luxor</a> für die Nacht vom 1. auf den 2. August. Dann beginnt der Finsternistag mit einem Frühstück statt mit einer vierstündigen Anfahrt.
 
 ### Variante 2: gleich in Marsa Alam wohnen
 
@@ -76,11 +76,16 @@ Dafür entfällt das grösste Risiko des Tagesausflugs: dass irgendetwas zwische
 
 ## Was ich empfehlen würde
 
-Wer die Wahl noch hat und ohnehin erst bucht: **Marsa Alam**. Fünfeinhalb Minuten Totalität aus dem eigenen Hotel, ohne einen einzigen Transfer, sind mehr wert als die eine zusätzliche Minute in Luxor. An diesem Tag ist Verlässlichkeit die knappe Ressource, nicht Dauer. Hier lässt sich vergleichen, was in <a href="https://www.stay22.com/allez/roam?aid=DEINE_STAY22_AID&lat=25.063&lng=34.89&campaign=hurghada-artikel-marsa-alam" rel="sponsored nofollow noopener" target="_blank">Marsa Alam noch frei ist</a>.
+Wer die Wahl noch hat und ohnehin erst bucht: **Marsa Alam**. Fünfeinhalb Minuten Totalität aus dem eigenen Hotel, ohne einen einzigen Transfer, sind mehr wert als die eine zusätzliche Minute in Luxor. An diesem Tag ist Verlässlichkeit die knappe Ressource, nicht Dauer. Hier lässt sich vergleichen, was in <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=25.063&lng=34.89&checkin=2027-07-30&checkout=2027-08-04&campaign=hurghada-artikel-marsa-alam" rel="sponsored nofollow noopener" target="_blank">Marsa Alam noch frei ist</a>.
 
 Wer schon in Hurghada gebucht hat und nicht umbuchen will oder kann: **Luxor als Tagesausflug**, verbindlich vorgebucht, mit Rückfahrt erst am Abend. Der Ort ist astronomisch der bessere, und die Grabmäler auf der Westbank sind ohnehin der Grund, warum die meisten Ägypten-Urlauber irgendwann dorthin fahren.
 
 Was ich nicht empfehlen würde: in Hurghada bleiben und hoffen, dass 98,5 % schon irgendwie reichen. Sie reichen nicht. Diese Finsternis ist mit über sechs Minuten die längste an Land beobachtbare des ganzen Jahrhunderts, die nächste vergleichbare Gelegenheit liegt Jahrzehnte entfernt, und der Unterschied zwischen 98,5 % und 100 % ist nicht ein bisschen – er ist alles.
+
+<!-- Persönlicher Einschub - Vorschlag, bitte prüfen und in deine Worte bringen.
+     Bewusst kurz und als Rückverweis formuliert: Die Szene vom 12.8.2026 hast du
+     im Vergleichsartikel schon ausführlich erzählt, ein zweites Mal würde sie
+     abnutzen. Hier reicht der Verweis, weil er das Argument trägt.
 
 Ich weiss, wovon ich rede: Am 12. August 2026 habe ich von der Schweiz aus eine
 tiefe partielle Phase gesehen. Beeindruckend – und trotzdem etwas kategorisch
