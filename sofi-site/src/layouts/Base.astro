@@ -86,6 +86,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       flex: 1; min-width: 220px; padding: 10px 14px; border-radius: 8px;
       border: none; font-size: 15px;
     }
+    .nl .hp { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
+    .nl-recht { color: #a8abc4; font-size: 12.5px; margin-top: 10px; }
+    .nl-recht a { color: #c9cbdd; }
     .nl button {
       background: var(--gold); color: var(--nacht); border: none; border-radius: 8px;
       padding: 10px 20px; font-weight: 700; font-size: 15px; cursor: pointer;
@@ -111,11 +114,21 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       <div class="nl">
         <h2>Der SoFi-2027-Countdown</h2>
         <p>Neue Orts-Analysen, Wolkendaten und Buchungs-Deadlines – etwa einmal im Monat, kein Spam.</p>
-        <!-- TODO: action durch Brevo-Formular-URL ersetzen -->
-        <form method="post" action="#brevo-todo">
+        <form
+          method="POST"
+          action="https://7d0486af.sibforms.com/serve/MUIFAPlHEQbtEVu7C5x6dfrrd5aK5PeNn3sN2QLg330qzen-FJX5adKMFAVFYZamQkRsO0tJGzZbfKl21U8szeqYdyWDKA4OkRE8DwZn9zzJmDMwccQQ2mtqtQcI448dGeIHDotPnHLg7h5Hx355Xwj38yKj9py10RzvyXZjFo8_3dYk0vPbY5VP7GiOjUvrnM1yJMCS-PxHhGEqSA=="
+        >
           <input type="email" name="EMAIL" placeholder="deine@email.ch" required />
           <button type="submit">Anmelden</button>
+          {/* Honeypot gegen Bots – muss leer bleiben */}
+          <input type="text" name="email_address_check" value="" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="hidden" name="locale" value="de" />
         </form>
+        <p class="nl-recht">
+          Mit der Anmeldung stimmst du zu, dass ich dir den Newsletter per E-Mail schicke.
+          Abmeldung jederzeit über den Link in jeder Mail.
+          <a href="/datenschutz">Datenschutz</a>
+        </p>
       </div>
     </div>
   </main>
