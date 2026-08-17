@@ -46,8 +46,29 @@ const schema = [{
     <div class="cta">
       <a class="btn primär" href="/karte">Zur interaktiven Karte</a>
       <a class="btn" href="/orte">Alle 56 Orte im Vergleich</a>
-      <a class="btn" href="/guides/spanien-marokko-oder-aegypten">Spanien, Marokko oder Ägypten?</a>
+      <a class="btn" href="/guides">Alle Guides</a>
     </div>
+  </section>
+
+  <section class="guides-teaser">
+    <h2>Die drei Entscheidungen vor der Buchung</h2>
+    <ul>
+      <li>
+        <a href="/guides/spanien-marokko-oder-aegypten">Spanien, Marokko oder Ägypten?</a>
+        <p>Vier Minuten in Tarifa oder 6:20 in Luxor – der Vergleich nach Dauer,
+        Wetterrisiko, Anreise und Budget.</p>
+      </li>
+      <li>
+        <a href="/guides/klarer-himmel-wolken-wahrscheinlichkeit">Wo ist der Himmel am klarsten?</a>
+        <p>30 Jahre Wetterdaten ausgewertet. Warum ausgerechnet Tarifa mit 67 %
+        das höchste Wolkenrisiko Spaniens hat.</p>
+      </li>
+      <li>
+        <a href="/guides/reicht-hurghada">Reicht Hurghada?</a>
+        <p>98,5 % Bedeckung klingen nach fast total und sind es nicht. Die zwei
+        Auswege für alle, die am Roten Meer gebucht haben.</p>
+      </li>
+    </ul>
   </section>
 
   <section>
@@ -98,6 +119,12 @@ const schema = [{
 </Base>
 
 <style>
+  .guides-teaser ul { list-style: none; margin: 0; padding: 0; max-width: 720px; }
+  .guides-teaser li { border-top: 1px solid var(--linie); padding: 14px 0; }
+  .guides-teaser a { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; text-decoration: none; }
+  .guides-teaser a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .guides-teaser p { color: var(--grau); font-size: 15px; margin-top: 4px; }
+
   .hero { padding: 8px 0 40px; }
   .eyebrow { color: var(--grau); font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
   h1 { font-size: clamp(30px, 5.5vw, 48px); line-height: 1.08; margin-bottom: 18px; }
