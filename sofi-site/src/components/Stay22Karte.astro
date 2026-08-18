@@ -52,7 +52,7 @@ const params = new URLSearchParams({
 params.set('campaign', `ortsseite-${ort.slug}`);
 
 const src = `https://www.stay22.com/embed/gm?${params.toString()}`;
-const aktiv = AID !== 'DEINE_STAY22_AID';
+const aktiv = AID.trim() !== '' && AID !== 'DEINE_STAY22_AID';
 ---
 
 {aktiv && (
