@@ -57,7 +57,7 @@ Für alle, die nicht fliegen wollen oder können, und für alle mit kleinen Kind
 | Estepona | 3m 37s | **82 %** |
 | Marbella | 3m 17s | **82 %** |
 
-Conil, Vejer und Zahara sind ausgewachsene Familienbadeorte mit flachem Strand, und sie bekommen vier Minuten. Wer die Küste bevorzugt, findet hier <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=36.135&lng=-5.846&checkin=2027-07-30&checkout=2027-08-04&campaign=familienguide-zahara" rel="sponsored nofollow noopener" target="_blank">Unterkünfte in Zahara de los Atunes</a> für die Nächte um den 2. August. Tarifa hat mit 4m 39s zwar mehr, aber auch das höchste Wolkenrisiko der ganzen Region – und ist wegen des Windes ohnehin eher ein Surfer- als ein Familienort.
+Conil, Vejer und Zahara sind ausgewachsene Familienbadeorte mit flachem Strand, und sie bekommen vier Minuten. Wer die Küste bevorzugt, findet hier <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=36.135&lng=-5.846&checkin=2027-07-30&checkout=2027-08-04&campaign=familienguide-zahara" rel="sponsored nofollow noopener" target="_blank">Unterkünfte in Zahara de los Atunes*</a> für die Nächte um den 2. August. Tarifa hat mit 4m 39s zwar mehr, aber auch das höchste Wolkenrisiko der ganzen Region – und ist wegen des Windes ohnehin eher ein Surfer- als ein Familienort.
 
 Wer Verlässlichkeit über Dauer stellt, fährt weiter östlich: Estepona und Marbella haben mit 82 % die besten Wetterwerte Südspaniens, dafür rund eine Minute weniger Totalität.
 
@@ -71,7 +71,7 @@ Der Kompromiss, über den fast niemand schreibt – und rechnerisch der beste Fa
 
 Die Totalität beginnt um 10:09 Uhr Ortszeit. Man kann also in Ruhe frühstücken, sich an den Strand oder auf die Hotelterrasse setzen, und danach hat man den ganzen Tag noch vor sich.
 
-Was auf Djerba noch frei ist, lässt sich <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=33.876&lng=10.857&checkin=2027-07-30&checkout=2027-08-04&campaign=familienguide-djerba" rel="sponsored nofollow noopener" target="_blank">hier vergleichen</a> – die Kontingente der Charterveranstalter sind endlich, und die Insel steht in kaum einem deutschsprachigen Finsternis-Artikel.
+Was auf Djerba noch frei ist, lässt sich <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=33.876&lng=10.857&checkin=2027-07-30&checkout=2027-08-04&campaign=familienguide-djerba" rel="sponsored nofollow noopener" target="_blank">hier vergleichen*</a> – die Kontingente der Charterveranstalter sind endlich, und die Insel steht in kaum einem deutschsprachigen Finsternis-Artikel.
 
 Was dagegen spricht: Auf einer Insel gibt es keinen Plan B. Bei 96 % ist das ein kalkuliertes Risiko – aber es bleibt eines.
 
@@ -102,11 +102,7 @@ Drei Punkte, die bei Kindern anders liegen als bei Erwachsenen:
 - **Ältere Kinder, die das Maximum wollen:** Marsa Alam als einziger ägyptischer Kompromiss – aber mit ehrlicher Vorbereitung auf Hitze und Mittagssonne.
 - **Was ich nicht machen würde:** Tagesausflüge mit Kleinkindern am Finsternistag. Was auch immer man plant, es sollte am Morgen des 2. August höchstens eine halbe Stunde Fahrt bedeuten.
 
-<!-- Persönlicher Einschub - Vorschlag, bitte in deine Worte bringen oder streichen.
-     Achtung: Die Andalusien-Ortskenntnis steht schon im Vergleichsartikel, die
-     Szene vom 12.8.2026 ebenfalls. Hier wäre ein neuer Aspekt nötig - etwa
-     etwas zum Sonnenstand oder zur Brille, falls du dazu eigene Erfahrung hast.
-     Bitte nur schreiben, was du wirklich erlebt hast. -->
+<p style="font-size:13.5px;color:var(--grau);margin-top:28px">Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.</p>
 
 ## Die Zahlen dahinter
 
