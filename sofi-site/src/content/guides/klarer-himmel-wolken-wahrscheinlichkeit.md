@@ -102,6 +102,12 @@ buchen, wo es Verfügbarkeit und Preis erlauben, am Finsternismorgen den Satelli
 anschauen und notfalls 30 bis 60 Minuten fahren. Genau diese Flexibilität ist der grösste
 Vorteil, den Andalusien gegenüber jedem Flugreiseziel hat.
 
+Wer die Wahl zwischen mehreren Küstenorten hat, sollte dabei den Osten mitprüfen: An der
+Costa del Sol liegt die Klarhimmel-Wahrscheinlichkeit rund fünfzehn Prozentpunkte über der
+Meerenge, bei nur einer Minute weniger Totalität. Was in
+<a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=36.428&lng=-5.146&checkin=2027-07-30&checkout=2027-08-04&campaign=wetterguide-estepona" rel="sponsored nofollow noopener" target="_blank">Estepona noch frei ist*</a>,
+lässt sich für die Nächte um den 2. August direkt vergleichen.
+
 ## Weiter östlich wird es eindeutig
 
 Ab Tunesien kippt das Bild vollständig:
@@ -126,18 +132,20 @@ Zwei Details, die in der Planung oft untergehen:
 
 **Die südliche Rotmeerküste ist wolkiger als das Niltal.** Marsa Alam kommt auf 91 %,
 Luxor auf 96 %. Weiter nördlich ist es paradoxerweise klarer – Hurghada und El Gouna
-erreichen 98 %, liegen aber ausserhalb der Totalitätszone. Auch Safaga, 60 Kilometer 
-südlich von Hurghada, kommt auf 97 % klaren Himmel – und mit 99,6 % Bedeckung trotzdem 
-nicht in die Zone. Für alle, die Strandurlaub mit Totalität kombinieren wollen, bleibt 
-Marsa Alam die beste Wahl: Es ist der einzige grosse Badeort innerhalb der Zone. Warum 
+erreichen 98 %, liegen aber ausserhalb der Totalitätszone. Auch Safaga, 60 Kilometer
+südlich von Hurghada, kommt auf 97 % klaren Himmel – und mit 99,6 % Bedeckung trotzdem
+nicht in die Zone. Für alle, die Strandurlaub mit Totalität kombinieren wollen, bleibt
+Marsa Alam die beste Wahl: Es ist der einzige grosse Badeort innerhalb der Zone. Warum
 98,5 % keine Finsternis sind und welche zwei Auswege es von Hurghada aus gibt,
 steht in [Reicht Hurghada?](/guides/reicht-hurghada).
 
 **Djerba ist der stille Gewinner.** 96 % klarer Himmel, 4m 42s Totalität, Charterflüge
 und Hotelkapazität – und damit ein besserer Erwartungswert als jeder Ort in Spanien
 oder Marokko. Die tunesischen Bade-Hochburgen Sousse und Monastir liegen dagegen knapp
-ausserhalb der Zone (99,9 % – und trotzdem keine Totalität); von dort ist es eine 
-kurze Fahrt südwärts.
+ausserhalb der Zone (99,9 % – und trotzdem keine Totalität); von dort ist es eine
+kurze Fahrt südwärts. Wer den Erwartungswert über die reine Dauer stellt, findet
+<a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=33.876&lng=10.857&checkin=2027-07-30&checkout=2027-08-04&campaign=wetterguide-djerba" rel="sponsored nofollow noopener" target="_blank">Unterkünfte auf Djerba*</a>
+hier im Überblick – die Kontingente der Charterveranstalter sind endlich.
 
 ## Und zu Hause?
 
@@ -170,3 +178,5 @@ Südspanien und Nordmarokko sind gut, aber nicht sicher – und wer dort hinfäh
 Beweglichkeit einplanen statt sich auf den Ort mit der längsten Totalität zu fixieren.
 Die vollständigen Werte für alle 56 Orte stehen in der [Ortsübersicht](/orte), die
 räumliche Verteilung auf der [Karte](/karte).
+
+<p style="font-size:13.5px;color:var(--grau);margin-top:28px">Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.</p>

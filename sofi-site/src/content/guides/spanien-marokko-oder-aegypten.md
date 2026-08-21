@@ -70,7 +70,8 @@ oder Algeciras nach Tanger, danach kurze Distanzen.
 angenehm zu beobachten, Temperaturen um 30–35 °C. In Luxor steht sie fast im Zenit (82°)
 bei über 40 °C: Beobachtung heisst dort Schattenplanung, Wasser, und im Zweifel die
 Ruinen erst nach der Finsternis. Wer mit Kindern oder älteren Mitreisenden plant, sollte
-diesen Punkt nicht unterschätzen.
+diesen Punkt nicht unterschätzen – dazu gibt es einen eigenen
+[Familien-Guide](/guides/sonnenfinsternis-mit-kindern).
 
 **5. Budget und Verfügbarkeit.** Andalusien im August ist ohnehin teuer und wird durch
 den Finsternis-Effekt teurer; dafür gibt es enorm viel Kapazität (ganz Costa de la Luz
@@ -118,7 +119,11 @@ eine andere Region. Genau deshalb halte ich Andalusien für die beste Wahl für 
 flexibel sein wollen – ein Mietwagen und eine halbe Stunde Fahrt lösen dort Wetterprobleme,
 die man in Luxor wohl nur aussitzen kann.
 
-<!-- TODO Monetarisierung: Stay22-Karte "Unterkünfte Costa de la Luz" -->
+Wer an der Costa de la Luz sucht, findet in
+<a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=36.277&lng=-6.089&checkin=2027-07-30&checkout=2027-08-04&campaign=vergleich-conil" rel="sponsored nofollow noopener" target="_blank">Conil de la Frontera*</a>
+einen guten Ausgangspunkt: vier Minuten Totalität, flacher Strand, und Vejer, Zahara und
+Tarifa liegen alle innerhalb einer halben Stunde – also genau die Beweglichkeit, um die es
+in diesem Abschnitt geht.
 
 ## Marokko: Der unterschätzte Mittelweg
 
@@ -186,7 +191,8 @@ Hotelburgen, Strand – und mehr Totalität als irgendwo in Spanien oder Marokko
 96 % Wahrscheinlichkeit für klaren Himmel. Die Bade-Hochburgen Sousse und Monastir
 liegen allerdings knapp *ausserhalb* (99,9 % Bedeckung – so nah und doch vorbei);
 von dort ist es eine kurze Fahrt südwärts in die Zone, z. B. Richtung Mahdia/El Jem.
-Wer Pauschalreise-Komfort mit langer Totalität verbinden will, sollte Djerba
+Wer Pauschalreise-Komfort mit langer Totalität verbinden will, sollte
+<a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=33.876&lng=10.857&checkin=2027-07-30&checkout=2027-08-04&campaign=vergleich-djerba" rel="sponsored nofollow noopener" target="_blank">Djerba*</a>
 ernsthaft prüfen, bevor es die Masse tut.
 
 ## Die Kreuzfahrt-Option, kurz eingeordnet
@@ -231,3 +237,5 @@ Moment, in dem es dunkel wird.
 Wie sich Dauer und Wetterrisiko zusammen auswirken – und warum ausgerechnet Tarifa
 im Ranking abrutscht – steht im Detail im Artikel
 [Wo stehen die Chancen auf klaren Himmel am besten?](/guides/klarer-himmel-wolken-wahrscheinlichkeit).
+
+<p style="font-size:13.5px;color:var(--grau);margin-top:28px">Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.</p>
