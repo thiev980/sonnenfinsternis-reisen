@@ -76,7 +76,7 @@ Dafür entfällt das grösste Risiko des Tagesausflugs: dass irgendetwas zwische
 
 ## Was ich empfehlen würde
 
-Wer die Wahl noch hat und ohnehin erst bucht: **Marsa Alam**. Fünfeinhalb Minuten Totalität aus dem eigenen Hotel, ohne einen einzigen Transfer, sind mehr wert als die eine zusätzliche Minute in Luxor. An diesem Tag ist Verlässlichkeit die knappe Ressource, nicht Dauer. Hier lässt sich vergleichen, was in <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=25.063&lng=34.89&checkin=2027-07-30&checkout=2027-08-04&campaign=hurghada-artikel-marsa-alam" rel="sponsored nofollow noopener" target="_blank">Marsa Alam noch frei ist</a>.
+Wer die Wahl noch hat und ohnehin erst bucht: **Marsa Alam**. Fünfeinhalb Minuten Totalität aus dem eigenen Hotel, ohne einen einzigen Transfer, sind mehr wert als die eine zusätzliche Minute in Luxor. An diesem Tag ist Verlässlichkeit die knappe Ressource, nicht Dauer. Hier lässt sich vergleichen, was in <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=25.063&lng=34.89&checkin=2027-07-30&checkout=2027-08-04&campaign=hurghada-artikel-marsa-alam" rel="sponsored nofollow noopener" target="_blank">Marsa Alam noch frei ist*</a>.
 
 Wer schon in Hurghada gebucht hat und nicht umbuchen will oder kann: **Luxor als Tagesausflug**, verbindlich vorgebucht, mit Rückfahrt erst am Abend. Der Ort ist astronomisch der bessere, und die Grabmäler auf der Westbank sind ohnehin der Grund, warum die meisten Ägypten-Urlauber irgendwann dorthin fahren.
 
@@ -107,4 +107,4 @@ die Wolkenwahrscheinlichkeit über das Ranking entscheidet, erkläre ich im
 
 Alle Zahlen im Detail: [Hurghada](/orte/hurghada), [Luxor](/orte/luxor), [Marsa Alam](/orte/marsa-alam) und [Safaga](/orte/safaga). Der vollständige Vergleich steht unter [alle 56 Orte](/orte), die Methodik unter [Methodik](/methodik).
 
-Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.
+<p style="font-size:13.5px;color:var(--grau);margin-top:28px">Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.</p>
