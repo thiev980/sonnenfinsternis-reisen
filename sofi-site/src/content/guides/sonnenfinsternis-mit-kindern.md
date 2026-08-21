@@ -57,7 +57,7 @@ Für alle, die nicht fliegen wollen oder können, und für alle mit kleinen Kind
 | Estepona | 3m 37s | **82 %** |
 | Marbella | 3m 17s | **82 %** |
 
-Conil, Vejer und Zahara sind ausgewachsene Familienbadeorte mit flachem Strand, und sie bekommen vier Minuten. Tarifa hat mit 4m 39s zwar mehr, aber auch das höchste Wolkenrisiko der ganzen Region – und ist wegen des Windes ohnehin eher ein Surfer- als ein Familienort.
+Conil, Vejer und Zahara sind ausgewachsene Familienbadeorte mit flachem Strand, und sie bekommen vier Minuten. Wer die Küste bevorzugt, findet hier <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=36.135&lng=-5.846&checkin=2027-07-30&checkout=2027-08-04&campaign=familienguide-zahara" rel="sponsored nofollow noopener" target="_blank">Unterkünfte in Zahara de los Atunes</a> für die Nächte um den 2. August. Tarifa hat mit 4m 39s zwar mehr, aber auch das höchste Wolkenrisiko der ganzen Region – und ist wegen des Windes ohnehin eher ein Surfer- als ein Familienort.
 
 Wer Verlässlichkeit über Dauer stellt, fährt weiter östlich: Estepona und Marbella haben mit 82 % die besten Wetterwerte Südspaniens, dafür rund eine Minute weniger Totalität.
 
@@ -70,6 +70,8 @@ Der Kompromiss, über den fast niemand schreibt – und rechnerisch der beste Fa
 **4 Minuten 42 Sekunden bei 96 % Wahrscheinlichkeit für klaren Himmel.** Das ist mehr Totalität als an jedem Ort in Spanien oder Marokko, bei deutlich besserem Wetter. Dazu Charterflüge ab mehreren deutschen und Schweizer Flughäfen, Hotelkapazität in einer Grössenordnung, die den Finsternis-Ansturm verkraftet, und ein Strand vor der Tür.
 
 Die Totalität beginnt um 10:09 Uhr Ortszeit. Man kann also in Ruhe frühstücken, sich an den Strand oder auf die Hotelterrasse setzen, und danach hat man den ganzen Tag noch vor sich.
+
+Was auf Djerba noch frei ist, lässt sich <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=33.876&lng=10.857&checkin=2027-07-30&checkout=2027-08-04&campaign=familienguide-djerba" rel="sponsored nofollow noopener" target="_blank">hier vergleichen</a> – die Kontingente der Charterveranstalter sind endlich, und die Insel steht in kaum einem deutschsprachigen Finsternis-Artikel.
 
 Was dagegen spricht: Auf einer Insel gibt es keinen Plan B. Bei 96 % ist das ein kalkuliertes Risiko – aber es bleibt eines.
 
@@ -105,9 +107,6 @@ Drei Punkte, die bei Kindern anders liegen als bei Erwachsenen:
      Szene vom 12.8.2026 ebenfalls. Hier wäre ein neuer Aspekt nötig - etwa
      etwas zum Sonnenstand oder zur Brille, falls du dazu eigene Erfahrung hast.
      Bitte nur schreiben, was du wirklich erlebt hast. -->
-
-<!-- TODO Monetarisierung: Stay22-Allez-Deeplinks auf Djerba und Conil/Zahara,
-     campaign=familien-artikel-djerba bzw. familien-artikel-andalusien -->
 
 ## Die Zahlen dahinter
 
