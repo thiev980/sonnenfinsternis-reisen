@@ -64,7 +64,7 @@ Die Totalität fällt auf 13:02 bis 13:08 Uhr Ortszeit, die Sonne steht dabei fa
 
 Der Haken ist die Logistik, nicht die Astronomie. Die Strecke Hurghada–Luxor ist eine gängige Ausflugsroute, aber an diesem einen Tag werden zehntausende Menschen dieselbe Idee haben. Wer das plant, sollte den Transfer verbindlich vorbuchen und nicht darauf setzen, ihn spontan an der Hotelrezeption zu bekommen.
 
-Wer das Risiko ganz vermeiden will, übernachtet vor Ort statt hin- und herzufahren: <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=25.687&lng=32.64&checkin=2027-07-30&checkout=2027-08-04&campaign=hurghada-artikel-luxor" rel="sponsored nofollow noopener" target="_blank">Unterkünfte in Luxor</a> für die Nacht vom 1. auf den 2. August. Dann beginnt der Finsternistag mit einem Frühstück statt mit einer vierstündigen Anfahrt.
+Wer das Risiko ganz vermeiden will, übernachtet vor Ort statt hin- und herzufahren: <a href="https://www.stay22.com/allez/roam?aid=sonnenfinsternisreis&lat=25.687&lng=32.64&checkin=2027-07-30&checkout=2027-08-04&campaign=hurghada-artikel-luxor" rel="sponsored nofollow noopener" target="_blank">Unterkünfte in Luxor*</a> für die Nacht vom 1. auf den 2. August. Dann beginnt der Finsternistag mit einem Frühstück statt mit einer vierstündigen Anfahrt.
 
 ### Variante 2: gleich in Marsa Alam wohnen
 
@@ -106,3 +106,5 @@ die Wolkenwahrscheinlichkeit über das Ranking entscheidet, erkläre ich im
 [Wetter-Artikel](/guides/klarer-himmel-wolken-wahrscheinlichkeit).
 
 Alle Zahlen im Detail: [Hurghada](/orte/hurghada), [Luxor](/orte/luxor), [Marsa Alam](/orte/marsa-alam) und [Safaga](/orte/safaga). Der vollständige Vergleich steht unter [alle 56 Orte](/orte), die Methodik unter [Methodik](/methodik).
+
+Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.
