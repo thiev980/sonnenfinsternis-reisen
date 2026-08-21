@@ -102,10 +102,10 @@ Drei Punkte, die bei Kindern anders liegen als bei Erwachsenen:
 - **Ältere Kinder, die das Maximum wollen:** Marsa Alam als einziger ägyptischer Kompromiss – aber mit ehrlicher Vorbereitung auf Hitze und Mittagssonne.
 - **Was ich nicht machen würde:** Tagesausflüge mit Kleinkindern am Finsternistag. Was auch immer man plant, es sollte am Morgen des 2. August höchstens eine halbe Stunde Fahrt bedeuten.
 
-<p style="font-size:13.5px;color:var(--grau);margin-top:28px">Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.</p>
-
 ## Die Zahlen dahinter
 
 Kontaktzeiten, Totalitätsdauer und Sonnenstand stammen aus eigener Berechnung mit skyfield und der JPL-Ephemeride DE421, validiert gegen NASA-Referenzwerte auf ein bis zwei Sekunden. Die Wolkenwerte beruhen auf 30 Jahren ERA5-Reanalyse (1995–2024, Ende Juli bis Anfang August, jeweils zur Finsternis-Uhrzeit). Das ist Klimatologie, keine Vorhersage – sie sagt, wie oft der Himmel an diesen Kalendertagen historisch klar war.
 
 Mehr dazu: der [Reiseziel-Vergleich](/guides/spanien-marokko-oder-aegypten) für die grosse Linie, die [Wolkenanalyse](/guides/klarer-himmel-wolken-wahrscheinlichkeit) für das Wetterrisiko im Detail und [Reicht Hurghada?](/guides/reicht-hurghada) für alle, die am Roten Meer buchen wollen. Alle Werte für die genannten Orte: [Conil](/orte/conil), [Zahara](/orte/zahara), [Estepona](/orte/estepona), [Djerba](/orte/djerba) und [Marsa Alam](/orte/marsa-alam).
+
+<p style="font-size:13.5px;color:var(--grau);margin-top:28px">Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.</p>
