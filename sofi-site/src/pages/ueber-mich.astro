@@ -20,14 +20,14 @@ import Base from '../layouts/Base.astro';
   <p>
     Die Pipeline hinter dieser Seite – skyfield für die Finsternis-Geometrie, ERA5 für 
     die Wolkenklimatologie – ist dieselbe Art von Arbeit, die ich unter der Woche mache:
-    Quelle prüfen, selbst rechnen, und dazusagen, wie belastbar das Ergebnis ist.
+    Quellen prüfen, selbst rechnen und die Unsicherheiten offenlegen.
   </p>
 
   <h2>Warum es diese Seite gibt</h2>
   <p>
-    Am 12. August 2026 habe ich die partielle Finsternis von der Schweiz aus gesehen und dabei
-    zum ersten Mal gehört, dass ein Jahr später eine deutlich attraktivere folgt. Die
-    naheliegende Frage war: wo erlebt man die am besten? Die Antworten im Netz waren
+    Am 12. August 2026 habe ich die partielle Finsternis (fast 90% Bedeckung) von der Schweiz aus 
+    gesehen und dabei zum ersten Mal gehört, dass ein Jahr später eine deutlich attraktivere 
+    folgt. Die naheliegende Frage war: wo erlebt man die am besten? Die Antworten im Netz waren
     voneinander abgeschrieben, drehten sich ausschliesslich um die Totalitätsdauer und
     ignorierten die zweite Hälfte des Problems – dass sechs Minuten hinter einer Wolke
     weniger wert sind als drei Minuten unter klarem Himmel.
@@ -45,7 +45,7 @@ import Base from '../layouts/Base.astro';
   </p>
   <p>
     Diese Erinnerung war die Motivation, überhaupt anzufangen. Sie hält der Prüfung nicht
-    stand. Rechnet man die Finsternisse dieser Jahre für Zürich durch, kommt am ehesten der
+    stand. Rechnet man die Finsternisse dieser Jahre für Zürich durch, kommt am ehesten der 
     <strong>3. Oktober 2005</strong> in Frage: 57,3 % Bedeckung, Maximum um 11:09 Uhr, die
     Sonne 32 Grad über dem Horizont. Die Alternative, der 29. März 2006, kommt sogar nur auf
     33,6 %.
@@ -53,16 +53,15 @@ import Base from '../layouts/Base.astro';
   <p>
     Bei 57 % bleibt vom Sonnenlicht noch gut die Hälfte übrig, und die menschliche Wahrnehmung 
     gleicht das fast vollständig aus – etwa so, wie wenn eine dünne Wolke vorbeizieht. 
-    Spürbar wird der Unterschied erst weit jenseits von 90 % Bedeckung, und Effekte wie 
-    Temperaturabfall oder verstummende Tiere gehören in die letzten Prozente davor.
-    
-    Meine Erinnerung hat also aus einem unauffälligen Nachmittag ein Ereignis gemacht.
+    Spürbar wird der Unterschied erst, wenn die Bedeckung nahe an die Totalität heranreicht, und 
+    Effekte wie Temperaturabfall oder verstummende Tiere gehören in die letzten Prozente davor. 
+    Meine Erinnerung hat also aus einem unauffälligen Vormittag ein Ereignis gemacht.
   </p>
 
   <h2>Wie die Zahlen entstehen</h2>
   <p>
     Zwei getrennte Berechnungen liegen allem zugrunde. Die <strong>Finsternis-Geometrie</strong>
-    kommt aus skyfield auf Basis der JPL-Ephemeride DE421: topozentrische Positionen von Sonne
+     kommt aus skyfield auf Basis der JPL-Ephemeride DE421: topozentrische Positionen von Sonne
     und Mond, Kontaktzeiten per Bisektion verfeinert, für 56 Orte entlang des Pfads. Gegen die
     NASA-Referenzwerte geprüft liegt die Abweichung bei ein bis zwei Sekunden.
   </p>
