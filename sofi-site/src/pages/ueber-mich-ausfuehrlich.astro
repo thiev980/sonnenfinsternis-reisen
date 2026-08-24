@@ -1,0 +1,113 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Über diese Seite: Wer rechnet die Finsternis-Daten?"
+  description="Wer hinter sonnenfinsternis-reisen.de steht: Datenanalyst aus der Schweiz, der die Zeiten und Wolkenwahrscheinlichkeiten für die Sonnenfinsternis 2027 selbst berechnet – und warum."
+>
+  <h1>Über diese Seite</h1>
+  <p class="lead">
+    Diese Website behauptet einiges: dass Tarifa das höchste Wolkenrisiko Südspaniens hat,
+    dass Hurghada keine Totalität sieht, dass Djerba der beste Erwartungswert für Familien ist.
+    Damit stellt sich die Frage, wer das rechnet – und warum man ihm glauben sollte.
+  </p>
+
+  <h2>Wer dahintersteht</h2>
+  <p>
+    Ich bin Datenanalyst und arbeite seit fünf Jahren in der Redaktion eines Schweizer 
+    Medienhauses, wo ich Daten für journalistische Recherchen aufbereite und auswerte.
+  </p>
+  <p>
+    Die Pipeline hinter dieser Seite – skyfield für die Finsternis-Geometrie, ERA5 für 
+    die Wolkenklimatologie – ist dieselbe Art von Arbeit, die ich unter der Woche mache:
+    Quelle prüfen, selbst rechnen, und dazusagen, wie belastbar das Ergebnis ist.
+  </p>
+
+  <h2>Warum es diese Seite gibt</h2>
+  <p>
+    Am 12. August 2026 habe ich die partielle Finsternis von der Schweiz aus gesehen und dabei
+    zum ersten Mal gehört, dass ein Jahr später eine deutlich attraktivere folgt. Die
+    naheliegende Frage war: wo erlebt man die am besten? Die Antworten im Netz waren
+    voneinander abgeschrieben, drehten sich ausschliesslich um die Totalitätsdauer und
+    ignorierten die zweite Hälfte des Problems – dass sechs Minuten hinter einer Wolke
+    weniger wert sind als drei Minuten unter klarem Himmel.
+  </p>
+  <p>
+    Also habe ich angefangen, selbst zu rechnen. Erst für die eigene Reiseplanung, dann für
+    diese Seite, weil die Frage offensichtlich mehr Leute betrifft als mich.
+  </p>
+
+  <h2>Eine Erinnerung, die der Prüfung nicht standhielt</h2>
+  <p>
+    Bevor ich mit dem Rechnen anfing, hatte ich eine klare Erinnerung: irgendwann in den
+    Nullerjahren, mitten am Tag, eine partielle Finsternis, bei der es dämmrig wurde,
+    spürbar kühler, und bei der sogar die Vögel vor dem Bürofenster verstummten.
+  </p>
+  <p>
+    Diese Erinnerung war die Motivation, überhaupt anzufangen. Sie hält der Prüfung nicht
+    stand. Rechnet man die Finsternisse dieser Jahre für Zürich durch, kommt am ehesten der
+    <strong>3. Oktober 2005</strong> in Frage: 57,3 % Bedeckung, Maximum um 11:09 Uhr, die
+    Sonne 32 Grad über dem Horizont. Die Alternative, der 29. März 2006, kommt sogar nur auf
+    33,6 %.
+  </p>
+  <p>
+    Bei 57 % bleibt vom Sonnenlicht noch gut die Hälfte übrig, und die menschliche Wahrnehmung 
+    gleicht das fast vollständig aus – etwa so, wie wenn eine dünne Wolke vorbeizieht. 
+    Spürbar wird der Unterschied erst weit jenseits von 90 % Bedeckung, und Effekte wie 
+    Temperaturabfall oder verstummende Tiere gehören in die letzten Prozente davor.
+    
+    Meine Erinnerung hat also aus einem unauffälligen Nachmittag ein Ereignis gemacht.
+  </p>
+
+  <h2>Wie die Zahlen entstehen</h2>
+  <p>
+    Zwei getrennte Berechnungen liegen allem zugrunde. Die <strong>Finsternis-Geometrie</strong>
+    kommt aus skyfield auf Basis der JPL-Ephemeride DE421: topozentrische Positionen von Sonne
+    und Mond, Kontaktzeiten per Bisektion verfeinert, für 56 Orte entlang des Pfads. Gegen die
+    NASA-Referenzwerte geprüft liegt die Abweichung bei ein bis zwei Sekunden.
+  </p>
+  <p>
+    Die <strong>Wolkenklimatologie</strong> stammt aus 30 Jahren ERA5-Reanalyse des Copernicus
+    Climate Change Service – 1995 bis 2024, jeweils Ende Juli bis Anfang August, jeweils zu den
+    Stunden, in denen der Kernschatten die betreffende Region überquert. Daraus ergibt sich,
+    wie oft der Himmel an diesen Kalendertagen historisch klar war.
+  </p>
+  <p>
+    Beide zusammen ergeben den SoFi-Score: Totalitätsdauer in Minuten mal Wahrscheinlichkeit
+    für klaren Himmel, also den Erwartungswert an tatsächlich erlebten Totalitäts-Minuten.
+    Die Einzelheiten und die Grenzen der Methode stehen offen in der
+    <a href="/methodik">Methodik</a>.
+  </p>
+
+  <h2>Was ich nicht mache</h2>
+  <p>
+    Keine erfundenen Reiseerlebnisse. Keine Fahrzeiten und Strassenkilometer, die ich nicht
+    belegen kann – Distanzen auf dieser Seite sind Luftlinien aus den Koordinaten, und sie
+    sind auch so bezeichnet. Keine Zahl ohne die Einschränkung, die dazugehört: Klimatologie
+    ist keine Vorhersage, und das Datenraster von ERA5 ist rund 28 Kilometer grob, weshalb
+    Unterschiede von ein, zwei Prozentpunkten nichts bedeuten.
+  </p>
+  <p>
+    Und keine Empfehlung, die von einer Provision abhängt. Einzelne Links auf dieser Seite
+    sind Empfehlungs-Links und als solche gekennzeichnet; buchst du darüber, erhalte ich eine
+    Provision, ohne dass sich für dich am Preis etwas ändert. Die Bewertung der Orte entsteht
+    aber aus den Berechnungen, nicht aus den Partnerprogrammen. Ein Ort wird hier nicht besser 
+    beurteilt, weil sich an ihm mehr verdienen liesse – und wenn die Daten gegen ihn sprechen, 
+    steht das im Text. Der ganze Hurghada-Artikel besteht im Kern aus dem Rat, dort nicht zu 
+    bleiben, obwohl gerade dort besonders viele Leute ein Hotel buchen.
+  </p>
+
+  <h2>Kontakt</h2>
+  <p>
+    Fehler gefunden, eigene Beobachtungsdaten aus der Region, oder eine Frage zur Berechnung?
+    Ich freue mich über Rückmeldungen – die Adresse steht im <a href="/impressum">Impressum</a>.
+    Korrekturen baue ich ein und mache sie kenntlich.
+  </p>
+</Base>
+
+<style>
+  h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
+  .lead { max-width: 640px; margin-bottom: 24px; }
+  h2 { font-size: 21px; margin: 24px 0 10px; }
+  p { max-width: 720px; }
+</style>

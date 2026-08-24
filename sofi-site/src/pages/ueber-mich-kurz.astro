@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Über diese Seite: Wer rechnet die Finsternis-Daten?"
+  description="Wer hinter sonnenfinsternis-reisen.de steht: Datenanalyst aus der Schweiz, der die Zeiten und Wolkenwahrscheinlichkeiten für die Sonnenfinsternis 2027 selbst berechnet – und warum."
+>
+  <h1>Über diese Seite</h1>
+  <p class="lead">
+    Diese Website behauptet einiges: dass Tarifa das höchste Wolkenrisiko Südspaniens hat,
+    dass Hurghada keine Totalität sieht, dass Djerba der beste Erwartungswert für Familien ist.
+    Damit stellt sich die Frage, wer das rechnet – und warum man ihm glauben sollte.
+  </p>
+
+  <h2>Wer dahintersteht</h2>
+  <p>
+    Ich bin Datenanalyst und arbeite seit fünf Jahren in der Redaktion eines Schweizer
+    Medienhauses, wo ich Daten für journalistische Recherchen aufbereite und auswerte.
+    Davor war ich zehn Jahre lang Projektleiter für Online-Video in einer Marketingagentur.
+    Studiert habe ich Soziologie an der Universität Freiburg, die Data-Science-Kenntnisse
+    kamen später über eine Weiterbildung dazu.
+  </p>
+  <p>
+    Was das hier bedeutet: Der Umgang mit Rohdaten, Reanalysen und Unsicherheiten ist mein
+    Beruf, nicht mein Hobby. Die Pipeline hinter dieser Seite – skyfield für die
+    Finsternis-Geometrie, ERA5 für die Wolkenklimatologie – ist dieselbe Art von Arbeit,
+    die ich unter der Woche mache.
+  </p>
+
+  <h2>Warum es diese Seite gibt</h2>
+  <p>
+    Am 12. August 2026 habe ich die partielle Finsternis von der Schweiz aus gesehen und dabei
+    zum ersten Mal gehört, dass ein Jahr später eine deutlich attraktivere folgt. Die
+    naheliegende Frage war: wo erlebt man die am besten? Die Antworten im Netz waren
+    voneinander abgeschrieben und drehten sich alle nur um die Totalitätsdauer. Also habe ich
+    angefangen, selbst zu rechnen – erst für mich, dann für diese Seite.
+  </p>
+  <p>
+    Ich bin kein Astronom. Was ich beitrage, ist nicht Fachwissen über Finsternisse, sondern
+    die Fähigkeit, öffentlich verfügbare Daten sauber auszuwerten und die Unsicherheiten
+    dazuzusagen. Wie das im Einzelnen funktioniert, steht offen in der
+    <a href="/methodik">Methodik</a>.
+  </p>
+
+  <h2>Was ich nicht mache</h2>
+  <p>
+    Keine erfundenen Reiseerlebnisse. Keine Fahrzeiten und Strassenkilometer, die ich nicht
+    belegen kann – Distanzen auf dieser Seite sind Luftlinien aus den Koordinaten. Und keine
+    Empfehlung, die von einer Provision abhängt: Einzelne Links sind Empfehlungs-Links und als
+    solche gekennzeichnet, aber die Bewertung der Orte entsteht aus den Berechnungen, nicht aus
+    den Partnerprogrammen. Wo die Daten gegen einen Ort sprechen, steht das im Text – auch wenn
+    es dort nichts zu verdienen gibt.
+  </p>
+
+  <h2>Kontakt</h2>
+  <p>
+    Fehler gefunden, eigene Beobachtungsdaten, oder eine Frage zur Berechnung?
+    Ich freue mich über Rückmeldungen – die Adresse steht im <a href="/impressum">Impressum</a>.
+  </p>
+</Base>
+
+<style>
+  h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
+  .lead { max-width: 640px; margin-bottom: 24px; }
+  h2 { font-size: 21px; margin: 24px 0 10px; }
+  p { max-width: 720px; }
+</style>
