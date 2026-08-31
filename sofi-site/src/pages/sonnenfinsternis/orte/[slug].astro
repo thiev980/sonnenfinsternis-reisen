@@ -93,7 +93,7 @@ const schema = [
 ---
 <Base title={titel} description={beschreibung} schema={schema}>
   <article>
-    <p class="brotkrumen"><a href="/orte">Alle Orte</a> → {ort.name}</p>
+    <p class="brotkrumen"><a href="/sonnenfinsternis/orte">Alle Orte</a> → {ort.name}</p>
     <h1>Sonnenfinsternis 2027 in {ort.name}</h1>
     <p class="untertitel">
       {ort.country} · 2. August 2027 ·
@@ -178,7 +178,7 @@ const schema = [
           <p class="score">
             <strong>SoFi-Score: {score(ort.sofi_score)}</strong> – der Erwartungswert an tatsächlich
             erlebten Totalitäts-Minuten (Dauer × Wahrscheinlichkeit für klaren Himmel).
-            {' '}<a href="/orte">Alle Orte nach Score vergleichen →</a>
+            {' '}<a href="/sonnenfinsternis/orte">Alle Orte nach Score vergleichen →</a>
           </p>
         )}
         <p class="klein">
@@ -221,7 +221,7 @@ const schema = [
     <p class="quelle">
       Zeiten aus eigener Berechnung (skyfield / JPL-Ephemeride DE421), auf ±wenige Sekunden
       validiert gegen NASA-Referenzwerte. Randlagen beachten: Die Zonengrenze hat durch das
-      Mondprofil ±1–2 km Unschärfe. <a href="/methodik">Methodik im Detail</a>.
+      Mondprofil ±1–2 km Unschärfe. <a href="/sonnenfinsternis/methodik">Methodik im Detail</a>.
     </p>
   </article>
 </Base>

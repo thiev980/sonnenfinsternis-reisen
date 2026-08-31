@@ -26,7 +26,7 @@ Grundlage sind ERA5-Reanalysedaten des Europäischen Zentrums für mittelfristig
 Wettervorhersage – 30 Jahre (1995–2024), jeweils vom 26. Juli bis 9. August, jeweils zu den
 Stunden, in denen der Kernschatten die jeweilige Region überquert. Ausgewertet habe ich
 den Anteil der Fälle mit praktisch klarem Himmel (unter 25 % Bewölkung). Die vollständige
-Methodik steht [hier](/methodik).
+Methodik steht [hier](/sonnenfinsternis/methodik).
 
 Das Ergebnis widerspricht an einer entscheidenden Stelle der gängigen Empfehlung.
 
@@ -137,7 +137,7 @@ südlich von Hurghada, kommt auf 97 % klaren Himmel – und mit 99,6 % Bedeckung
 nicht in die Zone. Für alle, die Strandurlaub mit Totalität kombinieren wollen, bleibt
 Marsa Alam die beste Wahl: Es ist der einzige grosse Badeort innerhalb der Zone. Warum
 98,5 % keine Finsternis sind und welche zwei Auswege es von Hurghada aus gibt,
-steht in [Reicht Hurghada?](/guides/reicht-hurghada).
+steht in [Reicht Hurghada?](/sonnenfinsternis/guides/reicht-hurghada).
 
 **Djerba ist der stille Gewinner.** 96 % klarer Himmel, 4m 42s Totalität, Charterflüge
 und Hotelkapazität – und damit ein besserer Erwartungswert als jeder Ort in Spanien
@@ -176,7 +176,7 @@ plant, sollte lokale Erfahrungswerte ergänzen.
 Unterm Strich bleibt die Empfehlung aber robust: Ägypten und Tunesien sind Wetter-sicher,
 Südspanien und Nordmarokko sind gut, aber nicht sicher – und wer dort hinfährt, sollte
 Beweglichkeit einplanen statt sich auf den Ort mit der längsten Totalität zu fixieren.
-Die vollständigen Werte für alle 56 Orte stehen in der [Ortsübersicht](/orte), die
-räumliche Verteilung auf der [Karte](/karte).
+Die vollständigen Werte für alle 56 Orte stehen in der [Ortsübersicht](/sonnenfinsternis/orte), die
+räumliche Verteilung auf der [Karte](/sonnenfinsternis/karte).
 
 <p style="font-size:13.5px;color:var(--grau);margin-top:28px">Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.</p>

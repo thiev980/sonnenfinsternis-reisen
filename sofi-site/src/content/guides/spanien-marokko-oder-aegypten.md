@@ -38,7 +38,7 @@ Totalität 6 Minuten und 23 Sekunden. Zum Vergleich: Die Finsternis vom August 2
 es an ihrem besten Landpunkt auf gut zwei Minuten.
 
 Alle Zeiten und Dauern in diesem Artikel stammen aus meiner eigenen Berechnung
-(±wenige Sekunden gegen NASA-Referenzwerte validiert, [Methodik](/methodik)) – ich
+(±wenige Sekunden gegen NASA-Referenzwerte validiert, [Methodik](/sonnenfinsternis/methodik)) – ich
 schreibe hier keine Agenturmeldungen ab.
 
 ## Die fünf Faktoren, die deine Entscheidung bestimmen
@@ -55,7 +55,7 @@ Atlantikküste ist gut, aber nicht perfekt: Der Levante-Wind produziert an der S
 Gibraltar lokal Wolkenbänke, während es wenige Kilometer weiter östlich klar ist. Die
 Daten bestätigen das deutlich – Tarifa kommt nur auf 67 % klaren Himmel, Estepona und
 Marbella auf 82 %. Mehr dazu im
-[Wetter-Artikel](/guides/klarer-himmel-wolken-wahrscheinlichkeit). Marokko und Tunesien
+[Wetter-Artikel](/sonnenfinsternis/guides/klarer-himmel-wolken-wahrscheinlichkeit). Marokko und Tunesien
 liegen dazwischen, wobei Tunesien mit bis zu 96 % näher an Ägypten liegt.
 
 **3. Anreise und Logistik.** Andalusien erreichst du mit Auto oder Zug – für Familien,
@@ -71,7 +71,7 @@ angenehm zu beobachten, Temperaturen um 30–35 °C. In Luxor steht sie fast im 
 bei über 40 °C: Beobachtung heisst dort Schattenplanung, Wasser, und im Zweifel die
 Ruinen erst nach der Finsternis. Wer mit Kindern oder älteren Mitreisenden plant, sollte
 diesen Punkt nicht unterschätzen – dazu gibt es einen eigenen
-[Familien-Guide](/guides/sonnenfinsternis-mit-kindern).
+[Familien-Guide](/sonnenfinsternis/guides/sonnenfinsternis-mit-kindern).
 
 **5. Budget und Verfügbarkeit.** Andalusien im August ist ohnehin teuer und wird durch
 den Finsternis-Effekt teurer; dafür gibt es enorm viel Kapazität (ganz Costa de la Luz
@@ -176,7 +176,7 @@ nicht: Es wird nicht dunkel, keine Korona, keine Sterne.
 
 Weil das der häufigste und teuerste Irrtum bei dieser Finsternis ist, habe ich ihm
 einen eigenen Artikel gewidmet – mit beiden Auswegen im Vergleich:
-**[Reicht Hurghada?](/guides/reicht-hurghada)** Die Kurzfassung: Tagesausflug nach
+**[Reicht Hurghada?](/sonnenfinsternis/guides/reicht-hurghada)** Die Kurzfassung: Tagesausflug nach
 Luxor oder gleich in Marsa Alam buchen, das mit 5m 28s *innerhalb* der Zone liegt
 und Strand plus Totalität kombiniert.
 
@@ -236,6 +236,6 @@ Moment, in dem es dunkel wird.
 
 Wie sich Dauer und Wetterrisiko zusammen auswirken – und warum ausgerechnet Tarifa
 im Ranking abrutscht – steht im Detail im Artikel
-[Wo stehen die Chancen auf klaren Himmel am besten?](/guides/klarer-himmel-wolken-wahrscheinlichkeit).
+[Wo stehen die Chancen auf klaren Himmel am besten?](/sonnenfinsternis/guides/klarer-himmel-wolken-wahrscheinlichkeit).
 
 <p style="font-size:13.5px;color:var(--grau);margin-top:28px">Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.</p>

@@ -74,6 +74,6 @@ Für Andalusien und Nordmarokko: selbst planen. Mietwagen, Unterkunft dort buche
 
 Für Tunesien: eine gewöhnliche Pauschalreise im richtigen Zeitraum. Das Hotel ist der Beobachtungsort, mehr braucht es nicht.
 
-Welches Land überhaupt das richtige ist, steht im [Reiseziel-Vergleich](/guides/spanien-marokko-oder-aegypten). Wie stark das Wetterrisiko die Rangfolge verschiebt, im [Wetter-Artikel](/guides/klarer-himmel-wolken-wahrscheinlichkeit). Und wer mit Kindern plant, findet die Uhrzeit-Frage im [Familien-Guide](/guides/sonnenfinsternis-mit-kindern) behandelt.
+Welches Land überhaupt das richtige ist, steht im [Reiseziel-Vergleich](/sonnenfinsternis/guides/spanien-marokko-oder-aegypten). Wie stark das Wetterrisiko die Rangfolge verschiebt, im [Wetter-Artikel](/sonnenfinsternis/guides/klarer-himmel-wolken-wahrscheinlichkeit). Und wer mit Kindern plant, findet die Uhrzeit-Frage im [Familien-Guide](/sonnenfinsternis/guides/sonnenfinsternis-mit-kindern) behandelt.
 
 <p style="font-size:13.5px;color:var(--grau);margin-top:28px">Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.</p>

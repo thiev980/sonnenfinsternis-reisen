@@ -16,7 +16,7 @@ import pfad from '../data/pfad.json';
   <div id="map"></div>
   <p class="quelle">
     Zonengrenzen ±1–2 km (Mond-Limb-Profil) – an der Kante zählt jeder Kilometer.
-    Eigene Berechnung, <a href="/methodik">Methodik</a>.
+    Eigene Berechnung, <a href="/sonnenfinsternis/methodik">Methodik</a>.
   </p>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
@@ -49,7 +49,7 @@ import pfad from '../data/pfad.json';
         ? `<strong>${p.totality_str}</strong> Totalität · ${p.c2_local.slice(0,5)}–${p.c3_local.slice(0,5)} Uhr`
         : `partiell ${String(p.obscuration_pct).replace('.', ',')} %`;
       L.circleMarker([p.lat, p.lon], opt).addTo(map)
-        .bindPopup(`<strong>${p.name}</strong> (${p.country})<br>${info}<br><a href="/orte/${p.slug}">Zur Detailseite →</a>`);
+        .bindPopup(`<strong>${p.name}</strong> (${p.country})<br>${info}<br><a href="/sonnenfinsternis/orte/${p.slug}">Zur Detailseite →</a>`);
     });
   </script>
 </Base>

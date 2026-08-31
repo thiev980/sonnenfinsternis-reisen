@@ -101,10 +101,10 @@ Die Kontaktzeiten und Bedeckungsgrade habe ich mit skyfield und der JPL-Ephemeri
 Eine Einschränkung, die dazugehört: Das ist Klimatologie, keine Vorhersage. Die Werte sagen, wie oft der Himmel an diesen Kalendertagen historisch klar war – nicht, wie das Wetter am 2. August 2027 sein wird.
 
 Wie Ägypten im Vergleich zu Spanien, Marokko und Tunesien abschneidet, steht im
-[grossen Reiseziel-Vergleich](/guides/spanien-marokko-oder-aegypten). Warum ausgerechnet
+[grossen Reiseziel-Vergleich](/sonnenfinsternis/guides/spanien-marokko-oder-aegypten). Warum ausgerechnet
 die Wolkenwahrscheinlichkeit über das Ranking entscheidet, erkläre ich im
-[Wetter-Artikel](/guides/klarer-himmel-wolken-wahrscheinlichkeit).
+[Wetter-Artikel](/sonnenfinsternis/guides/klarer-himmel-wolken-wahrscheinlichkeit).
 
-Alle Zahlen im Detail: [Hurghada](/orte/hurghada), [Luxor](/orte/luxor), [Marsa Alam](/orte/marsa-alam) und [Safaga](/orte/safaga). Der vollständige Vergleich steht unter [alle 56 Orte](/orte), die Methodik unter [Methodik](/methodik).
+Alle Zahlen im Detail: [Hurghada](/sonnenfinsternis/orte/hurghada), [Luxor](/sonnenfinsternis/orte/luxor), [Marsa Alam](/sonnenfinsternis/orte/marsa-alam) und [Safaga](/sonnenfinsternis/orte/safaga). Der vollständige Vergleich steht unter [alle 56 Orte](/sonnenfinsternis/orte), die Methodik unter [Methodik](/sonnenfinsternis/methodik).
 
 <p style="font-size:13.5px;color:var(--grau);margin-top:28px">Mit * markierte Links sind Empfehlungs-Links. Buchst du darüber, erhalte ich eine Provision – für dich ändert sich am Preis nichts.</p>
