@@ -13,7 +13,7 @@ const guides = (await getCollection('guides', ({ data }) => !data.draft))
   <ul class="liste">
     {guides.map(g => (
       <li>
-        <a href={`/guides/${g.id}`}>{g.data.heading ?? g.data.title}</a>
+        <a href={`/sonnenfinsternis/guides/${g.id}`}>{g.data.heading ?? g.data.title}</a>
         <p>{g.data.description}</p>
       </li>
     ))}

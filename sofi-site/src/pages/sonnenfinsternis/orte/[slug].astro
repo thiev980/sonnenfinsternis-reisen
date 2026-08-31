@@ -135,7 +135,7 @@ const schema = [
           Unterschied fehlt: Es wird nicht dunkel, die Korona bleibt unsichtbar.
           {alternative && (
             <>
-              {' '}Die gute Nachricht: <a href={`/orte/${alternative.slug}`}>{alternative.name}</a>
+              {' '}Die gute Nachricht: <a href={`/sonnenfinsternis/orte/${alternative.slug}`}>{alternative.name}</a>
               {' '}liegt in der Zone ({alternative.totality_str} Totalität) und ist
               von {ort.name} aus erreichbar.
             </>
@@ -200,7 +200,7 @@ const schema = [
         <ul>
           {nachbarn.map((n) => (
             <li>
-              <a href={`/orte/${n.slug}`}>{n.name}</a> –{' '}
+              <a href={`/sonnenfinsternis/orte/${n.slug}`}>{n.name}</a> –{' '}
               {n.is_total ? `${n.totality_str} Totalität` : `partiell (${zahl(n.obscuration_pct)} %)`}
             </li>
           ))}

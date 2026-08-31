@@ -26,7 +26,7 @@ const top = orte.filter(o => o.is_total).sort((a, b) => b.totality_s - a.totalit
       <tbody>
         {top.map(o => (
           <tr>
-            <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+            <td><a href={`/sonnenfinsternis/orte/${o.slug}`}>{o.name}</a></td>
             <td>{o.country}</td>
             <td><strong>{o.totality_str}</strong></td>
           </tr>

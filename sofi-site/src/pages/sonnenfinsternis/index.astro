@@ -89,7 +89,7 @@ const schema = [{
       <tbody>
         {top.map((o) => (
           <tr>
-            <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+            <td><a href={`/sonnenfinsternis/orte/${o.slug}`}>{o.name}</a></td>
             <td>{o.country}</td>
             <td><strong>{o.totality_str}</strong></td>
             <td>{o.max_local.slice(0, 5)} Uhr</td>
@@ -104,8 +104,8 @@ const schema = [{
     <p>
       Für alle, die nicht fliegen wollen: Die Totalitätszone erreicht Europa in der Provinz
       Cádiz – mit dem Auto oder Zug erreichbar. Die Dauer variiert stark:
-      {' '}<a href={`/orte/tarifa`}>Tarifa</a> bekommt 4m&nbsp;39s,
-      {' '}<a href={`/orte/malaga`}>Málaga</a> nur 1m&nbsp;51s – die Nordgrenze der Zone
+      {' '}<a href={`/sonnenfinsternis/orte/tarifa`}>Tarifa</a> bekommt 4m&nbsp;39s,
+      {' '}<a href={`/sonnenfinsternis/orte/malaga`}>Málaga</a> nur 1m&nbsp;51s – die Nordgrenze der Zone
       verläuft dort nur 9&nbsp;km nördlich der Stadt.
     </p>
     <table class="daten">
@@ -113,7 +113,7 @@ const schema = [{
       <tbody>
         {spanien.map((o) => (
           <tr>
-            <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+            <td><a href={`/sonnenfinsternis/orte/${o.slug}`}>{o.name}</a></td>
             <td><strong>{o.totality_str}</strong></td>
             <td>{o.c2_local.slice(0, 5)}–{o.c3_local.slice(0, 5)} Uhr</td>
           </tr>

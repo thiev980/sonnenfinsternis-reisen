@@ -31,7 +31,7 @@ const partiell = orte.filter(o => !o.is_total).sort((a, b) => b.obscuration_pct 
           {nachScore.map((o, i) => (
             <tr>
               <td>{i + 1}</td>
-              <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+              <td><a href={`/sonnenfinsternis/orte/${o.slug}`}>{o.name}</a></td>
               <td>{o.country}</td>
               <td><strong>{score(o.sofi_score)}</strong></td>
               <td>{o.totality_str}</td>
@@ -50,7 +50,7 @@ const partiell = orte.filter(o => !o.is_total).sort((a, b) => b.obscuration_pct 
       {total.map(o => (
         <tr>
           <td>{o.duration_rank}</td>
-          <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+          <td><a href={`/sonnenfinsternis/orte/${o.slug}`}>{o.name}</a></td>
           <td>{o.country}</td>
           <td><strong>{o.totality_str}</strong></td>
           <td>{o.c2_local.slice(0,5)}–{o.c3_local.slice(0,5)}</td>
@@ -66,7 +66,7 @@ const partiell = orte.filter(o => !o.is_total).sort((a, b) => b.obscuration_pct 
     <tbody>
       {partiell.map(o => (
         <tr>
-          <td><a href={`/orte/${o.slug}`}>{o.name}</a></td>
+          <td><a href={`/sonnenfinsternis/orte/${o.slug}`}>{o.name}</a></td>
           <td>{o.country}</td>
           <td>{zahl(o.obscuration_pct)} %</td>
           <td>{o.max_local.slice(0,5)} Uhr</td>
