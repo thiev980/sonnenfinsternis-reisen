@@ -2,7 +2,7 @@
 title: "Sonnenfinsternis 2027: Pauschalreise oder selbst organisieren?"
 heading: "Pauschalreise oder selbst organisieren?"
 description: "Der Markt für Sonnenfinsternis-Reisen 2027 bedient fast nur Ägypten. Wann sich eine organisierte Reise lohnt, wann man besser selbst plant – und die neun Fragen, die man jedem Veranstalter stellen sollte."
-pubDate: 2026-08-25
+pubDate: 2026-08-31
 tldr: "Organisierte Reisen gibt es fast ausschliesslich nach Ägypten, weil dort die Logistik den Unterschied macht. Für Andalusien, Marokko und Tunesien lohnt sich Eigenregie – dort ist Beweglichkeit wichtiger als Organisation. Wer bucht, sollte vorher neun Fragen stellen."
 faq:
   - f: "Gibt es Pauschalreisen zur Sonnenfinsternis 2027?"
