@@ -11,6 +11,16 @@ interface Props {
 }
 const { title, description, schema = [], noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const pfad = Astro.url.pathname;
+const inSofi = pfad.startsWith('/sonnenfinsternis');
+
+const nlTitel = inSofi
+  ? 'Der SoFi-2027-Countdown'
+  : 'Neue Ziele, neue Daten';
+const nlText = inSofi
+  ? 'Neue Orts-Analysen, Wolkendaten und Buchungs-Deadlines – etwa einmal im Monat, kein Spam.'
+  : 'Wenn ein neuer Bereich fertig ist oder sich bei den Daten etwas tut – etwa einmal im Monat, kein Spam.';
+
 ---
 <!DOCTYPE html>
 <html lang="de">
@@ -54,8 +64,24 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       display: flex; align-items: center; justify-content: space-between;
       padding-top: 14px; padding-bottom: 14px; gap: 16px; flex-wrap: wrap;
     }
-    .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; text-decoration: none; }
-    .logo .sonne { color: var(--gold); }
+    .logo {
+      font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;
+      text-decoration: none; display: inline-flex; flex-direction: column; gap: 1px;
+    }
+    .logo .punkt { color: var(--gold); }
+    .claim {
+      font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+      font-size: 12px; font-weight: 500; color: var(--grau);
+      letter-spacing: 0;
+    }
+    nav.sektion { border-bottom: 1px solid var(--linie); background: var(--karte-bg); }
+    nav.sektion .wrap {
+      display: flex; gap: 20px; flex-wrap: wrap;
+      padding-top: 9px; padding-bottom: 9px;
+    }
+    nav.sektion a { font-size: 14.5px; text-decoration: none; color: var(--tinte); }
+    nav.sektion a[aria-current="page"] { font-weight: 700; }
+    nav.sektion a:hover { text-decoration: underline; text-underline-offset: 4px; }
     nav.main a { text-decoration: none; margin-left: 18px; font-size: 15px; color: var(--tinte); }
     nav.main a:hover { color: var(--nacht); text-decoration: underline; text-underline-offset: 4px; }
     main { padding: 36px 0 64px; }
@@ -99,21 +125,33 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 <body>
   <header class="site">
     <div class="wrap">
-      <a href="/" class="logo">sonnenfinsternis&#8209;reisen<span class="sonne">.de</span></a>
+      <a href="/" class="logo">
+        <span>astro<span class="punkt">reisen</span></span>
+        <span class="claim">Reisen zu Sonnenfinsternis, Nordlicht und Sternenhimmel</span>
+      </a>
       <nav class="main">
-        <a href="/sonnenfinsternis/karte">Karte</a>
-        <a href="/sonnenfinsternis/guides">Guides</a>
-        <a href="/sonnenfinsternis/orte">Alle Orte</a>
-        <a href="/sonnenfinsternis/methodik">Methodik</a>
+        <a href="/sonnenfinsternis">Sonnenfinsternis</a>
+        <a href="/ueber-mich">Über mich</a>
       </nav>
     </div>
   </header>
+  {inSofi && (
+    <nav class="sektion">
+      <div class="wrap">
+        <a href="/sonnenfinsternis" aria-current={pfad === '/sonnenfinsternis' ? 'page' : undefined}>Übersicht</a>
+        <a href="/sonnenfinsternis/karte" aria-current={pfad.startsWith('/sonnenfinsternis/karte') ? 'page' : undefined}>Karte</a>
+        <a href="/sonnenfinsternis/orte" aria-current={pfad.startsWith('/sonnenfinsternis/orte') ? 'page' : undefined}>Alle Orte</a>
+        <a href="/sonnenfinsternis/guides" aria-current={pfad.startsWith('/sonnenfinsternis/guides') ? 'page' : undefined}>Guides</a>
+        <a href="/sonnenfinsternis/methodik" aria-current={pfad.startsWith('/sonnenfinsternis/methodik') ? 'page' : undefined}>Methodik</a>
+      </div>
+    </nav>
+  )}
   <main>
     <div class="wrap">
       <slot />
       <div class="nl">
-        <h2>Der SoFi-2027-Countdown</h2>
-        <p>Neue Orts-Analysen, Wolkendaten und Buchungs-Deadlines – etwa einmal im Monat, kein Spam.</p>
+        <h2>{nlTitel}</h2>
+        <p>{nlText}</p>
         <form
           method="POST"
           action="https://7d0486af.sibforms.com/serve/MUIFAPlHEQbtEVu7C5x6dfrrd5aK5PeNn3sN2QLg330qzen-FJX5adKMFAVFYZamQkRsO0tJGzZbfKl21U8szeqYdyWDKA4OkRE8DwZn9zzJmDMwccQQ2mtqtQcI448dGeIHDotPnHLg7h5Hx355Xwj38yKj9py10RzvyXZjFo8_3dYk0vPbY5VP7GiOjUvrnM1yJMCS-PxHhGEqSA=="
@@ -135,16 +173,19 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <footer class="site">
     <div class="wrap cols">
       <div>
-        © 2026 sonnenfinsternis-reisen.de ·
+        © 2026 astroreisen.com ·
         <a href="/impressum">Impressum</a> ·
-        <a href="/datenschutz">Datenschutz</a> ·
-        <a href="/sonnenfinsternis/methodik">Methodik &amp; Quellen</a>
+        <a href="/datenschutz">Datenschutz</a>
+        {inSofi && <> · <a href="/sonnenfinsternis/methodik">Methodik &amp; Quellen</a></>}
       </div>
       <div style="max-width:420px">
         Transparenz: Diese Seite wird künftig durch Empfehlungs-Links (Affiliate) mitfinanziert.
-        Für dich ändert sich am Preis nichts. Berechnungen: eigene Pipeline (skyfield/DE421),
-        validiert gegen NASA-Daten. Wolkenklimatologie: enthält modifizierte Copernicus
-        Climate Change Service Informationen (ERA5).
+        Für dich ändert sich am Preis nichts.
+        {inSofi && (
+          <> Berechnungen: eigene Pipeline (skyfield/DE421), validiert gegen NASA-Daten.
+          Wolkenklimatologie: enthält modifizierte Copernicus Climate Change Service
+          Informationen (ERA5).</>
+        )}
       </div>
     </div>
   </footer>
