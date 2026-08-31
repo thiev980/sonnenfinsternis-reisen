@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+import orte from '../data/orte.json';
+
+const laengste = orte
+  .filter((o) => o.is_total)
+  .sort((a, b) => b.totality_s - a.totality_s)[0];
+
+const anzahlTotal = orte.filter((o) => o.is_total).length;
+
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'astroreisen',
+  url: 'https://astroreisen.com',
+  description: 'Reiseplanung für Sonnenfinsternisse, Nordlichter und den Sternenhimmel – mit selbst berechneten Daten.',
+}];
+---
+<Base
+  title="astroreisen – Reisen zu Sonnenfinsternis, Nordlicht und Sternenhimmel"
+  description="Wohin reisen für Sonnenfinsternis, Nordlicht oder klaren Sternenhimmel? Selbst berechnete Daten zu Zeiten, Dauer und Wetterrisiko statt abgeschriebener Listen."
+  schema={schema}
+>
+  <section class="hero">
+    <h1>Manche Dinge kann man nur dort sehen,<br />wo man gerade nicht ist.</h1>
+    <p class="lead">
+      Eine totale Sonnenfinsternis dauert Minuten und ist an einen Streifen von
+      wenigen hundert Kilometern gebunden. Nordlichter brauchen Dunkelheit, Breitengrad
+      und Geduld. Für beides gilt dieselbe Frage: <strong>wohin, und wann?</strong>
+      Ich rechne die Antworten selbst – mit offenen Quellen und offengelegten Unsicherheiten.
+    </p>
+  </section>
+
+  <section class="bereiche">
+    <h2>Die Bereiche</h2>
+    <ul>
+      <li>
+        <a href="/sonnenfinsternis">Sonnenfinsternis 2027</a>
+        <p>
+          Am 2. August 2027 zieht der Kernschatten über Südspanien, Nordafrika und
+          die Arabische Halbinsel – bis zu {laengste.totality_str} Totalität.
+          Zeiten, Dauer und Wolkenrisiko für {anzahlTotal} Orte in der Zone,
+          dazu Karte und Reise-Guides.
+        </p>
+        <span class="status bereit">Vollständig</span>
+      </li>
+      <li>
+        <span class="titel-inaktiv">Nordlichter</span>
+        <p>
+          Die Saison läuft von September bis März. Wohin es sich lohnt, wie
+          verlässlich die Vorhersagen wirklich sind und was der Sonnenzyklus
+          damit zu tun hat.
+        </p>
+        <span class="status kommt">Im Aufbau – ab Herbst 2026</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="warum">
+    <h2>Warum diese Seite</h2>
+    <p>
+      Reiseartikel zu Himmelsereignissen schreiben meist voneinander ab. Bei der
+      Finsternis 2027 heisst das: Alle nennen die Totalitätsdauer, kaum jemand das
+      Wetterrisiko – obwohl sechs Minuten hinter einer Wolke weniger wert sind als
+      drei Minuten unter klarem Himmel. Ich bin Datenanalyst und rechne beides selbst.
+      {' '}<a href="/ueber-mich">Mehr dazu, wer dahintersteht →</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .hero { padding: 8px 0 36px; }
+  h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.12; margin-bottom: 18px; }
+  .lead { font-size: 18px; max-width: 660px; }
+
+  .bereiche ul { list-style: none; margin: 0; padding: 0; max-width: 720px; }
+  .bereiche li { border-top: 1px solid var(--linie); padding: 18px 0; }
+  .bereiche a, .titel-inaktiv {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px;
+    text-decoration: none; display: inline-block;
+  }
+  .bereiche a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .titel-inaktiv { color: var(--grau); }
+  .bereiche p { color: var(--grau); font-size: 15px; margin: 6px 0 8px; }
+  .status { font-size: 12.5px; font-weight: 600; padding: 2px 10px; border-radius: 11px; display: inline-block; }
+  .status.bereit { background: var(--nacht); color: #fff; }
+  .status.kommt { background: #edebe4; color: var(--grau); }
+
+  .warum { margin-top: 40px; max-width: 660px; }
+  .warum p { color: var(--tinte); }
+  section h2 { font-size: 24px; margin-bottom: 14px; }
+</style>
