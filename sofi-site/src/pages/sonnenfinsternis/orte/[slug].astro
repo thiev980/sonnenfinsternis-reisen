@@ -1,8 +1,8 @@
 ---
-import Base from '../../layouts/Base.astro';
-import orte from '../../data/orte.json';
-import { zahl, score } from '../../lib/format.js';
-import Stay22Karte from '../../components/Stay22Karte.astro';
+import Base from '../../../layouts/Base.astro';
+import orte from '../../../data/orte.json';
+import { zahl, score } from '../../../lib/format.js';
+import Stay22Karte from '../../../components/Stay22Karte.astro';
 
 export function getStaticPaths() {
   return orte.map((ort) => ({ params: { slug: ort.slug }, props: { ort } }));

@@ -1,7 +1,7 @@
 ---
-import Base from '../../layouts/Base.astro';
-import orte from '../../data/orte.json';
-import { zahl, score } from '../../lib/format.js';
+import Base from '../../../layouts/Base.astro';
+import orte from '../../../data/orte.json';
+import { zahl, score } from '../../../lib/format.js';
 const total = orte.filter(o => o.is_total).sort((a, b) => b.totality_s - a.totality_s);
 const hatWolken = orte.some(o => o.cloud);
 const nachScore = hatWolken
