@@ -10,5 +10,5 @@ export default defineConfig({
         !page.includes('/newsletter-'),
     }),
   ],
-  trailingSlash: 'never',
+  trailingSlash: 'ignore',
 });

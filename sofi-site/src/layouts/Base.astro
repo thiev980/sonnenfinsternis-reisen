@@ -10,7 +10,8 @@ interface Props {
   noindex?: boolean;
 }
 const { title, description, schema = [], noindex = false } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const canonicalPfad = Astro.url.pathname !== '/' && Astro.url.pathname.endsWith('/') ? Astro.url.pathname.slice(0, -1) : Astro.url.pathname;
+const canonical = new URL(canonicalPfad, Astro.site);
 const pfad = Astro.url.pathname;
 const inSofi = pfad.startsWith('/sonnenfinsternis');
 
