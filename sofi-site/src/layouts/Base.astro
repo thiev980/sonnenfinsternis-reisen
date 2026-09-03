@@ -14,12 +14,17 @@ const canonicalPfad = Astro.url.pathname !== '/' && Astro.url.pathname.endsWith(
 const canonical = new URL(canonicalPfad, Astro.site);
 const pfad = Astro.url.pathname;
 const inSofi = pfad.startsWith('/sonnenfinsternis');
+const inNordlicht = pfad.startsWith('/nordlichter');
 
 const nlTitel = inSofi
   ? 'Der SoFi-2027-Countdown'
+  : inNordlicht
+  ? 'Neue Orts-Auswertungen'
   : 'Neue Ziele, neue Daten';
 const nlText = inSofi
   ? 'Neue Orts-Analysen, Wolkendaten und Buchungs-Deadlines – etwa einmal im Monat, kein Spam.'
+  : inNordlicht
+  ? 'Neue Orte, neue Guides, sobald die Daten stehen – etwa einmal im Monat, kein Spam.'
   : 'Wenn ein neuer Bereich fertig ist oder sich bei den Daten etwas tut – etwa einmal im Monat, kein Spam.';
 
 ---
@@ -132,6 +137,7 @@ const nlText = inSofi
       </a>
       <nav class="main">
         <a href="/sonnenfinsternis">Sonnenfinsternis</a>
+        <a href="/nordlichter">Nordlichter</a>
         <a href="/ueber-mich">Über mich</a>
       </nav>
     </div>
@@ -144,6 +150,15 @@ const nlText = inSofi
         <a href="/sonnenfinsternis/orte" aria-current={pfad.startsWith('/sonnenfinsternis/orte') ? 'page' : undefined}>Alle Orte</a>
         <a href="/sonnenfinsternis/guides" aria-current={pfad.startsWith('/sonnenfinsternis/guides') ? 'page' : undefined}>Guides</a>
         <a href="/sonnenfinsternis/methodik" aria-current={pfad.startsWith('/sonnenfinsternis/methodik') ? 'page' : undefined}>Methodik</a>
+      </div>
+    </nav>
+  )}
+  {inNordlicht && (
+    <nav class="sektion">
+      <div class="wrap">
+        <a href="/nordlichter" aria-current={pfad === '/nordlichter' ? 'page' : undefined}>Übersicht</a>
+        <a href="/nordlichter/guides" aria-current={pfad.startsWith('/nordlichter/guides') ? 'page' : undefined}>Guides</a>
+        <a href="/nordlichter/methodik" aria-current={pfad.startsWith('/nordlichter/methodik') ? 'page' : undefined}>Methodik</a>
       </div>
     </nav>
   )}
@@ -178,6 +193,7 @@ const nlText = inSofi
         <a href="/impressum">Impressum</a> ·
         <a href="/datenschutz">Datenschutz</a>
         {inSofi && <> · <a href="/sonnenfinsternis/methodik">Methodik &amp; Quellen</a></>}
+        {inNordlicht && <> · <a href="/nordlichter/methodik">Methodik &amp; Quellen</a></>}
       </div>
       <div style="max-width:420px">
         Transparenz: Diese Seite wird künftig durch Empfehlungs-Links (Affiliate) mitfinanziert.

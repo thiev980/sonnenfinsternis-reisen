@@ -1,0 +1,122 @@
+{
+  "tromsoe": {
+    "name": "Tromsø",
+    "sep": {
+      "dunkelstunden": 1.76
+    },
+    "okt": {
+      "dunkelstunden": 8.13
+    },
+    "nov": {
+      "dunkelstunden": 11.72
+    },
+    "dez": {
+      "dunkelstunden": 13.38
+    },
+    "jan": {
+      "dunkelstunden": 12.52
+    },
+    "feb": {
+      "dunkelstunden": 9.64
+    },
+    "mär": {
+      "dunkelstunden": 4.22
+    }
+  },
+  "abisko": {
+    "name": "Abisko",
+    "sep": {
+      "dunkelstunden": 2.37
+    },
+    "okt": {
+      "dunkelstunden": 8.35
+    },
+    "nov": {
+      "dunkelstunden": 11.68
+    },
+    "dez": {
+      "dunkelstunden": 13.23
+    },
+    "jan": {
+      "dunkelstunden": 12.42
+    },
+    "feb": {
+      "dunkelstunden": 9.74
+    },
+    "mär": {
+      "dunkelstunden": 4.92
+    }
+  },
+  "rovaniemi": {
+    "name": "Rovaniemi",
+    "sep": {
+      "dunkelstunden": 3.26
+    },
+    "okt": {
+      "dunkelstunden": 8.61
+    },
+    "nov": {
+      "dunkelstunden": 11.62
+    },
+    "dez": {
+      "dunkelstunden": 13.03
+    },
+    "jan": {
+      "dunkelstunden": 12.3
+    },
+    "feb": {
+      "dunkelstunden": 9.86
+    },
+    "mär": {
+      "dunkelstunden": 5.81
+    }
+  },
+  "reykjavik": {
+    "name": "Reykjavik",
+    "sep": {
+      "dunkelstunden": 4.43
+    },
+    "okt": {
+      "dunkelstunden": 8.89
+    },
+    "nov": {
+      "dunkelstunden": 11.56
+    },
+    "dez": {
+      "dunkelstunden": 12.81
+    },
+    "jan": {
+      "dunkelstunden": 12.16
+    },
+    "feb": {
+      "dunkelstunden": 9.97
+    },
+    "mär": {
+      "dunkelstunden": 6.51
+    }
+  },
+  "yellowknife": {
+    "name": "Yellowknife",
+    "sep": {
+      "dunkelstunden": 5.21
+    },
+    "okt": {
+      "dunkelstunden": 9.01
+    },
+    "nov": {
+      "dunkelstunden": 11.5
+    },
+    "dez": {
+      "dunkelstunden": 12.68
+    },
+    "jan": {
+      "dunkelstunden": 12.08
+    },
+    "feb": {
+      "dunkelstunden": 10.06
+    },
+    "mär": {
+      "dunkelstunden": 6.92
+    }
+  }
+}

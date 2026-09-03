@@ -1,0 +1,99 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Methodik: So berechnen wir die Nordlicht-Daten"
+  description="Wie die geomagnetischen und astronomischen Werte auf astroreisen.com entstehen: Dipol-Näherung, skyfield, ERA5 - und warum ein Nordlicht sich anders vorhersagen lässt als eine Sonnenfinsternis."
+>
+  <h1>Methodik &amp; Quellen</h1>
+  <p class="lead">
+    Alle Zahlen in diesem Bereich stammen aus einer eigenen Berechnungs-Pipeline. Wichtiger
+    als bei der Sonnenfinsternis: Ein Nordlicht ist grundsätzlich anders vorhersagbar als eine
+    Finsternis-Geometrie, und diese Seite sagt genau, wo die Grenze liegt.
+  </p>
+
+  <h2>Warum das anders ist als bei der Sonnenfinsternis</h2>
+  <p>
+    Eine Finsternis folgt bekannten Bahnen von Erde, Mond und Sonne - berechenbar auf die Sekunde,
+    Jahre im Voraus. Ob an einem bestimmten Ort an einem bestimmten Tag ein Nordlicht steht, hängt
+    dagegen von der Sonnenaktivität in den Tagen davor ab - verlässlich vorhersagbar erst rund drei
+    Tage im Voraus. Was diese Seite liefert, ist deshalb keine Vorhersage für ein Datum, sondern eine
+    <strong>klimatologische Wahrscheinlichkeit</strong>: wie oft es an diesem Ort in diesem Monat
+    historisch günstige Bedingungen gab.
+  </p>
+
+  <h2>Geomagnetische Breite</h2>
+  <p>
+    Der Nordlichtring folgt nicht dem geografischen, sondern dem magnetischen Nordpol - und der
+    liegt heute über Nordkanada, nicht über dem geografischen Pol. Das verschiebt die tatsächlichen
+    Chancen teils deutlich gegenüber der reinen geografischen Breite: Yellowknife liegt geomagnetisch
+    höher als Tromsø, obwohl es geografisch rund 7 Grad südlicher liegt.
+  </p>
+  <p>
+    Wir rechnen mit einer <strong>Dipol-Näherung</strong> auf Basis der WMM2025-Polkoordinaten, nicht
+    mit dem vollen AACGM-Modell, das professionelle Weltraumwetter-Dienste verwenden. Der Unterschied
+    liegt typischerweise bei ein bis zwei Grad - für eine Reise-Entscheidung ausreichend genau, für
+    wissenschaftliche Zwecke nicht.
+  </p>
+
+  <h2>Dunkelstunden und Mondphase</h2>
+  <p>
+    Für jeden Ort und Monat berechnen wir mit <em>skyfield</em> (derselben Bibliothek wie bei der
+    Finsternis), wie viele Stunden pro Nacht die Sonne mehr als 18 Grad unter dem Horizont steht -
+    die Standardschwelle für astronomische Dunkelheit. Das ist keine reine Kalenderfrage: Selbst in
+    der tiefsten Polarnacht gibt es an vielen Orten täglich ein paar Stunden Dämmerung um die
+    Mittagszeit, die nicht zählen.
+  </p>
+  <p>
+    Die Mondphase berechnen wir ebenfalls, sie fliesst aber bewusst <strong>nicht</strong> in den
+    Index unten ein: über 30 Jahre gemittelt hat jeder Kalendermonat dieselbe mittlere
+    Mondbeleuchtung, das wäre reines Rauschen in einer Saison-Auswertung. Für die konkrete Wahl
+    einer einzelnen Nacht - Vollmond überstrahlt schwache Nordlichter - bauen wir das später als
+    eigenständiges Werkzeug.
+  </p>
+
+  <h2>Wolkenklimatologie</h2>
+  <p>
+    Dieselbe ERA5-Reanalyse wie bei der Finsternis (Copernicus Climate Change Service, 30 Jahre
+    1995-2024), aber mit einer wichtigen Anpassung: Unsere Zielorte liegen von Kanada bis
+    Skandinavien über fast den halben Globus verteilt, "Nacht" fällt also an jedem Ort auf eine
+    andere UTC-Stunde. Statt eines einzigen festen Zeitfensters wie bei der Finsternis bekommt
+    jeder Ort sein eigenes, aus der Zeitzone abgeleitetes Nachtfenster.
+  </p>
+  <p class="hinweis">
+    <strong>Eine bekannte Grenze dieser Methode, transparent statt versteckt:</strong> ERA5 rechnet
+    mit geglätteter Topografie und unterschätzt dadurch kleinräumige Effekte wie den Regenschatten,
+    den Berge erzeugen. Abisko ist ein dokumentierter Fall davon - die Aurora Sky Station misst dort
+    seit 1989 deutlich mehr klare Nächte, als unsere Berechnung zeigt, unter anderem weil die
+    Station auf 900&nbsp;m Höhe oft über tiefliegenden Wolken liegt, was unser Wert nicht separat
+    erfasst. Wo uns das bekannt ist, weisen wir bei der Ortsseite direkt darauf hin, statt die Zahl
+    unkommentiert stehen zu lassen.
+  </p>
+
+  <h2>Der Index: wie wir die Monate vergleichen</h2>
+  <p>
+    <strong>Index = Dunkelstunden × P(klar)</strong> - dieselbe Logik wie unser SoFi-Score bei der
+    Finsternis (Totalitätsdauer × P(klar)), nur pro Ort <em>und</em> Monat statt für ein einzelnes
+    Datum. Die geomagnetische Breite fliesst hier bewusst nicht mit ein: Sie ändert sich nicht mit
+    der Jahreszeit und beantwortet eine andere Frage - ob ein Ort grundsätzlich geeignet ist, nicht
+    wann dort die beste Zeit ist.
+  </p>
+
+  <h2>Was das für deine Planung heisst</h2>
+  <p>
+    Die Werte auf dieser Seite sagen dir, wo die Chancen über viele Jahre gemittelt am besten stehen
+    und in welchem Monat - nicht, ob am Dienstag in zwei Wochen ein Nordlicht zu sehen sein wird. Für
+    die kurzfristige Vorhersage (27 Tage grob, 3 Tage verlässlich) verweisen wir auf spezialisierte
+    Dienste wie NOAA SWPC.
+  </p>
+</Base>
+<style>
+  h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
+  .lead { max-width: 640px; margin-bottom: 24px; }
+  h2 { font-size: 21px; margin: 24px 0 10px; }
+  p { max-width: 720px; }
+  .hinweis {
+    background: var(--karte-bg); border-left: 3px solid var(--gold);
+    padding: 14px 18px; border-radius: 0 8px 8px 0;
+  }
+</style>

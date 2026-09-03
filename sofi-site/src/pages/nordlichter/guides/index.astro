@@ -1,19 +1,22 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-const guides = (await getCollection('guides', ({ data }) => !data.draft && data.section === 'sonnenfinsternis'))
+const guides = (await getCollection('guides', ({ data }) => !data.draft && data.section === 'nordlicht'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 <Base
-  title="Guides zur Sonnenfinsternis 2027: Reiseziele, Wetter, Ausrüstung"
-  description="Alle Ratgeber zur totalen Sonnenfinsternis vom 2. August 2027: Reiseziel-Vergleich, Wolkenwahrscheinlichkeiten, Planung mit Kindern, Fotografie und Ausrüstung."
+  title="Guides zu Nordlichtern: Wo, wann, wie realistisch"
+  description="Entscheidungshilfen für Nordlicht-Reisen: welche Orte, welche Saison, was man von einer Vorhersage wirklich erwarten kann - auf Basis eigener Berechnungen."
 >
   <h1>Guides</h1>
-  <p class="lead">Entscheidungshilfen für den 2. August 2027 – auf Basis eigener Berechnungen statt abgeschriebener Agenturmeldungen.</p>
+  <p class="lead">Entscheidungshilfen für Nordlicht-Reisen – auf Basis eigener Berechnungen statt abgeschriebener Agenturmeldungen.</p>
+  {guides.length === 0 && (
+    <p class="leer">Die ersten Guides sind noch in Arbeit. Bis dahin: <a href="/nordlichter/methodik">wie wir rechnen</a>.</p>
+  )}
   <ul class="liste">
     {guides.map(g => (
       <li>
-        <a href={`/sonnenfinsternis/guides/${g.id}`}>{g.data.heading ?? g.data.title}</a>
+        <a href={`/nordlichter/guides/${g.id}`}>{g.data.heading ?? g.data.title}</a>
         <p>{g.data.description}</p>
       </li>
     ))}
@@ -22,6 +25,7 @@ const guides = (await getCollection('guides', ({ data }) => !data.draft && data.
 <style>
   h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
   .lead { max-width: 640px; margin-bottom: 26px; }
+  .leer { color: var(--grau); max-width: 640px; }
   .liste { list-style: none; margin: 0; padding: 0; max-width: 720px; }
   .liste li { border-top: 1px solid var(--linie); padding: 16px 0; }
   .liste a { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; text-decoration: none; }

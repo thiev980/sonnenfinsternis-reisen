@@ -14,6 +14,8 @@ const guides = defineCollection({
     tldr: z.string().optional(),
     faq: z.array(z.object({ f: z.string(), a: z.string() })).default([]),
     draft: z.boolean().default(false),
+    // Welche Sektion des Hubs. Bestehende Artikel brauchen kein Update - Default deckt sie ab.
+    section: z.enum(['sonnenfinsternis', 'nordlicht']).default('sonnenfinsternis'),
   }),
 });
 

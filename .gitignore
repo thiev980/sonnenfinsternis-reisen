@@ -5,5 +5,7 @@ node_modules/
 dist/
 .astro/
 sofi-pipeline/data/era5/
+sofi-pipeline/data/era5_nordlicht/
+*.nc
 .DS_Store
 *.log

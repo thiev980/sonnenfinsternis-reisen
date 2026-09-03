@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Nordlichter: Wo und wann',
+  description: 'Reiseplanung für Nordlichter - geomagnetische Breite, Dunkelstunden und Wolkenklimatologie statt Reiseblog-Abschriften.',
+}];
+---
+<Base
+  title="Nordlichter: Wo und wann sich die Reise lohnt"
+  description="Nordlicht-Reiseplanung mit eigenen Berechnungen: geomagnetische Breite, Dunkelstunden pro Saison und Wolkenklimatologie - transparent statt geraten."
+  schema={schema}
+>
+  <section class="hero">
+    <p class="eyebrow">September bis März · Nordhalbkugel</p>
+    <h1>Wo ein Nordlicht wahrscheinlich ist.<br />Und warum das nicht dasselbe ist wie sicher.</h1>
+    <p class="lead">
+      Anders als eine Sonnenfinsternis lässt sich ein Nordlicht nicht auf die Minute vorausberechnen -
+      die Sonnenaktivität ist erst wenige Tage vorher verlässlich einzuschätzen. Was sich aber berechnen
+      lässt: wo die geomagnetische Lage, die Dunkelstunden und das Wetter über viele Jahre gemittelt am
+      günstigsten zusammenkommen. Genau das bauen wir hier auf.
+    </p>
+  </section>
+
+  <section class="stand">
+    <h2>Aktueller Stand</h2>
+    <ul class="checkliste">
+      <li class="fertig">Geomagnetische Breite für die Zielorte berechnet</li>
+      <li class="fertig">Dunkelstunden und Mondphase pro Ort und Monat berechnet</li>
+      <li class="laeuft">Wolkenklimatologie: Berechnung läuft</li>
+      <li class="offen">Ortsseiten und Karte: folgen, sobald die Wolkendaten stehen</li>
+    </ul>
+    <p>
+      Die Nordlicht-Saison hat gerade begonnen. Wir veröffentlichen die ersten Orts-Auswertungen und
+      Guides laufend, sobald die Daten vollständig sind - nicht vorher, weil eine Rangfolge ohne
+      Wolkendaten nur die halbe Geschichte wäre.
+      {' '}<a href="/nordlichter/methodik">Wie wir rechnen →</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .hero { padding: 8px 0 32px; }
+  .eyebrow { color: var(--grau); font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+  h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.12; margin-bottom: 18px; }
+  .lead { font-size: 18px; max-width: 660px; }
+
+  .stand { max-width: 660px; }
+  .stand h2 { font-size: 22px; margin-bottom: 14px; }
+  .checkliste { list-style: none; margin: 0 0 20px; padding: 0; }
+  .checkliste li { padding: 8px 0 8px 28px; position: relative; font-size: 15.5px; }
+  .checkliste li::before { position: absolute; left: 0; font-weight: 700; }
+  .checkliste li.fertig::before { content: '✓'; color: var(--nacht); }
+  .checkliste li.laeuft::before { content: '···'; color: var(--gold); }
+  .checkliste li.offen { color: var(--grau); }
+  .checkliste li.offen::before { content: '○'; color: var(--grau); }
+</style>

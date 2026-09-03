@@ -1,0 +1,192 @@
+{
+  "tromsoe": {
+    "name": "Tromsø",
+    "sep": {
+      "mean_tcc": 0.777,
+      "p_clear": 0.111,
+      "p_ok": 0.194
+    },
+    "okt": {
+      "mean_tcc": 0.777,
+      "p_clear": 0.103,
+      "p_ok": 0.185
+    },
+    "nov": {
+      "mean_tcc": 0.778,
+      "p_clear": 0.109,
+      "p_ok": 0.179
+    },
+    "dez": {
+      "mean_tcc": 0.775,
+      "p_clear": 0.115,
+      "p_ok": 0.187
+    },
+    "jan": {
+      "mean_tcc": 0.756,
+      "p_clear": 0.135,
+      "p_ok": 0.218
+    },
+    "feb": {
+      "mean_tcc": 0.757,
+      "p_clear": 0.143,
+      "p_ok": 0.206
+    },
+    "mär": {
+      "mean_tcc": 0.747,
+      "p_clear": 0.137,
+      "p_ok": 0.219
+    }
+  },
+  "abisko": {
+    "name": "Abisko",
+    "sep": {
+      "mean_tcc": 0.863,
+      "p_clear": 0.055,
+      "p_ok": 0.103
+    },
+    "okt": {
+      "mean_tcc": 0.898,
+      "p_clear": 0.022,
+      "p_ok": 0.067
+    },
+    "nov": {
+      "mean_tcc": 0.896,
+      "p_clear": 0.017,
+      "p_ok": 0.073
+    },
+    "dez": {
+      "mean_tcc": 0.893,
+      "p_clear": 0.02,
+      "p_ok": 0.065
+    },
+    "jan": {
+      "mean_tcc": 0.873,
+      "p_clear": 0.041,
+      "p_ok": 0.081
+    },
+    "feb": {
+      "mean_tcc": 0.857,
+      "p_clear": 0.06,
+      "p_ok": 0.101
+    },
+    "mär": {
+      "mean_tcc": 0.809,
+      "p_clear": 0.091,
+      "p_ok": 0.149
+    }
+  },
+  "rovaniemi": {
+    "name": "Rovaniemi",
+    "sep": {
+      "mean_tcc": 0.736,
+      "p_clear": 0.161,
+      "p_ok": 0.247
+    },
+    "okt": {
+      "mean_tcc": 0.786,
+      "p_clear": 0.151,
+      "p_ok": 0.203
+    },
+    "nov": {
+      "mean_tcc": 0.855,
+      "p_clear": 0.091,
+      "p_ok": 0.13
+    },
+    "dez": {
+      "mean_tcc": 0.85,
+      "p_clear": 0.095,
+      "p_ok": 0.136
+    },
+    "jan": {
+      "mean_tcc": 0.837,
+      "p_clear": 0.107,
+      "p_ok": 0.151
+    },
+    "feb": {
+      "mean_tcc": 0.813,
+      "p_clear": 0.123,
+      "p_ok": 0.172
+    },
+    "mär": {
+      "mean_tcc": 0.663,
+      "p_clear": 0.26,
+      "p_ok": 0.329
+    }
+  },
+  "reykjavik": {
+    "name": "Reykjavik",
+    "sep": {
+      "mean_tcc": 0.771,
+      "p_clear": 0.111,
+      "p_ok": 0.196
+    },
+    "okt": {
+      "mean_tcc": 0.728,
+      "p_clear": 0.163,
+      "p_ok": 0.25
+    },
+    "nov": {
+      "mean_tcc": 0.746,
+      "p_clear": 0.145,
+      "p_ok": 0.221
+    },
+    "dez": {
+      "mean_tcc": 0.752,
+      "p_clear": 0.133,
+      "p_ok": 0.217
+    },
+    "jan": {
+      "mean_tcc": 0.791,
+      "p_clear": 0.108,
+      "p_ok": 0.176
+    },
+    "feb": {
+      "mean_tcc": 0.766,
+      "p_clear": 0.134,
+      "p_ok": 0.204
+    },
+    "mär": {
+      "mean_tcc": 0.742,
+      "p_clear": 0.145,
+      "p_ok": 0.221
+    }
+  },
+  "yellowknife": {
+    "name": "Yellowknife",
+    "sep": {
+      "mean_tcc": 0.657,
+      "p_clear": 0.228,
+      "p_ok": 0.332
+    },
+    "okt": {
+      "mean_tcc": 0.783,
+      "p_clear": 0.129,
+      "p_ok": 0.19
+    },
+    "nov": {
+      "mean_tcc": 0.834,
+      "p_clear": 0.099,
+      "p_ok": 0.145
+    },
+    "dez": {
+      "mean_tcc": 0.794,
+      "p_clear": 0.141,
+      "p_ok": 0.188
+    },
+    "jan": {
+      "mean_tcc": 0.754,
+      "p_clear": 0.173,
+      "p_ok": 0.232
+    },
+    "feb": {
+      "mean_tcc": 0.664,
+      "p_clear": 0.26,
+      "p_ok": 0.321
+    },
+    "mär": {
+      "mean_tcc": 0.63,
+      "p_clear": 0.297,
+      "p_ok": 0.361
+    }
+  }
+}
