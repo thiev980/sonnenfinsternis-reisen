@@ -1,0 +1,98 @@
+---
+import Base from '../../../layouts/Base.astro';
+import orte from '../../../data/nordlicht_orte.json';
+import { zahl } from '../../../lib/format.js';
+import Stay22Karte from '../../../components/Stay22Karte.astro';
+
+export async function getStaticPaths() {
+  return orte.map((ort) => ({ params: { slug: ort.slug }, props: { ort } }));
+}
+
+const { ort } = Astro.props;
+const MONATE = ['sep', 'okt', 'nov', 'dez', 'jan', 'feb', 'mär'];
+const MONATSNAME = {
+  sep: 'September', okt: 'Oktober', nov: 'November', dez: 'Dezember',
+  jan: 'Januar', feb: 'Februar', mär: 'März',
+};
+
+const andereOrte = orte.filter(o => o.slug !== ort.slug)
+  .sort((a, b) => b.monate[b.bester_monat].index - a.monate[a.bester_monat].index);
+
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'Place',
+  name: ort.name,
+  address: { '@type': 'PostalAddress', addressCountry: ort.land },
+  geo: { '@type': 'GeoCoordinates', latitude: ort.lat, longitude: ort.lon },
+}];
+---
+<Base
+  title={`${ort.name}: Wann ist die beste Zeit für Nordlichter?`}
+  description={`${ort.name} (${ort.land}): geomagnetische Breite, Dunkelstunden und Wolkenwahrscheinlichkeit Monat für Monat - beste Reisezeit ${MONATSNAME[ort.bester_monat]}.`}
+  schema={schema}
+>
+  <p class="brotkrumen"><a href="/nordlichter/orte">Alle Orte</a> → {ort.name}</p>
+  <h1>{ort.name}</h1>
+  <p class="untertitel">{ort.land} · Geomagnetische Breite {zahl(ort.geomag_lat)}°</p>
+
+  <p class="lead">
+    Beste Reisezeit nach unserer Berechnung: <strong>{MONATSNAME[ort.bester_monat]}</strong>,
+    mit einem Index von {zahl(ort.monate[ort.bester_monat].index)}
+    {' '}({zahl(ort.monate[ort.bester_monat].dunkelstunden)} Std. Dunkelheit pro Nacht,
+    {' '}{Math.round(ort.monate[ort.bester_monat].p_clear * 100)}% Chance auf klaren Himmel).
+  </p>
+
+  {ort.einschraenkung && (
+    <div class="hinweisbox">
+      <strong>Einschränkung unserer Daten:</strong> {ort.einschraenkung}
+    </div>
+  )}
+
+  <h2>Monat für Monat</h2>
+  <table class="daten">
+    <thead>
+      <tr><th>Monat</th><th>Dunkelstunden</th><th>P(klar)</th><th>Index</th></tr>
+    </thead>
+    <tbody>
+      {MONATE.map(m => (
+        <tr class:list={{ bester: m === ort.bester_monat }}>
+          <td>{MONATSNAME[m]}{m === ort.bester_monat && <span class="stern"> ★</span>}</td>
+          <td>{zahl(ort.monate[m].dunkelstunden)} Std.</td>
+          <td>{Math.round(ort.monate[m].p_clear * 100)}%</td>
+          <td><strong>{zahl(ort.monate[m].index)}</strong></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <Stay22Karte sektion="nordlicht" ort={ort} />
+
+  <section class="andere">
+    <h2>Andere Orte im Vergleich</h2>
+    <ul class="liste">
+      {andereOrte.map(o => (
+        <li>
+          <a href={`/nordlichter/orte/${o.slug}`}>{o.name}</a>
+          <span class="kurzinfo">beste Zeit {MONATSNAME[o.bester_monat]}, Index {zahl(o.monate[o.bester_monat].index)}</span>
+        </li>
+      ))}
+    </ul>
+    <p><a href="/nordlichter/orte">Alle Orte im Raster vergleichen →</a></p>
+  </section>
+</Base>
+
+<style>
+  .brotkrumen { font-size: 13.5px; color: var(--grau); margin-bottom: 10px; }
+  h1 { font-size: clamp(28px, 5vw, 42px); margin-bottom: 4px; }
+  .untertitel { color: var(--grau); margin-bottom: 18px; }
+  .lead { max-width: 680px; margin-bottom: 20px; }
+  h2 { font-size: 21px; margin: 30px 0 12px; }
+  tr.bester { background: var(--karte-bg); }
+  .stern { color: var(--gold); }
+  .andere { margin-top: 10px; }
+  .liste { list-style: none; margin: 0 0 14px; padding: 0; max-width: 480px; }
+  .liste li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-top: 1px solid var(--linie); }
+  .liste a { font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .liste a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .kurzinfo { color: var(--grau); font-size: 13.5px; text-align: right; }
+</style>

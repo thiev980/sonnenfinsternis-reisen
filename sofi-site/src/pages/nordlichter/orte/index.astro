@@ -1,0 +1,102 @@
+---
+import Base from '../../../layouts/Base.astro';
+import orte from '../../../data/nordlicht_orte.json';
+import { zahl } from '../../../lib/format.js';
+
+const MONATE = ['sep', 'okt', 'nov', 'dez', 'jan', 'feb', 'mär'];
+const MONATSLABEL = { sep: 'Sep', okt: 'Okt', nov: 'Nov', dez: 'Dez', jan: 'Jan', feb: 'Feb', mär: 'Mär' };
+
+// Fuer die Faerbung: hoechster Index ueber alle Orte/Monate als Referenz
+const maxIndex = Math.max(...orte.flatMap(o => MONATE.map(m => o.monate[m].index)));
+
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Nordlicht-Orte im Vergleich',
+  itemListElement: orte.map((o, i) => ({
+    '@type': 'ListItem', position: i + 1, name: o.name,
+  })),
+}];
+---
+<Base
+  title="Nordlicht-Orte im Vergleich: Wann wo am besten"
+  description="Geomagnetische Breite, Dunkelstunden und Wolkenwahrscheinlichkeit für alle Zielorte, Monat für Monat - aus eigener Berechnung statt Reiseblog-Abschriften."
+  schema={schema}
+>
+  <h1>Orte im Vergleich</h1>
+  <p class="lead">
+    Jede Zelle zeigt den <strong>Index</strong> (Dunkelstunden × P(klar)) für diesen Ort in diesem
+    Monat - je höher, desto besser die klimatologischen Chancen. Der beste Monat pro Ort ist
+    hervorgehoben. Details zur Rechnung: <a href="/nordlichter/methodik">Methodik</a>.
+  </p>
+
+  <div class="tabelle-wrap">
+    <table class="daten raster">
+      <thead>
+        <tr>
+          <th>Ort</th>
+          <th class="num">Geomag.</th>
+          {MONATE.map(m => <th class="num">{MONATSLABEL[m]}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {orte.map(o => (
+          <tr>
+            <td>
+              <a href={`/nordlichter/orte/${o.slug}`}>{o.name}</a>
+              {o.einschraenkung && <span class="warnzeichen" title="Bekannte Einschränkung der Wolkendaten - siehe Ortsseite">*</span>}
+              <span class="land">{o.land}</span>
+            </td>
+            <td class="num">{zahl(o.geomag_lat)}°</td>
+            {MONATE.map(m => {
+              const val = o.monate[m].index;
+              const intensitaet = val / maxIndex;
+              const istBester = m === o.bester_monat;
+              return (
+                <td class="num zelle" style={`--i: ${intensitaet}`} class:list={{ bester: istBester }}>
+                  {zahl(val)}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  {orte.some(o => o.einschraenkung) && (
+    <p class="fussnote">* Bekannte Einschränkung der Wolkendaten für diesen Ort - Details auf der Ortsseite.</p>
+  )}
+
+  <section class="erklaerung">
+    <h2>Wie lese ich das?</h2>
+    <p>
+      <strong>Geomagnetische Breite</strong> sagt, wie tief ein Ort im Nordlichtring liegt - ändert
+      sich nicht mit der Jahreszeit. <strong>Der Index</strong> pro Monat verbindet Dunkelstunden und
+      Wolkenwahrscheinlichkeit und beantwortet die eigentliche "wann"-Frage. Ein Ort mit niedrigerer
+      geomagnetischer Breite kann trotzdem den höheres Index-Wert haben, wenn dort das Wetter
+      verlässlicher mitspielt - genau das zeigt sich hier bei Yellowknife gegenüber Tromsø.
+    </p>
+  </section>
+</Base>
+
+<style>
+  h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
+  .lead { max-width: 680px; margin-bottom: 26px; }
+  .tabelle-wrap { overflow-x: auto; margin-bottom: 8px; }
+  table.raster { min-width: 640px; }
+  table.raster th, table.raster td { padding: 8px 10px; }
+  th.num, td.num { text-align: center; }
+  td:first-child { white-space: nowrap; }
+  td:first-child a { font-weight: 700; text-decoration: none; }
+  td:first-child a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .land { display: block; color: var(--grau); font-size: 12.5px; font-weight: 400; }
+  .warnzeichen { color: var(--gold); font-weight: 700; margin-left: 2px; cursor: help; }
+  .zelle {
+    background: color-mix(in srgb, var(--gold) calc(var(--i) * 55%), var(--papier));
+    font-variant-numeric: tabular-nums;
+  }
+  .zelle.bester { font-weight: 700; box-shadow: inset 0 0 0 1.5px var(--nacht); border-radius: 4px; }
+  .fussnote { color: var(--grau); font-size: 13px; margin-top: 6px; }
+  .erklaerung { margin-top: 40px; max-width: 680px; }
+  .erklaerung h2 { font-size: 21px; margin-bottom: 10px; }
+</style>

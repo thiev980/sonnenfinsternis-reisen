@@ -8,6 +8,12 @@
  * kommt die Seite weiterhin ohne Consent-Banner aus.
  *
  * Doku der Parameter: https://group.stay22.com/docs/
+ *
+ * SEKTIONS-UNTERSTÜTZUNG: `sektion` ist optional und faellt auf
+ * 'sonnenfinsternis' zurueck - bestehende Aufrufe ohne dieses Prop verhalten
+ * sich unveraendert. Bei sektion="nordlicht" werden Checkin/Checkout aus
+ * ort.bester_monat berechnet (Mitte des Monats, 5 Naechte), statt eines
+ * festen Datums - es gibt bei Nordlichtern kein einzelnes Ereignisdatum.
  */
 
 // --- Konfiguration ----------------------------------------------------------
@@ -18,24 +24,61 @@ const AID = 'sonnenfinsternisreis';
 // Anreise Freitag, Abreise Mittwoch – die Finsternis ist an einem Montag.
 // Zwei Puffertage davor sind bei Finsternisreisen üblich, weil man bei
 // schlechter Prognose kurzfristig verlegen können will.
-const CHECKIN = '2027-07-30';
-const CHECKOUT = '2027-08-04';
+const SOFI_CHECKIN = '2027-07-30';
+const SOFI_CHECKOUT = '2027-08-04';
 
 const MAINCOLOR = '14183C'; // --nacht, ohne #
 
+const MONAT_NUM: Record<string, number> = {
+  sep: 9, okt: 10, nov: 11, dez: 12, jan: 1, feb: 2, mär: 3,
+};
+const MONATSNAME_LANG: Record<string, string> = {
+  sep: 'September', okt: 'Oktober', nov: 'November', dez: 'Dezember',
+  jan: 'Januar', feb: 'Februar', mär: 'März',
+};
+
+function nordlichtDaten(monat: string) {
+  const m = MONAT_NUM[monat];
+  const jahr = m >= 9 ? 2026 : 2027;
+  const pad = (n: number) => String(n).padStart(2, '0');
+  const checkinD = new Date(Date.UTC(jahr, m - 1, 15));
+  const checkoutD = new Date(Date.UTC(jahr, m - 1, 20));
+  const fmt = (d: Date) => `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
+  return { checkin: fmt(checkinD), checkout: fmt(checkoutD) };
+}
+
 interface Props {
+  sektion?: 'sonnenfinsternis' | 'nordlicht';
   ort: {
     slug: string;
     name: string;
-    country: string;
+    country?: string;
     lat: number;
     lon: number;
-    is_total: boolean;
+    // Sonnenfinsternis:
+    is_total?: boolean;
     totality_str?: string;
+    // Nordlicht:
+    bester_monat?: string; // z.B. 'feb'
   };
+  // Manuelle Uebersteuerung, hat Vorrang vor jeder automatischen Berechnung
+  checkin?: string;
+  checkout?: string;
 }
 
-const { ort } = Astro.props;
+const { sektion = 'sonnenfinsternis', ort, checkin: checkinProp, checkout: checkoutProp } = Astro.props;
+
+let CHECKIN: string;
+let CHECKOUT: string;
+if (checkinProp && checkoutProp) {
+  CHECKIN = checkinProp;
+  CHECKOUT = checkoutProp;
+} else if (sektion === 'nordlicht' && ort.bester_monat) {
+  ({ checkin: CHECKIN, checkout: CHECKOUT } = nordlichtDaten(ort.bester_monat));
+} else {
+  CHECKIN = SOFI_CHECKIN;
+  CHECKOUT = SOFI_CHECKOUT;
+}
 
 const params = new URLSearchParams({
   aid: AID,
@@ -46,23 +89,29 @@ const params = new URLSearchParams({
   venue: ort.name,
   maincolor: MAINCOLOR,
 });
-// EIN campaign-Wert, Platzierung und Ort mit Bindestrich kombiniert.
-// Zwei separate campaign-Parameter kamen im Hub nicht an - dort stand danach
-// nur "No Campaign ID" zur Auswahl.
-params.set('campaign', `ortsseite-${ort.slug}`);
+// Praefix trennt die Sektionen im Stay22-Dashboard-Filter voneinander,
+// ohne dass sich Klicks gegenseitig verdecken - siehe Chat-Verlauf.
+const campaignPrefix = sektion === 'nordlicht' ? 'nordlicht' : 'sofi';
+params.set('campaign', `${campaignPrefix}-ortsseite-${ort.slug}`);
 
 const src = `https://www.stay22.com/embed/gm?${params.toString()}`;
 const aktiv = AID.trim() !== '' && AID !== 'DEINE_STAY22_AID';
+
+const titel = sektion === 'nordlicht'
+  ? `Hotels und Preise für ${MONATSNAME_LANG[ort.bester_monat ?? 'dez']}`
+  : 'Hotels und Preise für den 2. August 2027';
+
+const beschreibung = sektion === 'nordlicht'
+  ? `Übernachtungen in ${ort.name}, mit Beispielpreisen für ${MONATSNAME_LANG[ort.bester_monat ?? 'dez']} – nach unserer Berechnung die beste Reisezeit hier. Die tatsächlichen Reisedaten wählst du auf der Karte frei.`
+  : (ort.is_total
+      ? `Wer die ${ort.totality_str} Totalität in ${ort.name} sehen will, sollte früh buchen – die Zimmerkontingente in der Zone sind endlich.`
+      : `Übernachtungen in ${ort.name} und Umgebung, mit Preisen für die Nächte um den 2. August 2027.`);
 ---
 
 {aktiv && (
   <section class="s22" data-stay22 data-src={src}>
     <h2>Unterkünfte in {ort.name}</h2>
-    <p>
-      {ort.is_total
-        ? `Wer die ${ort.totality_str} Totalität in ${ort.name} sehen will, sollte früh buchen – die Zimmerkontingente in der Zone sind endlich.`
-        : `Übernachtungen in ${ort.name} und Umgebung, mit Preisen für die Nächte um den 2. August 2027.`}
-    </p>
+    <p>{beschreibung}</p>
 
     <div class="s22-box">
       <div class="s22-inhalt">
@@ -71,7 +120,7 @@ const aktiv = AID.trim() !== '' && AID !== 'DEINE_STAY22_AID';
           <path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5v-13L15 6.5 9 4Z" />
           <path d="M9 4v13M15 6.5v13" />
         </svg>
-        <p class="s22-titel">Hotels und Preise für den 2. August 2027</p>
+        <p class="s22-titel">{titel}</p>
         <p class="s22-hinweis">
           Die Karte wird von <strong>Stay22</strong> geladen. Erst beim Klick werden Daten
           (u. a. deine IP-Adresse) an Stay22 übertragen. Mehr dazu in der{' '}
