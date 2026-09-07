@@ -27,14 +27,8 @@ BASE = Path(__file__).resolve().parent.parent
 # Import der Geomag-Funktion direkt statt einer Zwischendatei -
 # reine Formel, kein Grund fuer einen dritten JSON-Umweg
 from nordlicht_geomag import geomag_latitude
+from nordlicht_orte_liste import ORTE
 
-ORTE = [
-    ("tromsoe", "Tromsø", "Norwegen", 69.6517, 18.9556),
-    ("abisko", "Abisko", "Schweden", 68.3541, 18.7871),
-    ("rovaniemi", "Rovaniemi", "Finnland", 66.5039, 25.7294),
-    ("reykjavik", "Reykjavik", "Island", 64.1466, -21.9426),
-    ("yellowknife", "Yellowknife", "Kanada", 62.4540, -114.3718),
-]
 MONATE = ["sep", "okt", "nov", "dez", "jan", "feb", "mär"]
 
 # Bekannte Grenzen der Wolken-Klimatologie: ERA5 unterschaetzt lokale
@@ -63,7 +57,8 @@ def main():
     darkness = json.loads((BASE / "data" / "nordlicht_darkness.json").read_text())
 
     ergebnis = []
-    for slug, name, land, lat, lon in ORTE:
+    for o in ORTE:
+        slug, name, land, lat, lon = o["slug"], o["name"], o["land"], o["lat"], o["lon"]
         geomag = round(geomag_latitude(lat, lon), 1)
         monatswerte = {}
         for m in MONATE:

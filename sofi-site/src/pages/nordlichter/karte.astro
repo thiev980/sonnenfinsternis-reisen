@@ -1,0 +1,149 @@
+---
+import Base from '../../layouts/Base.astro';
+import orte from '../../data/nordlicht_orte.json';
+
+// Einmal hier berechnet statt im Client-Skript dupliziert - Legende und
+// Farbfunktion nutzen exakt dieselben Werte, koennen also nie auseinanderlaufen.
+const alleIndizes = orte.flatMap(o => Object.values(o.monate).map((m) => m.index));
+const MIN_I = Math.min(...alleIndizes);
+const MAX_I = Math.max(...alleIndizes);
+---
+<Base
+  title="Interaktive Karte: Nordlicht-Orte im Vergleich"
+  description="Geomagnetische Breite, Dunkelstunden und Wolkenwahrscheinlichkeit für alle Nordlicht-Zielorte auf einer Karte - mit Monats-Umschalter, weil es kein festes Datum wie bei einer Finsternis gibt."
+>
+  <h1>Nordlicht-Orte auf der Karte</h1>
+  <p class="lead">
+    Farbe = Index (Dunkelstunden × P(klar)) im gewählten Monat. Anders als bei der Finsternis gibt
+    es kein festes Datum - wähl oben den Monat, für den du reisen willst, und die Karte färbt sich
+    entsprechend neu.
+  </p>
+
+  <div class="monate" id="monate">
+    <button data-monat="sep">Sep</button>
+    <button data-monat="okt">Okt</button>
+    <button data-monat="nov">Nov</button>
+    <button data-monat="dez">Dez</button>
+    <button data-monat="jan">Jan</button>
+    <button data-monat="feb">Feb</button>
+    <button data-monat="mär">Mär</button>
+  </div>
+
+  <div id="map"></div>
+
+  <div class="legende">
+    <div class="legende-skala">
+      <span>{MIN_I.toFixed(1)}</span>
+      <div class="legende-balken"></div>
+      <span>{MAX_I.toFixed(1)}</span>
+    </div>
+    <p class="legende-text">
+      Index (niedrig → hoch) - Farbe und Grösse des Punkts zeigen beides denselben Wert.
+      <strong>★</strong> = bekannte Einschränkung der Wolkendaten für diesen Ort.
+    </p>
+  </div>
+
+  <p class="quelle">
+    Eigene Berechnung, <a href="/nordlichter/methodik">Methodik</a>.
+  </p>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <script is:inline define:vars={{ orte, minI: MIN_I, maxI: MAX_I }}>
+    window.__ORTE__ = orte;
+    window.__MIN_I__ = minI;
+    window.__MAX_I__ = maxI;
+  </script>
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script is:inline>
+    const OR = window.__ORTE__;
+    const MIN_I = window.__MIN_I__;
+    const MAX_I = window.__MAX_I__;
+    const MONATSNAME = { sep:'September', okt:'Oktober', nov:'November', dez:'Dezember', jan:'Januar', feb:'Februar', mär:'März' };
+
+    const map = L.map('map', { zoomSnap: 0.5, scrollWheelZoom: false });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+      { attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 18 }).addTo(map);
+
+    // Kartenausschnitt automatisch auf alle Orte anpassen - anders als bei
+    // der Finsternis gibt es keinen sinnvollen festen Mittelpunkt, weil die
+    // Orte von Kanada bis Skandinavien verteilt liegen und weitere dazukommen
+    // koennen.
+    const bounds = L.latLngBounds(OR.map(o => [o.lat, o.lon]));
+    map.fitBounds(bounds, { padding: [30, 30] });
+
+    // Farbskala: hell/gold (niedriger Index) bis dunkel/nacht (hoher Index).
+    // MIN_I/MAX_I kommen aus dem Astro-Frontmatter (siehe oben) - dieselben
+    // Werte wie in der Legende, nicht separat neu berechnet.
+    function farbe(index) {
+      const t = MAX_I > MIN_I ? (index - MIN_I) / (MAX_I - MIN_I) : 0.5;
+      const hell = [243, 212, 143]; // --gold, hell
+      const dunkel = [20, 24, 60];  // --nacht
+      const rgb = hell.map((v, i) => Math.round(v + (dunkel[i] - v) * t));
+      return `rgb(${rgb.join(',')})`;
+    }
+
+    let markers = [];
+    function zeichneMonat(monat) {
+      markers.forEach(m => map.removeLayer(m));
+      markers = [];
+      OR.forEach(o => {
+        const d = o.monate[monat];
+        const stern = o.einschraenkung ? ' ★' : '';
+        const marker = L.circleMarker([o.lat, o.lon], {
+          radius: 7 + (d.index / MAX_I) * 6,
+          fillColor: farbe(d.index),
+          fillOpacity: 0.9,
+          color: '#fff',
+          weight: 1.5,
+        }).addTo(map);
+        marker.bindPopup(
+          `<strong>${o.name}${stern}</strong> (${o.land})<br>` +
+          `${MONATSNAME[monat]}: Index ${d.index.toFixed(2)}<br>` +
+          `${d.dunkelstunden.toFixed(1)} Std. dunkel · ${Math.round(d.p_clear * 100)}% klar<br>` +
+          (o.bester_monat === monat ? '<em>Bester Monat für diesen Ort</em><br>' : '') +
+          `<a href="/nordlichter/orte/${o.slug}">Zur Detailseite →</a>`
+        );
+        markers.push(marker);
+      });
+    }
+
+    const buttons = document.querySelectorAll('#monate button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('aktiv'));
+        btn.classList.add('aktiv');
+        zeichneMonat(btn.dataset.monat);
+      });
+    });
+
+    // Start: aktueller Monat, falls in der Saison, sonst September
+    const jetzt = new Date().getMonth() + 1; // 1-12
+    const saisonMonate = { 9:'sep', 10:'okt', 11:'nov', 12:'dez', 1:'jan', 2:'feb', 3:'mär' };
+    const startMonat = saisonMonate[jetzt] || 'sep';
+    document.querySelector(`#monate button[data-monat="${startMonat}"]`).classList.add('aktiv');
+    zeichneMonat(startMonat);
+  </script>
+</Base>
+
+<style>
+  h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
+  .lead { max-width: 680px; margin-bottom: 20px; }
+  .monate { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+  .monate button {
+    font: inherit; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px;
+    padding: 7px 16px; border-radius: 20px; border: 1.5px solid var(--linie);
+    background: var(--papier); color: var(--tinte); cursor: pointer;
+  }
+  .monate button:hover { border-color: var(--nacht); }
+  .monate button.aktiv { background: var(--nacht); color: #fff; border-color: var(--nacht); }
+  #map { height: 66vh; min-height: 420px; border-radius: 12px; border: 1px solid var(--linie); }
+  .legende { margin-top: 14px; max-width: 420px; }
+  .legende-skala { display: flex; align-items: center; gap: 10px; }
+  .legende-skala span { font-size: 13px; color: var(--grau); font-variant-numeric: tabular-nums; }
+  .legende-balken {
+    flex: 1; height: 10px; border-radius: 5px;
+    background: linear-gradient(90deg, rgb(243,212,143), rgb(20,24,60));
+  }
+  .legende-text { font-size: 13px; color: var(--grau); margin-top: 6px; }
+  .quelle { margin-top: 10px; font-size: 13.5px; color: var(--grau); }
+</style>

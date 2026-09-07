@@ -65,27 +65,19 @@ def mondphase_am(ts, eph, datum) -> float:
 if __name__ == "__main__":
     import json
     from pathlib import Path as P
+    from nordlicht_orte_liste import ORTE
 
     ts = load.timescale()
     data_path = Path(get_skyfield_data_path())
     eph = load_file(str(data_path / "de421.bsp"))
 
-    # slug, Name, lat, lon - Slug identisch zu nordlicht_geomag.py und
-    # nordlicht_cloud_era5.py, damit sich alle drei Dateien im Merge
-    # ueber denselben Schluessel verbinden lassen.
-    orte = [
-        ("tromsoe", "Tromsø", 69.6517, 18.9556),
-        ("abisko", "Abisko", 68.3541, 18.7871),
-        ("rovaniemi", "Rovaniemi", 66.5039, 25.7294),
-        ("reykjavik", "Reykjavik", 64.1466, -21.9426),
-        ("yellowknife", "Yellowknife", 62.4540, -114.3718),
-    ]
     monatsname = {9: "sep", 10: "okt", 11: "nov", 12: "dez", 1: "jan", 2: "feb", 3: "mär"}
     saison_monate = [9, 10, 11, 12, 1, 2, 3]
 
     ergebnis = {}
     print(f"{'Ort':<14}" + "".join(f"{monatsname[m]:>6}" for m in saison_monate))
-    for slug, name, lat, lon in orte:
+    for o in ORTE:
+        slug, name, lat, lon = o["slug"], o["name"], o["lat"], o["lon"]
         ergebnis[slug] = {"name": name}
         werte = []
         for m in saison_monate:

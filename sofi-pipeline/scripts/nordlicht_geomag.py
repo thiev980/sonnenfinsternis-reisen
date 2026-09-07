@@ -29,25 +29,9 @@ def geomag_latitude(lat: float, lon: float) -> float:
 
 
 if __name__ == "__main__":
-    # Kandidatenliste: (Name, Land, lat, lon) - grobe Auswahl zur Diskussion,
-    # Koordinaten Stadtzentrum/bekannter Ausgangspunkt, nicht ueberpruefte Praezisionspunkte
-    kandidaten = [
-        ("Tromsø",        "Norwegen",  69.6517,  18.9556),
-        ("Alta",          "Norwegen",  69.9689,  23.2717),
-        ("Svolvær (Lofoten)", "Norwegen", 68.2340, 14.5687),
-        ("Kiruna",        "Schweden",  67.8558,  20.2253),
-        ("Abisko",        "Schweden",  68.3541,  18.7871),
-        ("Rovaniemi",     "Finnland",  66.5039,  25.7294),
-        ("Levi (Kittilä)", "Finnland", 67.8033,  24.8107),
-        ("Saariselkä",    "Finnland",  68.4167,  27.4167),
-        ("Reykjavik",     "Island",    64.1466, -21.9426),
-        ("Akureyri",      "Island",    65.6885, -18.1262),
-        ("Yellowknife",   "Kanada",    62.4540, -114.3718),
-        ("Fairbanks",     "USA",       64.8378, -147.7164),
-        ("Tórshavn",      "Färöer",    62.0107,  -6.7741),
-        ("Aviemore",      "Schottland", 57.1930, -3.8270),
-    ]
+    from nordlicht_orte_liste import ORTE
 
     print(f"{'Ort':<20} {'Land':<12} {'geogr. lat':>11} {'geomag. lat':>12}")
-    for name, land, lat, lon in sorted(kandidaten, key=lambda k: -geomag_latitude(k[2], k[3])):
-        print(f"{name:<20} {land:<12} {lat:>10.2f}° {geomag_latitude(lat, lon):>11.2f}°")
+    for o in sorted(ORTE, key=lambda o: -geomag_latitude(o["lat"], o["lon"])):
+        g = geomag_latitude(o["lat"], o["lon"])
+        print(f"{o['name']:<20} {o['land']:<12} {o['lat']:>10.2f}° {g:>11.2f}°")

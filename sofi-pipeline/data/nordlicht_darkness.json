@@ -118,5 +118,149 @@
     "mär": {
       "dunkelstunden": 6.92
     }
+  },
+  "akureyri": {
+    "name": "Akureyri",
+    "sep": {
+      "dunkelstunden": 3.62
+    },
+    "okt": {
+      "dunkelstunden": 8.72
+    },
+    "nov": {
+      "dunkelstunden": 11.61
+    },
+    "dez": {
+      "dunkelstunden": 12.95
+    },
+    "jan": {
+      "dunkelstunden": 12.25
+    },
+    "feb": {
+      "dunkelstunden": 9.9
+    },
+    "mär": {
+      "dunkelstunden": 6.08
+    }
+  },
+  "fairbanks": {
+    "name": "Fairbanks",
+    "sep": {
+      "dunkelstunden": 4.06
+    },
+    "okt": {
+      "dunkelstunden": 8.8
+    },
+    "nov": {
+      "dunkelstunden": 11.58
+    },
+    "dez": {
+      "dunkelstunden": 12.88
+    },
+    "jan": {
+      "dunkelstunden": 12.21
+    },
+    "feb": {
+      "dunkelstunden": 9.95
+    },
+    "mär": {
+      "dunkelstunden": 6.34
+    }
+  },
+  "kiruna": {
+    "name": "Kiruna",
+    "sep": {
+      "dunkelstunden": 2.6
+    },
+    "okt": {
+      "dunkelstunden": 8.43
+    },
+    "nov": {
+      "dunkelstunden": 11.67
+    },
+    "dez": {
+      "dunkelstunden": 13.17
+    },
+    "jan": {
+      "dunkelstunden": 12.39
+    },
+    "feb": {
+      "dunkelstunden": 9.78
+    },
+    "mär": {
+      "dunkelstunden": 5.19
+    }
+  },
+  "alta": {
+    "name": "Alta",
+    "sep": {
+      "dunkelstunden": 1.65
+    },
+    "okt": {
+      "dunkelstunden": 8.07
+    },
+    "nov": {
+      "dunkelstunden": 11.73
+    },
+    "dez": {
+      "dunkelstunden": 13.42
+    },
+    "jan": {
+      "dunkelstunden": 12.54
+    },
+    "feb": {
+      "dunkelstunden": 9.61
+    },
+    "mär": {
+      "dunkelstunden": 4.04
+    }
+  },
+  "saariselkae": {
+    "name": "Saariselkä",
+    "sep": {
+      "dunkelstunden": 2.33
+    },
+    "okt": {
+      "dunkelstunden": 8.34
+    },
+    "nov": {
+      "dunkelstunden": 11.68
+    },
+    "dez": {
+      "dunkelstunden": 13.23
+    },
+    "jan": {
+      "dunkelstunden": 12.43
+    },
+    "feb": {
+      "dunkelstunden": 9.74
+    },
+    "mär": {
+      "dunkelstunden": 4.87
+    }
+  },
+  "torshavn": {
+    "name": "Tórshavn",
+    "sep": {
+      "dunkelstunden": 5.4
+    },
+    "okt": {
+      "dunkelstunden": 9.07
+    },
+    "nov": {
+      "dunkelstunden": 11.5
+    },
+    "dez": {
+      "dunkelstunden": 12.64
+    },
+    "jan": {
+      "dunkelstunden": 12.04
+    },
+    "feb": {
+      "dunkelstunden": 10.06
+    },
+    "mär": {
+      "dunkelstunden": 6.99
+    }
   }
 }

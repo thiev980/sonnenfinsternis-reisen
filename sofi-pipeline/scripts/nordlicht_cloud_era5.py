@@ -32,8 +32,7 @@ import json
 import sys
 from pathlib import Path
 
-BASE = Path(__file__).resolve().parent.parent
-RAW = BASE / "data" / "era5_nordlicht"
+RAW = Path(__file__).resolve().parent.parent / "data" / "era5_nordlicht"
 RAW.mkdir(parents=True, exist_ok=True)
 
 YEARS = [str(y) for y in range(1995, 2025)]
@@ -41,14 +40,7 @@ MONTHS = ["09", "10", "11", "12", "01", "02", "03"]
 CLEAR_THRESHOLD = 0.25
 OK_THRESHOLD = 0.50
 
-# Ortsliste: slug, name, lat, lon, UTC-Offset Standardzeit (ohne Sommerzeit)
-LOCATIONS = [
-    ("tromsoe",     "Tromsø",      69.6517,  18.9556,  1),
-    ("abisko",      "Abisko",      68.3541,  18.7871,  1),
-    ("rovaniemi",   "Rovaniemi",   66.5039,  25.7294,  2),
-    ("reykjavik",   "Reykjavik",   64.1466, -21.9426,  0),
-    ("yellowknife", "Yellowknife", 62.4540, -114.3718, -7),
-]
+from nordlicht_orte_liste import ORTE
 
 
 def nacht_utc_stunden(utc_offset: int) -> list:
@@ -62,7 +54,8 @@ def download(nur_ort=None):
     import cdsapi
     c = cdsapi.Client()
 
-    for slug, name, lat, lon, offset in LOCATIONS:
+    for o in ORTE:
+        slug, lat, lon, offset = o["slug"], o["lat"], o["lon"], o["utc_offset"]
         if nur_ort and slug != nur_ort:
             continue
         area = [round(lat + 0.5, 2), round(lon - 0.5, 2),
@@ -104,7 +97,8 @@ def aggregate():
     }
 
     ergebnis = {}
-    for slug, name, lat, lon, offset in LOCATIONS:
+    for o in ORTE:
+        slug, name, lat, lon = o["slug"], o["name"], o["lat"], o["lon"]
         ergebnis[slug] = {"name": name}
         for month in MONTHS:
             f = RAW / f"era5_tcc_{slug}_{month}.nc"
@@ -124,7 +118,7 @@ def aggregate():
             }
             print(f"{name:14s} {m}  P(klar)={ergebnis[slug][m]['p_clear']:.0%}")
 
-    out = BASE / "data" / "cloud_stats_nordlicht.json"
+    out = Path(__file__).resolve().parent.parent / "data" / "cloud_stats_nordlicht.json"
     out.write_text(json.dumps(ergebnis, ensure_ascii=False, indent=2))
     print(f"✓ {out}")
 
