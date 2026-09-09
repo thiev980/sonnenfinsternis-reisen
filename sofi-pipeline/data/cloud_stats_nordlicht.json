@@ -188,5 +188,233 @@
       "p_clear": 0.297,
       "p_ok": 0.361
     }
+  },
+  "akureyri": {
+    "name": "Akureyri",
+    "sep": {
+      "mean_tcc": 0.833,
+      "p_clear": 0.063,
+      "p_ok": 0.133
+    },
+    "okt": {
+      "mean_tcc": 0.863,
+      "p_clear": 0.049,
+      "p_ok": 0.104
+    },
+    "nov": {
+      "mean_tcc": 0.873,
+      "p_clear": 0.04,
+      "p_ok": 0.092
+    },
+    "dez": {
+      "mean_tcc": 0.866,
+      "p_clear": 0.04,
+      "p_ok": 0.093
+    },
+    "jan": {
+      "mean_tcc": 0.872,
+      "p_clear": 0.04,
+      "p_ok": 0.088
+    },
+    "feb": {
+      "mean_tcc": 0.849,
+      "p_clear": 0.051,
+      "p_ok": 0.113
+    },
+    "mär": {
+      "mean_tcc": 0.835,
+      "p_clear": 0.059,
+      "p_ok": 0.128
+    }
+  },
+  "fairbanks": {
+    "name": "Fairbanks",
+    "sep": {
+      "mean_tcc": 0.691,
+      "p_clear": 0.194,
+      "p_ok": 0.289
+    },
+    "okt": {
+      "mean_tcc": 0.652,
+      "p_clear": 0.237,
+      "p_ok": 0.33
+    },
+    "nov": {
+      "mean_tcc": 0.627,
+      "p_clear": 0.272,
+      "p_ok": 0.357
+    },
+    "dez": {
+      "mean_tcc": 0.665,
+      "p_clear": 0.229,
+      "p_ok": 0.328
+    },
+    "jan": {
+      "mean_tcc": 0.584,
+      "p_clear": 0.301,
+      "p_ok": 0.423
+    },
+    "feb": {
+      "mean_tcc": 0.599,
+      "p_clear": 0.306,
+      "p_ok": 0.391
+    },
+    "mär": {
+      "mean_tcc": 0.516,
+      "p_clear": 0.395,
+      "p_ok": 0.473
+    }
+  },
+  "kiruna": {
+    "name": "Kiruna",
+    "sep": {
+      "mean_tcc": 0.717,
+      "p_clear": 0.173,
+      "p_ok": 0.27
+    },
+    "okt": {
+      "mean_tcc": 0.75,
+      "p_clear": 0.161,
+      "p_ok": 0.232
+    },
+    "nov": {
+      "mean_tcc": 0.754,
+      "p_clear": 0.152,
+      "p_ok": 0.231
+    },
+    "dez": {
+      "mean_tcc": 0.782,
+      "p_clear": 0.131,
+      "p_ok": 0.201
+    },
+    "jan": {
+      "mean_tcc": 0.78,
+      "p_clear": 0.129,
+      "p_ok": 0.204
+    },
+    "feb": {
+      "mean_tcc": 0.763,
+      "p_clear": 0.147,
+      "p_ok": 0.221
+    },
+    "mär": {
+      "mean_tcc": 0.652,
+      "p_clear": 0.253,
+      "p_ok": 0.341
+    }
+  },
+  "alta": {
+    "name": "Alta",
+    "sep": {
+      "mean_tcc": 0.811,
+      "p_clear": 0.079,
+      "p_ok": 0.155
+    },
+    "okt": {
+      "mean_tcc": 0.844,
+      "p_clear": 0.054,
+      "p_ok": 0.113
+    },
+    "nov": {
+      "mean_tcc": 0.838,
+      "p_clear": 0.064,
+      "p_ok": 0.121
+    },
+    "dez": {
+      "mean_tcc": 0.835,
+      "p_clear": 0.054,
+      "p_ok": 0.12
+    },
+    "jan": {
+      "mean_tcc": 0.826,
+      "p_clear": 0.069,
+      "p_ok": 0.13
+    },
+    "feb": {
+      "mean_tcc": 0.823,
+      "p_clear": 0.072,
+      "p_ok": 0.138
+    },
+    "mär": {
+      "mean_tcc": 0.781,
+      "p_clear": 0.1,
+      "p_ok": 0.175
+    }
+  },
+  "saariselkae": {
+    "name": "Saariselkä",
+    "sep": {
+      "mean_tcc": 0.769,
+      "p_clear": 0.122,
+      "p_ok": 0.206
+    },
+    "okt": {
+      "mean_tcc": 0.807,
+      "p_clear": 0.117,
+      "p_ok": 0.179
+    },
+    "nov": {
+      "mean_tcc": 0.861,
+      "p_clear": 0.082,
+      "p_ok": 0.121
+    },
+    "dez": {
+      "mean_tcc": 0.836,
+      "p_clear": 0.102,
+      "p_ok": 0.149
+    },
+    "jan": {
+      "mean_tcc": 0.844,
+      "p_clear": 0.095,
+      "p_ok": 0.142
+    },
+    "feb": {
+      "mean_tcc": 0.836,
+      "p_clear": 0.104,
+      "p_ok": 0.149
+    },
+    "mär": {
+      "mean_tcc": 0.69,
+      "p_clear": 0.22,
+      "p_ok": 0.302
+    }
+  },
+  "torshavn": {
+    "name": "Tórshavn",
+    "sep": {
+      "mean_tcc": 0.78,
+      "p_clear": 0.076,
+      "p_ok": 0.215
+    },
+    "okt": {
+      "mean_tcc": 0.768,
+      "p_clear": 0.061,
+      "p_ok": 0.224
+    },
+    "nov": {
+      "mean_tcc": 0.762,
+      "p_clear": 0.063,
+      "p_ok": 0.232
+    },
+    "dez": {
+      "mean_tcc": 0.766,
+      "p_clear": 0.068,
+      "p_ok": 0.227
+    },
+    "jan": {
+      "mean_tcc": 0.782,
+      "p_clear": 0.064,
+      "p_ok": 0.198
+    },
+    "feb": {
+      "mean_tcc": 0.758,
+      "p_clear": 0.07,
+      "p_ok": 0.223
+    },
+    "mär": {
+      "mean_tcc": 0.771,
+      "p_clear": 0.066,
+      "p_ok": 0.212
+    }
   }
 }

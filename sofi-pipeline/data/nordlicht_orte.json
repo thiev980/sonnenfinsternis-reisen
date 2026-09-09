@@ -1,5 +1,58 @@
 [
   {
+    "slug": "akureyri",
+    "name": "Akureyri",
+    "land": "Island",
+    "lat": 65.6885,
+    "lon": -18.1262,
+    "geomag_lat": 69.7,
+    "bester_monat": "dez",
+    "monate": {
+      "sep": {
+        "dunkelstunden": 3.62,
+        "p_clear": 0.063,
+        "mean_tcc": 0.833,
+        "index": 0.23
+      },
+      "okt": {
+        "dunkelstunden": 8.72,
+        "p_clear": 0.049,
+        "mean_tcc": 0.863,
+        "index": 0.43
+      },
+      "nov": {
+        "dunkelstunden": 11.61,
+        "p_clear": 0.04,
+        "mean_tcc": 0.873,
+        "index": 0.46
+      },
+      "dez": {
+        "dunkelstunden": 12.95,
+        "p_clear": 0.04,
+        "mean_tcc": 0.866,
+        "index": 0.52
+      },
+      "jan": {
+        "dunkelstunden": 12.25,
+        "p_clear": 0.04,
+        "mean_tcc": 0.872,
+        "index": 0.49
+      },
+      "feb": {
+        "dunkelstunden": 9.9,
+        "p_clear": 0.051,
+        "mean_tcc": 0.849,
+        "index": 0.5
+      },
+      "mär": {
+        "dunkelstunden": 6.08,
+        "p_clear": 0.059,
+        "mean_tcc": 0.835,
+        "index": 0.36
+      }
+    }
+  },
+  {
     "slug": "reykjavik",
     "name": "Reykjavik",
     "land": "Island",
@@ -159,6 +212,59 @@
     }
   },
   {
+    "slug": "alta",
+    "name": "Alta",
+    "land": "Norwegen",
+    "lat": 69.9689,
+    "lon": 23.2717,
+    "geomag_lat": 67.2,
+    "bester_monat": "jan",
+    "monate": {
+      "sep": {
+        "dunkelstunden": 1.65,
+        "p_clear": 0.079,
+        "mean_tcc": 0.811,
+        "index": 0.13
+      },
+      "okt": {
+        "dunkelstunden": 8.07,
+        "p_clear": 0.054,
+        "mean_tcc": 0.844,
+        "index": 0.44
+      },
+      "nov": {
+        "dunkelstunden": 11.73,
+        "p_clear": 0.064,
+        "mean_tcc": 0.838,
+        "index": 0.75
+      },
+      "dez": {
+        "dunkelstunden": 13.42,
+        "p_clear": 0.054,
+        "mean_tcc": 0.835,
+        "index": 0.72
+      },
+      "jan": {
+        "dunkelstunden": 12.54,
+        "p_clear": 0.069,
+        "mean_tcc": 0.826,
+        "index": 0.87
+      },
+      "feb": {
+        "dunkelstunden": 9.61,
+        "p_clear": 0.072,
+        "mean_tcc": 0.823,
+        "index": 0.69
+      },
+      "mär": {
+        "dunkelstunden": 4.04,
+        "p_clear": 0.1,
+        "mean_tcc": 0.781,
+        "index": 0.4
+      }
+    }
+  },
+  {
     "slug": "abisko",
     "name": "Abisko",
     "land": "Schweden",
@@ -211,6 +317,218 @@
       }
     },
     "einschraenkung": "Unsere Wolkenklimatologie basiert auf ERA5 und unterschaetzt hier vermutlich den realen Vorteil: Abiskos dokumentierter Regenschatten-Effekt (der \"Blue Hole\") ist kleinraeumiger, als das Modellraster gut abbilden kann, und die Aurora Sky Station liegt auf 900m Hoehe oberhalb tiefer Wolkenschichten, die unser Wert nicht separat erfasst."
+  },
+  {
+    "slug": "fairbanks",
+    "name": "Fairbanks",
+    "land": "USA",
+    "lat": 64.8378,
+    "lon": -147.7164,
+    "geomag_lat": 65.7,
+    "bester_monat": "jan",
+    "monate": {
+      "sep": {
+        "dunkelstunden": 4.06,
+        "p_clear": 0.194,
+        "mean_tcc": 0.691,
+        "index": 0.79
+      },
+      "okt": {
+        "dunkelstunden": 8.8,
+        "p_clear": 0.237,
+        "mean_tcc": 0.652,
+        "index": 2.09
+      },
+      "nov": {
+        "dunkelstunden": 11.58,
+        "p_clear": 0.272,
+        "mean_tcc": 0.627,
+        "index": 3.15
+      },
+      "dez": {
+        "dunkelstunden": 12.88,
+        "p_clear": 0.229,
+        "mean_tcc": 0.665,
+        "index": 2.95
+      },
+      "jan": {
+        "dunkelstunden": 12.21,
+        "p_clear": 0.301,
+        "mean_tcc": 0.584,
+        "index": 3.68
+      },
+      "feb": {
+        "dunkelstunden": 9.95,
+        "p_clear": 0.306,
+        "mean_tcc": 0.599,
+        "index": 3.04
+      },
+      "mär": {
+        "dunkelstunden": 6.34,
+        "p_clear": 0.395,
+        "mean_tcc": 0.516,
+        "index": 2.5
+      }
+    }
+  },
+  {
+    "slug": "kiruna",
+    "name": "Kiruna",
+    "land": "Schweden",
+    "lat": 67.8558,
+    "lon": 20.2253,
+    "geomag_lat": 65.7,
+    "bester_monat": "nov",
+    "monate": {
+      "sep": {
+        "dunkelstunden": 2.6,
+        "p_clear": 0.173,
+        "mean_tcc": 0.717,
+        "index": 0.45
+      },
+      "okt": {
+        "dunkelstunden": 8.43,
+        "p_clear": 0.161,
+        "mean_tcc": 0.75,
+        "index": 1.36
+      },
+      "nov": {
+        "dunkelstunden": 11.67,
+        "p_clear": 0.152,
+        "mean_tcc": 0.754,
+        "index": 1.77
+      },
+      "dez": {
+        "dunkelstunden": 13.17,
+        "p_clear": 0.131,
+        "mean_tcc": 0.782,
+        "index": 1.73
+      },
+      "jan": {
+        "dunkelstunden": 12.39,
+        "p_clear": 0.129,
+        "mean_tcc": 0.78,
+        "index": 1.6
+      },
+      "feb": {
+        "dunkelstunden": 9.78,
+        "p_clear": 0.147,
+        "mean_tcc": 0.763,
+        "index": 1.44
+      },
+      "mär": {
+        "dunkelstunden": 5.19,
+        "p_clear": 0.253,
+        "mean_tcc": 0.652,
+        "index": 1.31
+      }
+    }
+  },
+  {
+    "slug": "saariselkae",
+    "name": "Saariselkä",
+    "land": "Finnland",
+    "lat": 68.4167,
+    "lon": 27.4167,
+    "geomag_lat": 65.2,
+    "bester_monat": "dez",
+    "monate": {
+      "sep": {
+        "dunkelstunden": 2.33,
+        "p_clear": 0.122,
+        "mean_tcc": 0.769,
+        "index": 0.28
+      },
+      "okt": {
+        "dunkelstunden": 8.34,
+        "p_clear": 0.117,
+        "mean_tcc": 0.807,
+        "index": 0.98
+      },
+      "nov": {
+        "dunkelstunden": 11.68,
+        "p_clear": 0.082,
+        "mean_tcc": 0.861,
+        "index": 0.96
+      },
+      "dez": {
+        "dunkelstunden": 13.23,
+        "p_clear": 0.102,
+        "mean_tcc": 0.836,
+        "index": 1.35
+      },
+      "jan": {
+        "dunkelstunden": 12.43,
+        "p_clear": 0.095,
+        "mean_tcc": 0.844,
+        "index": 1.18
+      },
+      "feb": {
+        "dunkelstunden": 9.74,
+        "p_clear": 0.104,
+        "mean_tcc": 0.836,
+        "index": 1.01
+      },
+      "mär": {
+        "dunkelstunden": 4.87,
+        "p_clear": 0.22,
+        "mean_tcc": 0.69,
+        "index": 1.07
+      }
+    }
+  },
+  {
+    "slug": "torshavn",
+    "name": "Tórshavn",
+    "land": "Färöer",
+    "lat": 62.0107,
+    "lon": -6.7741,
+    "geomag_lat": 64.5,
+    "bester_monat": "dez",
+    "monate": {
+      "sep": {
+        "dunkelstunden": 5.4,
+        "p_clear": 0.076,
+        "mean_tcc": 0.78,
+        "index": 0.41
+      },
+      "okt": {
+        "dunkelstunden": 9.07,
+        "p_clear": 0.061,
+        "mean_tcc": 0.768,
+        "index": 0.55
+      },
+      "nov": {
+        "dunkelstunden": 11.5,
+        "p_clear": 0.063,
+        "mean_tcc": 0.762,
+        "index": 0.72
+      },
+      "dez": {
+        "dunkelstunden": 12.64,
+        "p_clear": 0.068,
+        "mean_tcc": 0.766,
+        "index": 0.86
+      },
+      "jan": {
+        "dunkelstunden": 12.04,
+        "p_clear": 0.064,
+        "mean_tcc": 0.782,
+        "index": 0.77
+      },
+      "feb": {
+        "dunkelstunden": 10.06,
+        "p_clear": 0.07,
+        "mean_tcc": 0.758,
+        "index": 0.7
+      },
+      "mär": {
+        "dunkelstunden": 6.99,
+        "p_clear": 0.066,
+        "mean_tcc": 0.771,
+        "index": 0.46
+      }
+    }
   },
   {
     "slug": "rovaniemi",
