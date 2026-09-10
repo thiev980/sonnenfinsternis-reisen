@@ -61,7 +61,7 @@ const MAX_I = Math.max(...alleIndizes);
     const MONATSNAME = { sep:'September', okt:'Oktober', nov:'November', dez:'Dezember', jan:'Januar', feb:'Februar', mär:'März' };
 
     const map = L.map('map', { zoomSnap: 0.5, scrollWheelZoom: false });
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_343o_1_0e18ed12688928e5c4447a06',
       { attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 18 }).addTo(map);
 
     // Kartenausschnitt automatisch auf alle Orte anpassen - anders als bei

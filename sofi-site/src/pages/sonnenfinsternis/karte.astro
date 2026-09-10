@@ -27,7 +27,7 @@ import pfad from '../../data/pfad.json';
   <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script is:inline>
     const map = L.map('map', { zoomSnap: 0.5, scrollWheelZoom: false }).setView([30.5, 14], 4.5);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_343o_1_0e18ed12688928e5c4447a06',
       { attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 18 }).addTo(map);
     const PF = window.__PFAD__, OR = window.__ORTE__;
     L.geoJSON(PF.features[0], { style: { color: '#14183C', weight: 1, fillColor: '#14183C', fillOpacity: 0.28 } }).addTo(map);
