@@ -1,5 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
+import orte from '../../data/nordlicht_orte.json';
+import { zahl } from '../../lib/format.js';
+
+const MONATSNAME_LANG = {
+  sep: 'September', okt: 'Oktober', nov: 'November', dez: 'Dezember',
+  jan: 'Januar', feb: 'Februar', mär: 'März',
+};
+
+const top5 = [...orte]
+  .sort((a, b) => b.monate[b.bester_monat].index - a.monate[a.bester_monat].index)
+  .slice(0, 5);
 
 const schema = [{
   '@context': 'https://schema.org',
@@ -10,7 +21,7 @@ const schema = [{
 ---
 <Base
   title="Nordlichter: Wo und wann sich die Reise lohnt"
-  description="Nordlicht-Reiseplanung mit eigenen Berechnungen: geomagnetische Breite, Dunkelstunden pro Saison und Wolkenklimatologie - transparent statt geraten."
+  description="Nordlicht-Reiseplanung mit eigenen Berechnungen: geomagnetische Breite, Dunkelstunden pro Saison und Wolkenklimatologie für 11 Orte von Kanada bis Skandinavien - transparent statt geraten."
   schema={schema}
 >
   <section class="hero">
@@ -20,24 +31,61 @@ const schema = [{
       Anders als eine Sonnenfinsternis lässt sich ein Nordlicht nicht auf die Minute vorausberechnen -
       die Sonnenaktivität ist erst wenige Tage vorher verlässlich einzuschätzen. Was sich aber berechnen
       lässt: wo die geomagnetische Lage, die Dunkelstunden und das Wetter über viele Jahre gemittelt am
-      günstigsten zusammenkommen. Genau das bauen wir hier auf.
+      günstigsten zusammenkommen - für {orte.length} Orte von Kanada bis Skandinavien.
+    </p>
+    <div class="cta">
+      <a class="btn primär" href="/nordlichter/karte">Zur interaktiven Karte</a>
+      <a class="btn" href="/nordlichter/orte">Alle {orte.length} Orte im Vergleich</a>
+      <a class="btn" href="/nordlichter/guides">Alle Guides</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Die besten Chancen gerade</h2>
+    <table class="daten">
+      <thead><tr><th>Ort</th><th>Land</th><th>Bester Monat</th><th>Index</th></tr></thead>
+      <tbody>
+        {top5.map((o) => (
+          <tr>
+            <td><a href={`/nordlichter/orte/${o.slug}`}>{o.name}</a></td>
+            <td>{o.land}</td>
+            <td>{MONATSNAME_LANG[o.bester_monat]}</td>
+            <td><strong>{zahl(o.monate[o.bester_monat].index)}</strong></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="tabellen-hinweis">
+      Index = Dunkelstunden × Wahrscheinlichkeit auf klaren Himmel. Warum die bekanntesten Orte
+      hier nicht automatisch vorne liegen, steht im{' '}
+      <a href="/nordlichter/guides/tromsoe-abisko-oder-yellowknife">Datenvergleich</a>.
     </p>
   </section>
 
-  <section class="stand">
-    <h2>Aktueller Stand</h2>
-    <ul class="checkliste">
-      <li class="fertig">Geomagnetische Breite für die Zielorte berechnet</li>
-      <li class="fertig">Dunkelstunden und Mondphase pro Ort und Monat berechnet</li>
-      <li class="laeuft">Wolkenklimatologie: Berechnung läuft</li>
-      <li class="offen">Ortsseiten und Karte: folgen, sobald die Wolkendaten stehen</li>
+  <section class="guides-teaser">
+    <h2>Die Entscheidungen vor der Reise</h2>
+    <ul>
+      <li>
+        <a href="/nordlichter/guides/kp-index-und-vorhersage">Warum sich ein Nordlicht nicht wie eine Finsternis vorhersagen lässt</a>
+        <p>Was ein Kp-Wert misst, welcher Zeithorizont wirklich verlässlich ist - und warum
+        „ein Jahr im Voraus buchen" bei Nordlichtern eine andere Frage ist als bei einer Finsternis.</p>
+      </li>
+      <li>
+        <a href="/nordlichter/guides/tromsoe-abisko-oder-yellowknife">Fairbanks, Tromsø oder Yellowknife?</a>
+        <p>Der Datenvergleich über alle elf Orte - inklusive zweier Fälle, bei denen wir unseren
+        eigenen Zahlen nicht vollständig trauen.</p>
+      </li>
+      <li>
+        <a href="/nordlichter/guides/warum-nicht-dezember">Warum Dezember nicht automatisch die beste Zeit ist</a>
+        <p>Die längste Nacht des Jahres liegt im Dezember. Der beste Reisemonat oft nicht -
+        weil Dunkelheit nur die halbe Rechnung ist.</p>
+      </li>
+      <li>
+        <a href="/nordlichter/guides/pauschalreise-oder-selbst-planen">Pauschalreise, geführte Tour oder selbst planen?</a>
+        <p>Der Unterschied zur Finsternis: Eine Nordlicht-Tour kann in derselben Nacht dorthin
+        fahren, wo der Himmel klar ist. Wann sich das lohnt.</p>
+      </li>
     </ul>
-    <p>
-      Die Nordlicht-Saison hat gerade begonnen. Wir veröffentlichen die ersten Orts-Auswertungen und
-      Guides laufend, sobald die Daten vollständig sind - nicht vorher, weil eine Rangfolge ohne
-      Wolkendaten nur die halbe Geschichte wäre.
-      {' '}<a href="/nordlichter/methodik">Wie wir rechnen →</a>
-    </p>
   </section>
 </Base>
 
@@ -46,14 +94,21 @@ const schema = [{
   .eyebrow { color: var(--grau); font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
   h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.12; margin-bottom: 18px; }
   .lead { font-size: 18px; max-width: 660px; }
+  .cta { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 11px 20px; border-radius: 9px; text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15.5px;
+    border: 1.5px solid var(--nacht); color: var(--nacht);
+  }
+  .btn.primär { background: var(--nacht); color: #fff; }
 
-  .stand { max-width: 660px; }
-  .stand h2 { font-size: 22px; margin-bottom: 14px; }
-  .checkliste { list-style: none; margin: 0 0 20px; padding: 0; }
-  .checkliste li { padding: 8px 0 8px 28px; position: relative; font-size: 15.5px; }
-  .checkliste li::before { position: absolute; left: 0; font-weight: 700; }
-  .checkliste li.fertig::before { content: '✓'; color: var(--nacht); }
-  .checkliste li.laeuft::before { content: '···'; color: var(--gold); }
-  .checkliste li.offen { color: var(--grau); }
-  .checkliste li.offen::before { content: '○'; color: var(--grau); }
+  section h2 { font-size: 24px; margin-bottom: 14px; }
+  .tabellen-hinweis { color: var(--grau); font-size: 13.5px; margin-top: 10px; }
+
+  .guides-teaser { margin-top: 40px; }
+  .guides-teaser ul { list-style: none; margin: 0; padding: 0; max-width: 720px; }
+  .guides-teaser li { border-top: 1px solid var(--linie); padding: 14px 0; }
+  .guides-teaser a { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; text-decoration: none; }
+  .guides-teaser a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .guides-teaser p { color: var(--grau); font-size: 15px; margin-top: 4px; }
 </style>

@@ -1,12 +1,25 @@
 ---
 import Base from '../layouts/Base.astro';
 import orte from '../data/orte.json';
+import nordlichtOrte from '../data/nordlicht_orte.json';
 
 const laengste = orte
   .filter((o) => o.is_total)
   .sort((a, b) => b.totality_s - a.totality_s)[0];
 
 const anzahlTotal = orte.filter((o) => o.is_total).length;
+
+// Bester Ort/Monat ueber alle Nordlicht-Zielorte - dynamisch, damit sich
+// der Text automatisch mitzieht, wenn weitere Orte dazukommen.
+const MONATSNAME_LANG = {
+  sep: 'September', okt: 'Oktober', nov: 'November', dez: 'Dezember',
+  jan: 'Januar', feb: 'Februar', mär: 'März',
+};
+const bestNL = nordlichtOrte.reduce((best, o) => {
+  const idx = o.monate[o.bester_monat].index;
+  return idx > best.idx ? { ort: o, idx } : best;
+}, { ort: null, idx: -Infinity });
+const anzahlNordlicht = nordlichtOrte.length;
 
 const schema = [{
   '@context': 'https://schema.org',
@@ -47,11 +60,12 @@ const schema = [{
       <li>
         <a href="/nordlichter">Nordlichter</a>
         <p>
-          Die Saison läuft von September bis März. Wohin es sich lohnt, wie
-          verlässlich die Vorhersagen wirklich sind und was der Sonnenzyklus
-          damit zu tun hat.
+          Die Saison läuft von September bis März. Geomagnetische Lage, Dunkelstunden
+          und Wolkenwahrscheinlichkeit für {anzahlNordlicht} Orte von Kanada bis
+          Skandinavien – aktuell beste Chance: {bestNL.ort.name} im {MONATSNAME_LANG[bestNL.ort.bester_monat]}.
+          Dazu Karte und Reise-Guides.
         </p>
-        <span class="status kommt">Im Aufbau – ab Herbst 2026</span>
+        <span class="status bereit">Vollständig</span>
       </li>
     </ul>
   </section>
