@@ -11,6 +11,13 @@ export function getStaticPaths() {
 const { ort } = Astro.props;
 const totalOrte = orte.filter((o) => o.is_total).sort((a, b) => b.totality_s - a.totality_s);
 
+// Optionaler redaktioneller Text pro Ort: src/texte/sonnenfinsternis/<slug>.md
+// Gibt es die Datei nicht, erscheint der Abschnitt einfach nicht.
+const texte = import.meta.glob('../../../texte/sonnenfinsternis/*.md', { eager: true });
+const ortsText = texte[`../../../texte/sonnenfinsternis/${ort.slug}.md`];
+const OrtsText = ortsText?.Content;
+const textStand = ortsText?.frontmatter?.stand;
+
 // Nachbarn: gleiche Region (Land), nach Dauer sortiert, ohne den Ort selbst
 const nachbarn = orte
   .filter((o) => o.country === ort.country && o.slug !== ort.slug)
@@ -153,6 +160,13 @@ const schema = [
       </>
     )}
 
+
+    {OrtsText && (
+      <section class="ortstext">
+        <OrtsText />
+        {textStand && <p class="textstand">Redaktioneller Text, Stand der Recherche: {textStand}.</p>}
+      </section>
+    )}
     {ort.cloud && (
       <section class="wolken">
         <h2>Wie stehen die Chancen auf klaren Himmel?</h2>
@@ -249,4 +263,10 @@ const schema = [
   .score { font-size: 15.5px; }
   .klein { font-size: 13.5px; color: var(--grau); margin-top: 10px; }
   .quelle { margin-top: 34px; font-size: 13.5px; color: var(--grau); }
+  .ortstext { max-width: 680px; margin-top: 8px; }
+  .ortstext :global(h2) { font-size: 21px; margin: 30px 0 12px; }
+  .ortstext :global(p) { margin-bottom: 14px; }
+  .ortstext :global(ul) { margin: 0 0 14px 20px; }
+  .ortstext :global(li) { margin-bottom: 6px; font-size: 15px; }
+  .textstand { color: var(--grau); font-size: 13.5px; margin-top: 18px; }
 </style>
