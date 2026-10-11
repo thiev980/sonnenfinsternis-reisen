@@ -1,11 +1,12 @@
 ---
 /**
- * Stay22-Unterkunftskarte als Zwei-Klick-Lösung.
+ * Stay22-Unterkunftskarte hinter Einwilligung.
  *
- * Das Iframe wird NICHT beim Seitenaufruf geladen, sondern erst, wenn der
- * Besucher den Button drückt. Vorher geht keine einzige Anfrage an stay22.com,
- * es wird also keine IP-Adresse an einen Dritten übertragen. Genau deshalb
- * kommt die Seite weiterhin ohne Consent-Banner aus.
+ * Das Iframe wird NICHT ungefragt beim Seitenaufruf geladen. Es lädt entweder
+ * automatisch, wenn der Besucher im Einwilligungsfenster (ConsentBanner.astro)
+ * zugestimmt hat, oder erst, wenn er den Button drückt. Bis dahin geht keine
+ * einzige Anfrage an stay22.com, es wird also keine IP-Adresse übertragen.
+ * Ein Widerruf (Footer-Link) blendet die Karte sofort wieder aus.
  *
  * Doku der Parameter: https://group.stay22.com/docs/
  *
@@ -138,20 +139,25 @@ const beschreibung = sektion === 'nordlicht'
 )}
 
 <script>
+  import { getConsent, onConsentChange } from '../lib/consent.js';
+
   document.querySelectorAll('[data-stay22]').forEach((box) => {
+    const platzhalter = box.querySelector('.s22-box');
     const btn = box.querySelector('.s22-btn');
-    if (!btn) return;
-    btn.addEventListener('click', () => {
-      const ziel = box.querySelector('.s22-box');
+    if (!platzhalter || !btn) return;
+    let iframe: HTMLIFrameElement | null = null;
+
+    const laden = () => {
+      if (iframe) return;
       let src = box.getAttribute('data-src');
-      if (!ziel || !src) return;
+      if (!src) return;
       // Eigene Tests aus der Statistik heraushalten: Seite mit ?s22test
       // aufrufen, dann laufen Load und Klick unter einer eigenen Campaign,
       // die sich im Hub wegfiltern lässt.
       if (new URLSearchParams(location.search).has('s22test')) {
         src = src.replace(/([?&]campaign=)[^&]*/, '$1intern-test');
       }
-      const iframe = document.createElement('iframe');
+      iframe = document.createElement('iframe');
       iframe.src = src;
       iframe.title = 'Unterkunftskarte von Stay22';
       iframe.loading = 'lazy';
@@ -164,8 +170,19 @@ const beschreibung = sektion === 'nordlicht'
       iframe.style.border = '0';
       iframe.style.borderRadius = '10px';
       iframe.style.display = 'block';
-      ziel.replaceWith(iframe);
-    }, { once: true });
+      platzhalter.replaceWith(iframe);
+    };
+
+    // Widerruf: Karte wieder durch den Platzhalter ersetzen.
+    const entladen = () => {
+      if (!iframe) return;
+      iframe.replaceWith(platzhalter);
+      iframe = null;
+    };
+
+    btn.addEventListener('click', laden);
+    if (getConsent()?.stay22) laden();
+    onConsentChange((stay22) => (stay22 ? laden() : entladen()));
   });
 </script>
 

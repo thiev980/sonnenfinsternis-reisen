@@ -2,6 +2,7 @@
 // Basis-Layout: Design-Tokens, Header, Footer, SEO-Grundgerüst
 import '@fontsource/space-grotesk/500.css';
 import '@fontsource/space-grotesk/700.css';
+import ConsentBanner from '../components/ConsentBanner.astro';
 
 interface Props {
   title: string;
@@ -97,6 +98,8 @@ const nlText = inSofi
       font-size: 13.5px; color: var(--grau);
     }
     footer.site a { color: var(--grau); }
+    .consent-link { background: none; border: 0; padding: 0; font: inherit; color: var(--nacht); text-decoration: underline; cursor: pointer; }
+    footer.site .consent-link { color: var(--grau); }
     footer.site .cols { display: flex; gap: 32px; flex-wrap: wrap; justify-content: space-between; }
     .badge-total { display: inline-block; background: var(--nacht); color: #fff; padding: 2px 10px; border-radius: 11px; font-size: 12.5px; font-weight: 600; }
     .badge-partiell { display: inline-block; background: #edebe4; color: var(--tinte); padding: 2px 10px; border-radius: 11px; font-size: 12.5px; font-weight: 600; }
@@ -193,7 +196,8 @@ const nlText = inSofi
       <div>
         © 2026 astroreisen.com ·
         <a href="/impressum">Impressum</a> ·
-        <a href="/datenschutz">Datenschutz</a>
+        <a href="/datenschutz">Datenschutz</a> ·
+        <button type="button" class="consent-link" data-consent-open>Datenschutz-Einstellungen</button>
         {inSofi && <> · <a href="/sonnenfinsternis/methodik">Methodik &amp; Quellen</a></>}
         {inNordlicht && <> · <a href="/nordlichter/methodik">Methodik &amp; Quellen</a></>}
       </div>
@@ -208,5 +212,6 @@ const nlText = inSofi
       </div>
     </div>
   </footer>
+  <ConsentBanner />
 </body>
 </html>

@@ -1,0 +1,130 @@
+---
+/**
+ * Einwilligungsfenster (Stay22).
+ *
+ * - Erscheint beim ersten Besuch als Fenster in der Seitenmitte (<dialog>, mit
+ *   abgedunkeltem Hintergrund). Der Browser sperrt den Rest der Seite für Maus
+ *   und Tastatur, solange es offen ist.
+ * - "Annehmen" und "Ablehnen" sind bewusst gleich gestaltet und gleich gross.
+ * - Die Wahl wird in localStorage gespeichert (siehe lib/consent.js). Danach
+ *   erscheint das Fenster nicht mehr, bis die Wahl über den Footer-Link
+ *   "Datenschutz-Einstellungen" (Attribut data-consent-open) wieder geöffnet wird.
+ * - Auf /datenschutz und /impressum öffnet es sich nie von selbst, damit man die
+ *   Seiten, auf die das Fenster verweist, lesen kann.
+ * - Der Inhalt steckt in einem <template> und gelangt erst bei Bedarf ins DOM.
+ *   So taucht der Fenstertext nicht in jedem Seiten-HTML auf.
+ */
+---
+<template id="consent-tpl">
+  <dialog class="cb" aria-labelledby="cb-titel">
+    <h2 id="cb-titel" tabindex="-1" autofocus>Unterkunftskarte laden?</h2>
+    <p>
+      Auf den Ortsseiten zeige ich eine interaktive Unterkunftskarte. Beim Laden werden
+      Daten an den Kartenanbieter Stay22 (Kanada) übertragen, und Stay22 kann Cookies
+      setzen, um Buchungen mir zuzuordnen.
+    </p>
+    <p>
+      <strong>Annehmen:</strong> Die Karte lädt direkt.{' '}
+      <strong>Ablehnen:</strong> Die Karte bleibt hinter einem Klick, sonst ändert sich nichts.
+    </p>
+    <p class="cb-klein">
+      Unabhängig davon laden die Karten-Seiten Kartenkacheln von CARTO, und Cloudflare
+      misst Seitenaufrufe ohne Cookies. Details in der{' '}
+      <a href="/datenschutz">Datenschutzerklärung</a>. Deine Wahl kannst du jederzeit über
+      «Datenschutz-Einstellungen» im Fussbereich ändern.
+    </p>
+    <p class="cb-klein cb-status" data-status hidden></p>
+    <div class="cb-knoepfe">
+      <button type="button" class="cb-btn" data-wahl="ja">Annehmen</button>
+      <button type="button" class="cb-btn" data-wahl="nein">Ablehnen</button>
+    </div>
+  </dialog>
+</template>
+
+<script>
+  import { getConsent, setConsent } from '../lib/consent.js';
+
+  const vorlage = document.getElementById('consent-tpl') as HTMLTemplateElement | null;
+  let fenster: HTMLDialogElement | null = null;
+
+  function oeffnen() {
+    if (fenster || !vorlage) return;
+    const neu = vorlage.content.firstElementChild?.cloneNode(true) as HTMLDialogElement | undefined;
+    if (!neu) return;
+    fenster = neu;
+    document.body.appendChild(fenster);
+
+    // Bei erneutem Öffnen zeigen, was gerade gilt.
+    const aktuell = getConsent();
+    const status = fenster.querySelector('[data-status]') as HTMLElement | null;
+    if (aktuell && status) {
+      status.textContent = aktuell.stay22
+        ? 'Aktuell: Die Unterkunftskarte lädt automatisch.'
+        : 'Aktuell: Die Unterkunftskarte lädt erst nach einem Klick.';
+      status.hidden = false;
+    }
+
+    // Beim allerersten Besuch lässt sich das Fenster nicht mit Esc wegdrücken,
+    // ohne zu wählen. Beim erneuten Öffnen über den Footer schon.
+    fenster.addEventListener('cancel', (e) => {
+      if (!getConsent()) e.preventDefault();
+    });
+    fenster.addEventListener('close', () => {
+      fenster?.remove();
+      fenster = null;
+      document.documentElement.style.overflow = '';
+    });
+    fenster.querySelectorAll('[data-wahl]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        setConsent((btn as HTMLElement).dataset.wahl === 'ja');
+        fenster?.close();
+      });
+    });
+
+    document.documentElement.style.overflow = 'hidden';
+    fenster.showModal();
+  }
+
+  // Footer-Link und Button auf der Datenschutzseite
+  document.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement | null)?.closest('[data-consent-open]')) oeffnen();
+  });
+
+  // Erstbesuch: Fenster nur auf Seiten zeigen, die eine Stay22-Karte enthalten.
+  if (!getConsent() && document.querySelector('.s22-box')) oeffnen();
+</script>
+
+<style is:global>
+  dialog.cb {
+    /* Die globale Regel `* { margin: 0 }` in Base.astro hebt das automatische
+       Zentrieren des <dialog> auf, daher hier ausdrücklich wieder setzen. */
+    margin: auto;
+    border: 0;
+    border-radius: 12px;
+    padding: 26px 28px;
+    width: min(520px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    background: var(--papier, #fbfaf7);
+    color: var(--tinte, #22252e);
+    box-shadow: 0 20px 60px rgba(20, 24, 60, 0.35);
+    font: 15.5px/1.6 -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  dialog.cb::backdrop { background: rgba(20, 24, 60, 0.55); }
+  dialog.cb h2 { font-size: 21px; margin: 0 0 12px; outline: none; }
+  dialog.cb p { margin: 0 0 12px; }
+  dialog.cb .cb-klein { font-size: 13.5px; color: #5b606d; }
+  dialog.cb .cb-knoepfe { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+  dialog.cb .cb-btn {
+    flex: 1 1 180px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 2px solid var(--nacht, #14183c);
+    background: var(--nacht, #14183c);
+    color: #fff;
+    font: 700 15.5px 'Space Grotesk', sans-serif;
+    cursor: pointer;
+  }
+  dialog.cb .cb-btn:hover { opacity: 0.9; }
+  dialog.cb .cb-btn:focus-visible { outline: 3px solid var(--gold, #e8b44f); outline-offset: 2px; }
+</style>
