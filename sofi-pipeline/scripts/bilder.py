@@ -62,7 +62,8 @@ TITEL_RAUS = re.compile(
     r"karte|\bmap\b|\bplan\b|wappen|coat.of.arms|schild|\bsign\b|tafel|innen|interior|inside|orgel|altar|"
     r"fenster|window|grab|epitaph|logo|diagram|fahne|flag|portrait|porträt|briefmarke|stamp|"
     r"postkarte|postcard|\bdetail\b|inschrift|inscription|relief|skulptur|sculpture|statue|gemälde|painting|"
-    r"museum|exhibit|poster|screenshot|chart|graph|satellite|locator",
+    r"museum|exhibit|poster|screenshot|chart|graph|satellite|locator|google.art.project|lithograph|engraving|"
+    r"kupferstich|illustration|\bISS\d|view of earth|astronaut photo|aerial.view.of.earth",
     re.I,
 )
 
@@ -285,7 +286,9 @@ def _kandidaten_seite(s: dict, ergebnis: dict) -> None:
         liste.append({k: v for k, v in info.items() if k not in ("kategorien", "mime")}
                      | {"vorschau": _vorschau_url(info["url"]), "quelle": quellen[t],
                         "wertung": _wertung(info, quellen[t])})
-    liste.sort(key=lambda c: (-c["wertung"], c["datei"]))
+    # bei gleicher Wertung: Reihenfolge der Quelle (Geosuche nach Abstand, Textsuche nach Relevanz)
+    rang = {t: i for i, t in enumerate(quellen)}
+    liste.sort(key=lambda c: (-c["wertung"], rang[c["datei"]]))
     # Serien (gleicher Titel bis auf Nummer, z. B. Flickr-Uploads) höchstens zweimal
     serie: dict[str, int] = {}
     gefiltert = []
