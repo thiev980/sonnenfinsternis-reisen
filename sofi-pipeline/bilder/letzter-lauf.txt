@@ -1,0 +1,51 @@
+seite/start
+seite/start: 8 Kandidaten (von 148 Dateien)
+seite/sonnenfinsternis
+seite/sonnenfinsternis: 8 Kandidaten (von 146 Dateien)
+seite/nordlichter
+seite/nordlichter: 8 Kandidaten (von 133 Dateien)
+guide/klarer-himmel-wolken-wahrscheinlichkeit
+guide/klarer-himmel-wolken-wahrscheinlichkeit: 8 Kandidaten (von 250 Dateien)
+guide/kp-index-und-vorhersage
+guide/kp-index-und-vorhersage: 8 Kandidaten (von 63 Dateien)
+guide/pauschalreise-oder-selbst-organisieren
+guide/pauschalreise-oder-selbst-organisieren: 8 Kandidaten (von 300 Dateien)
+guide/pauschalreise-oder-selbst-planen
+guide/pauschalreise-oder-selbst-planen: 8 Kandidaten (von 155 Dateien)
+guide/reicht-hurghada
+guide/reicht-hurghada: 8 Kandidaten (von 199 Dateien)
+guide/sonnenfinsternis-mit-kindern
+guide/sonnenfinsternis-mit-kindern: 8 Kandidaten (von 143 Dateien)
+guide/spanien-marokko-oder-aegypten
+guide/spanien-marokko-oder-aegypten: 8 Kandidaten (von 350 Dateien)
+guide/tromsoe-abisko-oder-yellowknife
+guide/tromsoe-abisko-oder-yellowknife: 8 Kandidaten (von 92 Dateien)
+guide/warum-nicht-dezember
+guide/warum-nicht-dezember: 8 Kandidaten (von 59 Dateien)
+sofi/tarifa
+  Wikidata Q222702 → Tarifa panorama.jpg
+sofi/tarifa: 8 Kandidaten (von 101 Dateien)
+sofi/cadiz
+  Wikidata Q15682 → Cadiz aerea.jpg
+sofi/cadiz: 8 Kandidaten (von 101 Dateien)
+sofi/jerez
+  Wikidata Q12303 → HDR Panorama (8265946396).jpg
+sofi/jerez: 8 Kandidaten (von 101 Dateien)
+sofi/estepona
+  Wikidata Q492748 → Estepona aerial.jpg
+Traceback (most recent call last):
+  File "/home/runner/work/sonnenfinsternis-reisen/sonnenfinsternis-reisen/sofi-pipeline/scripts/bilder.py", line 403, in <module>
+    main(sys.argv[1:])
+  File "/home/runner/work/sonnenfinsternis-reisen/sonnenfinsternis-reisen/sofi-pipeline/scripts/bilder.py", line 391, in main
+    kandidaten()
+  File "/home/runner/work/sonnenfinsternis-reisen/sonnenfinsternis-reisen/sofi-pipeline/scripts/bilder.py", line 265, in kandidaten
+    infos = bildinfo(list(quellen))
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/sonnenfinsternis-reisen/sonnenfinsternis-reisen/sofi-pipeline/scripts/bilder.py", line 148, in bildinfo
+    d = _get(COMMONS, {"action": "query", "titles": "|".join(titel[i:i + 50]), "prop": "imageinfo",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/sonnenfinsternis-reisen/sonnenfinsternis-reisen/sofi-pipeline/scripts/bilder.py", line 80, in _get
+    r.raise_for_status()
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3AOrchidarium+de+Estepona+%2832910000564%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832910036174%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832910041414%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832910047284%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939955553%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939957813%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939963143%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939964583%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939988063%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939998343%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832940004103%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832940006753%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832940020193%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832940025373%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833368401850%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833368407960%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833368418140%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596719092%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596720792%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596722152%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596723222%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596749252%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596756622%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596764972%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623896941%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623922401%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623944611%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623968241%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623971881%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623975391%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623981721%29+%282%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712218586%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712225396%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712234246%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712244256%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712246836%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712249466%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712251206%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712253106%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712276416%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833752944315%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833752947005%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833752987385%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833752993745%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833367731590%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833367735920%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833367738680%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833711683116%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833711684286%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833711687166%29.jpg&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1920&iiextmetadatafilter=Artist%7CCredit%7CLicenseShortName%7CLicenseUrl%7CCategories&format=json&formatversion=2
