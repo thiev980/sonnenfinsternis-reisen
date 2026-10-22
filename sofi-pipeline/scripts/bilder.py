@@ -72,9 +72,13 @@ _s.headers["User-Agent"] = UA
 
 def _get(url: str, params: dict) -> dict:
     params = {**params, "format": "json", "formatversion": 2}
-    for versuch in range(5):
-        r = _s.get(url, params=params, timeout=60)
-        if r.status_code in (429, 503):
+    for versuch in range(6):
+        try:
+            r = _s.get(url, params=params, timeout=90)
+        except requests.RequestException:
+            time.sleep(5 * (versuch + 1))
+            continue
+        if r.status_code in (429, 500, 502, 503, 504):
             time.sleep(5 * (versuch + 1))
             continue
         r.raise_for_status()
@@ -144,8 +148,8 @@ def bildinfo(titel: list[str], breite: int = BREITE_HEADER) -> dict[str, dict]:
     """Metadaten und Vorschau-URL je Commons-Datei; nur passende Lizenzen."""
     out: dict[str, dict] = {}
     titel = sorted(set(titel))
-    for i in range(0, len(titel), 50):
-        d = _get(COMMONS, {"action": "query", "titles": "|".join(titel[i:i + 50]), "prop": "imageinfo",
+    for i in range(0, len(titel), 25):
+        d = _get(COMMONS, {"action": "query", "titles": "|".join(titel[i:i + 25]), "prop": "imageinfo",
                            "iiprop": "url|size|mime|extmetadata", "iiurlwidth": breite,
                            "iiextmetadatafilter": "Artist|Credit|LicenseShortName|LicenseUrl|Categories"})
         for p in d.get("query", {}).get("pages", []):
@@ -248,44 +252,61 @@ def kandidaten() -> dict:
         if s["key"] in entschieden or s["key"] in ergebnis:
             continue          # schon entschieden oder schon Kandidaten gesucht
         log.info("%s", s["key"])
-        quellen: dict[str, str] = {}
-        if "ort" in s:
-            o, u = s["ort"], s["ueber"]
-            t = wikidata_bild(o["name"], o["lat"], o["lon"], u.get("wikidata"))
-            if t:
-                quellen[t] = f"Wikidata-Bild von {o['name']}"
-            for t in geosuche(o["lat"], o["lon"], u.get("radius", 3000)):
-                quellen.setdefault(t, f"bis {u.get('radius', 3000) // 1000} km um {o['name']}")
-        for o in s.get("orte", []):
-            for t in geosuche(o["lat"], o["lon"], 3000):
-                quellen.setdefault(t, f"bei {o['name']}")
-        for b in s.get("suche", []):
-            for t in textsuche(b):
-                quellen.setdefault(t, f"Suche «{b}»")
-        infos = bildinfo(list(quellen))
-        liste = []
-        for t, info in infos.items():
-            if not _passt(info):
-                continue
-            liste.append({k: v for k, v in info.items() if k not in ("kategorien", "mime")}
-                         | {"vorschau": _vorschau_url(info["url"]), "quelle": quellen[t],
-                            "wertung": _wertung(info, quellen[t])})
-        liste.sort(key=lambda c: (-c["wertung"], c["datei"]))
-        # Höchstens die Hälfte aus einer einzelnen Quelle, damit Wikidata, Geo- und Textsuche gemischt erscheinen
-        pro_quelle: dict[str, int] = {}
-        auswahl, rest = [], []
-        for c in liste:
-            if pro_quelle.get(c["quelle"], 0) < PRO_SEITE // 2:
-                pro_quelle[c["quelle"]] = pro_quelle.get(c["quelle"], 0) + 1
-                auswahl.append(c)
-            else:
-                rest.append(c)
-        auswahl = (auswahl + rest)[:PRO_SEITE]
-        ergebnis[s["key"]] = {"bereich": s["bereich"], "titel": s["titel"], "kandidaten": auswahl}
-        log.info("%s: %d Kandidaten (von %d Dateien)", s["key"], len(auswahl), len(quellen))
+        try:
+            _kandidaten_seite(s, ergebnis)
+        except requests.RequestException as e:
+            log.warning("%s: Wikimedia-Fehler, nächster Lauf versucht es wieder (%s)", s["key"], str(e)[:120])
+    return ergebnis
+
+
+def _kandidaten_seite(s: dict, ergebnis: dict) -> None:
+    quellen: dict[str, str] = {}
+    if "ort" in s:
+        o, u = s["ort"], s["ueber"]
+        t = wikidata_bild(o["name"], o["lat"], o["lon"], u.get("wikidata"))
+        if t:
+            quellen[t] = f"Wikidata-Bild von {o['name']}"
+        for t in geosuche(o["lat"], o["lon"], u.get("radius", 3000)):
+            quellen.setdefault(t, f"bis {u.get('radius', 3000) // 1000} km um {o['name']}")
+    for o in s.get("orte", []):
+        for t in geosuche(o["lat"], o["lon"], 3000):
+            quellen.setdefault(t, f"bei {o['name']}")
+    for b in s.get("suche", []):
+        for t in textsuche(b):
+            quellen.setdefault(t, f"Suche «{b}»")
+    infos = bildinfo(list(quellen))
+    liste = []
+    for t, info in infos.items():
+        if not _passt(info):
+            continue
+        liste.append({k: v for k, v in info.items() if k not in ("kategorien", "mime")}
+                     | {"vorschau": _vorschau_url(info["url"]), "quelle": quellen[t],
+                        "wertung": _wertung(info, quellen[t])})
+    liste.sort(key=lambda c: (-c["wertung"], c["datei"]))
+    # Serien (gleicher Titel bis auf Nummer, z. B. Flickr-Uploads) höchstens zweimal
+    serie: dict[str, int] = {}
+    gefiltert = []
+    for c in liste:
+        stamm = re.sub(r"[\s_\-(]*[\d)\s(]*\.\w+$", "", c["datei"]).lower()
+        serie[stamm] = serie.get(stamm, 0) + 1
+        if serie[stamm] <= 2:
+            gefiltert.append(c)
+    liste = gefiltert
+    # Höchstens die Hälfte aus einer einzelnen Quelle, damit Wikidata, Geo- und Textsuche gemischt erscheinen
+    pro_quelle: dict[str, int] = {}
+    auswahl, rest = [], []
+    for c in liste:
+        if pro_quelle.get(c["quelle"], 0) < PRO_SEITE // 2:
+            pro_quelle[c["quelle"]] = pro_quelle.get(c["quelle"], 0) + 1
+            auswahl.append(c)
+        else:
+            rest.append(c)
+    auswahl = (auswahl + rest)[:PRO_SEITE]
+    ergebnis[s["key"]] = {"bereich": s["bereich"], "titel": s["titel"], "kandidaten": auswahl}
+    log.info("%s: %d Kandidaten (von %d Dateien)", s["key"], len(auswahl), len(quellen))
+    # nach jeder Seite speichern: bricht Wikimedia später ab, bleibt das Bisherige erhalten
     BILDER.mkdir(exist_ok=True)
     KANDIDATEN.write_text(json.dumps(ergebnis, ensure_ascii=False, indent=1) + "\n")
-    return ergebnis
 
 
 # --------------------------------------------------------------------------- Auswahl / Laden
