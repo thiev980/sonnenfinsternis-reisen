@@ -3738,5 +3738,225 @@
     "wertung": 1.0
    }
   ]
+ },
+ "sofi/sohag": {
+  "bereich": "Sonnenfinsternis-Orte",
+  "titel": "Sohag (Ägypten)",
+  "kandidaten": [
+   {
+    "datei": "File:SohagMidanCorniche.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/SohagMidanCorniche.jpg/1920px-SohagMidanCorniche.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 3000,
+    "hoehe": 2000,
+    "autor": "Roland Unger",
+    "lizenz": "CC BY-SA 3.0",
+    "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "seite": "https://commons.wikimedia.org/wiki/File:SohagMidanCorniche.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/SohagMidanCorniche.jpg/500px-SohagMidanCorniche.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "Wikidata-Bild von Sohag",
+    "wertung": 4.0
+   },
+   {
+    "datei": "File:Earth 2.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Earth_2.jpg/1920px-Earth_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4032,
+    "hoehe": 3024,
+    "autor": "Kyrillos Tharwat",
+    "lizenz": "CC BY-SA 4.0",
+    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "seite": "https://commons.wikimedia.org/wiki/File:Earth_2.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Earth_2.jpg/500px-Earth_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 3 km um Sohag",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS022-E-21205 - View of Earth.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/ISS022-E-21205_-_View_of_Earth.jpg/1920px-ISS022-E-21205_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 6048,
+    "hoehe": 4147,
+    "autor": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS022-E-21205_-_View_of_Earth.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/ISS022-E-21205_-_View_of_Earth.jpg/500px-ISS022-E-21205_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Sohag",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS022-E-21892 - View of Earth.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/ISS022-E-21892_-_View_of_Earth.jpg/1920px-ISS022-E-21892_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4288,
+    "hoehe": 2848,
+    "autor": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS022-E-21892_-_View_of_Earth.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/ISS022-E-21892_-_View_of_Earth.jpg/500px-ISS022-E-21892_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Sohag",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS022-E-21893 - View of Earth.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/ISS022-E-21893_-_View_of_Earth.jpg/1920px-ISS022-E-21893_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4288,
+    "hoehe": 2848,
+    "autor": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS022-E-21893_-_View_of_Earth.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/ISS022-E-21893_-_View_of_Earth.jpg/500px-ISS022-E-21893_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Sohag",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS022-E-21894 - View of Earth.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/ISS022-E-21894_-_View_of_Earth.jpg/1920px-ISS022-E-21894_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4288,
+    "hoehe": 2848,
+    "autor": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS022-E-21894_-_View_of_Earth.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/ISS022-E-21894_-_View_of_Earth.jpg/500px-ISS022-E-21894_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Sohag",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:Nile in Sohag - panoramio.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Nile_in_Sohag_-_panoramio.jpg/1920px-Nile_in_Sohag_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 3264,
+    "hoehe": 2448,
+    "autor": "KaiAbuSir",
+    "lizenz": "CC BY-SA 3.0",
+    "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "seite": "https://commons.wikimedia.org/wiki/File:Nile_in_Sohag_-_panoramio.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Nile_in_Sohag_-_panoramio.jpg/500px-Nile_in_Sohag_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 3 km um Sohag",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:شارع المحطة سوهاج - panoramio.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/%D8%B4%D8%A7%D8%B1%D8%B9_%D8%A7%D9%84%D9%85%D8%AD%D8%B7%D8%A9_%D8%B3%D9%88%D9%87%D8%A7%D8%AC_-_panoramio.jpg/1920px-%D8%B4%D8%A7%D8%B1%D8%B9_%D8%A7%D9%84%D9%85%D8%AD%D8%B7%D8%A9_%D8%B3%D9%88%D9%87%D8%A7%D8%AC_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4752,
+    "hoehe": 3168,
+    "autor": "Mohamed Sameer",
+    "lizenz": "CC BY 3.0",
+    "lizenz_url": "https://creativecommons.org/licenses/by/3.0",
+    "seite": "https://commons.wikimedia.org/wiki/File:%D8%B4%D8%A7%D8%B1%D8%B9_%D8%A7%D9%84%D9%85%D8%AD%D8%B7%D8%A9_%D8%B3%D9%88%D9%87%D8%A7%D8%AC_-_panoramio.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/%D8%B4%D8%A7%D8%B1%D8%B9_%D8%A7%D9%84%D9%85%D8%AD%D8%B7%D8%A9_%D8%B3%D9%88%D9%87%D8%A7%D8%AC_-_panoramio.jpg/500px-%D8%B4%D8%A7%D8%B1%D8%B9_%D8%A7%D9%84%D9%85%D8%AD%D8%B7%D8%A9_%D8%B3%D9%88%D9%87%D8%A7%D8%AC_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 3 km um Sohag",
+    "wertung": 1.0
+   }
+  ]
+ },
+ "sofi/girga": {
+  "bereich": "Sonnenfinsternis-Orte",
+  "titel": "Girga (Ägypten)",
+  "kandidaten": [
+   {
+    "datei": "File:Bandar-sandy.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Bandar-sandy.jpg/1920px-Bandar-sandy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4160,
+    "hoehe": 1968,
+    "autor": "Tarek-Ramadan-2024",
+    "lizenz": "CC BY-SA 4.0",
+    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "seite": "https://commons.wikimedia.org/wiki/File:Bandar-sandy.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Bandar-sandy.jpg/500px-Bandar-sandy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Girga",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS015-E-19745 - View of Earth.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/ISS015-E-19745_-_View_of_Earth.jpg/1920px-ISS015-E-19745_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 3032,
+    "hoehe": 2008,
+    "autor": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS015-E-19745_-_View_of_Earth.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/ISS015-E-19745_-_View_of_Earth.jpg/500px-ISS015-E-19745_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Girga",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS033-E-15970 - View of Egypt.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/ISS033-E-15970_-_View_of_Egypt.jpg/1920px-ISS033-E-15970_-_View_of_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4256,
+    "hoehe": 2832,
+    "autor": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS033-E-15970_-_View_of_Egypt.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/ISS033-E-15970_-_View_of_Egypt.jpg/500px-ISS033-E-15970_-_View_of_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Girga",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS042-E-333537 - View of Earth.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/ISS042-E-333537_-_View_of_Earth.jpg/1920px-ISS042-E-333537_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4928,
+    "hoehe": 3280,
+    "autor": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS042-E-333537_-_View_of_Earth.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/ISS042-E-333537_-_View_of_Earth.jpg/500px-ISS042-E-333537_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Girga",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS042-E-333538 - View of Earth.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/ISS042-E-333538_-_View_of_Earth.jpg/1920px-ISS042-E-333538_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4928,
+    "hoehe": 3280,
+    "autor": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS042-E-333538_-_View_of_Earth.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/ISS042-E-333538_-_View_of_Earth.jpg/500px-ISS042-E-333538_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Girga",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS052-E-79939 - View of Earth.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/ISS052-E-79939_-_View_of_Earth.jpg/1920px-ISS052-E-79939_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4928,
+    "hoehe": 3280,
+    "autor": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS052-E-79939_-_View_of_Earth.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/ISS052-E-79939_-_View_of_Earth.jpg/500px-ISS052-E-79939_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Girga",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS052-E-79940 - View of Earth.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/ISS052-E-79940_-_View_of_Earth.jpg/1920px-ISS052-E-79940_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4928,
+    "hoehe": 3280,
+    "autor": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS052-E-79940_-_View_of_Earth.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/ISS052-E-79940_-_View_of_Earth.jpg/500px-ISS052-E-79940_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Girga",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:ISS060-E-28553 - View of Earth.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/ISS060-E-28553_-_View_of_Earth.jpg/1920px-ISS060-E-28553_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 5568,
+    "hoehe": 3712,
+    "autor": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center",
+    "lizenz": "Public domain",
+    "lizenz_url": null,
+    "seite": "https://commons.wikimedia.org/wiki/File:ISS060-E-28553_-_View_of_Earth.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/ISS060-E-28553_-_View_of_Earth.jpg/500px-ISS060-E-28553_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 10 km um Girga",
+    "wertung": 1.0
+   }
+  ]
  }
 }
