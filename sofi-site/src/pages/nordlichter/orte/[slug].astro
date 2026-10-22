@@ -3,12 +3,15 @@ import Base from '../../../layouts/Base.astro';
 import orte from '../../../data/nordlicht_orte.json';
 import { zahl } from '../../../lib/format.js';
 import Stay22Karte from '../../../components/Stay22Karte.astro';
+import { headerBild } from '../../../lib/bilder';
+import Headerbild from '../../../components/Headerbild.astro';
 
 export async function getStaticPaths() {
   return orte.map((ort) => ({ params: { slug: ort.slug }, props: { ort } }));
 }
 
 const { ort } = Astro.props;
+const bild = headerBild(`nordlicht/${ort.slug}`);
 const MONATE = ['sep', 'okt', 'nov', 'dez', 'jan', 'feb', 'mär'];
 const MONATSNAME = {
   sep: 'September', okt: 'Oktober', nov: 'November', dez: 'Dezember',
@@ -37,10 +40,12 @@ const schema = [{
   title={`${ort.name}: Wann ist die beste Zeit für Nordlichter?`}
   description={`${ort.name} (${ort.land}): geomagnetische Breite, Dunkelstunden und Wolkenwahrscheinlichkeit Monat für Monat - beste Reisezeit ${MONATSNAME[ort.bester_monat]}.`}
   schema={schema}
+  bild={bild}
 >
   <p class="brotkrumen"><a href="/nordlichter/orte">Alle Orte</a> → {ort.name}</p>
   <h1>{ort.name}</h1>
   <p class="untertitel">{ort.land} · Geomagnetische Breite {zahl(ort.geomag_lat)}°</p>
+  <Headerbild bild={bild} alt={`${ort.name}, ${ort.land}`} />
 
   <p class="lead">
     Beste Reisezeit nach unserer Berechnung: <strong>{MONATSNAME[ort.bester_monat]}</strong>,

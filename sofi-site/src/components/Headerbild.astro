@@ -1,0 +1,30 @@
+---
+/** Headerbild mit Bildzeile (Urheber, Lizenz, Link zur Commons-Seite). Ohne Bild: nichts. */
+import { Picture } from 'astro:assets';
+import type { Bild } from '../lib/bilder';
+interface Props { bild?: Bild; alt: string }   // alt: Ersatz, falls das Bild keinen eigenen Alt-Text hat
+const { bild, alt } = Astro.props;
+const m = bild?.meta;
+---
+{bild && m && (
+  <figure class="header-bild">
+    <Picture src={bild.src} alt={m.alt ?? alt} formats={['webp']} widths={[480, 800, 1200, 1880]}
+      sizes="(max-width: 980px) 100vw, 940px" loading="eager" fetchpriority="high"
+      style={m.fokus ? `object-position:${m.fokus}` : undefined} />
+    <figcaption>
+      Foto: {m.autor}, <a href={m.lizenz_url ?? m.seite} rel="nofollow noopener" target="_blank">{m.lizenz}</a>,
+      via <a href={m.seite} rel="nofollow noopener" target="_blank">Wikimedia Commons</a>
+    </figcaption>
+  </figure>
+)}
+
+<style>
+  .header-bild { margin: 4px 0 22px; }
+  .header-bild :global(img) {
+    display: block; width: 100%; height: auto; aspect-ratio: 21 / 9; object-fit: cover;
+    border-radius: 12px; background: var(--karte-bg);
+  }
+  @media (max-width: 560px) { .header-bild :global(img) { aspect-ratio: 16 / 10; } }
+  figcaption { font-size: 12px; line-height: 1.4; color: var(--grau); margin-top: 5px; text-align: right; }
+  figcaption a { color: var(--grau); }
+</style>

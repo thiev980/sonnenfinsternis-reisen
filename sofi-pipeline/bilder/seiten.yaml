@@ -1,0 +1,55 @@
+# Suchangaben für Headerbild-Kandidaten (sofi-pipeline/scripts/bilder.py kandidaten).
+# Ortsseiten brauchen hier nichts: Kandidaten kommen aus Wikidata (P18) und der Commons-Geosuche um die
+# Koordinaten in orte.json / nordlicht_orte.json. Unten nur Ausnahmen für Orte (radius, feste Wikidata-ID).
+#
+# suche: Commons-Volltextsuche (nur Bilddateien)   orte: Geosuche (3 km) um diese Orts-Slugs
+
+seiten:
+  start:
+    titel: "Startseite"
+    suche: ["total solar eclipse corona", "aurora borealis landscape", "solar eclipse totality"]
+  sonnenfinsternis:
+    titel: "Übersicht Sonnenfinsternis"
+    suche: ["total solar eclipse corona", "solar eclipse totality", "diamond ring eclipse"]
+  nordlichter:
+    titel: "Übersicht Nordlichter"
+    suche: ["aurora borealis landscape", "aurora borealis Norway", "northern lights Lapland"]
+
+# Standard je Bereich, wenn ein Guide unten nicht aufgeführt ist (neue Guides)
+guide_standard:
+  sonnenfinsternis:
+    suche: ["total solar eclipse corona", "solar eclipse observers"]
+  nordlicht:
+    suche: ["aurora borealis landscape", "aurora borealis"]
+
+guides:
+  spanien-marokko-oder-aegypten:
+    suche: ["total solar eclipse corona"]
+    orte: [tarifa, luxor, chefchaouen]
+  klarer-himmel-wolken-wahrscheinlichkeit:
+    suche: ["clear sky desert", "cumulus clouds sky", "solar eclipse clouds"]
+    orte: [siwa]
+  reicht-hurghada:
+    suche: ["partial solar eclipse", "Hurghada beach"]
+    orte: [hurghada]
+  sonnenfinsternis-mit-kindern:
+    suche: ["eclipse glasses", "solar eclipse viewing family", "solar eclipse watching"]
+  pauschalreise-oder-selbst-organisieren:
+    suche: ["Luxor Nile", "solar eclipse observers"]
+    orte: [luxor, djerba]
+  kp-index-und-vorhersage:
+    suche: ["aurora borealis corona", "aurora borealis"]
+  pauschalreise-oder-selbst-planen:
+    suche: ["aurora borealis tour", "aurora borealis Tromsø"]
+    orte: [tromsoe]
+  tromsoe-abisko-oder-yellowknife:
+    suche: ["aurora borealis Yellowknife", "aurora Abisko", "aurora borealis Tromsø"]
+  warum-nicht-dezember:
+    suche: ["aurora borealis winter", "polar night Lapland"]
+
+# Ausnahmen für Ortsseiten: radius (Meter, Geosuche, Standard 3000), wikidata (feste Q-ID statt Namenssuche)
+orte:
+  siwa: {radius: 8000}
+  djerba: {radius: 6000}
+  abisko: {radius: 6000}
+  saariselkae: {radius: 5000}

@@ -1,5 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { headerBild } from '../../lib/bilder';
+import Headerbild from '../../components/Headerbild.astro';
+const bild = headerBild('seite/sonnenfinsternis');
 import orte from '../../data/orte.json';
 
 const totalOrte = orte
@@ -32,6 +35,7 @@ const schema = [{
   title="Sonnenfinsternis 2. August 2027: Orte, Zeiten, Reiseplanung"
   description="Wo die totale Sonnenfinsternis 2027 wie lange dauert – selbst berechnete Zeiten und Totalitätsdauern für 56 Orte von Cádiz bis Luxor, mit interaktiver Karte."
   schema={schema}
+  bild={bild}
 >
   <section class="hero">
     <p class="eyebrow">Montag, 2. August 2027 · Südspanien → Nordafrika → Arabien</p>
@@ -48,6 +52,7 @@ const schema = [{
       <a class="btn" href="/sonnenfinsternis/orte">Alle 56 Orte im Vergleich</a>
       <a class="btn" href="/sonnenfinsternis/guides">Alle Guides</a>
     </div>
+    <Headerbild bild={bild} alt="Totale Sonnenfinsternis" />
   </section>
 
   <section class="guides-teaser">

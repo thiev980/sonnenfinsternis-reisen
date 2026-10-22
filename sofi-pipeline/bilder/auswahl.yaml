@@ -1,0 +1,5 @@
+# Headerbilder von Wikimedia Commons, ausgewählt über die Auswahlseite (Kandidaten: kandidaten.json).
+# Schlüssel: sofi/<slug>, nordlicht/<slug>, guide/<slug>, seite/<name> (start, sonnenfinsternis, nordlichter).
+# Wert: {datei: Commons-Dateiname, alt: Alt-Text (Schweizer Rechtschreibung), fokus: "50% 30%" (optional)};
+# «kein» = bewusst ohne Bild.
+# Änderungen hier starten den Workflow «Bilder aktualisieren», der die Bilder lädt.

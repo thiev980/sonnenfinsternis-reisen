@@ -3,12 +3,15 @@ import Base from '../../../layouts/Base.astro';
 import orte from '../../../data/orte.json';
 import { zahl, score } from '../../../lib/format.js';
 import Stay22Karte from '../../../components/Stay22Karte.astro';
+import { headerBild } from '../../../lib/bilder';
+import Headerbild from '../../../components/Headerbild.astro';
 
 export function getStaticPaths() {
   return orte.map((ort) => ({ params: { slug: ort.slug }, props: { ort } }));
 }
 
 const { ort } = Astro.props;
+const bild = headerBild(`sofi/${ort.slug}`);
 const totalOrte = orte.filter((o) => o.is_total).sort((a, b) => b.totality_s - a.totality_s);
 
 // Optionaler redaktioneller Text pro Ort: src/texte/sonnenfinsternis/<slug>.md
@@ -98,7 +101,7 @@ const schema = [
   },
 ];
 ---
-<Base title={titel} description={beschreibung} schema={schema}>
+<Base title={titel} description={beschreibung} schema={schema} bild={bild}>
   <article>
     <p class="brotkrumen"><a href="/sonnenfinsternis/orte">Alle Orte</a> → {ort.name}</p>
     <h1>Sonnenfinsternis 2027 in {ort.name}</h1>
@@ -108,6 +111,7 @@ const schema = [
         ? <span class="badge-total">TOTAL · {ort.totality_str} · Rang {ort.duration_rank} von 34</span>
         : <span class="badge-partiell">nur partiell · {zahl(ort.obscuration_pct)} % Bedeckung</span>}
     </p>
+    <Headerbild bild={bild} alt={`${ort.name}, ${ort.country}`} />
 
     {ort.is_total ? (
       <>

@@ -1,5 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import { headerBild } from '../lib/bilder';
+import Headerbild from '../components/Headerbild.astro';
+const bild = headerBild('seite/start');
 import orte from '../data/orte.json';
 import nordlichtOrte from '../data/nordlicht_orte.json';
 
@@ -33,6 +36,7 @@ const schema = [{
   title="astroreisen – Reisen zu Sonnenfinsternis, Nordlicht und Sternenhimmel"
   description="Wohin reisen für Sonnenfinsternis, Nordlicht oder klaren Sternenhimmel? Selbst berechnete Daten zu Zeiten, Dauer und Wetterrisiko statt abgeschriebener Listen."
   schema={schema}
+  bild={bild}
 >
   <section class="hero">
     <h1>Manche Dinge kann man nur dort sehen,<br />wo man gerade nicht ist.</h1>
@@ -42,6 +46,7 @@ const schema = [{
       und Geduld. Für beides gilt dieselbe Frage: <strong>wohin, und wann?</strong>
       Ich rechne die Antworten selbst – mit offenen Quellen und offengelegten Unsicherheiten.
     </p>
+    <Headerbild bild={bild} alt="Sonnenfinsternis und Nordlicht" />
   </section>
 
   <section class="bereiche">

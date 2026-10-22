@@ -1,6 +1,8 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
+import { headerBild } from '../../../lib/bilder';
+import Headerbild from '../../../components/Headerbild.astro';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides', ({ data }) => !data.draft && data.section === 'nordlicht');
@@ -10,6 +12,7 @@ export async function getStaticPaths() {
 const { guide } = Astro.props;
 const { Content } = await render(guide);
 const d = guide.data;
+const bild = headerBild(`guide/${guide.id}`);
 
 const fmt = (x: Date) =>
   x.toLocaleDateString('de-CH', { day: '2-digit', month: 'long', year: 'numeric' });
@@ -37,7 +40,7 @@ const schema = [
     : []),
 ];
 ---
-<Base title={d.title} description={d.description} schema={schema}>
+<Base title={d.title} description={d.description} schema={schema} bild={bild}>
   <article class="guide">
     <p class="brotkrumen"><a href="/nordlichter/guides">Guides</a> → {d.heading ?? d.title}</p>
     <h1>{d.heading ?? d.title}</h1>
@@ -45,6 +48,7 @@ const schema = [
       Veröffentlicht {fmt(d.pubDate)}
       {d.updatedDate && <> · zuletzt aktualisiert {fmt(d.updatedDate)}</>}
     </p>
+    <Headerbild bild={bild} alt={d.heading ?? d.title} />
     {d.tldr && <div class="tldr"><strong>Kurz gesagt:</strong> {d.tldr}</div>}
 
     <Content />

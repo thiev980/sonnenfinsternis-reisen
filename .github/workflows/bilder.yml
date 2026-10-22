@@ -1,0 +1,81 @@
+# Headerbilder von Wikimedia Commons (die Claude-Cloud-Sessions nicht erreichen). Verfahren: docs/BILDER.md
+#   - kandidaten: sucht Foto-Kandidaten für Seiten ohne Entscheidung → sofi-pipeline/bilder/kandidaten.json,
+#     Vorschaubilder auf Branch «bilder-vorschau» (für die Auswahlseite)
+#   - laden: lädt die Bilder aus sofi-pipeline/bilder/auswahl.yaml → sofi-site/src/assets/bilder
+# Start per REST:
+#   gh api -X POST repos/thiev980/sonnenfinsternis-reisen/actions/workflows/bilder.yml/dispatches -f ref=main -f 'inputs[kandidaten]=true'
+# Läuft automatisch, wenn sich auswahl.yaml ändert (dann nur «laden»). Der Commit deployt über Cloudflare.
+name: Bilder aktualisieren
+
+on:
+  workflow_dispatch:
+    inputs:
+      kandidaten:
+        description: "Auch Kandidaten suchen (für Seiten ohne Entscheidung)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - "sofi-pipeline/bilder/auswahl.yaml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bilder
+  cancel-in-progress: false
+
+jobs:
+  bilder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r sofi-pipeline/requirements-bilder.txt
+
+      - name: Kandidaten suchen
+        if: ${{ inputs.kandidaten }}
+        run: python sofi-pipeline/scripts/bilder.py kandidaten 2>&1 | tee bilder.log
+
+      - name: Vorschaubilder für die Auswahlseite
+        if: ${{ inputs.kandidaten }}
+        run: python sofi-pipeline/scripts/bilder.py vorschau 2>&1 | tee -a bilder.log
+
+      - name: Vorschaubilder auf Branch «bilder-vorschau» ablegen (nicht auf main)
+        if: ${{ inputs.kandidaten }}
+        run: |
+          [ -n "$(ls vorschau 2>/dev/null)" ] || { echo "Keine offenen Seiten – nichts abzulegen."; exit 0; }
+          cd vorschau
+          git init -q -b bilder-vorschau
+          git config user.name "astroreisen-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A && git commit -qm "Vorschaubilder der Bild-Kandidaten"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" bilder-vorschau
+
+      - name: Bilder laden
+        run: python sofi-pipeline/scripts/bilder.py laden 2>&1 | tee -a bilder.log
+
+      - name: Zusammenfassung
+        if: always()
+        run: |
+          { echo "### Bilder"; echo '```'; grep -E "Kandidaten|Bilder:|Wikidata|WARNING|keine passende|Error" bilder.log | tail -80 || true; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Committen, falls sich etwas geändert hat
+        run: |
+          rm -rf vorschau
+          git config user.name "astroreisen-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A sofi-pipeline/bilder sofi-site/src/assets/bilder sofi-site/src/data/bilder.json
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "Bilder aktualisiert (Wikimedia Commons)"
+            git pull --rebase origin main
+            git push
+          fi

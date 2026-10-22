@@ -1,5 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { headerBild } from '../../lib/bilder';
+import Headerbild from '../../components/Headerbild.astro';
+const bild = headerBild('seite/nordlichter');
 import orte from '../../data/nordlicht_orte.json';
 import { zahl } from '../../lib/format.js';
 
@@ -23,6 +26,7 @@ const schema = [{
   title="Nordlichter: Wo und wann sich die Reise lohnt"
   description="Nordlicht-Reiseplanung mit eigenen Berechnungen: geomagnetische Breite, Dunkelstunden pro Saison und Wolkenklimatologie für 11 Orte von Kanada bis Skandinavien - transparent statt geraten."
   schema={schema}
+  bild={bild}
 >
   <section class="hero">
     <p class="eyebrow">September bis März · Nordhalbkugel</p>
@@ -38,6 +42,7 @@ const schema = [{
       <a class="btn" href="/nordlichter/orte">Alle {orte.length} Orte im Vergleich</a>
       <a class="btn" href="/nordlichter/guides">Alle Guides</a>
     </div>
+    <Headerbild bild={bild} alt="Nordlicht" />
   </section>
 
   <section>
