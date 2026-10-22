@@ -268,6 +268,9 @@ def _kandidaten_seite(s: dict, ergebnis: dict) -> None:
             quellen[t] = f"Wikidata-Bild von {o['name']}"
         for t in geosuche(o["lat"], o["lon"], u.get("radius", 3000)):
             quellen.setdefault(t, f"bis {u.get('radius', 3000) // 1000} km um {o['name']}")
+        if len(quellen) < 40:     # kleiner Ort, wenig Fotos in der Nähe → Umkreis auf 10 km erweitern
+            for t in geosuche(o["lat"], o["lon"], 10000):
+                quellen.setdefault(t, f"bis 10 km um {o['name']}")
     for o in s.get("orte", []):
         for t in geosuche(o["lat"], o["lon"], 3000):
             quellen.setdefault(t, f"bei {o['name']}")
