@@ -196,7 +196,7 @@ def _wertung(info: dict, quelle: str) -> float:
 
 def _passt(info: dict) -> bool:
     b, h = info["breite"] or 0, info["hoehe"] or 1
-    return (info["mime"] == "image/jpeg" and b >= 1600 and 1.25 <= b / h <= 2.6
+    return (info["mime"] == "image/jpeg" and b >= 1600 and 1.25 <= b / h <= 3.2
             and not TITEL_RAUS.search(info["datei"]))
 
 
@@ -236,7 +236,8 @@ def seiten() -> list[dict]:
     for o in sofi:
         if o["slug"] in texte:
             out.append({"key": f"sofi/{o['slug']}", "bereich": "Sonnenfinsternis-Orte",
-                        "titel": f"{o['name']} ({o['country']})", "ort": o, "ueber": ueber.get(o["slug"], {})})
+                        "titel": f"{o['name']} ({o['country']})", "ort": o, "ueber": ueber.get(o["slug"], {}),
+                        "suche": [f'"{re.sub(r"\s*\(.*?\)", "", o["name"])}"']})
     for o in nl:
         out.append({"key": f"nordlicht/{o['slug']}", "bereich": "Nordlicht-Orte",
                     "titel": f"{o['name']} ({o['land']})", "ort": o, "ueber": ueber.get(o["slug"], {}),
