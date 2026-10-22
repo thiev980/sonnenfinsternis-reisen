@@ -30,6 +30,9 @@ jobs:
   bilder:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash -o pipefail {0}
     steps:
       - uses: actions/checkout@v4
 
@@ -41,7 +44,7 @@ jobs:
 
       - name: Kandidaten suchen
         if: ${{ inputs.kandidaten }}
-        run: python sofi-pipeline/scripts/bilder.py kandidaten 2>&1 | tee bilder.log
+        run: python sofi-pipeline/scripts/bilder.py kandidaten 2>&1 | tee -a bilder.log
 
       - name: Vorschaubilder für die Auswahlseite
         if: ${{ inputs.kandidaten }}
@@ -66,9 +69,12 @@ jobs:
         run: |
           { echo "### Bilder"; echo '```'; grep -E "Kandidaten|Bilder:|Wikidata|WARNING|keine passende|Error" bilder.log | tail -80 || true; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
+      # Logs sind aus der Claude-Session nicht abrufbar → Protokoll ins Repo (auch bei Fehlern)
       - name: Committen, falls sich etwas geändert hat
+        if: always()
         run: |
           rm -rf vorschau
+          cp bilder.log sofi-pipeline/bilder/letzter-lauf.txt 2>/dev/null || true
           git config user.name "astroreisen-bot"
           git config user.email "actions@users.noreply.github.com"
           git add -A sofi-pipeline/bilder sofi-site/src/assets/bilder sofi-site/src/data/bilder.json
