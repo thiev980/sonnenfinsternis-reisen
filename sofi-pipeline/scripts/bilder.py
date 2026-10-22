@@ -237,11 +237,11 @@ def seiten() -> list[dict]:
         if o["slug"] in texte:
             out.append({"key": f"sofi/{o['slug']}", "bereich": "Sonnenfinsternis-Orte",
                         "titel": f"{o['name']} ({o['country']})", "ort": o, "ueber": ueber.get(o["slug"], {}),
-                        "suche": [f'"{re.sub(r"\s*\(.*?\)", "", o["name"])}"']})
+                        "suche": [f'intitle:"{re.sub(r"\s*\(.*?\)", "", o["name"])}"']})
     for o in nl:
         out.append({"key": f"nordlicht/{o['slug']}", "bereich": "Nordlicht-Orte",
                     "titel": f"{o['name']} ({o['land']})", "ort": o, "ueber": ueber.get(o["slug"], {}),
-                    "suche": [f'"{o["name"]}" aurora']})
+                    "suche": [f'intitle:"{o["name"]}" aurora', f'intitle:"{o["name"]}"']})
     for s in out:
         s["orte"] = [alle_orte[x] for x in s.get("orte", []) if x in alle_orte]
     return out
@@ -299,16 +299,15 @@ def _kandidaten_seite(s: dict, ergebnis: dict) -> None:
         if serie[stamm] <= 2:
             gefiltert.append(c)
     liste = gefiltert
-    # Höchstens die Hälfte aus einer einzelnen Quelle, damit Wikidata, Geo- und Textsuche gemischt erscheinen
-    pro_quelle: dict[str, int] = {}
-    auswahl, rest = [], []
+    # Abwechselnd aus den Quellen (Wikidata, Geosuche, Textsuchen), innerhalb jeder Quelle nach Wertung/Rang
+    gruppen: dict[str, list] = {}
     for c in liste:
-        if pro_quelle.get(c["quelle"], 0) < PRO_SEITE // 2:
-            pro_quelle[c["quelle"]] = pro_quelle.get(c["quelle"], 0) + 1
-            auswahl.append(c)
-        else:
-            rest.append(c)
-    auswahl = (auswahl + rest)[:PRO_SEITE]
+        gruppen.setdefault(c["quelle"], []).append(c)
+    auswahl = []
+    while len(auswahl) < PRO_SEITE and any(gruppen.values()):
+        for g in list(gruppen.values()):
+            if g and len(auswahl) < PRO_SEITE:
+                auswahl.append(g.pop(0))
     ergebnis[s["key"]] = {"bereich": s["bereich"], "titel": s["titel"], "kandidaten": auswahl}
     log.info("%s: %d Kandidaten (von %d Dateien)", s["key"], len(auswahl), len(quellen))
     # nach jeder Seite speichern: bricht Wikimedia später ab, bleibt das Bisherige erhalten
