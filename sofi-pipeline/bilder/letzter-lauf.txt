@@ -33,19 +33,66 @@ sofi/jerez
 sofi/jerez: 8 Kandidaten (von 101 Dateien)
 sofi/estepona
   Wikidata Q492748 → Estepona aerial.jpg
-Traceback (most recent call last):
-  File "/home/runner/work/sonnenfinsternis-reisen/sonnenfinsternis-reisen/sofi-pipeline/scripts/bilder.py", line 403, in <module>
-    main(sys.argv[1:])
-  File "/home/runner/work/sonnenfinsternis-reisen/sonnenfinsternis-reisen/sofi-pipeline/scripts/bilder.py", line 391, in main
-    kandidaten()
-  File "/home/runner/work/sonnenfinsternis-reisen/sonnenfinsternis-reisen/sofi-pipeline/scripts/bilder.py", line 265, in kandidaten
-    infos = bildinfo(list(quellen))
-            ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/sonnenfinsternis-reisen/sonnenfinsternis-reisen/sofi-pipeline/scripts/bilder.py", line 148, in bildinfo
-    d = _get(COMMONS, {"action": "query", "titles": "|".join(titel[i:i + 50]), "prop": "imageinfo",
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/sonnenfinsternis-reisen/sonnenfinsternis-reisen/sofi-pipeline/scripts/bilder.py", line 80, in _get
-    r.raise_for_status()
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3AOrchidarium+de+Estepona+%2832910000564%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832910036174%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832910041414%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832910047284%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939955553%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939957813%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939963143%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939964583%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939988063%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832939998343%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832940004103%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832940006753%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832940020193%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2832940025373%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833368401850%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833368407960%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833368418140%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596719092%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596720792%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596722152%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596723222%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596749252%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596756622%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833596764972%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623896941%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623922401%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623944611%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623968241%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623971881%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623975391%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833623981721%29+%282%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712218586%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712225396%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712234246%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712244256%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712246836%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712249466%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712251206%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712253106%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833712276416%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833752944315%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833752947005%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833752987385%29.jpg%7CFile%3AOrchidarium+de+Estepona+%2833752993745%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833367731590%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833367735920%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833367738680%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833711683116%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833711684286%29.jpg%7CFile%3ATorre+del+Reloj+de+Estepona+%2833711687166%29.jpg&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1920&iiextmetadatafilter=Artist%7CCredit%7CLicenseShortName%7CLicenseUrl%7CCategories&format=json&formatversion=2
+sofi/estepona: 8 Kandidaten (von 101 Dateien)
+sofi/sevilla
+  Wikidata Q8717 → Sevilla Luft 120308.JPG
+sofi/sevilla: 8 Kandidaten (von 101 Dateien)
+sofi/kairouan
+  Wikidata Q179570 → View of Kairouan from the Minaret of the Great Mosque - Tunisia - 1899.jpg
+sofi/kairouan: 8 Kandidaten (von 101 Dateien)
+sofi/sousse
+  Wikidata Q180717 → Sousse Kasbah.JPG
+sofi/sousse: 8 Kandidaten (von 101 Dateien)
+sofi/sfax
+  Wikidata Q46325 → Murailles de sfax vue casbah sfax avenue ali balhaouane.jpg
+sofi/sfax: 8 Kandidaten (von 101 Dateien)
+sofi/djerba
+  Wikidata Q188938 → ISD highres ISS002 ISS002-749-82 3.JPG
+sofi/djerba: 8 Kandidaten (von 101 Dateien)
+sofi/sohag
+  Wikidata Q388108 → SohagMidanCorniche.jpg
+sofi/sohag: 7 Kandidaten (von 12 Dateien)
+sofi/girga
+  Wikidata Q749187 → Girgeh (1890) - TIMEA.jpg
+sofi/girga: 0 Kandidaten (von 1 Dateien)
+sofi/luxor
+  Wikidata Q130514 → LuxorHotelsIbnWalidSt.jpg
+sofi/luxor: 8 Kandidaten (von 101 Dateien)
+sofi/marsa-alam
+  Wikidata Q1001901 → Marsa Alam, Egypt 2007feb08 byDanielCsorfoly.JPG
+sofi/marsa-alam: 8 Kandidaten (von 47 Dateien)
+nordlicht/akureyri
+  Wikidata Q29042 → Akureyri-08-Panorama-2018-gje.jpg
+nordlicht/akureyri: 8 Kandidaten (von 104 Dateien)
+nordlicht/reykjavik
+  Wikidata Q1764 → Reykjavík 5545 (cropped).JPG
+nordlicht/reykjavik: 8 Kandidaten (von 151 Dateien)
+nordlicht/yellowknife
+  Wikidata Q2061 → Downtown Yellowknife 2.jpg
+nordlicht/yellowknife: 8 Kandidaten (von 149 Dateien)
+nordlicht/tromsoe
+  Wikidata Q26087 → Tromso Tromsø Norway tunliweb 02.jpg
+nordlicht/tromsoe: 8 Kandidaten (von 151 Dateien)
+nordlicht/alta
+  Wikidata Q6535 → Bilde-Alta boligomraade.jpg
+nordlicht/alta: 8 Kandidaten (von 92 Dateien)
+nordlicht/abisko
+  Wikidata Q321471 → Northern Lights in Abisko (10739341995).jpg
+nordlicht/abisko: 8 Kandidaten (von 130 Dateien)
+nordlicht/fairbanks
+  Wikidata Q79638 → Fairbanks, Alaska skyline.jpg
+nordlicht/fairbanks: 8 Kandidaten (von 151 Dateien)
+nordlicht/kiruna
+  Wikidata Q83232 → Kiruna montage.png
+nordlicht/kiruna: 8 Kandidaten (von 150 Dateien)
+nordlicht/saariselkae
+  Wikidata Q1815690 → Huippu-ravintola.JPG
+nordlicht/saariselkae: 8 Kandidaten (von 84 Dateien)
+nordlicht/torshavn
+  Wikidata Q10704 → Tinganes 57.jpg
+nordlicht/torshavn: 8 Kandidaten (von 101 Dateien)
+nordlicht/rovaniemi
+  Wikidata Q103717 → Rovaniemi 06101999 rescanned.jpg
+nordlicht/rovaniemi: 8 Kandidaten (von 120 Dateien)
+Vorschau: 247 Dateien
+Bilder: 0 Headerbilder
