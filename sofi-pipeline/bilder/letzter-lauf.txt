@@ -24,43 +24,43 @@ guide/warum-nicht-dezember
 guide/warum-nicht-dezember: 8 Kandidaten (von 59 Dateien)
 sofi/tarifa
   Wikidata Q222702 → Tarifa panorama.jpg
-sofi/tarifa: 8 Kandidaten (von 101 Dateien)
+sofi/tarifa: 8 Kandidaten (von 131 Dateien)
 sofi/cadiz
   Wikidata Q15682 → Cadiz aerea.jpg
-sofi/cadiz: 8 Kandidaten (von 101 Dateien)
+sofi/cadiz: 8 Kandidaten (von 150 Dateien)
 sofi/jerez
   Wikidata Q12303 → HDR Panorama (8265946396).jpg
-sofi/jerez: 8 Kandidaten (von 101 Dateien)
+sofi/jerez: 8 Kandidaten (von 148 Dateien)
 sofi/estepona
   Wikidata Q492748 → Estepona aerial.jpg
-sofi/estepona: 8 Kandidaten (von 101 Dateien)
+sofi/estepona: 8 Kandidaten (von 150 Dateien)
 sofi/sevilla
   Wikidata Q8717 → Sevilla Luft 120308.JPG
-sofi/sevilla: 8 Kandidaten (von 101 Dateien)
+sofi/sevilla: 8 Kandidaten (von 150 Dateien)
 sofi/kairouan
   Wikidata Q179570 → View of Kairouan from the Minaret of the Great Mosque - Tunisia - 1899.jpg
-sofi/kairouan: 8 Kandidaten (von 101 Dateien)
+sofi/kairouan: 8 Kandidaten (von 148 Dateien)
 sofi/sousse
   Wikidata Q180717 → Sousse Kasbah.JPG
-sofi/sousse: 8 Kandidaten (von 101 Dateien)
+sofi/sousse: 8 Kandidaten (von 149 Dateien)
 sofi/sfax
   Wikidata Q46325 → Murailles de sfax vue casbah sfax avenue ali balhaouane.jpg
-sofi/sfax: 8 Kandidaten (von 101 Dateien)
+sofi/sfax: 8 Kandidaten (von 150 Dateien)
 sofi/djerba
   Wikidata Q188938 → ISD highres ISS002 ISS002-749-82 3.JPG
-sofi/djerba: 8 Kandidaten (von 101 Dateien)
+sofi/djerba: 8 Kandidaten (von 150 Dateien)
 sofi/sohag
   Wikidata Q388108 → SohagMidanCorniche.jpg
-sofi/sohag: 7 Kandidaten (von 29 Dateien)
+sofi/sohag: 8 Kandidaten (von 71 Dateien)
 sofi/girga
   Wikidata Q749187 → Girgeh (1890) - TIMEA.jpg
-sofi/girga: 2 Kandidaten (von 15 Dateien)
+sofi/girga: 8 Kandidaten (von 64 Dateien)
 sofi/luxor
   Wikidata Q130514 → LuxorHotelsIbnWalidSt.jpg
-sofi/luxor: 8 Kandidaten (von 101 Dateien)
+sofi/luxor: 8 Kandidaten (von 151 Dateien)
 sofi/marsa-alam
   Wikidata Q1001901 → Marsa Alam, Egypt 2007feb08 byDanielCsorfoly.JPG
-sofi/marsa-alam: 8 Kandidaten (von 47 Dateien)
+sofi/marsa-alam: 8 Kandidaten (von 90 Dateien)
 nordlicht/akureyri
   Wikidata Q29042 → Akureyri-08-Panorama-2018-gje.jpg
 nordlicht/akureyri: 8 Kandidaten (von 104 Dateien)
@@ -94,5 +94,5 @@ nordlicht/torshavn: 8 Kandidaten (von 101 Dateien)
 nordlicht/rovaniemi
   Wikidata Q103717 → Rovaniemi 06101999 rescanned.jpg
 nordlicht/rovaniemi: 8 Kandidaten (von 120 Dateien)
-Vorschau: 246 Dateien
+Vorschau: 253 Dateien
 Bilder: 0 Headerbilder
