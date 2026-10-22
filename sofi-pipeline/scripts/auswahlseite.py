@@ -6,7 +6,7 @@ Zeigt nur Seiten, die in sofi-pipeline/bilder/auswahl.yaml noch keine Entscheidu
 Die Vorschaubilder kommen vom Branch `bilder-vorschau` (Workflow «Bilder aktualisieren» mit
 kandidaten=true): `git clone --depth 1 -b bilder-vorschau https://github.com/thiev980/sonnenfinsternis-reisen <ordner>`.
 Sie werden verkleinert als data:-URIs eingebettet (die Artifact-Seite darf keine fremden Bilder laden).
-Danach mit dem Artifact-Tool veröffentlichen (URL in docs/BILDER.md, capabilities {"db": {}}).
+Danach mit dem Artifact-Tool veröffentlichen (https://claude.ai/artifact/5uofzTt5VHGPKPTPg65p5R, capabilities {"db": {}}).
 Die Auswahl liegt in der Collection `auswahl`: Dokument-ID = Schlüssel mit «/» → «__»,
 Felder `schluessel`, `datei` (Commons-Titel oder «kein»).
 """

@@ -46,7 +46,7 @@ Ranglisten, Karte, Methodik und Guide-Übersichten bekommen kein Headerbild.
 - Workflows nur per REST starten (`gh api -X POST …/dispatches`); bei Anmeldefehlern vorher `unset GH_TOKEN`.
 
 ## Auswahlseite
-URL: AUSWAHLSEITE_URL  ·  capabilities `{"db": {}}`, Collection `auswahl`,
+URL: https://claude.ai/artifact/5uofzTt5VHGPKPTPg65p5R  ·  capabilities `{"db": {}}`, Collection `auswahl`,
 Dokument-ID = Schlüssel mit `/` → `__`, Felder `schluessel`, `datei` (Commons-Titel oder `kein`).
 Neu veröffentlichen: erst `Artifact action: read` mit der URL, dann `publish` mit `url` und `file_path`.
 
