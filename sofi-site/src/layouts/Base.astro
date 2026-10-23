@@ -123,8 +123,9 @@ const nlText = inSofi
     .datenblock h3 { margin-top: 0 !important; }
     @media (max-width: 560px) { .datenblock { padding: 12px 14px 6px; margin-left: -6px; margin-right: -6px; } }
     .hinweisbox {
-      background: var(--karte-bg); border-left: 3px solid var(--gold);
-      padding: 14px 18px; border-radius: 0 8px 8px 0; font-size: 15px; margin: 22px 0;
+      /* ohne Hintergrund: hinterlegt sind nur Datenblöcke (.datenblock), Hinweise tragen die Goldlinie */
+      border-left: 3px solid var(--gold);
+      padding: 4px 0 4px 18px; font-size: 15px; margin: 22px 0;
     }
     .nl {
       background: var(--nacht); color: #fff; border-radius: 12px;
