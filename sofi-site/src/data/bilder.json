@@ -9,6 +9,7 @@
    "lizenz": "Public domain",
    "lizenz_url": null,
    "seite": "https://commons.wikimedia.org/wiki/File:Aurora_borealis_over_Eielson_Air_Force_Base,_Alaska.jpg",
+   "fokus": "50% 72%",
    "alt": "Grün leuchtendes Polarlicht über einer verschneiten Landschaft mit Nadelbäumen bei der Eielson Air Force Base in Alaska."
   },
   "seite/sonnenfinsternis": {
@@ -20,6 +21,7 @@
    "lizenz": "CC BY-SA 3.0 igo",
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
    "seite": "https://commons.wikimedia.org/wiki/File:Total_solar_eclipse_ESA425433.jpg",
+   "fokus": "50% 50%",
    "alt": "Totale Sonnenfinsternis: die schwarze Mondscheibe, umgeben vom hellen Strahlenkranz der Sonnenkorona."
   },
   "seite/start": {
@@ -31,6 +33,7 @@
    "lizenz": "CC BY-SA 4.0",
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Virmalised_15.09.2017_-_Aurora_Borealis_15.09.2017_copy.jpg",
+   "fokus": "50% 92%",
    "alt": "Sternenhimmel mit Milchstrasse und schwachem Polarlicht über der Silhouette einer Baumreihe."
   },
   "sofi/benghazi": {
@@ -87,6 +90,7 @@
    "lizenz": "CC BY-SA 4.0",
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Miguel,_Jerez_de_la_Frontera,_Espa%C3%B1a,_2015-12-07,_DD_105-107_HDR.JPG",
+   "fokus": "50% 50%",
    "alt": "Blick hinauf in das gotische Sterngewölbe der Iglesia de San Miguel in Jerez de la Frontera."
   },
   "sofi/kairouan": {
@@ -153,7 +157,7 @@
    "lizenz": "CC BY-SA 4.0",
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Siwa,_view_from_the_temple.jpg",
-   "fokus": "50% 70%",
+   "fokus": "50% 80%",
    "alt": "Blick von den Tempelruinen in Siwa über Palmenhaine auf den hellen Salzsee der Oase."
   },
   "sofi/sousse": {
@@ -199,6 +203,7 @@
    "lizenz": "CC BY-SA 4.0",
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Akureyri-08-Panorama-2018-gje.jpg",
+   "fokus": "50% 72%",
    "alt": "Akureyri am Fjord an einem sonnigen Tag, dahinter Berge mit Schneeresten."
   },
   "nordlicht/alta": {
@@ -222,6 +227,7 @@
    "lizenz": "CC BY 2.0",
    "lizenz_url": "https://creativecommons.org/licenses/by/2.0",
    "seite": "https://commons.wikimedia.org/wiki/File:The_northern_lights_just_north_of_Fairbanks,_Alaska.jpg",
+   "fokus": "50% 78%",
    "alt": "Grünes Polarlicht über den Silhouetten von Fichten nördlich von Fairbanks in Alaska."
   },
   "nordlicht/kiruna": {
@@ -322,6 +328,7 @@
    "lizenz": "CC0",
    "lizenz_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "seite": "https://commons.wikimedia.org/wiki/File:Lofoten,_Norway_(Unsplash).jpg",
+   "fokus": "50% 70%",
    "alt": "Kräftiges grünes und violettes Polarlicht über Felsen und Bergen auf den Lofoten in Norwegen."
   },
   "guide/pauschalreise-oder-selbst-organisieren": {
@@ -389,6 +396,7 @@
    "lizenz": "CC BY 2.0",
    "lizenz_url": "https://creativecommons.org/licenses/by/2.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Y1A9749_Saariselk%C3%A4,_Finland_(15186395524).jpg",
+   "fokus": "50% 72%",
    "alt": "Verschneite Fichten im rosafarbenen Licht eines Wintertags bei Saariselkä in Finnland."
   }
  }

@@ -4,7 +4,7 @@ import '@fontsource/space-grotesk/500.css';
 import '@fontsource/space-grotesk/700.css';
 import ConsentBanner from '../components/ConsentBanner.astro';
 import { getImage } from 'astro:assets';
-import type { Bild } from '../lib/bilder';
+import { sharpPosition, type Bild } from '../lib/bilder';
 
 interface Props {
   title: string;
@@ -14,7 +14,7 @@ interface Props {
   bild?: Bild;   // Headerbild der Seite → og:image (1200×630) und og:image:alt
 }
 const { title, description, schema = [], noindex = false, bild } = Astro.props;
-const og = bild ? await getImage({ src: bild.src, width: 1200, height: 630, fit: 'cover', format: 'jpg' }) : undefined;
+const og = bild ? await getImage({ src: bild.src, width: 1200, height: 630, fit: 'cover', position: sharpPosition(bild.meta.fokus), format: 'jpg' }) : undefined;
 const canonicalPfad = Astro.url.pathname !== '/' && Astro.url.pathname.endsWith('/') ? Astro.url.pathname.slice(0, -1) : Astro.url.pathname;
 const canonical = new URL(canonicalPfad, Astro.site);
 const pfad = Astro.url.pathname;

@@ -1,20 +1,23 @@
 # Headerbilder von Wikimedia Commons, ausgewählt über die Auswahlseite (Kandidaten: kandidaten.json).
 # Schlüssel: sofi/<slug>, nordlicht/<slug>, guide/<slug>, seite/<name> (start, sonnenfinsternis, nordlichter).
 # Wert: {datei: Commons-Dateiname oder «kein» (bewusst ohne Bild), alt: Alt-Text (Schweizer Rechtschreibung),
-#        fokus: "50% 30%" (optional, Bildausschnitt), gewaehlt: Zeitpunkt der Wahl (UTC)}.
+#        fokus: "50% 30%" (optional, Bildausschnitt; Standard "50% 62%", prüfen mit scripts/zuschnitt.py), gewaehlt: Zeitpunkt der Wahl (UTC)}.
 # Von Hand geändert? `gewaehlt` auf jetzt setzen, sonst kann eine ältere Wahl der Auswahlseite sie überschreiben.
 # Änderungen hier starten den Workflow «Bilder aktualisieren», der die Bilder lädt.
 seite/nordlichter:
   datei: "File:Aurora borealis over Eielson Air Force Base, Alaska.jpg"
   alt: "Grün leuchtendes Polarlicht über einer verschneiten Landschaft mit Nadelbäumen bei der Eielson Air Force Base in Alaska."
+  fokus: "50% 72%"
   gewaehlt: "2026-10-22T21:29:50.541Z"
 seite/sonnenfinsternis:
   datei: "File:Total solar eclipse ESA425433.jpg"
   alt: "Totale Sonnenfinsternis: die schwarze Mondscheibe, umgeben vom hellen Strahlenkranz der Sonnenkorona."
+  fokus: "50% 50%"
   gewaehlt: "2026-10-22T21:30:03.919Z"
 seite/start:
   datei: "File:Virmalised 15.09.2017 - Aurora Borealis 15.09.2017 copy.jpg"
   alt: "Sternenhimmel mit Milchstrasse und schwachem Polarlicht über der Silhouette einer Baumreihe."
+  fokus: "50% 92%"
   gewaehlt: "2026-10-22T21:29:25.085Z"
 sofi/benghazi:
   datei: "File:ميدان السلفيوم.jpg"
@@ -39,6 +42,7 @@ sofi/girga:
 sofi/jerez:
   datei: "File:Iglesia de San Miguel, Jerez de la Frontera, España, 2015-12-07, DD 105-107 HDR.JPG"
   alt: "Blick hinauf in das gotische Sterngewölbe der Iglesia de San Miguel in Jerez de la Frontera."
+  fokus: "50% 50%"
   gewaehlt: "2026-10-22T21:32:09.589Z"
 sofi/kairouan:
   datei: "File:Great Mosque of Kairouan mihrab view.jpg"
@@ -66,7 +70,7 @@ sofi/sfax:
 sofi/siwa:
   datei: "File:Siwa, view from the temple.jpg"
   alt: "Blick von den Tempelruinen in Siwa über Palmenhaine auf den hellen Salzsee der Oase."
-  fokus: "50% 70%"
+  fokus: "50% 80%"
   gewaehlt: "2026-10-23T06:47:34.887Z"
 sofi/sohag:
   datei: "kein"
@@ -87,6 +91,7 @@ nordlicht/abisko:
 nordlicht/akureyri:
   datei: "File:Akureyri-08-Panorama-2018-gje.jpg"
   alt: "Akureyri am Fjord an einem sonnigen Tag, dahinter Berge mit Schneeresten."
+  fokus: "50% 72%"
   gewaehlt: "2026-10-22T21:35:04.386Z"
 nordlicht/alta:
   datei: "File:Alta, Norway, Northern Lights Church - Flickr - JingKe888.jpg"
@@ -96,6 +101,7 @@ nordlicht/alta:
 nordlicht/fairbanks:
   datei: "File:The northern lights just north of Fairbanks, Alaska.jpg"
   alt: "Grünes Polarlicht über den Silhouetten von Fichten nördlich von Fairbanks in Alaska."
+  fokus: "50% 78%"
   gewaehlt: "2026-10-22T21:35:47.753Z"
 nordlicht/kiruna:
   datei: "File:E 10 road near Låktatjåkka in Kiruna, Norrbottens län, Sweden, 2022 June.jpg"
@@ -133,6 +139,7 @@ guide/klarer-himmel-wolken-wahrscheinlichkeit:
 guide/kp-index-und-vorhersage:
   datei: "File:Lofoten, Norway (Unsplash).jpg"
   alt: "Kräftiges grünes und violettes Polarlicht über Felsen und Bergen auf den Lofoten in Norwegen."
+  fokus: "50% 70%"
   gewaehlt: "2026-10-22T21:40:05.032Z"
 guide/pauschalreise-oder-selbst-organisieren:
   datei: "File:Total Solar Eclipse - July 2, 2019 (48266572602).jpg"
@@ -146,9 +153,6 @@ guide/reicht-hurghada:
   datei: "File:Partial solar eclipse with some clouds in Tuntorp 43.jpg"
   alt: "Teilweise verfinsterte Sonne hinter Wolkenschleiern, aufgenommen in Tuntorp."
   gewaehlt: "2026-10-22T21:38:50.228Z"
-guide/sonnenfinsternis-mit-kindern:
-  datei: "kein"
-  gewaehlt: "2026-10-22T21:39:14.475Z"
 guide/spanien-marokko-oder-aegypten:
   datei: "File:Tarifa, Puerto de Jerez.jpg"
   alt: "Das mittelalterliche Stadttor Puerta de Jerez mit Zinnen in Tarifa."
@@ -161,4 +165,5 @@ guide/tromsoe-abisko-oder-yellowknife:
 guide/warum-nicht-dezember:
   datei: "File:Y1A9749 Saariselkä, Finland (15186395524).jpg"
   alt: "Verschneite Fichten im rosafarbenen Licht eines Wintertags bei Saariselkä in Finnland."
+  fokus: "50% 72%"
   gewaehlt: "2026-10-22T21:39:56.424Z"

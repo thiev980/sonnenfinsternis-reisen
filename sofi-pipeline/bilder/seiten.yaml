@@ -33,7 +33,10 @@ guides:
     suche: ["partial solar eclipse", "Hurghada beach"]
     orte: [hurghada]
   sonnenfinsternis-mit-kindern:
-    suche: ["eclipse glasses", "solar eclipse viewing family", "solar eclipse watching"]
+    # gesucht: Kinder bei der Beobachtung, möglichst von hinten/seitlich (ohne erkennbare Gesichter)
+    suche: ["children watching solar eclipse", "kids solar eclipse glasses", "child eclipse glasses",
+            "family watching eclipse", "students eclipse viewing", "eclipse viewing school"]
+    anzahl: 24
   pauschalreise-oder-selbst-organisieren:
     suche: ["Luxor Nile", "solar eclipse observers"]
     orte: [luxor, djerba]

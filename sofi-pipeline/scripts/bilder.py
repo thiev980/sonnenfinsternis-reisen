@@ -231,7 +231,8 @@ def seiten() -> list[dict]:
         section = fm.get("section", "sonnenfinsternis")
         standard = konf.get("guide_standard", {}).get(section, {})
         out.append({"key": f"guide/{p.stem}", "bereich": "Guides", "titel": fm.get("heading") or fm.get("title"),
-                    "suche": v.get("suche", standard.get("suche", [])), "orte": v.get("orte", standard.get("orte", []))})
+                    "suche": v.get("suche", standard.get("suche", [])), "orte": v.get("orte", standard.get("orte", [])),
+                    "anzahl": v.get("anzahl", PRO_SEITE)})
     texte = {p.stem for p in (SITE / "texte" / "sonnenfinsternis").glob("*.md")}
     for o in sofi:
         if o["slug"] in texte:
@@ -304,9 +305,10 @@ def _kandidaten_seite(s: dict, ergebnis: dict) -> None:
     for c in liste:
         gruppen.setdefault(c["quelle"], []).append(c)
     auswahl = []
-    while len(auswahl) < PRO_SEITE and any(gruppen.values()):
+    anzahl = s.get("anzahl", PRO_SEITE)
+    while len(auswahl) < anzahl and any(gruppen.values()):
         for g in list(gruppen.values()):
-            if g and len(auswahl) < PRO_SEITE:
+            if g and len(auswahl) < anzahl:
                 auswahl.append(g.pop(0))
     ergebnis[s["key"]] = {"bereich": s["bereich"], "titel": s["titel"], "kandidaten": auswahl}
     log.info("%s: %d Kandidaten (von %d Dateien)", s["key"], len(auswahl), len(quellen))
