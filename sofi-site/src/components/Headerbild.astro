@@ -2,12 +2,12 @@
 /** Headerbild mit Bildzeile (Urheber, Lizenz, Link zur Commons-Seite). Ohne Bild: nichts. */
 import { Picture } from 'astro:assets';
 import { STANDARD_FOKUS, type Bild } from '../lib/bilder';
-interface Props { bild?: Bild; alt: string }   // alt: Ersatz, falls das Bild keinen eigenen Alt-Text hat
-const { bild, alt } = Astro.props;
+interface Props { bild?: Bild; alt: string; oben?: boolean }   // alt: Ersatz, falls das Bild keinen eigenen Alt-Text hat
+const { bild, alt, oben = false } = Astro.props;
 const m = bild?.meta;
 ---
 {bild && m && (
-  <figure class="header-bild">
+  <figure class:list={["header-bild", { oben }]}>
     <Picture src={bild.src} alt={m.alt ?? alt} formats={['webp']} widths={[480, 800, 1200, 1880]}
       sizes="(max-width: 980px) 100vw, 940px" loading="eager" fetchpriority="high"
       style={`object-position:${m.fokus ?? STANDARD_FOKUS}`} />
@@ -20,6 +20,7 @@ const m = bild?.meta;
 
 <style>
   .header-bild { margin: 4px 0 22px; }
+  .header-bild.oben { margin: -12px 0 30px; }
   .header-bild :global(img) {
     display: block; width: 100%; height: auto; aspect-ratio: 21 / 9; object-fit: cover;
     border-radius: 12px; background: var(--karte-bg);

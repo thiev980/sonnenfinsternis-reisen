@@ -41,6 +41,7 @@ const schema = [
 ];
 ---
 <Base title={d.title} description={d.description} schema={schema} bild={bild}>
+  <Headerbild oben bild={bild} alt={d.heading ?? d.title} />
   <article class="guide">
     <p class="brotkrumen"><a href="/sonnenfinsternis/guides">Guides</a> → {d.heading ?? d.title}</p>
     <h1>{d.heading ?? d.title}</h1>
@@ -48,7 +49,6 @@ const schema = [
       Veröffentlicht {fmt(d.pubDate)}
       {d.updatedDate && <> · zuletzt aktualisiert {fmt(d.updatedDate)}</>}
     </p>
-    <Headerbild bild={bild} alt={d.heading ?? d.title} />
     {d.tldr && <div class="tldr"><strong>Kurz gesagt:</strong> {d.tldr}</div>}
 
     <Content />

@@ -102,6 +102,7 @@ const schema = [
 ];
 ---
 <Base title={titel} description={beschreibung} schema={schema} bild={bild}>
+  <Headerbild oben bild={bild} alt={`${ort.name}, ${ort.country}`} />
   <article class="ortsseite">
     <p class="brotkrumen"><a href="/sonnenfinsternis/orte">Alle Orte</a> → {ort.name}</p>
     <h1>Sonnenfinsternis 2027 in {ort.name}</h1>
@@ -111,7 +112,6 @@ const schema = [
         ? <span class="badge-total">TOTAL · {ort.totality_str} · Rang {ort.duration_rank} von 34</span>
         : <span class="badge-partiell">nur partiell · {zahl(ort.obscuration_pct)} % Bedeckung</span>}
     </p>
-    <Headerbild bild={bild} alt={`${ort.name}, ${ort.country}`} />
 
     {ort.is_total ? (
       <>
