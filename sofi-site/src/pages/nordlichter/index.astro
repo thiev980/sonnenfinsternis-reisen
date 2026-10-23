@@ -30,7 +30,8 @@ const schema = [{
 >
   <section class="hero">
     <p class="eyebrow">September bis März · Nordhalbkugel</p>
-    <h1>Wo ein Nordlicht wahrscheinlich ist.<br />Und warum das nicht dasselbe ist wie sicher.</h1>
+    <h1>Wo ein Nordlicht wahrscheinlich ist. Und warum das nicht dasselbe ist wie sicher.</h1>
+    <Headerbild bild={bild} alt="Nordlicht" />
     <p class="lead">
       Anders als eine Sonnenfinsternis lässt sich ein Nordlicht nicht auf die Minute vorausberechnen -
       die Sonnenaktivität ist erst wenige Tage vorher verlässlich einzuschätzen. Was sich aber berechnen
@@ -42,7 +43,6 @@ const schema = [{
       <a class="btn" href="/nordlichter/orte">Alle {orte.length} Orte im Vergleich</a>
       <a class="btn" href="/nordlichter/guides">Alle Guides</a>
     </div>
-    <Headerbild bild={bild} alt="Nordlicht" />
   </section>
 
   <section>
@@ -98,8 +98,10 @@ const schema = [{
   .hero { padding: 8px 0 32px; }
   .eyebrow { color: var(--grau); font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
   h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.12; margin-bottom: 18px; }
-  .lead { font-size: 18.5px; max-width: 760px; }
-  .hero :global(.header-bild) { margin-top: 40px; }
+  .lead { font-size: clamp(18px, 2.1vw, 21px); line-height: 1.6; }
+  /* Titel → Bild → Text; alles in voller Breite. Der Lead ist dafür grösser gesetzt, damit die Zeilen
+     nicht über ~90 Zeichen kommen. */
+  .hero :global(.header-bild) { margin: 24px 0 26px; }
   .cta { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
   .btn {
     display: inline-block; padding: 11px 20px; border-radius: 9px; text-decoration: none;

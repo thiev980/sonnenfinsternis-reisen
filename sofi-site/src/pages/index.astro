@@ -5,6 +5,7 @@ import Headerbild from '../components/Headerbild.astro';
 const bild = headerBild('seite/start');
 import orte from '../data/orte.json';
 import nordlichtOrte from '../data/nordlicht_orte.json';
+import { zahl, score } from '../lib/format.js';
 
 const laengste = orte
   .filter((o) => o.is_total)
@@ -24,6 +25,15 @@ const bestNL = nordlichtOrte.reduce((best, o) => {
 }, { ort: null, idx: -Infinity });
 const anzahlNordlicht = nordlichtOrte.length;
 
+// Einstiege mit echten Zahlen: beste Orte nach SoFi-Score (Dauer × P(klar)) und bester Ort in Europa
+const nachScore = orte.filter((o) => o.sofi_score).sort((a, b) => b.sofi_score - a.sofi_score);
+const topSofi = nachScore.slice(0, 3);
+const besterEuropa = nachScore.find((o) => o.country === 'Spanien' || o.country === 'Gibraltar');
+const rangEuropa = besterEuropa ? nachScore.indexOf(besterEuropa) + 1 : null;
+const topNL = [...nordlichtOrte]
+  .sort((a, b) => b.monate[b.bester_monat].index - a.monate[a.bester_monat].index)
+  .slice(0, 3);
+
 const schema = [{
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -39,72 +49,158 @@ const schema = [{
   bild={bild}
 >
   <section class="hero">
-    <h1>Manche Dinge kann man nur dort sehen,<br />wo man gerade nicht ist.</h1>
+    <h1>Manche Dinge kann man nur dort sehen, wo man gerade nicht ist.</h1>
+    <Headerbild bild={bild} alt="Sonnenfinsternis und Nordlicht" />
     <p class="lead">
       Eine totale Sonnenfinsternis dauert Minuten und ist an einen Streifen von
       wenigen hundert Kilometern gebunden. Nordlichter brauchen Dunkelheit, Breitengrad
-      und Geduld. Für beides gilt dieselbe Frage: <strong>wohin, und wann?</strong>
+      und Geduld. Für beides gilt dieselbe Frage: <strong>wohin, und wann?</strong>{' '}
       Ich rechne die Antworten selbst – mit offenen Quellen und offengelegten Unsicherheiten.
     </p>
-    <Headerbild bild={bild} alt="Sonnenfinsternis und Nordlicht" />
   </section>
 
-  <section class="bereiche">
-    <h2>Die Bereiche</h2>
+  <section class="bereich">
+    <h2><a href="/sonnenfinsternis">Sonnenfinsternis 2027</a></h2>
+    <p class="intro">
+      Am 2. August 2027 zieht der Kernschatten über Südspanien, Nordafrika und
+      die Arabische Halbinsel – bis zu {laengste.totality_str} Totalität.
+      Zeiten, Dauer und Wolkenrisiko für {anzahlTotal} Orte in der Zone.
+    </p>
+    <h3>Die besten Orte nach SoFi-Score</h3>
+    <table class="daten">
+      <thead><tr><th>Ort</th><th>Totalität</th><th>Klarer Himmel</th><th>SoFi-Score</th></tr></thead>
+      <tbody>
+        {topSofi.map((o) => (
+          <tr>
+            <td><a href={`/sonnenfinsternis/orte/${o.slug}`}>{o.name}</a> <span class="land">{o.country}</span></td>
+            <td>{o.totality_str}</td>
+            <td>{Math.round(o.cloud.p_clear * 100)} %</td>
+            <td><strong>{score(o.sofi_score)}</strong></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="hinweis">
+      SoFi-Score = Totalitätsdauer in Minuten × Wahrscheinlichkeit für klaren Himmel, also die zu erwartenden
+      Minuten Totalität.
+      {besterEuropa && <> Bester Ort in Europa: <a href={`/sonnenfinsternis/orte/${besterEuropa.slug}`}>{besterEuropa.name}</a>
+      {' '}mit {besterEuropa.totality_str} und {Math.round(besterEuropa.cloud.p_clear * 100)} % klarem Himmel
+      (Score {score(besterEuropa.sofi_score)}, Rang {rangEuropa} von {nachScore.length}).</>}
+    </p>
+    <p class="weiter">
+      <a href="/sonnenfinsternis/orte">Alle {orte.length} Orte vergleichen</a> ·{' '}
+      <a href="/sonnenfinsternis/karte">Karte</a> ·{' '}
+      <a href="/sonnenfinsternis/guides">Guides</a>
+    </p>
+  </section>
+
+  <section class="bereich">
+    <h2><a href="/nordlichter">Nordlichter</a></h2>
+    <p class="intro">
+      Die Saison läuft von September bis März. Geomagnetische Lage, Dunkelstunden
+      und Wolkenwahrscheinlichkeit für {anzahlNordlicht} Orte von Kanada bis Skandinavien.
+    </p>
+    <h3>Die besten Chancen nach Index</h3>
+    <table class="daten">
+      <thead><tr><th>Ort</th><th>Bester Monat</th><th>Dunkelstunden</th><th>Index</th></tr></thead>
+      <tbody>
+        {topNL.map((o) => (
+          <tr>
+            <td><a href={`/nordlichter/orte/${o.slug}`}>{o.name}</a> <span class="land">{o.land}</span></td>
+            <td>{MONATSNAME_LANG[o.bester_monat]}</td>
+            <td>{zahl(o.monate[o.bester_monat].dunkelstunden, 1)} Std.</td>
+            <td><strong>{zahl(o.monate[o.bester_monat].index)}</strong></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="hinweis">Index = Dunkelstunden pro Nacht × Wahrscheinlichkeit für klaren Himmel im besten Monat.</p>
+    <p class="weiter">
+      <a href="/nordlichter/orte">Alle {anzahlNordlicht} Orte vergleichen</a> ·{' '}
+      <a href="/nordlichter/karte">Karte</a> ·{' '}
+      <a href="/nordlichter/guides">Guides</a>
+    </p>
+  </section>
+
+  <section class="guides-teaser">
+    <h2>Guides zum Einstieg</h2>
     <ul>
       <li>
-        <a href="/sonnenfinsternis">Sonnenfinsternis 2027</a>
-        <p>
-          Am 2. August 2027 zieht der Kernschatten über Südspanien, Nordafrika und
-          die Arabische Halbinsel – bis zu {laengste.totality_str} Totalität.
-          Zeiten, Dauer und Wolkenrisiko für {anzahlTotal} Orte in der Zone,
-          dazu Karte und Reise-Guides.
-        </p>
+        <a href="/sonnenfinsternis/guides/spanien-marokko-oder-aegypten">Spanien, Marokko oder Ägypten?</a>
+        <p>Vier Minuten in Tarifa oder 6:20 in Luxor – der Vergleich nach Dauer,
+        Wetterrisiko, Anreise und Budget.</p>
       </li>
       <li>
-        <a href="/nordlichter">Nordlichter</a>
-        <p>
-          Die Saison läuft von September bis März. Geomagnetische Lage, Dunkelstunden
-          und Wolkenwahrscheinlichkeit für {anzahlNordlicht} Orte von Kanada bis
-          Skandinavien – aktuell beste Chance: {bestNL.ort.name} im {MONATSNAME_LANG[bestNL.ort.bester_monat]}.
-          Dazu Karte und Reise-Guides.
-        </p>
+        <a href="/sonnenfinsternis/guides/reicht-hurghada">Reicht Hurghada?</a>
+        <p>98,5 % Bedeckung klingen nach fast total und sind es nicht. Die zwei
+        Auswege für alle, die am Roten Meer gebucht haben.</p>
+      </li>
+      <li>
+        <a href="/nordlichter/guides/tromsoe-abisko-oder-yellowknife">Fairbanks, Tromsø oder Yellowknife?</a>
+        <p>Der Datenvergleich über alle elf Orte – inklusive zweier Fälle, bei denen wir unseren
+        eigenen Zahlen nicht vollständig trauen.</p>
+      </li>
+      <li>
+        <a href="/nordlichter/guides/warum-nicht-dezember">Warum Dezember nicht automatisch die beste Zeit ist</a>
+        <p>Die längste Nacht des Jahres liegt im Dezember. Der beste Reisemonat oft nicht –
+        weil Dunkelheit nur die halbe Rechnung ist.</p>
       </li>
     </ul>
   </section>
 
   <section class="warum">
-    <h2>Warum diese Seite</h2>
+    <h2>Warum diese Seite – und wie ich rechne</h2>
     <p>
       Reiseartikel zu Himmelsereignissen schreiben meist voneinander ab. Bei der
       Finsternis 2027 heisst das: Alle nennen die Totalitätsdauer, kaum jemand das
       Wetterrisiko – obwohl sechs Minuten hinter einer Wolke weniger wert sind als
-      drei Minuten unter klarem Himmel. Ich bin Datenanalyst und rechne beides selbst.
-      {' '}<a href="/ueber-mich">Mehr dazu, wer dahintersteht →</a>
+      drei Minuten unter klarem Himmel. Ich bin Datenanalyst und rechne beides selbst:
+    </p>
+    <ul>
+      <li><strong>Finsternis-Zeiten</strong> mit der Astronomie-Bibliothek skyfield und der JPL-Ephemeride DE421,
+        geprüft gegen NASA-Referenzwerte (Abweichung ±1–2 Sekunden).</li>
+      <li><strong>Wolkenrisiko</strong> aus 30 Jahren ERA5-Wetterdaten des Copernicus-Klimadienstes (1995–2024):
+        für die Finsternis Ende Juli bis Anfang August zur Finsternis-Uhrzeit, für Nordlichter im Nachtfenster jedes Orts.</li>
+      <li><strong>Nordlicht-Chancen</strong> aus geomagnetischer Breite, Dunkelstunden pro Monat und derselben
+        Wolkenstatistik – samt den Grenzen dieser Methode.</li>
+    </ul>
+    <p>
+      Details: <a href="/sonnenfinsternis/methodik">Methodik Sonnenfinsternis</a> ·
+      {' '}<a href="/nordlichter/methodik">Methodik Nordlichter</a> ·
+      {' '}<a href="/ueber-mich">Wer dahintersteht</a>
     </p>
   </section>
 </Base>
 
 <style>
-  .hero { padding: 8px 0 36px; }
-  h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.12; margin-bottom: 18px; }
-  .lead { font-size: 18.5px; max-width: 760px; }
-  .hero :global(.header-bild) { margin-top: 40px; }
+  .hero { padding: 8px 0 30px; }
+  h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.12; margin-bottom: 8px; }
+  /* Titel → Bild → Text; alles in voller Breite, der Lead dafür grösser (≤ ~90 Zeichen pro Zeile) */
+  .hero :global(.header-bild) { margin: 24px 0 26px; }
+  .lead { font-size: clamp(18px, 2.1vw, 21px); line-height: 1.6; }
 
-  .bereiche ul { list-style: none; margin: 0; padding: 0; max-width: 720px; }
-  .bereiche li { border-top: 1px solid var(--linie); padding: 18px 0; }
-  .bereiche a, .titel-inaktiv {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px;
-    text-decoration: none; display: inline-block;
-  }
-  .bereiche a:hover { text-decoration: underline; text-underline-offset: 4px; }
-  .titel-inaktiv { color: var(--grau); }
-  .bereiche p { color: var(--grau); font-size: 15px; margin: 6px 0 8px; }
-  .status { font-size: 12.5px; font-weight: 600; padding: 2px 10px; border-radius: 11px; display: inline-block; }
-  .status.bereit { background: var(--nacht); color: #fff; }
-  .status.kommt { background: #edebe4; color: var(--grau); }
+  section h2 { font-size: 24px; margin-bottom: 10px; }
+  .bereich { border-top: 1px solid var(--linie); padding: 28px 0 8px; }
+  .bereich h2 a { text-decoration: none; }
+  .bereich h2 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .bereich h3 { font-size: 17px; margin: 18px 0 6px; }
+  .intro { max-width: 760px; }
+  .land { color: var(--grau); font-size: 13.5px; margin-left: 4px; }
+  .bereich td:not(:first-child) { white-space: nowrap; }
+  @media (max-width: 560px) { .land { display: block; margin-left: 0; } }
+  .hinweis { color: var(--grau); font-size: 14px; margin-top: 10px; max-width: 760px; }
+  .weiter { margin: 12px 0 10px; font-weight: 600; }
 
-  .warum { margin-top: 40px; max-width: 660px; }
-  .warum p { color: var(--tinte); }
-  section h2 { font-size: 24px; margin-bottom: 14px; }
+  .guides-teaser { border-top: 1px solid var(--linie); padding-top: 28px; margin-top: 20px; }
+  .guides-teaser ul { list-style: none; margin: 0; padding: 0; max-width: 760px; }
+  .guides-teaser li { border-top: 1px solid var(--linie); padding: 14px 0; }
+  .guides-teaser li:first-child { border-top: 0; padding-top: 4px; }
+  .guides-teaser a { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; text-decoration: none; }
+  .guides-teaser a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .guides-teaser p { color: var(--grau); font-size: 15px; margin-top: 4px; }
+
+  .warum { border-top: 1px solid var(--linie); margin-top: 20px; padding-top: 28px; max-width: 760px; }
+  .warum p { margin-bottom: 12px; }
+  .warum ul { margin: 0 0 14px 20px; }
+  .warum li { margin-bottom: 6px; }
 </style>
