@@ -22,17 +22,19 @@ Wahl samt Alt-Text, und der Workflow lädt die Bilder ins Repo.
 | `seite/start`, `seite/sonnenfinsternis`, `seite/nordlichter` | Startseite, Übersichten | Commons-Suche laut `seiten.yaml` |
 
 Platzierung: Ortsseiten und Guides unter Titel/Untertitel bzw. Datumszeile, vor dem Lead; Startseite und
-Übersichten am Ende des Hero-Abschnitts. Format 21:9 (Handy 16:10), Bildausschnitt bei Bedarf über `fokus`.
+Übersichten am Ende des Hero-Abschnitts. Format 21:9 (Handy 16:10), Bildausschnitt über `fokus` (Standard `50% 62%`, `STANDARD_FOKUS` in `lib/bilder.ts`
+und `zuschnitt.py`); `og:image` (1200×630) folgt grob demselben Fokus (oben/Mitte/unten).
 Ranglisten, Karte, Methodik und Guide-Übersichten bekommen kein Headerbild.
 
 ## Dateien
 | Datei | Zweck |
 |---|---|
 | `sofi-pipeline/scripts/bilder.py` | `kandidaten`, `vorschau`, `laden`; offline: `seiten` (Liste, ✓ = entschieden) |
-| `sofi-pipeline/bilder/seiten.yaml` | Suchbegriffe für Übersichten/Guides, Ausnahmen für Orte (`radius`, `wikidata`) |
+| `sofi-pipeline/bilder/seiten.yaml` | Suchbegriffe für Übersichten/Guides (`suche`, `orte`, `anzahl` Kandidaten), Ausnahmen für Orte (`radius`, `wikidata`) |
 | `sofi-pipeline/bilder/kandidaten.json` | vom Workflow geschrieben; Seiten mit Kandidaten werden nicht neu gesucht |
 | `sofi-pipeline/bilder/auswahl.yaml` | Schlüssel → `{datei, alt, fokus?}` oder `kein`; Push startet «Bilder aktualisieren» |
 | `sofi-pipeline/scripts/auswahlseite.py` + `templates/auswahlseite.html` | baut die Auswahlseite |
+| `sofi-pipeline/scripts/zuschnitt.py` | Bogen mit Desktop-/Handy-Zuschnitt der gewählten Bilder, zum Setzen von `fokus` |
 | `sofi-pipeline/scripts/auswahl_uebernehmen.py` | Auswahl (ArtifactData-Export) → `auswahl.yaml`, neue Einträge mit leerem `alt:` |
 | `.github/workflows/bilder.yml` | Kandidaten + Vorschauen (manuell, `inputs[kandidaten]=true`), Laden (Push auf `auswahl.yaml`) |
 | `sofi-site/src/lib/bilder.ts`, `src/components/Headerbild.astro` | Bild + Bildzeile; `Base.astro` setzt `og:image` |
@@ -73,12 +75,23 @@ Neu veröffentlichen: erst `Artifact action: read` mit der URL, dann `publish` m
 2. `python3 sofi-pipeline/scripts/auswahl_uebernehmen.py <ordner>` → neue und geänderte Entscheidungen in
    `auswahl.yaml` (Ausgabe `neu: …` / `geändert: …`).
 3. Für jeden neuen oder geänderten Eintrag mit Bild das Vorschaubild (Branch `bilder-vorschau`) mit dem Read-Tool
-   ansehen und `alt:` schreiben (Muster: bestehende Einträge). Würde das Motiv im 21:9-Zuschnitt angeschnitten,
-   `fokus` setzen (z. B. `"50% 35%"`).
-4. Committen und pushen («Bildauswahl übernommen: …»). Der Push startet «Bilder aktualisieren».
+   ansehen und `alt:` schreiben (Muster: bestehende Einträge).
+4. **Zuschnitt prüfen:** `python3 sofi-pipeline/scripts/zuschnitt.py <vorschau> <bogen.jpg> <schlüssel …>` und den
+   Bogen mit dem Read-Tool ansehen (ganzes Bild mit Rahmen, daneben Desktop 21:9 und Handy 16:10). Standard ist
+   `50% 62%` (etwas unter der Mitte). Ziel: Boden/Horizont mit Kontext (Bäume ganz, Häuser, Wasser), nicht nur
+   Baumspitzen; Hauptmotiv (Turm, Korona, Polarlicht) nicht angeschnitten. Sonst `fokus` setzen («50% 80%» =
+   mehr unten, «50% 35%» = mehr oben), erneut prüfen. Kein Kompromiss möglich (Hochformat-Motiv): in der
+   Zusammenfassung erwähnen.
+5. Committen und pushen («Bildauswahl übernommen: …»). Der Push startet «Bilder aktualisieren».
 
 **Nach den neuen Texten – Kandidaten:**
 1. Nach dem Push der Texte: `bilder.yml` mit `inputs[kandidaten]=true` starten, auf das Ende warten, `git pull`.
 2. Vorschauen klonen, Auswahlseite bauen und neu veröffentlichen (siehe «Auswahlseite»).
 3. Telegram an Thi (Workflow `telegram-nachricht.yml` in `thiev980/affiliate-pipeline`), nur wenn neue Seiten
    zur Wahl stehen: «Astroreisen: Headerbilder wählen für <Orte> – <URL>».
+
+## Neue Kandidaten für eine Seite («noch eine Runde»)
+1. Suchbegriffe in `seiten.yaml` anpassen (bei Bedarf `anzahl` erhöhen).
+2. Den Schlüssel aus `kandidaten.json` und `auswahl.yaml` entfernen und das Dokument in der Collection `auswahl`
+   löschen (ArtifactData `delete`, Dokument-ID mit `__`) – sonst übernimmt Schritt 0 die alte Wahl wieder.
+3. `bilder.yml` mit `kandidaten=true` starten, Auswahlseite neu bauen und veröffentlichen.

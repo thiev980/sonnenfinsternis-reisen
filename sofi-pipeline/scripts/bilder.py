@@ -194,7 +194,12 @@ def _wertung(info: dict, quelle: str) -> float:
     return w
 
 
+KATEGORIE_RAUS = re.compile(r"\bletters\b|manuscripts|handwriting|documents|text\b|lunar eclipse", re.I)
+
+
 def _passt(info: dict) -> bool:
+    if KATEGORIE_RAUS.search(info.get("kategorien") or "") or re.search(r"lunar.eclipse|mondfinsternis", info["datei"], re.I):
+        return False
     b, h = info["breite"] or 0, info["hoehe"] or 1
     return (info["mime"] == "image/jpeg" and b >= 1600 and 1.25 <= b / h <= 3.2
             and not TITEL_RAUS.search(info["datei"]))
