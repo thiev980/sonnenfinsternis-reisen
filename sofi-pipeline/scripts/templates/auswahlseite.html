@@ -52,6 +52,11 @@
   .commons { font-size: 12px; color: var(--accent); padding: 0 9px 8px; }
   .kein { justify-content: center; align-items: center; min-height: 120px; color: var(--muted); font-weight: 600; background: repeating-linear-gradient(135deg, var(--card) 0 10px, var(--accent-soft) 10px 20px); }
   .leer { color: var(--muted); font-size: 14px; margin-top: 8px; }
+  .gewaehlt.vorgemerkt { color: var(--gold); font-weight: 600; }
+  details.alt { margin: 40px 0 0; border-top: 2px solid var(--line); }
+  details.alt > summary { cursor: pointer; font: 700 22px/1.2 var(--serif); padding: 20px 0 6px; list-style-position: outside; }
+  details.alt > summary span { font: 400 14px var(--sans); color: var(--muted); margin-left: 8px; }
+  details.alt h2 { font-size: 21px; }
   @media (max-width: 520px) { .raster { grid-template-columns: repeat(2, minmax(0, 1fr)); } h1 { font-size: 19px; } }
   @media (prefers-reduced-motion: reduce) { .balken i { transition: none; } }
 </style>
@@ -59,27 +64,32 @@
 <header>
   <div class="wrap">
     <h1>Bildauswahl astroreisen.com</h1>
-    <span class="stand" id="stand">0 von 0 gewählt</span>
+    <span class="stand" id="stand">0 von 0 offenen gewählt</span>
     <div class="balken" aria-hidden="true"><i id="balken"></i></div>
-    <button type="button" class="filter" id="offen" aria-pressed="false">Nur offene zeigen</button>
     <nav class="wege" id="wege"></nav>
   </div>
 </header>
 
 <main class="wrap">
-  <p class="hinweis">Pro Seite ein Foto antippen. Die Auswahl wird sofort gespeichert; Claude übernimmt sie beim nächsten geplanten Lauf ins Repo, und der Workflow lädt die Bilder in die Seite. «Kein Bild» lässt die Seite bewusst ohne Headerbild. Die Bilder stammen von Wikimedia Commons; «★» markiert von Commons ausgezeichnete Fotos oder das offizielle Wikidata-Bild des Orts. Über «Auf Commons ansehen» siehst du das Bild in voller Grösse. Das Headerbild wird im Format 21:9 zugeschnitten, also deutlich breiter als die Vorschau.</p>
+  <p class="hinweis">Pro Seite ein Foto antippen. Die Auswahl wird sofort gespeichert; Claude übernimmt sie beim nächsten geplanten Lauf (täglich 7:52) ins Repo, und der Workflow lädt die Bilder in die Seite. «Kein Bild» lässt die Seite bewusst ohne Headerbild. Unter «Bereits gewählt» kannst du jederzeit umwählen; die Änderung gilt ab dem nächsten Lauf. «★» markiert von Commons ausgezeichnete Fotos oder das offizielle Wikidata-Bild des Orts. Über «Auf Commons ansehen» siehst du das Bild in voller Grösse. Das Headerbild wird im Format 21:9 zugeschnitten, also deutlich breiter als die Vorschau.</p>
   <div class="status" id="status" hidden></div>
   <div id="inhalt"></div>
+  <details class="alt" id="alt">
+    <summary>Bereits gewählt <span id="alt-anzahl"></span></summary>
+    <nav class="wege" id="wege-alt" style="margin-top:10px"></nav>
+    <div id="inhalt-alt"><p class="leer" id="alt-laden">Vorschaubilder werden geladen …</p></div>
+  </details>
 </main>
 
 <script>
   const GRUPPEN = /*GRUPPEN*/[];
-  const BILDER = /*BILDER*/{};
-  const wahl = {};          // key → datei | "kein"
-  let db = null, kannSchreiben = true;
+  const SKRIPTE = /*SKRIPTE*/{};
+  const wahl = {};          // key → datei | "kein" (letzte Wahl auf dieser Seite, aus der Datenbank)
+  let db = null;
   const docId = (k) => k.replace(/\//g, '__');
   const $ = (s) => document.querySelector(s);
   const status = (t) => { const el = $('#status'); el.textContent = t; el.hidden = !t; };
+  const OFFEN = GRUPPEN.filter((g) => !g.gewaehlt), ALT = GRUPPEN.filter((g) => g.gewaehlt);
 
   function el(tag, attrs = {}, ...kinder) {
     const e = document.createElement(tag);
@@ -90,26 +100,37 @@
     return e;
   }
 
-  function aufbauen() {
-    const inhalt = $('#inhalt'), nav = $('#wege');
-    if (!GRUPPEN.length) {
-      inhalt.append(el('p', { class: 'leer' }, 'Alle Headerbilder sind gewählt. Sobald neue Ortstexte dazukommen, erscheinen ihre Kandidaten hier.'));
-    }
-    let wegAlt = null;
-    for (const g of GRUPPEN) {
-      if (g.bereich !== wegAlt) {
-        wegAlt = g.bereich;
-        const id = 'b-' + g.bereich.toLowerCase().replace(/[^a-z]+/g, '-');
+  // Vorschaubilder kommen aus eigenen Skript-Dateien (window.VORSCHAU), damit die Seite klein bleibt
+  const geladen = {};
+  function laden(art) {
+    if (!geladen[art]) geladen[art] = Promise.all((SKRIPTE[art] || []).map((src) => new Promise((ok) => {
+      const s = document.createElement('script'); s.src = src; s.onload = ok;
+      s.onerror = () => { status('Einige Vorschaubilder konnten nicht geladen werden.'); ok(); };
+      document.head.append(s);
+    }))).then(bilderSetzen);
+    return geladen[art];
+  }
+  function bilderSetzen() {
+    const v = window.VORSCHAU || {};
+    document.querySelectorAll('img[data-bild]').forEach((img) => { if (v[img.dataset.bild]) { img.src = v[img.dataset.bild]; img.removeAttribute('data-bild'); } });
+  }
+
+  function aufbauen(liste, inhalt, nav, praefix) {
+    let bereichAlt = null;
+    for (const g of liste) {
+      if (g.bereich !== bereichAlt) {
+        bereichAlt = g.bereich;
+        const id = praefix + g.bereich.toLowerCase().replace(/[^a-z]+/g, '-');
         inhalt.append(el('h2', { id }, g.bereich));
         nav.append(el('a', { href: '#' + id }, g.bereich));
       }
       const raster = el('div', { class: 'raster' });
       const sek = el('section', { class: 'gruppe', 'data-key': g.key },
-        el('div', { class: 'kopf' }, el('h3', {}, g.titel), el('span', { class: 'gewaehlt' }, 'noch offen')), raster);
+        el('div', { class: 'kopf' }, el('h3', {}, g.titel), el('span', { class: 'gewaehlt' }, '')), raster);
       for (const k of g.kand) {
         const knopf = el('button', { type: 'button', class: 'kand', 'aria-pressed': 'false', 'data-datei': k.datei,
             title: k.datei.replace(/^File:/, ''), onclick: () => waehlen(g.key, k.datei) },
-          el('img', { src: BILDER[k.bild], alt: k.datei.replace(/^File:|\.\w+$/g, ''), loading: 'lazy' }),
+          el('img', { 'data-bild': k.bild, alt: k.datei.replace(/^File:|\.\w+$/g, ''), loading: 'lazy' }),
           k.q >= 3 ? el('span', { class: 'gut', title: 'Ausgezeichnet auf Commons oder Wikidata-Bild des Orts' }, '★') : null,
           el('span', { class: 'haken', 'aria-hidden': 'true' }, '✓'),
           el('span', { class: 'txt' }, el('div', { class: 'q' }, k.quelle), el('div', { class: 'm' }, `${k.autor} · ${k.lizenz}`)));
@@ -126,22 +147,31 @@
 
   function zeigen() {
     let n = 0;
-    for (const sek of document.querySelectorAll('section.gruppe')) {
-      const w = wahl[sek.dataset.key];
-      if (w) n++;
-      sek.querySelectorAll('.kand').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.datei === w)));
+    for (const g of GRUPPEN) {
+      const sek = document.querySelector(`section.gruppe[data-key="${CSS.escape(g.key)}"]`);
+      if (!sek) continue;
+      const neu = wahl[g.key], aktiv = neu ?? g.gewaehlt;
+      sek.querySelectorAll('.kand').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.datei === aktiv)));
       const s = sek.querySelector('.gewaehlt');
-      s.textContent = !w ? 'noch offen' : w === 'kein' ? '✓ ohne Bild' : '✓ gewählt';
-      s.classList.toggle('ja', !!w);
-      sek.hidden = $('#offen').getAttribute('aria-pressed') === 'true' && !!w;
+      s.classList.remove('ja', 'vorgemerkt');
+      if (!g.gewaehlt) {
+        if (neu) n++;
+        s.textContent = !neu ? 'noch offen' : neu === 'kein' ? '✓ ohne Bild' : '✓ gewählt';
+        if (neu) s.classList.add('ja');
+      } else if (neu && neu !== g.gewaehlt) {
+        s.textContent = 'Änderung vorgemerkt – gilt ab dem nächsten Lauf'; s.classList.add('vorgemerkt');
+      } else {
+        s.textContent = g.gewaehlt === 'kein' ? '✓ ohne Bild (auf der Seite)' : '✓ auf der Seite'; s.classList.add('ja');
+      }
     }
-    $('#stand').textContent = `${n} von ${GRUPPEN.length} gewählt`;
-    $('#balken').style.width = `${GRUPPEN.length ? (100 * n) / GRUPPEN.length : 100}%`;
+    $('#stand').textContent = `${n} von ${OFFEN.length} offenen gewählt`;
+    $('#balken').style.width = `${OFFEN.length ? (100 * n) / OFFEN.length : 100}%`;
   }
 
   async function waehlen(key, datei) {
     const vorher = wahl[key];
-    if (vorher === datei) return;
+    const g = GRUPPEN.find((x) => x.key === key);
+    if ((vorher ?? g.gewaehlt) === datei) return;
     wahl[key] = datei;
     zeigen();
     if (!db) { status('Speichern ist in dieser Ansicht nicht möglich. Öffne die Seite angemeldet auf claude.ai.'); return; }
@@ -157,17 +187,32 @@
     }
   }
 
-  $('#offen').addEventListener('click', (e) => {
-    const b = e.currentTarget; b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true')); zeigen();
+  if (!OFFEN.length) $('#inhalt').append(el('p', { class: 'leer' }, 'Alle Headerbilder sind gewählt. Sobald neue Seiten dazukommen, erscheinen ihre Kandidaten hier.'));
+  aufbauen(OFFEN, $('#inhalt'), $('#wege'), 'o-');
+  $('#alt-anzahl').textContent = `(${ALT.length} Seiten – zum Umwählen aufklappen)`;
+  if (!ALT.length) $('#alt').hidden = true;
+  let altGebaut = false;
+  $('#alt').addEventListener('toggle', async (e) => {
+    if (!e.currentTarget.open || altGebaut) return;
+    altGebaut = true;
+    aufbauen(ALT, $('#inhalt-alt'), $('#wege-alt'), 'g-');
+    zeigen();
+    await laden('gewaehlt');
+    $('#alt-laden').remove();
   });
-
-  aufbauen();
   zeigen();
+  laden('offen');
   (async () => {
     try { db = await window.claude?.use?.('db'); } catch { db = null; }
     if (!db) { status('Gespeicherte Auswahl kann hier nicht geladen werden. Öffne die Seite angemeldet auf claude.ai.'); return; }
     db.collection('auswahl').onSnapshot((snap) => {
-      for (const d of snap.docs) { const x = d.data(); if (x && x.schluessel) wahl[x.schluessel] = x.datei; }
+      for (const d of snap.docs) {
+        const x = d.data(); if (!x || !x.schluessel) continue;
+        const g = GRUPPEN.find((y) => y.key === x.schluessel);
+        // ältere Wahl als der Stand im Repo (z. B. von Hand geändert) zählt nicht als Änderung
+        if (g && g.seit && (x.geaendert || '') <= g.seit) { delete wahl[x.schluessel]; continue; }
+        wahl[x.schluessel] = x.datei;
+      }
       for (const c of snap.docChanges()) if (c.type === 'removed') { const x = c.doc.data(); if (x) delete wahl[x.schluessel]; }
       zeigen();
     }, () => status('Die gespeicherte Auswahl konnte nicht geladen werden.'));

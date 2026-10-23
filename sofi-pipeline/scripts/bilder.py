@@ -325,14 +325,24 @@ def entschiedene_schluessel() -> set[str]:
     return set((yaml.safe_load(AUSWAHL.read_text()) or {}).keys()) if AUSWAHL.exists() else set()
 
 
-def offene_gruppen() -> list[dict]:
-    """Seiten ohne Entscheidung, mit ihren Kandidaten (für Vorschau und Auswahlseite)."""
+def alle_gruppen() -> list[dict]:
+    """Alle Seiten mit Kandidaten (für Vorschau und Auswahlseite); `gewaehlt` = aktuelle Wahl oder None."""
     daten = json.loads(KANDIDATEN.read_text()) if KANDIDATEN.exists() else {}
-    entschieden = entschiedene_schluessel()
-    gruppen = [{"key": k, "bereich": v["bereich"], "titel": v["titel"], "kand": v["kandidaten"]}
-               for k, v in daten.items() if k not in entschieden]
+    roh = (yaml.safe_load(AUSWAHL.read_text()) or {}) if AUSWAHL.exists() else {}
+    gruppen = []
+    for k, v in daten.items():
+        e = roh.get(k)
+        w = e.get("datei") if isinstance(e, dict) else e
+        seit = str(e.get("gewaehlt") or "") if isinstance(e, dict) else ""
+        gruppen.append({"key": k, "bereich": v["bereich"], "titel": v["titel"], "kand": v["kandidaten"],
+                        "gewaehlt": str(w) if w else None, "seit": seit})
     gruppen.sort(key=lambda g: (BEREICHE.index(g["bereich"]) if g["bereich"] in BEREICHE else 9, g["titel"]))
     return gruppen
+
+
+def offene_gruppen() -> list[dict]:
+    """Seiten ohne Entscheidung."""
+    return [g for g in alle_gruppen() if not g["gewaehlt"]]
 
 
 def vorschau_name(titel: str) -> str:
@@ -397,8 +407,9 @@ def laden() -> None:
 
 
 def vorschau(ziel: Path = VORSCHAU) -> None:
-    """Vorschaubilder (500 px) der Kandidaten aller offenen Seiten; Dateiname = SHA1 des Commons-Titels."""
-    titel = {c["datei"]: c["vorschau"] for g in offene_gruppen() for c in g["kand"]}
+    """Vorschaubilder (500 px) der Kandidaten aller Seiten (auch entschiedener, zum Umwählen);
+    Dateiname = SHA1 des Commons-Titels."""
+    titel = {c["datei"]: c["vorschau"] for g in alle_gruppen() for c in g["kand"]}
     for t, url in sorted(titel.items()):
         f = ziel / vorschau_name(t)
         if not f.exists():

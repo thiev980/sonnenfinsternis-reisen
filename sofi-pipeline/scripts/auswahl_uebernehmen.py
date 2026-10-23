@@ -3,10 +3,16 @@
   python sofi-pipeline/scripts/auswahl_uebernehmen.py <ordner-mit-json>
 
 Der Ordner enthält die Dokumente der Collection `auswahl`, wie sie das ArtifactData-Tool mit
-`out_dir` speichert (je Dokument eine JSON-Datei). Übernommen werden nur Schlüssel, die in
-auswahl.yaml noch fehlen, und nur Dateien aus der Kandidatenliste. Neue Einträge bekommen ein
-leeres `alt:` – den Alt-Text schreibt die Session, nachdem sie das Bild angesehen hat.
-Gibt die neu übernommenen Schlüssel aus.
+`out_dir` speichert (je Dokument eine JSON-Datei).
+- Neue Seiten (noch nicht in auswahl.yaml): Wahl übernehmen.
+- Bereits entschiedene Seiten: nur übernehmen, wenn die Wahl auf der Seite eine andere Datei ist UND
+  jünger als `gewaehlt` des Eintrags (so überschreibt eine alte Wahl keine Änderung von Hand).
+Nur Dateien aus der Kandidatenliste. Neue und geänderte Einträge mit Bild bekommen ein leeres `alt:`
+(ein altes `fokus` fällt weg) – den Alt-Text schreibt die Session, nachdem sie das Bild angesehen hat.
+Jeder Eintrag trägt `gewaehlt` (Zeitpunkt der Wahl). Gibt die neuen und geänderten Schlüssel aus.
+
+Von Hand ändern (z. B. auf Wunsch im Chat): Eintrag anpassen und `gewaehlt` auf die aktuelle Zeit setzen
+(`date -u +%Y-%m-%dT%H:%M:%SZ`).
 """
 from __future__ import annotations
 
@@ -27,43 +33,57 @@ def _reihenfolge(k: str):
     return (REIHENFOLGE.index(art) if art in REIHENFOLGE else 9, slug)
 
 
+def _eintrag(v) -> dict:
+    return dict(v) if isinstance(v, dict) else {"datei": str(v)}
+
+
+def schreiben(alle: dict, kopf: str) -> None:
+    zeilen = []
+    for s in sorted(alle, key=_reihenfolge):
+        v = _eintrag(alle[s])
+        z = f"{s}:\n  datei: {json.dumps(v['datei'], ensure_ascii=False)}\n"
+        if v["datei"] != "kein":
+            z += f"  alt: {json.dumps(v.get('alt') or '', ensure_ascii=False)}\n"
+            if v.get("fokus"):
+                z += f"  fokus: {json.dumps(v['fokus'])}\n"
+        if v.get("gewaehlt"):
+            z += f"  gewaehlt: {json.dumps(str(v['gewaehlt']))}\n"
+        zeilen.append(z)
+    AUSWAHL.write_text(kopf + "".join(zeilen))
+    assert set(yaml.safe_load(AUSWAHL.read_text())) == set(alle)
+
+
 def uebernehmen(ordner: Path) -> list[str]:
     k = json.loads(KANDIDATEN.read_text())
     erlaubt = {s: {c["datei"] for c in v["kandidaten"]} for s, v in k.items()}
 
     text = AUSWAHL.read_text() if AUSWAHL.exists() else ""
-    vorhanden = yaml.safe_load(text) or {}
-    neu: dict[str, str] = {}
+    kopf = "".join(z for z in text.splitlines(True) if z.startswith("#"))
+    alle = {s: _eintrag(v) for s, v in (yaml.safe_load(text) or {}).items()}
+    geaendert: list[str] = []
     for f in sorted(ordner.rglob("*.json")):
         d = json.loads(f.read_text())
         d = d.get("data", d)
-        schluessel, datei = d.get("schluessel"), d.get("datei")
-        if not schluessel or schluessel in vorhanden or schluessel not in erlaubt:
+        schluessel, datei, zeit = d.get("schluessel"), d.get("datei"), d.get("geaendert") or ""
+        if not schluessel or schluessel not in erlaubt or not datei:
             continue
         if datei != "kein" and datei not in erlaubt[schluessel]:
             print(f"übersprungen (nicht in den Kandidaten): {schluessel} → {datei}", file=sys.stderr)
             continue
-        neu[schluessel] = datei
+        alt = alle.get(schluessel)
+        if alt is not None:
+            if alt["datei"] == datei:
+                alt.setdefault("gewaehlt", zeit)      # alte Einträge ohne Zeit nachtragen
+                continue
+            if zeit <= str(alt.get("gewaehlt") or ""):
+                continue                              # Repo-Stand ist neuer (z. B. von Hand geändert)
+        alle[schluessel] = {"datei": datei, "alt": "", "gewaehlt": zeit}
+        geaendert.append(schluessel)
+        print(("geändert: " if alt is not None else "neu: ") + f"{schluessel} → {datei}")
 
-    if neu:
-        kopf = "".join(z for z in text.splitlines(True) if z.startswith("#"))
-        alle = {**vorhanden, **neu}
-        zeilen = []
-        for s in sorted(alle, key=_reihenfolge):
-            v = alle[s]
-            if isinstance(v, str):
-                v = "kein" if v == "kein" else {"datei": v, "alt": ""}
-            if v == "kein":
-                zeilen.append(f"{s}: kein\n")
-            else:
-                zeilen.append(f"{s}:\n  datei: {json.dumps(v['datei'], ensure_ascii=False)}\n"
-                              f"  alt: {json.dumps(v.get('alt', ''), ensure_ascii=False)}\n"
-                              + (f"  fokus: {json.dumps(v['fokus'])}\n" if v.get("fokus") else ""))
-        AUSWAHL.write_text(kopf + "".join(zeilen))
-        assert set(yaml.safe_load(AUSWAHL.read_text())) == set(alle)
-    for s in sorted(neu, key=_reihenfolge):
-        print(s, "→", neu[s])
-    return list(neu)
+    if alle:
+        schreiben(alle, kopf)
+    return geaendert
 
 
 if __name__ == "__main__":

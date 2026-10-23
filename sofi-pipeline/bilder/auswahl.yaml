@@ -1,110 +1,164 @@
 # Headerbilder von Wikimedia Commons, ausgewählt über die Auswahlseite (Kandidaten: kandidaten.json).
 # Schlüssel: sofi/<slug>, nordlicht/<slug>, guide/<slug>, seite/<name> (start, sonnenfinsternis, nordlichter).
-# Wert: {datei: Commons-Dateiname, alt: Alt-Text (Schweizer Rechtschreibung), fokus: "50% 30%" (optional)};
-# «kein» = bewusst ohne Bild.
+# Wert: {datei: Commons-Dateiname oder «kein» (bewusst ohne Bild), alt: Alt-Text (Schweizer Rechtschreibung),
+#        fokus: "50% 30%" (optional, Bildausschnitt), gewaehlt: Zeitpunkt der Wahl (UTC)}.
+# Von Hand geändert? `gewaehlt` auf jetzt setzen, sonst kann eine ältere Wahl der Auswahlseite sie überschreiben.
 # Änderungen hier starten den Workflow «Bilder aktualisieren», der die Bilder lädt.
 seite/nordlichter:
   datei: "File:Aurora borealis over Eielson Air Force Base, Alaska.jpg"
   alt: "Grün leuchtendes Polarlicht über einer verschneiten Landschaft mit Nadelbäumen bei der Eielson Air Force Base in Alaska."
+  gewaehlt: "2026-10-22T21:29:50.541Z"
 seite/sonnenfinsternis:
   datei: "File:Total solar eclipse ESA425433.jpg"
   alt: "Totale Sonnenfinsternis: die schwarze Mondscheibe, umgeben vom hellen Strahlenkranz der Sonnenkorona."
+  gewaehlt: "2026-10-22T21:30:03.919Z"
 seite/start:
   datei: "File:Virmalised 15.09.2017 - Aurora Borealis 15.09.2017 copy.jpg"
   alt: "Sternenhimmel mit Milchstrasse und schwachem Polarlicht über der Silhouette einer Baumreihe."
+  gewaehlt: "2026-10-22T21:29:25.085Z"
+sofi/benghazi:
+  datei: "File:ميدان السلفيوم.jpg"
+  alt: "Silphium-Platz in Bengasi: Denkmalsäule mit Brunnenbecken, Palmen und ein weisses Gebäude mit Turm unter Gewitterwolken."
+  gewaehlt: "2026-10-23T06:47:08.611Z"
 sofi/cadiz:
   datei: "File:Puente de la Constitución de 1812, Cádiz, España, 2015-12-08, DD 21-24 HDR.JPG"
   alt: "Die beleuchtete Puente de la Constitución de 1812 in Cádiz bei Nacht, ihre Lichter spiegeln sich im Wasser."
+  gewaehlt: "2026-10-22T21:30:18.206Z"
 sofi/djerba:
   datei: "File:Un groupe de grand cormoran sur un bateau échoué - Djerba - Tunisie.jpg"
   alt: "Kormorane sitzen auf einem gestrandeten, schräg im flachen Meer liegenden Fischerboot vor Djerba."
   fokus: "50% 30%"
+  gewaehlt: "2026-10-22T21:31:05.373Z"
 sofi/estepona:
   datei: "File:Calle aurora looking east - Estepona Garden of the Costa del Sol.jpg"
   alt: "Weisse Gasse Calle Aurora in Estepona mit Blumentöpfen in Pink und Rot an den Hauswänden."
-sofi/girga: kein
+  gewaehlt: "2026-10-22T21:31:33.294Z"
+sofi/girga:
+  datei: "kein"
+  gewaehlt: "2026-10-22T21:31:41.580Z"
 sofi/jerez:
   datei: "File:Iglesia de San Miguel, Jerez de la Frontera, España, 2015-12-07, DD 105-107 HDR.JPG"
   alt: "Blick hinauf in das gotische Sterngewölbe der Iglesia de San Miguel in Jerez de la Frontera."
+  gewaehlt: "2026-10-22T21:32:09.589Z"
 sofi/kairouan:
   datei: "File:Great Mosque of Kairouan mihrab view.jpg"
   alt: "Gebetssaal der Grossen Moschee von Kairouan mit Säulen, Kronleuchter und dem verzierten Mihrab."
+  gewaehlt: "2026-10-22T21:32:23.593Z"
 sofi/luxor:
   datei: "File:Tumba de Ramsés V y de Ramsés VI, Valle de las Reyes, Luxor, Egipto, 2022-04-03, DD 69.jpg"
   alt: "Bemalter Gang mit Säulen und Holztreppe im Grab von Ramses V. und Ramses VI. im Tal der Könige bei Luxor."
-sofi/marsa-alam: kein
+  gewaehlt: "2026-10-22T21:32:36.965Z"
+sofi/marsa-alam:
+  datei: "kein"
+  gewaehlt: "2026-10-22T21:33:01.119Z"
+sofi/qena:
+  datei: "File:Madinet Qaft, Qift, Qena Governorate, Egypt - panoramio (12).jpg"
+  alt: "Palmen und Häuser bei Qift im Gouvernement Qena spiegeln sich in der Abenddämmerung in einem Kanal."
+  gewaehlt: "2026-10-23T06:47:25.912Z"
 sofi/sevilla:
   datei: "File:Seville, Spain (Unsplash 0BmkJ72gd-0).jpg"
   alt: "Blick nach oben in einen Innenhof mit reich verzierten maurischen Bögen und Stuckarbeiten in Sevilla."
+  gewaehlt: "2026-10-22T21:33:14.966Z"
 sofi/sfax:
   datei: "File:Murailles de sfax vue casbah sfax avenue ali balhaouane.jpg"
   alt: "Blick von der Stadtmauer der Medina von Sfax auf die Avenue Ali Belhouane mit Palmen und weissen Häusern."
-sofi/sohag: kein
+  gewaehlt: "2026-10-22T21:33:27.077Z"
+sofi/siwa:
+  datei: "File:Siwa, view from the temple.jpg"
+  alt: "Blick von den Tempelruinen in Siwa über Palmenhaine auf den hellen Salzsee der Oase."
+  fokus: "50% 70%"
+  gewaehlt: "2026-10-23T06:47:34.887Z"
+sofi/sohag:
+  datei: "kein"
+  gewaehlt: "2026-10-22T21:33:35.395Z"
 sofi/sousse:
   datei: "File:Fondouk Daoui - actuellement musée Koubba.JPG"
   alt: "Innenhof des Fondouk Daoui in Sousse mit Rundbögen und roten Türen, durch einen Steinbogen gesehen."
+  gewaehlt: "2026-10-22T21:34:01.496Z"
 sofi/tarifa:
   datei: "File:From Tarifa to Morocco-3415.jpg"
   alt: "Blick über die Altstadt von Tarifa mit Kirchenkuppel auf die Meerenge und die Berge Marokkos am Horizont."
   fokus: "50% 30%"
+  gewaehlt: "2026-10-22T21:34:16.243Z"
 nordlicht/abisko:
   datei: "File:Aurora in Abisko National Park.jpg"
   alt: "Grünes Polarlicht am Sternenhimmel über einer verschneiten Ebene mit roten Hütten im Abisko-Nationalpark."
+  gewaehlt: "2026-10-22T21:34:46.736Z"
 nordlicht/akureyri:
   datei: "File:Akureyri-08-Panorama-2018-gje.jpg"
   alt: "Akureyri am Fjord an einem sonnigen Tag, dahinter Berge mit Schneeresten."
+  gewaehlt: "2026-10-22T21:35:04.386Z"
 nordlicht/alta:
   datei: "File:Alta, Norway, Northern Lights Church - Flickr - JingKe888.jpg"
   alt: "Die mit Metall verkleidete Nordlichtkathedrale in Alta unter dunklem Wolkenhimmel."
   fokus: "50% 35%"
+  gewaehlt: "2026-10-22T21:35:30.199Z"
 nordlicht/fairbanks:
   datei: "File:The northern lights just north of Fairbanks, Alaska.jpg"
   alt: "Grünes Polarlicht über den Silhouetten von Fichten nördlich von Fairbanks in Alaska."
+  gewaehlt: "2026-10-22T21:35:47.753Z"
 nordlicht/kiruna:
   datei: "File:E 10 road near Låktatjåkka in Kiruna, Norrbottens län, Sweden, 2022 June.jpg"
   alt: "Die Strasse E10 führt bei Låktatjåkka in der Gemeinde Kiruna durch eine Fjelllandschaft mit Schneeresten."
+  gewaehlt: "2026-10-22T21:35:57.206Z"
 nordlicht/reykjavik:
   datei: "File:Northern Lights over Reykjavik (15849686473).jpg"
   alt: "Grünes Polarlicht über den Lichtern von Reykjavik und dunklen Bergen am Horizont."
+  gewaehlt: "2026-10-22T21:36:18.674Z"
 nordlicht/rovaniemi:
   datei: "File:Rovaniemi 06101999 rescanned.jpg"
   alt: "Luftbild von Rovaniemi an einem breiten Fluss mit Schrägseilbrücke, Ufer in Herbstfarben."
+  gewaehlt: "2026-10-22T21:37:02.271Z"
 nordlicht/saariselkae:
   datei: "File:Huippu-ravintola.JPG"
   alt: "Verschneites Gipfelrestaurant Huippu bei Saariselkä in winterlichem Dämmerlicht."
+  gewaehlt: "2026-10-22T21:36:43.332Z"
 nordlicht/torshavn:
   datei: "File:Tinganes 57.jpg"
   alt: "Die Halbinsel Tinganes in Tórshavn mit roten Holzhäusern und Grasdächern, dahinter die Stadt."
+  gewaehlt: "2026-10-22T21:37:13.202Z"
 nordlicht/tromsoe:
   datei: "File:Tromso Tromsø Norway tunliweb 02.jpg"
   alt: "Tromsø in der Abenddämmerung von oben, mit beleuchteter Brücke über den Sund und verschneiten Bergen."
+  gewaehlt: "2026-10-22T21:36:57.973Z"
 nordlicht/yellowknife:
   datei: "File:Northern Light @ Aurora Village, Yellowknife.jpg"
   alt: "Grünes Polarlicht über Bäumen und beleuchteten Tipis im Aurora Village bei Yellowknife."
   fokus: "50% 60%"
+  gewaehlt: "2026-10-22T21:37:23.174Z"
 guide/klarer-himmel-wolken-wahrscheinlichkeit:
   datei: "File:Clear Desert Night Sky (Unsplash).jpg"
   alt: "Wolkenloser Sternenhimmel in der Dämmerung über Sanddünen und einer Bergkette."
+  gewaehlt: "2026-10-22T21:40:40.161Z"
 guide/kp-index-und-vorhersage:
   datei: "File:Lofoten, Norway (Unsplash).jpg"
   alt: "Kräftiges grünes und violettes Polarlicht über Felsen und Bergen auf den Lofoten in Norwegen."
+  gewaehlt: "2026-10-22T21:40:05.032Z"
 guide/pauschalreise-oder-selbst-organisieren:
   datei: "File:Total Solar Eclipse - July 2, 2019 (48266572602).jpg"
   alt: "Silhouetten von Menschen mit Kameras und Stativen vor dem Dämmerungshimmel bei der totalen Sonnenfinsternis vom 2. Juli 2019."
+  gewaehlt: "2026-10-22T21:38:05.063Z"
 guide/pauschalreise-oder-selbst-planen:
   datei: "File:Aurora Borealis - Flickr - marceloquinan.jpg"
   alt: "Grünes Polarlicht in Wirbelform über einer verschneiten, felsigen Landschaft."
+  gewaehlt: "2026-10-22T21:38:32.350Z"
 guide/reicht-hurghada:
   datei: "File:Partial solar eclipse with some clouds in Tuntorp 43.jpg"
   alt: "Teilweise verfinsterte Sonne hinter Wolkenschleiern, aufgenommen in Tuntorp."
-guide/sonnenfinsternis-mit-kindern: kein
+  gewaehlt: "2026-10-22T21:38:50.228Z"
+guide/sonnenfinsternis-mit-kindern:
+  datei: "kein"
+  gewaehlt: "2026-10-22T21:39:14.475Z"
 guide/spanien-marokko-oder-aegypten:
   datei: "File:Tarifa, Puerto de Jerez.jpg"
   alt: "Das mittelalterliche Stadttor Puerta de Jerez mit Zinnen in Tarifa."
   fokus: "50% 40%"
+  gewaehlt: "2026-10-22T21:39:39.985Z"
 guide/tromsoe-abisko-oder-yellowknife:
   datei: "File:Aurora Borealis Tromsø Norway.jpg"
   alt: "Grünes Polarlicht zwischen Wolken über verschneiten Bergen bei Tromsø."
+  gewaehlt: "2026-10-22T21:37:44.397Z"
 guide/warum-nicht-dezember:
   datei: "File:Y1A9749 Saariselkä, Finland (15186395524).jpg"
   alt: "Verschneite Fichten im rosafarbenen Licht eines Wintertags bei Saariselkä in Finnland."
+  gewaehlt: "2026-10-22T21:39:56.424Z"
