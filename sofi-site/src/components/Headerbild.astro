@@ -2,7 +2,7 @@
 /** Headerbild mit Bildzeile (Urheber, Lizenz, Link zur Commons-Seite). Ohne Bild: nichts. */
 import { Picture } from 'astro:assets';
 import { STANDARD_FOKUS, type Bild } from '../lib/bilder';
-interface Props { bild?: Bild; alt: string }   // alt: Ersatz, falls das Bild keinen eigenen Alt-Text hat
+interface Props { bild?: Bild; alt: string; mitte?: boolean }   // alt: Ersatz, falls das Bild keinen eigenen Alt-Text hat
 const { bild, alt } = Astro.props;
 const m = bild?.meta;
 ---

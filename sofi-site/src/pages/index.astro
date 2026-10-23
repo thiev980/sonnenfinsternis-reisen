@@ -40,13 +40,13 @@ const schema = [{
 >
   <section class="hero">
     <h1>Manche Dinge kann man nur dort sehen,<br />wo man gerade nicht ist.</h1>
+    <Headerbild mitte bild={bild} alt="Sonnenfinsternis und Nordlicht" />
     <p class="lead">
       Eine totale Sonnenfinsternis dauert Minuten und ist an einen Streifen von
       wenigen hundert Kilometern gebunden. Nordlichter brauchen Dunkelheit, Breitengrad
       und Geduld. Für beides gilt dieselbe Frage: <strong>wohin, und wann?</strong>
       Ich rechne die Antworten selbst – mit offenen Quellen und offengelegten Unsicherheiten.
     </p>
-    <Headerbild bild={bild} alt="Sonnenfinsternis und Nordlicht" />
   </section>
 
   <section class="bereiche">
@@ -91,7 +91,7 @@ const schema = [{
   .hero { padding: 8px 0 36px; }
   h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.12; margin-bottom: 18px; }
   .lead { font-size: 18.5px; max-width: 760px; }
-  .hero :global(.header-bild) { margin-top: 40px; }
+  .hero :global(.header-bild) { margin: 22px 0 24px; }
 
   .bereiche ul { list-style: none; margin: 0; padding: 0; max-width: 720px; }
   .bereiche li { border-top: 1px solid var(--linie); padding: 18px 0; }
