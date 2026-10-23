@@ -187,6 +187,12 @@ const schema = [{
   .intro { max-width: 760px; }
   .land { color: var(--grau); font-size: 13.5px; margin-left: 4px; }
   .bereich td:not(:first-child) { white-space: nowrap; }
+  /* beide Tabellen mit gleichen Spaltenbreiten, damit die Spalten untereinander stehen */
+  @media (min-width: 561px) {
+    .bereich table.daten { table-layout: fixed; }
+    .bereich table.daten th:first-child { width: 34%; }
+    .bereich table.daten th:not(:first-child) { width: 22%; }
+  }
   @media (max-width: 560px) { .land { display: block; margin-left: 0; } }
   .hinweis { color: var(--grau); font-size: 14px; margin-top: 10px; max-width: 760px; }
   .weiter { margin: 12px 0 10px; font-weight: 600; }
