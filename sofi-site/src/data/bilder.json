@@ -33,6 +33,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Virmalised_15.09.2017_-_Aurora_Borealis_15.09.2017_copy.jpg",
    "alt": "Sternenhimmel mit Milchstrasse und schwachem Polarlicht über der Silhouette einer Baumreihe."
   },
+  "sofi/benghazi": {
+   "titel": "File:ميدان السلفيوم.jpg",
+   "datei": "sofi/benghazi.jpg",
+   "breite": 4000,
+   "hoehe": 3000,
+   "autor": "WisiW",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:%D9%85%D9%8A%D8%AF%D8%A7%D9%86_%D8%A7%D9%84%D8%B3%D9%84%D9%81%D9%8A%D9%88%D9%85.jpg",
+   "alt": "Silphium-Platz in Bengasi: Denkmalsäule mit Brunnenbecken, Palmen und ein weisses Gebäude mit Turm unter Gewitterwolken."
+  },
   "sofi/cadiz": {
    "titel": "File:Puente de la Constitución de 1812, Cádiz, España, 2015-12-08, DD 21-24 HDR.JPG",
    "datei": "sofi/cadiz.jpg",
@@ -100,6 +111,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Tumba_de_Rams%C3%A9s_V_y_de_Rams%C3%A9s_VI,_Valle_de_las_Reyes,_Luxor,_Egipto,_2022-04-03,_DD_69.jpg",
    "alt": "Bemalter Gang mit Säulen und Holztreppe im Grab von Ramses V. und Ramses VI. im Tal der Könige bei Luxor."
   },
+  "sofi/qena": {
+   "titel": "File:Madinet Qaft, Qift, Qena Governorate, Egypt - panoramio (12).jpg",
+   "datei": "sofi/qena.jpg",
+   "breite": 3840,
+   "hoehe": 2160,
+   "autor": "Максим Улитин",
+   "lizenz": "CC BY 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Madinet_Qaft,_Qift,_Qena_Governorate,_Egypt_-_panoramio_(12).jpg",
+   "alt": "Palmen und Häuser bei Qift im Gouvernement Qena spiegeln sich in der Abenddämmerung in einem Kanal."
+  },
   "sofi/sevilla": {
    "titel": "File:Seville, Spain (Unsplash 0BmkJ72gd-0).jpg",
    "datei": "sofi/sevilla.jpg",
@@ -121,6 +143,18 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Murailles_de_sfax_vue_casbah_sfax_avenue_ali_balhaouane.jpg",
    "alt": "Blick von der Stadtmauer der Medina von Sfax auf die Avenue Ali Belhouane mit Palmen und weissen Häusern."
+  },
+  "sofi/siwa": {
+   "titel": "File:Siwa, view from the temple.jpg",
+   "datei": "sofi/siwa.jpg",
+   "breite": 3648,
+   "hoehe": 2736,
+   "autor": "Alyanumbers",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Siwa,_view_from_the_temple.jpg",
+   "fokus": "50% 70%",
+   "alt": "Blick von den Tempelruinen in Siwa über Palmenhaine auf den hellen Salzsee der Oase."
   },
   "sofi/sousse": {
    "titel": "File:Fondouk Daoui - actuellement musée Koubba.JPG",
