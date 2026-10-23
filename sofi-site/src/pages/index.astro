@@ -66,6 +66,7 @@ const schema = [{
       die Arabische Halbinsel – bis zu {laengste.totality_str} Totalität.
       Zeiten, Dauer und Wolkenrisiko für {anzahlTotal} Orte in der Zone.
     </p>
+    <div class="datenblock">
     <h3>Die besten Orte nach SoFi-Score</h3>
     <table class="daten">
       <thead><tr><th>Ort</th><th>Totalität</th><th>Klarer Himmel</th><th>SoFi-Score</th></tr></thead>
@@ -80,6 +81,7 @@ const schema = [{
         ))}
       </tbody>
     </table>
+    </div>
     <p class="hinweis">
       SoFi-Score = Totalitätsdauer in Minuten × Wahrscheinlichkeit für klaren Himmel, also die zu erwartenden
       Minuten Totalität.
@@ -100,6 +102,7 @@ const schema = [{
       Die Saison läuft von September bis März. Geomagnetische Lage, Dunkelstunden
       und Wolkenwahrscheinlichkeit für {anzahlNordlicht} Orte von Kanada bis Skandinavien.
     </p>
+    <div class="datenblock">
     <h3>Die besten Chancen nach Index</h3>
     <table class="daten">
       <thead><tr><th>Ort</th><th>Bester Monat</th><th>Dunkelstunden</th><th>Index</th></tr></thead>
@@ -114,6 +117,7 @@ const schema = [{
         ))}
       </tbody>
     </table>
+    </div>
     <p class="hinweis">Index = Dunkelstunden pro Nacht × Wahrscheinlichkeit für klaren Himmel im besten Monat.</p>
     <p class="weiter">
       <a href="/nordlichter/orte">Alle {anzahlNordlicht} Orte vergleichen</a> ·{' '}

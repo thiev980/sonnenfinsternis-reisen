@@ -62,7 +62,7 @@ const schema = [{
   )}
 
   <h2>Monat für Monat</h2>
-  <table class="daten">
+  <div class="datenblock"><table class="daten">
     <thead>
       <tr><th>Monat</th><th>Dunkelstunden</th><th>P(klar)</th><th>Index</th></tr>
     </thead>
@@ -76,7 +76,7 @@ const schema = [{
         </tr>
       ))}
     </tbody>
-  </table>
+  </table></div>
 
   {OrtsText && (
     <section class="ortstext">

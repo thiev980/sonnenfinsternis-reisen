@@ -121,7 +121,7 @@ const schema = [
           hinter dem Mond – Korona, Planeten und ein 360°-Dämmerungshorizont inklusive.
         </p>
         <h2>Alle Zeiten für {ort.name} (Ortszeit)</h2>
-        <table class="daten">
+        <div class="datenblock"><table class="daten">
           <tbody>
             <tr><th>Beginn partielle Phase (1. Kontakt)</th><td>{ort.c1_local.slice(0, 5)} Uhr</td></tr>
             <tr><th>Beginn Totalität (2. Kontakt)</th><td><strong>{ort.c2_local.slice(0, 5)} Uhr</strong></td></tr>
@@ -131,7 +131,7 @@ const schema = [
             <tr><th>Dauer der Totalität</th><td><strong>{ort.totality_str}</strong></td></tr>
             <tr><th>Sonnenhöhe / Richtung am Maximum</th><td>{ort.sun_alt_max_deg}° / Azimut {ort.sun_az_max_deg}°</td></tr>
           </tbody>
-        </table>
+        </table></div>
         <div class="hinweisbox">
           Ausserhalb der {ort.totality_str} Totalität braucht es durchgehend eine
           zertifizierte SoFi-Brille (ISO 12312-2). Nur während der Totalität selbst
@@ -153,14 +153,14 @@ const schema = [
           )}
         </p>
         <h2>Zeiten der partiellen Finsternis in {ort.name} (Ortszeit)</h2>
-        <table class="daten">
+        <div class="datenblock"><table class="daten">
           <tbody>
             <tr><th>Beginn</th><td>{ort.c1_local.slice(0, 5)} Uhr</td></tr>
             <tr><th>Maximum ({zahl(ort.obscuration_pct)} % Bedeckung)</th><td>{ort.max_local.slice(0, 5)} Uhr</td></tr>
             <tr><th>Ende</th><td>{ort.c4_local.slice(0, 5)} Uhr</td></tr>
             <tr><th>Sonnenhöhe am Maximum</th><td>{ort.sun_alt_max_deg}°</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </>
     )}
 

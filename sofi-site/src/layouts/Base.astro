@@ -117,6 +117,11 @@ const nlText = inSofi
     table.daten { border-collapse: collapse; width: 100%; font-size: 15px; }
     table.daten th, table.daten td { text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--linie); }
     table.daten th { color: var(--grau); font-weight: 600; font-size: 13.5px; }
+    /* Datenblock: dezent hinterlegte Zahlen (Tabellen) – gliedert lange Seiten */
+    .datenblock { background: var(--karte-bg); border-radius: 12px; padding: 16px 22px 10px; margin: 6px 0 4px; }
+    .datenblock table.daten tr:last-child td, .datenblock table.daten tr:last-child th { border-bottom: 0; }
+    .datenblock h3 { margin-top: 0 !important; }
+    @media (max-width: 560px) { .datenblock { padding: 12px 14px 6px; margin-left: -6px; margin-right: -6px; } }
     .hinweisbox {
       background: var(--karte-bg); border-left: 3px solid var(--gold);
       padding: 14px 18px; border-radius: 0 8px 8px 0; font-size: 15px; margin: 22px 0;
