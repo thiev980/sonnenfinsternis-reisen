@@ -42,6 +42,7 @@ const schema = [{
   schema={schema}
   bild={bild}
 >
+  <article class="ortsseite">
   <p class="brotkrumen"><a href="/nordlichter/orte">Alle Orte</a> → {ort.name}</p>
   <h1>{ort.name}</h1>
   <p class="untertitel">{ort.land} · Geomagnetische Breite {zahl(ort.geomag_lat)}°</p>
@@ -98,13 +99,16 @@ const schema = [{
     </ul>
     <p><a href="/nordlichter/orte">Alle Orte im Raster vergleichen →</a></p>
   </section>
+  </article>
 </Base>
 
 <style>
   .brotkrumen { font-size: 13.5px; color: var(--grau); margin-bottom: 10px; }
   h1 { font-size: clamp(28px, 5vw, 42px); margin-bottom: 4px; }
   .untertitel { color: var(--grau); margin-bottom: 18px; }
-  .lead { max-width: 680px; margin-bottom: 20px; }
+  /* eine Lesespalte wie bei den Guides */
+  .ortsseite { max-width: 720px; }
+  .lead { margin-bottom: 20px; }
   h2 { font-size: 21px; margin: 30px 0 12px; }
   tr.bester { background: var(--karte-bg); }
   .stern { color: var(--gold); }
@@ -116,7 +120,7 @@ const schema = [{
   .kurzinfo { color: var(--grau); font-size: 13.5px; text-align: right; }
 
   /* Markdown-Inhalt wird von Astro ohne Scope-Attribut gerendert, daher :global */
-  .ortstext { max-width: 680px; margin-top: 8px; }
+  .ortstext { margin-top: 8px; }
   .ortstext :global(h2) { font-size: 21px; margin: 30px 0 12px; }
   .ortstext :global(p) { margin-bottom: 14px; }
   .ortstext :global(ul) { margin: 0 0 14px 20px; }

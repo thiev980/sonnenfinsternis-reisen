@@ -102,7 +102,7 @@ const schema = [
 ];
 ---
 <Base title={titel} description={beschreibung} schema={schema} bild={bild}>
-  <article>
+  <article class="ortsseite">
     <p class="brotkrumen"><a href="/sonnenfinsternis/orte">Alle Orte</a> → {ort.name}</p>
     <h1>Sonnenfinsternis 2027 in {ort.name}</h1>
     <p class="untertitel">
@@ -248,7 +248,9 @@ const schema = [
   .brotkrumen { font-size: 13.5px; color: var(--grau); margin-bottom: 10px; }
   h1 { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 8px; }
   .untertitel { color: var(--grau); margin-bottom: 18px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-  .lead { font-size: 17.5px; max-width: 660px; margin-bottom: 24px; }
+  /* eine Lesespalte wie bei den Guides: Bild, Text, Tabellen und Karte gleich breit */
+  .ortsseite { max-width: 720px; }
+  .lead { font-size: 17.5px; margin-bottom: 24px; }
   h2 { font-size: 21px; margin: 26px 0 12px; }
   details { border-bottom: 1px solid var(--linie); padding: 10px 0; }
   summary { cursor: pointer; font-weight: 600; }
@@ -267,7 +269,7 @@ const schema = [
   .score { font-size: 15.5px; }
   .klein { font-size: 13.5px; color: var(--grau); margin-top: 10px; }
   .quelle { margin-top: 34px; font-size: 13.5px; color: var(--grau); }
-  .ortstext { max-width: 680px; margin-top: 8px; }
+  .ortstext { margin-top: 8px; }
   .ortstext :global(h2) { font-size: 21px; margin: 30px 0 12px; }
   .ortstext :global(p) { margin-bottom: 14px; }
   .ortstext :global(ul) { margin: 0 0 14px 20px; }
