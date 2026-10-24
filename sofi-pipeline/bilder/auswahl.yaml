@@ -5,10 +5,9 @@
 # Von Hand geändert? `gewaehlt` auf jetzt setzen, sonst kann eine ältere Wahl der Auswahlseite sie überschreiben.
 # Änderungen hier starten den Workflow «Bilder aktualisieren», der die Bilder lädt.
 seite/nordlichter:
-  datei: "File:Aurora borealis over Eielson Air Force Base, Alaska.jpg"
-  alt: "Grün leuchtendes Polarlicht über einer verschneiten Landschaft mit Nadelbäumen bei der Eielson Air Force Base in Alaska."
-  fokus: "50% 72%"
-  gewaehlt: "2026-10-22T21:29:50.541Z"
+  datei: "File:Gentle but wide green aurora display over Levi, Kittilä, Lapland, Finland, 2023 September - 2.jpg"
+  alt: "Breite grüne Polarlichtbänder am Nachthimmel über Levi in Lappland, im Vordergrund Silhouetten von Bäumen auf einer Anhöhe."
+  gewaehlt: "2026-10-23T07:18:59.897Z"
 seite/sonnenfinsternis:
   datei: "File:Total solar eclipse ESA425433.jpg"
   alt: "Totale Sonnenfinsternis: die schwarze Mondscheibe, umgeben vom hellen Strahlenkranz der Sonnenkorona."
@@ -85,9 +84,9 @@ sofi/tarifa:
   fokus: "50% 30%"
   gewaehlt: "2026-10-22T21:34:16.243Z"
 nordlicht/abisko:
-  datei: "File:Aurora in Abisko National Park.jpg"
-  alt: "Grünes Polarlicht am Sternenhimmel über einer verschneiten Ebene mit roten Hütten im Abisko-Nationalpark."
-  gewaehlt: "2026-10-22T21:34:46.736Z"
+  datei: "File:20221226 - Abisko - Aurore boréale 2.jpg"
+  alt: "Schwaches grünes Polarlicht über einer Hütte mit kahlen Birken auf verschneitem Boden bei Abisko."
+  gewaehlt: "2026-10-23T07:20:53.942Z"
 nordlicht/akureyri:
   datei: "File:Akureyri-08-Panorama-2018-gje.jpg"
   alt: "Akureyri am Fjord an einem sonnigen Tag, dahinter Berge mit Schneeresten."
@@ -99,22 +98,21 @@ nordlicht/alta:
   fokus: "50% 35%"
   gewaehlt: "2026-10-22T21:35:30.199Z"
 nordlicht/fairbanks:
-  datei: "File:The northern lights just north of Fairbanks, Alaska.jpg"
-  alt: "Grünes Polarlicht über den Silhouetten von Fichten nördlich von Fairbanks in Alaska."
-  fokus: "50% 78%"
-  gewaehlt: "2026-10-22T21:35:47.753Z"
+  datei: "File:Paisaje en el Sureste de Fairbanks, Alaska, Estados Unidos, 2017-08-28, DD 127-129 PAN.jpg"
+  alt: "Weite Hügellandschaft mit Nadelwald und Büschen südöstlich von Fairbanks in Alaska unter blauem Himmel mit Schönwetterwolken."
+  gewaehlt: "2026-10-23T07:21:19.041Z"
 nordlicht/kiruna:
   datei: "File:E 10 road near Låktatjåkka in Kiruna, Norrbottens län, Sweden, 2022 June.jpg"
   alt: "Die Strasse E10 führt bei Låktatjåkka in der Gemeinde Kiruna durch eine Fjelllandschaft mit Schneeresten."
   gewaehlt: "2026-10-22T21:35:57.206Z"
 nordlicht/reykjavik:
-  datei: "File:Northern Lights over Reykjavik (15849686473).jpg"
-  alt: "Grünes Polarlicht über den Lichtern von Reykjavik und dunklen Bergen am Horizont."
-  gewaehlt: "2026-10-22T21:36:18.674Z"
+  datei: "File:Reykjavík 5545 (cropped).JPG"
+  alt: "Blick über Reykjavik mit dem Turm der Hallgrímskirkja, der Bucht und einem Bergrücken am Horizont."
+  gewaehlt: "2026-10-23T07:19:49.169Z"
 nordlicht/rovaniemi:
-  datei: "File:Rovaniemi 06101999 rescanned.jpg"
-  alt: "Luftbild von Rovaniemi an einem breiten Fluss mit Schrägseilbrücke, Ufer in Herbstfarben."
-  gewaehlt: "2026-10-22T21:37:02.271Z"
+  datei: "File:Rovaniemi, Finland (Unsplash gm9utvaw1ao).jpg"
+  alt: "Silhouette einer Person zwischen Kiefern auf verschneitem Hang, dahinter die Lichter von Rovaniemi in der Abenddämmerung."
+  gewaehlt: "2026-10-23T07:27:01.079Z"
 nordlicht/saariselkae:
   datei: "File:Huippu-ravintola.JPG"
   alt: "Verschneites Gipfelrestaurant Huippu bei Saariselkä in winterlichem Dämmerlicht."
@@ -137,10 +135,9 @@ guide/klarer-himmel-wolken-wahrscheinlichkeit:
   alt: "Wolkenloser Sternenhimmel in der Dämmerung über Sanddünen und einer Bergkette."
   gewaehlt: "2026-10-22T21:40:40.161Z"
 guide/kp-index-und-vorhersage:
-  datei: "File:Lofoten, Norway (Unsplash).jpg"
-  alt: "Kräftiges grünes und violettes Polarlicht über Felsen und Bergen auf den Lofoten in Norwegen."
-  fokus: "50% 70%"
-  gewaehlt: "2026-10-22T21:40:05.032Z"
+  datei: "File:2024-05-11 Aurora Cannon Falls, MN 6 of 7.jpg"
+  alt: "Grünes und violettes Polarlicht, das sich direkt über dem Betrachter strahlenförmig ausbreitet, aufgenommen bei Cannon Falls in Minnesota."
+  gewaehlt: "2026-10-23T07:27:41.031Z"
 guide/pauschalreise-oder-selbst-organisieren:
   datei: "File:Total Solar Eclipse - July 2, 2019 (48266572602).jpg"
   alt: "Silhouetten von Menschen mit Kameras und Stativen vor dem Dämmerungshimmel bei der totalen Sonnenfinsternis vom 2. Juli 2019."
@@ -153,6 +150,11 @@ guide/reicht-hurghada:
   datei: "File:Partial solar eclipse with some clouds in Tuntorp 43.jpg"
   alt: "Teilweise verfinsterte Sonne hinter Wolkenschleiern, aufgenommen in Tuntorp."
   gewaehlt: "2026-10-22T21:38:50.228Z"
+guide/sonnenfinsternis-mit-kindern:
+  datei: "File:Julian-eclipse-spencer2-mirror.jpg"
+  alt: "Bildmontage: Ein Kind mit Sonnenfinsternis-Brille blickt zu einer hell strahlenden Sonne an einem Sternenhimmel."
+  fokus: "50% 85%"
+  gewaehlt: "2026-10-23T08:33:10.393Z"
 guide/spanien-marokko-oder-aegypten:
   datei: "File:Tarifa, Puerto de Jerez.jpg"
   alt: "Das mittelalterliche Stadttor Puerta de Jerez mit Zinnen in Tarifa."
