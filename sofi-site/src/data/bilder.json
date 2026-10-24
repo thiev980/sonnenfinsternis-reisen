@@ -1,16 +1,15 @@
 {
  "seiten": {
   "seite/nordlichter": {
-   "titel": "File:Aurora borealis over Eielson Air Force Base, Alaska.jpg",
+   "titel": "File:Gentle but wide green aurora display over Levi, Kittilä, Lapland, Finland, 2023 September - 2.jpg",
    "datei": "seite/nordlichter.jpg",
-   "breite": 3008,
-   "hoehe": 1960,
-   "autor": "United States Air Force photo by Senior Airman Joshua Strang",
-   "lizenz": "Public domain",
-   "lizenz_url": null,
-   "seite": "https://commons.wikimedia.org/wiki/File:Aurora_borealis_over_Eielson_Air_Force_Base,_Alaska.jpg",
-   "fokus": "50% 72%",
-   "alt": "Grün leuchtendes Polarlicht über einer verschneiten Landschaft mit Nadelbäumen bei der Eielson Air Force Base in Alaska."
+   "breite": 4200,
+   "hoehe": 2806,
+   "autor": "Ximonic (Simo Räsänen)",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Gentle_but_wide_green_aurora_display_over_Levi,_Kittil%C3%A4,_Lapland,_Finland,_2023_September_-_2.jpg",
+   "alt": "Breite grüne Polarlichtbänder am Nachthimmel über Levi in Lappland, im Vordergrund Silhouetten von Bäumen auf einer Anhöhe."
   },
   "seite/sonnenfinsternis": {
    "titel": "File:Total solar eclipse ESA425433.jpg",
@@ -184,15 +183,15 @@
    "alt": "Blick über die Altstadt von Tarifa mit Kirchenkuppel auf die Meerenge und die Berge Marokkos am Horizont."
   },
   "nordlicht/abisko": {
-   "titel": "File:Aurora in Abisko National Park.jpg",
+   "titel": "File:20221226 - Abisko - Aurore boréale 2.jpg",
    "datei": "nordlicht/abisko.jpg",
-   "breite": 5194,
-   "hoehe": 3463,
-   "autor": "ClaudiaTen",
+   "breite": 5184,
+   "hoehe": 3888,
+   "autor": "Fabricio Cardenas",
    "lizenz": "CC BY-SA 4.0",
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "seite": "https://commons.wikimedia.org/wiki/File:Aurora_in_Abisko_National_Park.jpg",
-   "alt": "Grünes Polarlicht am Sternenhimmel über einer verschneiten Ebene mit roten Hütten im Abisko-Nationalpark."
+   "seite": "https://commons.wikimedia.org/wiki/File:20221226_-_Abisko_-_Aurore_bor%C3%A9ale_2.jpg",
+   "alt": "Schwaches grünes Polarlicht über einer Hütte mit kahlen Birken auf verschneitem Boden bei Abisko."
   },
   "nordlicht/akureyri": {
    "titel": "File:Akureyri-08-Panorama-2018-gje.jpg",
@@ -219,16 +218,15 @@
    "alt": "Die mit Metall verkleidete Nordlichtkathedrale in Alta unter dunklem Wolkenhimmel."
   },
   "nordlicht/fairbanks": {
-   "titel": "File:The northern lights just north of Fairbanks, Alaska.jpg",
+   "titel": "File:Paisaje en el Sureste de Fairbanks, Alaska, Estados Unidos, 2017-08-28, DD 127-129 PAN.jpg",
    "datei": "nordlicht/fairbanks.jpg",
-   "breite": 4928,
-   "hoehe": 3264,
-   "autor": "Fairbanks Mike",
-   "lizenz": "CC BY 2.0",
-   "lizenz_url": "https://creativecommons.org/licenses/by/2.0",
-   "seite": "https://commons.wikimedia.org/wiki/File:The_northern_lights_just_north_of_Fairbanks,_Alaska.jpg",
-   "fokus": "50% 78%",
-   "alt": "Grünes Polarlicht über den Silhouetten von Fichten nördlich von Fairbanks in Alaska."
+   "breite": 13803,
+   "hoehe": 4374,
+   "autor": "Diego Delso",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Paisaje_en_el_Sureste_de_Fairbanks,_Alaska,_Estados_Unidos,_2017-08-28,_DD_127-129_PAN.jpg",
+   "alt": "Weite Hügellandschaft mit Nadelwald und Büschen südöstlich von Fairbanks in Alaska unter blauem Himmel mit Schönwetterwolken."
   },
   "nordlicht/kiruna": {
    "titel": "File:E 10 road near Låktatjåkka in Kiruna, Norrbottens län, Sweden, 2022 June.jpg",
@@ -242,26 +240,26 @@
    "alt": "Die Strasse E10 führt bei Låktatjåkka in der Gemeinde Kiruna durch eine Fjelllandschaft mit Schneeresten."
   },
   "nordlicht/reykjavik": {
-   "titel": "File:Northern Lights over Reykjavik (15849686473).jpg",
+   "titel": "File:Reykjavík 5545 (cropped).JPG",
    "datei": "nordlicht/reykjavik.jpg",
-   "breite": 4763,
-   "hoehe": 3155,
-   "autor": "sergejf",
-   "lizenz": "CC BY-SA 2.0",
-   "lizenz_url": "https://creativecommons.org/licenses/by-sa/2.0",
-   "seite": "https://commons.wikimedia.org/wiki/File:Northern_Lights_over_Reykjavik_(15849686473).jpg",
-   "alt": "Grünes Polarlicht über den Lichtern von Reykjavik und dunklen Bergen am Horizont."
+   "breite": 3888,
+   "hoehe": 1936,
+   "autor": "Hedwig Storch",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Reykjav%C3%ADk_5545_(cropped).JPG",
+   "alt": "Blick über Reykjavik mit dem Turm der Hallgrímskirkja, der Bucht und einem Bergrücken am Horizont."
   },
   "nordlicht/rovaniemi": {
-   "titel": "File:Rovaniemi 06101999 rescanned.jpg",
+   "titel": "File:Rovaniemi, Finland (Unsplash gm9utvaw1ao).jpg",
    "datei": "nordlicht/rovaniemi.jpg",
-   "breite": 3141,
-   "hoehe": 2094,
-   "autor": "MattiKSinisalo at Finnish Wikipedia",
-   "lizenz": "CC BY-SA 3.0",
-   "lizenz_url": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "seite": "https://commons.wikimedia.org/wiki/File:Rovaniemi_06101999_rescanned.jpg",
-   "alt": "Luftbild von Rovaniemi an einem breiten Fluss mit Schrägseilbrücke, Ufer in Herbstfarben."
+   "breite": 7254,
+   "hoehe": 4080,
+   "autor": "Vincent Guth vingtcent",
+   "lizenz": "CC0",
+   "lizenz_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "seite": "https://commons.wikimedia.org/wiki/File:Rovaniemi,_Finland_(Unsplash_gm9utvaw1ao).jpg",
+   "alt": "Silhouette einer Person zwischen Kiefern auf verschneitem Hang, dahinter die Lichter von Rovaniemi in der Abenddämmerung."
   },
   "nordlicht/saariselkae": {
    "titel": "File:Huippu-ravintola.JPG",
@@ -320,16 +318,15 @@
    "alt": "Wolkenloser Sternenhimmel in der Dämmerung über Sanddünen und einer Bergkette."
   },
   "guide/kp-index-und-vorhersage": {
-   "titel": "File:Lofoten, Norway (Unsplash).jpg",
+   "titel": "File:2024-05-11 Aurora Cannon Falls, MN 6 of 7.jpg",
    "datei": "guide/kp-index-und-vorhersage.jpg",
-   "breite": 5059,
-   "hoehe": 3373,
-   "autor": "Johannes Groll followhansi",
-   "lizenz": "CC0",
-   "lizenz_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "seite": "https://commons.wikimedia.org/wiki/File:Lofoten,_Norway_(Unsplash).jpg",
-   "fokus": "50% 70%",
-   "alt": "Kräftiges grünes und violettes Polarlicht über Felsen und Bergen auf den Lofoten in Norwegen."
+   "breite": 6000,
+   "hoehe": 3376,
+   "autor": "Dcs002",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:2024-05-11_Aurora_Cannon_Falls,_MN_6_of_7.jpg",
+   "alt": "Grünes und violettes Polarlicht, das sich direkt über dem Betrachter strahlenförmig ausbreitet, aufgenommen bei Cannon Falls in Minnesota."
   },
   "guide/pauschalreise-oder-selbst-organisieren": {
    "titel": "File:Total Solar Eclipse - July 2, 2019 (48266572602).jpg",
@@ -363,6 +360,18 @@
    "lizenz_url": "https://creativecommons.org/licenses/by/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Partial_solar_eclipse_with_some_clouds_in_Tuntorp_43.jpg",
    "alt": "Teilweise verfinsterte Sonne hinter Wolkenschleiern, aufgenommen in Tuntorp."
+  },
+  "guide/sonnenfinsternis-mit-kindern": {
+   "titel": "File:Julian-eclipse-spencer2-mirror.jpg",
+   "datei": "guide/sonnenfinsternis-mit-kindern.jpg",
+   "breite": 8545,
+   "hoehe": 6400,
+   "autor": "Patricia D. Gibbs",
+   "lizenz": "CC BY 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Julian-eclipse-spencer2-mirror.jpg",
+   "fokus": "50% 85%",
+   "alt": "Bildmontage: Ein Kind mit Sonnenfinsternis-Brille blickt zu einer hell strahlenden Sonne an einem Sternenhimmel."
   },
   "guide/spanien-marokko-oder-aegypten": {
    "titel": "File:Tarifa, Puerto de Jerez.jpg",
