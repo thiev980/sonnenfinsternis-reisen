@@ -69,6 +69,17 @@
    "fokus": "50% 30%",
    "alt": "Kormorane sitzen auf einem gestrandeten, schräg im flachen Meer liegenden Fischerboot vor Djerba."
   },
+  "sofi/dschidda": {
+   "titel": "File:Prince Mohammed Bin Abdulaziz St. near Le Mall, Tahlia, Jeddah.jpg",
+   "datei": "sofi/dschidda.jpg",
+   "breite": 3200,
+   "hoehe": 1800,
+   "autor": "Lightdn",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Prince_Mohammed_Bin_Abdulaziz_St._near_Le_Mall,_Tahlia,_Jeddah.jpg",
+   "alt": "Nächtliche Prince Mohammed Bin Abdulaziz Street bei Le Mall in Dschidda mit beleuchteten Geschäften, Hochhaus und fahrenden Autos."
+  },
   "sofi/estepona": {
    "titel": "File:Calle aurora looking east - Estepona Garden of the Costa del Sol.jpg",
    "datei": "sofi/estepona.jpg",
@@ -113,6 +124,17 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Tumba_de_Rams%C3%A9s_V_y_de_Rams%C3%A9s_VI,_Valle_de_las_Reyes,_Luxor,_Egipto,_2022-04-03,_DD_69.jpg",
    "alt": "Bemalter Gang mit Säulen und Holztreppe im Grab von Ramses V. und Ramses VI. im Tal der Könige bei Luxor."
+  },
+  "sofi/oran": {
+   "titel": "File:ORAN City & Coast.jpg",
+   "datei": "sofi/oran.jpg",
+   "breite": 4160,
+   "hoehe": 3120,
+   "autor": "Benba.d.mourad",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:ORAN_City_%26_Coast.jpg",
+   "alt": "Blick von oben über Oran mit weissem Turm und Kuppelbau im Vordergrund, langer Hafenmole und der Stadt an der Küste."
   },
   "sofi/qena": {
    "titel": "File:Madinet Qaft, Qift, Qena Governorate, Egypt - panoramio (12).jpg",
@@ -181,6 +203,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:From_Tarifa_to_Morocco-3415.jpg",
    "fokus": "50% 30%",
    "alt": "Blick über die Altstadt von Tarifa mit Kirchenkuppel auf die Meerenge und die Berge Marokkos am Horizont."
+  },
+  "sofi/tetouan": {
+   "titel": "File:Tetuan vista desde un tejado.JPG",
+   "datei": "sofi/tetouan.jpg",
+   "breite": 2272,
+   "hoehe": 1704,
+   "autor": "Anassbarnichou2",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "seite": "https://commons.wikimedia.org/wiki/File:Tetuan_vista_desde_un_tejado.JPG",
+   "alt": "Blick von einem Dach über die dicht gebauten weissen Häuser von Tétouan mit grünen Hügeln dahinter."
   },
   "nordlicht/abisko": {
    "titel": "File:20221226 - Abisko - Aurore boréale 2.jpg",
