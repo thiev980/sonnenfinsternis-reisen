@@ -66,7 +66,7 @@
    "lizenz": "CC BY-SA 4.0",
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Un_groupe_de_grand_cormoran_sur_un_bateau_%C3%A9chou%C3%A9_-_Djerba_-_Tunisie.jpg",
-   "fokus": "50% 30%",
+   "fokus": "50% 45%",
    "alt": "Kormorane sitzen auf einem gestrandeten, schräg im flachen Meer liegenden Fischerboot vor Djerba."
   },
   "sofi/dschidda": {
@@ -90,6 +90,17 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Calle_aurora_looking_east_-_Estepona_Garden_of_the_Costa_del_Sol.jpg",
    "alt": "Weisse Gasse Calle Aurora in Estepona mit Blumentöpfen in Pink und Rot an den Hauswänden."
+  },
+  "sofi/gibraltar": {
+   "titel": "File:Гибралтар. Бар-ресторан \"The Royal Calpe\" - panoramio.jpg",
+   "datei": "sofi/gibraltar.jpg",
+   "breite": 5184,
+   "hoehe": 3456,
+   "autor": "tiger rus",
+   "lizenz": "CC BY 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B8%D0%B1%D1%80%D0%B0%D0%BB%D1%82%D0%B0%D1%80._%D0%91%D0%B0%D1%80-%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD_%22The_Royal_Calpe%22_-_panoramio.jpg",
+   "alt": "Fassade des Pubs The Royal Calpe in Gibraltar mit grünem Schild, roten Holztüren und weinroter Markise."
   },
   "sofi/jerez": {
    "titel": "File:Iglesia de San Miguel, Jerez de la Frontera, España, 2015-12-07, DD 105-107 HDR.JPG",
@@ -124,6 +135,18 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Tumba_de_Rams%C3%A9s_V_y_de_Rams%C3%A9s_VI,_Valle_de_las_Reyes,_Luxor,_Egipto,_2022-04-03,_DD_69.jpg",
    "alt": "Bemalter Gang mit Säulen und Holztreppe im Grab von Ramses V. und Ramses VI. im Tal der Könige bei Luxor."
+  },
+  "sofi/mekka": {
+   "titel": "File:Alrajhi Mosque in Mecca.jpg",
+   "datei": "sofi/mekka.jpg",
+   "breite": 4032,
+   "hoehe": 3024,
+   "autor": "عمرو",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Alrajhi_Mosque_in_Mecca.jpg",
+   "fokus": "50% 45%",
+   "alt": "Weisse Al-Rajhi-Moschee in Mekka mit Kuppeln und hohem Minarett vor blauem Himmel, daneben ein Hotelgebäude."
   },
   "sofi/oran": {
    "titel": "File:ORAN City & Coast.jpg",
@@ -192,6 +215,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Fondouk_Daoui_-_actuellement_mus%C3%A9e_Koubba.JPG",
    "alt": "Innenhof des Fondouk Daoui in Sousse mit Rundbögen und roten Türen, durch einen Steinbogen gesehen."
   },
+  "sofi/tanger": {
+   "titel": "File:Tangier - 44699733295.jpg",
+   "datei": "sofi/tanger.jpg",
+   "breite": 5230,
+   "hoehe": 2311,
+   "autor": "Mike McBey",
+   "lizenz": "CC BY 2.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/2.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Tangier_-_44699733295.jpg",
+   "alt": "Blick über die dicht bebaute Stadt Tanger mit weissen Häusern, einem Minarett und Booten im Hafen im Vordergrund."
+  },
   "sofi/tarifa": {
    "titel": "File:From Tarifa to Morocco-3415.jpg",
    "datei": "sofi/tarifa.jpg",
@@ -201,7 +235,7 @@
    "lizenz": "CC BY-SA 4.0",
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:From_Tarifa_to_Morocco-3415.jpg",
-   "fokus": "50% 30%",
+   "fokus": "50% 45%",
    "alt": "Blick über die Altstadt von Tarifa mit Kirchenkuppel auf die Meerenge und die Berge Marokkos am Horizont."
   },
   "sofi/tetouan": {
