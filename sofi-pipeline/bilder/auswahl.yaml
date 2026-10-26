@@ -1,7 +1,7 @@
 # Headerbilder von Wikimedia Commons, ausgewählt über die Auswahlseite (Kandidaten: kandidaten.json).
 # Schlüssel: sofi/<slug>, nordlicht/<slug>, guide/<slug>, seite/<name> (start, sonnenfinsternis, nordlichter).
 # Wert: {datei: Commons-Dateiname oder «kein» (bewusst ohne Bild), alt: Alt-Text (Schweizer Rechtschreibung),
-#        fokus: "50% 30%" (optional, Bildausschnitt; Standard "50% 62%", prüfen mit scripts/zuschnitt.py), gewaehlt: Zeitpunkt der Wahl (UTC)}.
+#        fokus: "50% 45%" (optional, Bildausschnitt; Standard "50% 62%", prüfen mit scripts/zuschnitt.py), gewaehlt: Zeitpunkt der Wahl (UTC)}.
 # Von Hand geändert? `gewaehlt` auf jetzt setzen, sonst kann eine ältere Wahl der Auswahlseite sie überschreiben.
 # Änderungen hier starten den Workflow «Bilder aktualisieren», der die Bilder lädt.
 seite/nordlichter:
@@ -29,7 +29,7 @@ sofi/cadiz:
 sofi/djerba:
   datei: "File:Un groupe de grand cormoran sur un bateau échoué - Djerba - Tunisie.jpg"
   alt: "Kormorane sitzen auf einem gestrandeten, schräg im flachen Meer liegenden Fischerboot vor Djerba."
-  fokus: "50% 30%"
+  fokus: "50% 45%"
   gewaehlt: "2026-10-22T21:31:05.373Z"
 sofi/dschidda:
   datei: "File:Prince Mohammed Bin Abdulaziz St. near Le Mall, Tahlia, Jeddah.jpg"
@@ -39,6 +39,10 @@ sofi/estepona:
   datei: "File:Calle aurora looking east - Estepona Garden of the Costa del Sol.jpg"
   alt: "Weisse Gasse Calle Aurora in Estepona mit Blumentöpfen in Pink und Rot an den Hauswänden."
   gewaehlt: "2026-10-22T21:31:33.294Z"
+sofi/gibraltar:
+  datei: "File:Гибралтар. Бар-ресторан \"The Royal Calpe\" - panoramio.jpg"
+  alt: "Fassade des Pubs The Royal Calpe in Gibraltar mit grünem Schild, roten Holztüren und weinroter Markise."
+  gewaehlt: "2026-10-25T20:02:25.433Z"
 sofi/girga:
   datei: "kein"
   gewaehlt: "2026-10-22T21:31:41.580Z"
@@ -58,6 +62,11 @@ sofi/luxor:
 sofi/marsa-alam:
   datei: "kein"
   gewaehlt: "2026-10-22T21:33:01.119Z"
+sofi/mekka:
+  datei: "File:Alrajhi Mosque in Mecca.jpg"
+  alt: "Weisse Al-Rajhi-Moschee in Mekka mit Kuppeln und hohem Minarett vor blauem Himmel, daneben ein Hotelgebäude."
+  fokus: "50% 45%"
+  gewaehlt: "2026-10-25T20:02:38.482Z"
 sofi/oran:
   datei: "File:ORAN City & Coast.jpg"
   alt: "Blick von oben über Oran mit weissem Turm und Kuppelbau im Vordergrund, langer Hafenmole und der Stadt an der Küste."
@@ -86,10 +95,14 @@ sofi/sousse:
   datei: "File:Fondouk Daoui - actuellement musée Koubba.JPG"
   alt: "Innenhof des Fondouk Daoui in Sousse mit Rundbögen und roten Türen, durch einen Steinbogen gesehen."
   gewaehlt: "2026-10-22T21:34:01.496Z"
+sofi/tanger:
+  datei: "File:Tangier - 44699733295.jpg"
+  alt: "Blick über die dicht bebaute Stadt Tanger mit weissen Häusern, einem Minarett und Booten im Hafen im Vordergrund."
+  gewaehlt: "2026-10-25T20:02:52.879Z"
 sofi/tarifa:
   datei: "File:From Tarifa to Morocco-3415.jpg"
   alt: "Blick über die Altstadt von Tarifa mit Kirchenkuppel auf die Meerenge und die Berge Marokkos am Horizont."
-  fokus: "50% 30%"
+  fokus: "50% 45%"
   gewaehlt: "2026-10-22T21:34:16.243Z"
 sofi/tetouan:
   datei: "File:Tetuan vista desde un tejado.JPG"
