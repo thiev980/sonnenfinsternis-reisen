@@ -35,6 +35,17 @@
    "fokus": "50% 92%",
    "alt": "Sternenhimmel mit Milchstrasse und schwachem Polarlicht über der Silhouette einer Baumreihe."
   },
+  "sofi/asilah": {
+   "titel": "File:Assilah Waterfront2.jpg",
+   "datei": "sofi/asilah.jpg",
+   "breite": 3072,
+   "hoehe": 2304,
+   "autor": "Dans",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Assilah_Waterfront2.jpg",
+   "alt": "Weisse Häuser der Medina von Asilah hinter der Stadtmauer, davor Felsen, Sandstrand und Brandung des Atlantiks."
+  },
   "sofi/benghazi": {
    "titel": "File:ميدان السلفيوم.jpg",
    "datei": "sofi/benghazi.jpg",
@@ -56,6 +67,17 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Puente_de_la_Constituci%C3%B3n_de_1812,_C%C3%A1diz,_Espa%C3%B1a,_2015-12-08,_DD_21-24_HDR.JPG",
    "alt": "Die beleuchtete Puente de la Constitución de 1812 in Cádiz bei Nacht, ihre Lichter spiegeln sich im Wasser."
+  },
+  "sofi/ceuta": {
+   "titel": "File:Murallas Reales, Ceuta, España, 2015-12-10, DD 10.JPG",
+   "datei": "sofi/ceuta.jpg",
+   "breite": 8307,
+   "hoehe": 4504,
+   "autor": "Diego Delso",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Murallas_Reales,_Ceuta,_Espa%C3%B1a,_2015-12-10,_DD_10.JPG",
+   "alt": "Platz innerhalb der Murallas Reales von Ceuta mit Steinkreuz auf dem Sockel «Centro Gallego», Laternen und hohen Festungsmauern."
   },
   "sofi/djerba": {
    "titel": "File:Un groupe de grand cormoran sur un bateau échoué - Djerba - Tunisie.jpg",
@@ -147,6 +169,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Alrajhi_Mosque_in_Mecca.jpg",
    "fokus": "50% 45%",
    "alt": "Weisse Al-Rajhi-Moschee in Mekka mit Kuppeln und hohem Minarett vor blauem Himmel, daneben ein Hotelgebäude."
+  },
+  "sofi/melilla": {
+   "titel": "File:Homenaje a la flota pesquera de Melilla en la plaza de los Pescadores.jpg",
+   "datei": "sofi/melilla.jpg",
+   "breite": 4000,
+   "hoehe": 3000,
+   "autor": "Martijn.Munneke from Netherlands",
+   "lizenz": "CC BY 2.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/2.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Homenaje_a_la_flota_pesquera_de_Melilla_en_la_plaza_de_los_Pescadores.jpg",
+   "alt": "Denkmal für die Fischereiflotte von Melilla: ein rot-weiss-blaues Fischerboot auf der Plaza de los Pescadores vor den Festungsmauern."
   },
   "sofi/oran": {
    "titel": "File:ORAN City & Coast.jpg",

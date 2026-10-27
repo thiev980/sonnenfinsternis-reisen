@@ -1,11 +1,1 @@
-sofi/ceuta
-  Wikidata Q5823 → Panorámica de Ceuta desde el mirador de Isabel II.jpg
-sofi/ceuta: 8 Kandidaten (von 151 Dateien)
-sofi/melilla
-  Wikidata Q5831 → (Melilla) Aterrizando en Melilla (16668390111).jpg
-sofi/melilla: 8 Kandidaten (von 151 Dateien)
-sofi/asilah
-  Wikidata Q730328 → Assilah Waterfront2.jpg
-sofi/asilah: 8 Kandidaten (von 143 Dateien)
-Vorschau: 356 Dateien
-Bilder: 42 Headerbilder
+Bilder: 45 Headerbilder
