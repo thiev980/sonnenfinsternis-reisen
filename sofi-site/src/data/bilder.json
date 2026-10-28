@@ -35,6 +35,28 @@
    "fokus": "50% 92%",
    "alt": "Sternenhimmel mit Milchstrasse und schwachem Polarlicht über der Silhouette einer Baumreihe."
   },
+  "sofi/al-hoceima": {
+   "titel": "File:Al Hoceima Morocco.jpg",
+   "datei": "sofi/al-hoceima.jpg",
+   "breite": 2048,
+   "hoehe": 1536,
+   "autor": "Westonmr",
+   "lizenz": "Public domain",
+   "lizenz_url": null,
+   "seite": "https://commons.wikimedia.org/wiki/File:Al_Hoceima_Morocco.jpg",
+   "alt": "Häuser von Al Hoceïma vor einem kahlen Hügel mit weissem Gebäude auf dem Gipfel, links das tiefblaue Mittelmeer."
+  },
+  "sofi/algeciras": {
+   "titel": "File:Parque María Cristina Algeciras 2024 (1).jpg",
+   "datei": "sofi/algeciras.jpg",
+   "breite": 4000,
+   "hoehe": 3000,
+   "autor": "Falconaumanni",
+   "lizenz": "CC BY 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Parque_Mar%C3%ADa_Cristina_Algeciras_2024_(1).jpg",
+   "alt": "Palmen und hohe Laubbäume im Parque María Cristina in Algeciras, davor ein breiter Kiesplatz mit gekachelten Beeteinfassungen."
+  },
   "sofi/asilah": {
    "titel": "File:Assilah Waterfront2.jpg",
    "datei": "sofi/asilah.jpg",
@@ -78,6 +100,18 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Murallas_Reales,_Ceuta,_Espa%C3%B1a,_2015-12-10,_DD_10.JPG",
    "alt": "Platz innerhalb der Murallas Reales von Ceuta mit Steinkreuz auf dem Sockel «Centro Gallego», Laternen und hohen Festungsmauern."
+  },
+  "sofi/chefchaouen": {
+   "titel": "File:20230914 11h5095Em Chefchaouen (53256471719).jpg",
+   "datei": "sofi/chefchaouen.jpg",
+   "breite": 4608,
+   "hoehe": 2592,
+   "autor": "Emilien Lebourgeois",
+   "lizenz": "Public domain",
+   "lizenz_url": null,
+   "seite": "https://commons.wikimedia.org/wiki/File:20230914_11h5095Em_Chefchaouen_(53256471719).jpg",
+   "fokus": "50% 74%",
+   "alt": "Platz in der blau-weissen Altstadt von Chefchaouen mit kleinem, blau verziertem Pavillon, Arkadengebäude und kahlen Bergen im Hintergrund."
   },
   "sofi/djerba": {
    "titel": "File:Un groupe de grand cormoran sur un bateau échoué - Djerba - Tunisie.jpg",
