@@ -1,11 +1,11 @@
-sofi/vejer
-  Wikidata Q827393 → Vejer de la Frontera Sept2004.jpg
-sofi/vejer: 8 Kandidaten (von 148 Dateien)
-sofi/zahara
-  Wikidata Q140523 → Zahara de los Atunes vista desde el cielo.jpg
-sofi/zahara: 8 Kandidaten (von 116 Dateien)
-sofi/nador
-  Wikidata Q824594 → Nador seafront.JPG
-sofi/nador: 8 Kandidaten (von 130 Dateien)
-Vorschau: 402 Dateien
+sofi/conil
+  Wikidata Q832984 → Playa de Conil - panoramio (1).jpg
+sofi/conil: 8 Kandidaten (von 131 Dateien)
+sofi/marbella
+  Wikidata Q484799 → Marbella from La Concha, Andalucia, Spain - Sept 2009.jpg
+sofi/marbella: 8 Kandidaten (von 144 Dateien)
+sofi/fuengirola
+  Wikidata Q492735 → A view of Fuengirola (48829279762).jpg
+sofi/fuengirola: 8 Kandidaten (von 146 Dateien)
+Vorschau: 426 Dateien
 Bilder: 48 Headerbilder
