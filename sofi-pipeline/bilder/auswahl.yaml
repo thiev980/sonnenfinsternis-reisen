@@ -47,6 +47,10 @@ sofi/chefchaouen:
   alt: "Platz in der blau-weissen Altstadt von Chefchaouen mit kleinem, blau verziertem Pavillon, Arkadengebäude und kahlen Bergen im Hintergrund."
   fokus: "50% 74%"
   gewaehlt: "2026-10-27T13:52:33.572Z"
+sofi/conil:
+  datei: "File:Convento de la Misericordia - IMG 20210828 101047.jpg"
+  alt: "Platz in Conil de la Frontera mit Brunnen und Delfinfiguren vor weissen Häusern und dem Convento de la Misericordia unter blauem Himmel."
+  gewaehlt: "2026-10-29T07:48:40.149Z"
 sofi/djerba:
   datei: "File:Un groupe de grand cormoran sur un bateau échoué - Djerba - Tunisie.jpg"
   alt: "Kormorane sitzen auf einem gestrandeten, schräg im flachen Meer liegenden Fischerboot vor Djerba."
@@ -60,6 +64,10 @@ sofi/estepona:
   datei: "File:Calle aurora looking east - Estepona Garden of the Costa del Sol.jpg"
   alt: "Weisse Gasse Calle Aurora in Estepona mit Blumentöpfen in Pink und Rot an den Hauswänden."
   gewaehlt: "2026-10-22T21:31:33.294Z"
+sofi/fuengirola:
+  datei: "File:A view of Fuengirola (48829279762).jpg"
+  alt: "Blick von einem Hügel über Fuengirola mit Hochhäusern, langem Sandstrand und tiefblauem Mittelmeer."
+  gewaehlt: "2026-10-29T07:48:49.572Z"
 sofi/gibraltar:
   datei: "File:Гибралтар. Бар-ресторан \"The Royal Calpe\" - panoramio.jpg"
   alt: "Fassade des Pubs The Royal Calpe in Gibraltar mit grünem Schild, roten Holztüren und weinroter Markise."
@@ -80,6 +88,11 @@ sofi/luxor:
   datei: "File:Tumba de Ramsés V y de Ramsés VI, Valle de las Reyes, Luxor, Egipto, 2022-04-03, DD 69.jpg"
   alt: "Bemalter Gang mit Säulen und Holztreppe im Grab von Ramses V. und Ramses VI. im Tal der Könige bei Luxor."
   gewaehlt: "2026-10-22T21:32:36.965Z"
+sofi/marbella:
+  datei: "File:Plaza De Los Naranjos (12162841825).jpg"
+  alt: "Weisse Kapelle mit Glockengiebel an der Plaza de los Naranjos in Marbella in der Abenddämmerung, mit brennenden Laternen und Altstadthäusern."
+  fokus: "50% 30%"
+  gewaehlt: "2026-10-29T07:49:04.049Z"
 sofi/marsa-alam:
   datei: "kein"
   gewaehlt: "2026-10-22T21:33:01.119Z"
@@ -92,6 +105,10 @@ sofi/melilla:
   datei: "File:Homenaje a la flota pesquera de Melilla en la plaza de los Pescadores.jpg"
   alt: "Denkmal für die Fischereiflotte von Melilla: ein rot-weiss-blaues Fischerboot auf der Plaza de los Pescadores vor den Festungsmauern."
   gewaehlt: "2026-10-26T08:56:18.083Z"
+sofi/nador:
+  datei: "File:Nador seafront.JPG"
+  alt: "Palmengesäumte Uferstrasse in Nador mit Promenade, Lagune und einem weissen Gebäude auf einer Mole, Hügel im Hintergrund."
+  gewaehlt: "2026-10-29T07:49:42.481Z"
 sofi/oran:
   datei: "File:ORAN City & Coast.jpg"
   alt: "Blick von oben über Oran mit weissem Turm und Kuppelbau im Vordergrund, langer Hafenmole und der Stadt an der Küste."
@@ -133,6 +150,15 @@ sofi/tetouan:
   datei: "File:Tetuan vista desde un tejado.JPG"
   alt: "Blick von einem Dach über die dicht gebauten weissen Häuser von Tétouan mit grünen Hügeln dahinter."
   gewaehlt: "2026-10-24T18:48:08.536Z"
+sofi/vejer:
+  datei: "File:La Cobijada y el monumento a la mujer vejeriega (33085324551).jpg"
+  alt: "Bronzestatue der verhüllten Cobijada unter einem Olivenbaum in Vejer de la Frontera, dahinter die weissen Häuser des Orts."
+  gewaehlt: "2026-10-29T07:50:05.135Z"
+sofi/zahara:
+  datei: "File:Castillo - Zahara de los Atunes - 01.jpg"
+  alt: "Steinmauer mit grossem Torbogen und grünem Tor der Burg in Zahara de los Atunes an einer Strasse."
+  fokus: "50% 45%"
+  gewaehlt: "2026-10-29T07:50:28.575Z"
 nordlicht/abisko:
   datei: "File:20221226 - Abisko - Aurore boréale 2.jpg"
   alt: "Schwaches grünes Polarlicht über einer Hütte mit kahlen Birken auf verschneitem Boden bei Abisko."
