@@ -113,6 +113,17 @@
    "fokus": "50% 74%",
    "alt": "Platz in der blau-weissen Altstadt von Chefchaouen mit kleinem, blau verziertem Pavillon, Arkadengebäude und kahlen Bergen im Hintergrund."
   },
+  "sofi/conil": {
+   "titel": "File:Convento de la Misericordia - IMG 20210828 101047.jpg",
+   "datei": "sofi/conil.jpg",
+   "breite": 4000,
+   "hoehe": 3000,
+   "autor": "El Pantera",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Convento_de_la_Misericordia_-_IMG_20210828_101047.jpg",
+   "alt": "Platz in Conil de la Frontera mit Brunnen und Delfinfiguren vor weissen Häusern und dem Convento de la Misericordia unter blauem Himmel."
+  },
   "sofi/djerba": {
    "titel": "File:Un groupe de grand cormoran sur un bateau échoué - Djerba - Tunisie.jpg",
    "datei": "sofi/djerba.jpg",
@@ -146,6 +157,17 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Calle_aurora_looking_east_-_Estepona_Garden_of_the_Costa_del_Sol.jpg",
    "alt": "Weisse Gasse Calle Aurora in Estepona mit Blumentöpfen in Pink und Rot an den Hauswänden."
+  },
+  "sofi/fuengirola": {
+   "titel": "File:A view of Fuengirola (48829279762).jpg",
+   "datei": "sofi/fuengirola.jpg",
+   "breite": 6016,
+   "hoehe": 4016,
+   "autor": "Michael Gaylard from Horsham, UK",
+   "lizenz": "CC BY 2.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/2.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:A_view_of_Fuengirola_(48829279762).jpg",
+   "alt": "Blick von einem Hügel über Fuengirola mit Hochhäusern, langem Sandstrand und tiefblauem Mittelmeer."
   },
   "sofi/gibraltar": {
    "titel": "File:Гибралтар. Бар-ресторан \"The Royal Calpe\" - panoramio.jpg",
@@ -192,6 +214,18 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Tumba_de_Rams%C3%A9s_V_y_de_Rams%C3%A9s_VI,_Valle_de_las_Reyes,_Luxor,_Egipto,_2022-04-03,_DD_69.jpg",
    "alt": "Bemalter Gang mit Säulen und Holztreppe im Grab von Ramses V. und Ramses VI. im Tal der Könige bei Luxor."
   },
+  "sofi/marbella": {
+   "titel": "File:Plaza De Los Naranjos (12162841825).jpg",
+   "datei": "sofi/marbella.jpg",
+   "breite": 5355,
+   "hoehe": 3570,
+   "autor": "Nan Palmero from San Antonio, TX, USA",
+   "lizenz": "CC BY 2.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/2.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Plaza_De_Los_Naranjos_(12162841825).jpg",
+   "fokus": "50% 30%",
+   "alt": "Weisse Kapelle mit Glockengiebel an der Plaza de los Naranjos in Marbella in der Abenddämmerung, mit brennenden Laternen und Altstadthäusern."
+  },
   "sofi/mekka": {
    "titel": "File:Alrajhi Mosque in Mecca.jpg",
    "datei": "sofi/mekka.jpg",
@@ -214,6 +248,17 @@
    "lizenz_url": "https://creativecommons.org/licenses/by/2.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Homenaje_a_la_flota_pesquera_de_Melilla_en_la_plaza_de_los_Pescadores.jpg",
    "alt": "Denkmal für die Fischereiflotte von Melilla: ein rot-weiss-blaues Fischerboot auf der Plaza de los Pescadores vor den Festungsmauern."
+  },
+  "sofi/nador": {
+   "titel": "File:Nador seafront.JPG",
+   "datei": "sofi/nador.jpg",
+   "breite": 3072,
+   "hoehe": 2304,
+   "autor": "Tonkie",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Nador_seafront.JPG",
+   "alt": "Palmengesäumte Uferstrasse in Nador mit Promenade, Lagune und einem weissen Gebäude auf einer Mole, Hügel im Hintergrund."
   },
   "sofi/oran": {
    "titel": "File:ORAN City & Coast.jpg",
@@ -315,6 +360,29 @@
    "lizenz_url": "http://creativecommons.org/licenses/by-sa/3.0/",
    "seite": "https://commons.wikimedia.org/wiki/File:Tetuan_vista_desde_un_tejado.JPG",
    "alt": "Blick von einem Dach über die dicht gebauten weissen Häuser von Tétouan mit grünen Hügeln dahinter."
+  },
+  "sofi/vejer": {
+   "titel": "File:La Cobijada y el monumento a la mujer vejeriega (33085324551).jpg",
+   "datei": "sofi/vejer.jpg",
+   "breite": 4608,
+   "hoehe": 3072,
+   "autor": "Emilio J. Rodríguez Posada",
+   "lizenz": "CC BY-SA 2.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:La_Cobijada_y_el_monumento_a_la_mujer_vejeriega_(33085324551).jpg",
+   "alt": "Bronzestatue der verhüllten Cobijada unter einem Olivenbaum in Vejer de la Frontera, dahinter die weissen Häuser des Orts."
+  },
+  "sofi/zahara": {
+   "titel": "File:Castillo - Zahara de los Atunes - 01.jpg",
+   "datei": "sofi/zahara.jpg",
+   "breite": 3984,
+   "hoehe": 2656,
+   "autor": "Maesi64",
+   "lizenz": "CC0",
+   "lizenz_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "seite": "https://commons.wikimedia.org/wiki/File:Castillo_-_Zahara_de_los_Atunes_-_01.jpg",
+   "fokus": "50% 45%",
+   "alt": "Steinmauer mit grossem Torbogen und grünem Tor der Burg in Zahara de los Atunes an einer Strasse."
   },
   "nordlicht/abisko": {
    "titel": "File:20221226 - Abisko - Aurore boréale 2.jpg",
