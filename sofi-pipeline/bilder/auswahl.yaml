@@ -26,6 +26,10 @@ sofi/algeciras:
   datei: "File:Parque María Cristina Algeciras 2024 (1).jpg"
   alt: "Palmen und hohe Laubbäume im Parque María Cristina in Algeciras, davor ein breiter Kiesplatz mit gekachelten Beeteinfassungen."
   gewaehlt: "2026-10-27T13:52:13.749Z"
+sofi/almeria:
+  datei: "File:Almeria. Vista desde Alcazaba.jpg"
+  alt: "Blick von der Alcazaba über die hellen Häuser von Almería bis zum Hafen und zum Mittelmeer."
+  gewaehlt: "2026-10-30T07:21:48.575Z"
 sofi/asilah:
   datei: "File:Assilah Waterfront2.jpg"
   alt: "Weisse Häuser der Medina von Asilah hinter der Stadtmauer, davor Felsen, Sandstrand und Brandung des Atlantiks."
@@ -88,6 +92,11 @@ sofi/luxor:
   datei: "File:Tumba de Ramsés V y de Ramsés VI, Valle de las Reyes, Luxor, Egipto, 2022-04-03, DD 69.jpg"
   alt: "Bemalter Gang mit Säulen und Holztreppe im Grab von Ramses V. und Ramses VI. im Tal der Könige bei Luxor."
   gewaehlt: "2026-10-22T21:32:36.965Z"
+sofi/malaga:
+  datei: "File:Hotel Iberostar Málaga Playa Torrox Costa 2014.jpg"
+  alt: "Palmen und Pool vor der rötlichen Hotelanlage Iberostar Málaga Playa in Torrox Costa unter blauem Himmel."
+  fokus: "50% 45%"
+  gewaehlt: "2026-10-30T07:21:54.496Z"
 sofi/marbella:
   datei: "File:Plaza De Los Naranjos (12162841825).jpg"
   alt: "Weisse Kapelle mit Glockengiebel an der Plaza de los Naranjos in Marbella in der Abenddämmerung, mit brennenden Laternen und Altstadthäusern."
@@ -117,6 +126,11 @@ sofi/qena:
   datei: "File:Madinet Qaft, Qift, Qena Governorate, Egypt - panoramio (12).jpg"
   alt: "Palmen und Häuser bei Qift im Gouvernement Qena spiegeln sich in der Abenddämmerung in einem Kanal."
   gewaehlt: "2026-10-23T06:47:25.912Z"
+sofi/ronda:
+  datei: "File:View of Puente Nuevo bridge in Ronda Spain.jpg"
+  alt: "Die Puente Nuevo von Ronda spannt sich zwischen steilen Felswänden über die Schlucht, oben die Häuser der Altstadt."
+  fokus: "50% 35%"
+  gewaehlt: "2026-10-30T07:22:06.484Z"
 sofi/sevilla:
   datei: "File:Seville, Spain (Unsplash 0BmkJ72gd-0).jpg"
   alt: "Blick nach oben in einen Innenhof mit reich verzierten maurischen Bögen und Stuckarbeiten in Sevilla."
