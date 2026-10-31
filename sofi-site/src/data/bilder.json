@@ -57,6 +57,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Parque_Mar%C3%ADa_Cristina_Algeciras_2024_(1).jpg",
    "alt": "Palmen und hohe Laubbäume im Parque María Cristina in Algeciras, davor ein breiter Kiesplatz mit gekachelten Beeteinfassungen."
   },
+  "sofi/almeria": {
+   "titel": "File:Almeria. Vista desde Alcazaba.jpg",
+   "datei": "sofi/almeria.jpg",
+   "breite": 2048,
+   "hoehe": 1366,
+   "autor": "Elenaguiadealmeria",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Almeria._Vista_desde_Alcazaba.jpg",
+   "alt": "Blick von der Alcazaba über die hellen Häuser von Almería bis zum Hafen und zum Mittelmeer."
+  },
   "sofi/asilah": {
    "titel": "File:Assilah Waterfront2.jpg",
    "datei": "sofi/asilah.jpg",
@@ -214,6 +225,18 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Tumba_de_Rams%C3%A9s_V_y_de_Rams%C3%A9s_VI,_Valle_de_las_Reyes,_Luxor,_Egipto,_2022-04-03,_DD_69.jpg",
    "alt": "Bemalter Gang mit Säulen und Holztreppe im Grab von Ramses V. und Ramses VI. im Tal der Könige bei Luxor."
   },
+  "sofi/malaga": {
+   "titel": "File:Hotel Iberostar Málaga Playa Torrox Costa 2014.jpg",
+   "datei": "sofi/malaga.jpg",
+   "breite": 11365,
+   "hoehe": 5492,
+   "autor": "Tuxyso",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Hotel_Iberostar_M%C3%A1laga_Playa_Torrox_Costa_2014.jpg",
+   "fokus": "50% 45%",
+   "alt": "Palmen und Pool vor der rötlichen Hotelanlage Iberostar Málaga Playa in Torrox Costa unter blauem Himmel."
+  },
   "sofi/marbella": {
    "titel": "File:Plaza De Los Naranjos (12162841825).jpg",
    "datei": "sofi/marbella.jpg",
@@ -281,6 +304,18 @@
    "lizenz_url": "https://creativecommons.org/licenses/by/3.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Madinet_Qaft,_Qift,_Qena_Governorate,_Egypt_-_panoramio_(12).jpg",
    "alt": "Palmen und Häuser bei Qift im Gouvernement Qena spiegeln sich in der Abenddämmerung in einem Kanal."
+  },
+  "sofi/ronda": {
+   "titel": "File:View of Puente Nuevo bridge in Ronda Spain.jpg",
+   "datei": "sofi/ronda.jpg",
+   "breite": 9453,
+   "hoehe": 4800,
+   "autor": "This Photo was taken by Wolfgang Moroder . Feel free to use my photos, but please mention me as the author and send me a",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:View_of_Puente_Nuevo_bridge_in_Ronda_Spain.jpg",
+   "fokus": "50% 35%",
+   "alt": "Die Puente Nuevo von Ronda spannt sich zwischen steilen Felswänden über die Schlucht, oben die Häuser der Altstadt."
   },
   "sofi/sevilla": {
    "titel": "File:Seville, Spain (Unsplash 0BmkJ72gd-0).jpg",
