@@ -1,11 +1,11 @@
-sofi/granada
-  Wikidata Q8810 → "Der Blick von der Alhambra auf Granada ist einfach atemberaubend". 01.jpg
-sofi/granada: 8 Kandidaten (von 150 Dateien)
-sofi/safaga
-  Wikidata Q986325 → Safaga Red Sea.jpg
-sofi/safaga: 8 Kandidaten (von 109 Dateien)
-sofi/assuan
-  Wikidata Q29888 → Panoramic view of Aswan 2, Egypt.jpg
-sofi/assuan: 8 Kandidaten (von 151 Dateien)
-Vorschau: 498 Dateien
+sofi/fes
+  Wikidata Q80985 → Medina of Fes, Marocco.jpg
+sofi/fes: 8 Kandidaten (von 151 Dateien)
+sofi/hurghada
+  Wikidata Q187284 → South Hurghada.jpg
+sofi/hurghada: 8 Kandidaten (von 149 Dateien)
+sofi/el-gouna
+  Wikidata Q286510 → El Gouna 02.jpg
+sofi/el-gouna: 8 Kandidaten (von 139 Dateien)
+Vorschau: 518 Dateien
 Bilder: 57 Headerbilder
