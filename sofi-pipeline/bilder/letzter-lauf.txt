@@ -1,11 +1,11 @@
-sofi/fes
-  Wikidata Q80985 → Medina of Fes, Marocco.jpg
-sofi/fes: 8 Kandidaten (von 151 Dateien)
-sofi/hurghada
-  Wikidata Q187284 → South Hurghada.jpg
-sofi/hurghada: 8 Kandidaten (von 149 Dateien)
-sofi/el-gouna
-  Wikidata Q286510 → El Gouna 02.jpg
-sofi/el-gouna: 8 Kandidaten (von 139 Dateien)
-Vorschau: 518 Dateien
+sofi/palma
+  Wikidata Q8826 → Palma von Castell de Bellver.jpg
+sofi/palma: 8 Kandidaten (von 149 Dateien)
+sofi/tunis
+  Wikidata Q3572 → Panoramique du centre de Tunis (3197369985) (cropped).jpg
+sofi/tunis: 8 Kandidaten (von 151 Dateien)
+sofi/kairo
+  Wikidata Q85 → Cairo Skyline (2020).jpg
+sofi/kairo: 8 Kandidaten (von 151 Dateien)
+Vorschau: 542 Dateien
 Bilder: 57 Headerbilder
