@@ -1,11 +1,11 @@
-sofi/palma
-  Wikidata Q8826 → Palma von Castell de Bellver.jpg
-sofi/palma: 8 Kandidaten (von 149 Dateien)
-sofi/tunis
-  Wikidata Q3572 → Panoramique du centre de Tunis (3197369985) (cropped).jpg
-sofi/tunis: 8 Kandidaten (von 151 Dateien)
-sofi/kairo
-  Wikidata Q85 → Cairo Skyline (2020).jpg
-sofi/kairo: 8 Kandidaten (von 151 Dateien)
-Vorschau: 542 Dateien
+sofi/zuerich
+  Wikidata Q72 → Zuerich Fraumuenster St Peter.jpg
+sofi/zuerich: 8 Kandidaten (von 151 Dateien)
+sofi/bern
+  Wikidata Q70 → Bern luftaufnahme.png
+sofi/bern: 8 Kandidaten (von 151 Dateien)
+sofi/rom
+  Wikidata Q220 → Rome Skyline (8012016319).jpg
+sofi/rom: 8 Kandidaten (von 151 Dateien)
+Vorschau: 566 Dateien
 Bilder: 57 Headerbilder
