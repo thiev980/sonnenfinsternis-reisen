@@ -57,6 +57,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Parque_Mar%C3%ADa_Cristina_Algeciras_2024_(1).jpg",
    "alt": "Palmen und hohe Laubbäume im Parque María Cristina in Algeciras, davor ein breiter Kiesplatz mit gekachelten Beeteinfassungen."
   },
+  "sofi/algier": {
+   "titel": "File:Streets in Algiers 2024 02.jpg",
+   "datei": "sofi/algier.jpg",
+   "breite": 3612,
+   "hoehe": 1588,
+   "autor": "Dezedien",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Streets_in_Algiers_2024_02.jpg",
+   "alt": "Strasse in Algier mit hellen Wohnhäusern, roten Wimpelketten über der Fahrbahn und einem grossen Baum an einer Natursteinmauer."
+  },
   "sofi/almeria": {
    "titel": "File:Almeria. Vista desde Alcazaba.jpg",
    "datei": "sofi/almeria.jpg",
@@ -79,6 +90,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Assilah_Waterfront2.jpg",
    "alt": "Weisse Häuser der Medina von Asilah hinter der Stadtmauer, davor Felsen, Sandstrand und Brandung des Atlantiks."
   },
+  "sofi/assuan": {
+   "titel": "File:Assuan Mausoleum Aga Khan III. 13.JPG",
+   "datei": "sofi/assuan.jpg",
+   "breite": 3932,
+   "hoehe": 2950,
+   "autor": "Olaf Tausch",
+   "lizenz": "CC BY 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Assuan_Mausoleum_Aga_Khan_III._13.JPG",
+   "alt": "Das Mausoleum von Aga Khan III. in Assuan mit Kuppel und Zinnenmauer auf einem Sandhügel, im Vordergrund Palmen und Büsche."
+  },
   "sofi/benghazi": {
    "titel": "File:ميدان السلفيوم.jpg",
    "datei": "sofi/benghazi.jpg",
@@ -89,6 +111,17 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:%D9%85%D9%8A%D8%AF%D8%A7%D9%86_%D8%A7%D9%84%D8%B3%D9%84%D9%81%D9%8A%D9%88%D9%85.jpg",
    "alt": "Silphium-Platz in Bengasi: Denkmalsäule mit Brunnenbecken, Palmen und ein weisses Gebäude mit Turm unter Gewitterwolken."
+  },
+  "sofi/bern": {
+   "titel": "File:Bern Panorama von Rosengarten 20211007.jpg",
+   "datei": "sofi/bern.jpg",
+   "breite": 22160,
+   "hoehe": 8620,
+   "autor": "Daniel Kraft",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Bern_Panorama_von_Rosengarten_20211007.jpg",
+   "alt": "Blick vom Rosengarten über die Altstadt von Bern mit dem Münsterturm und der Aare, im Vordergrund grüne Baumkronen."
   },
   "sofi/cadiz": {
    "titel": "File:Puente de la Constitución de 1812, Cádiz, España, 2015-12-08, DD 21-24 HDR.JPG",
@@ -158,6 +191,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Prince_Mohammed_Bin_Abdulaziz_St._near_Le_Mall,_Tahlia,_Jeddah.jpg",
    "alt": "Nächtliche Prince Mohammed Bin Abdulaziz Street bei Le Mall in Dschidda mit beleuchteten Geschäften, Hochhaus und fahrenden Autos."
   },
+  "sofi/el-gouna": {
+   "titel": "File:El Gouna Turtle House R01.jpg",
+   "datei": "sofi/el-gouna.jpg",
+   "breite": 4288,
+   "hoehe": 2848,
+   "autor": "Marc Ryckaert",
+   "lizenz": "CC BY 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:El_Gouna_Turtle_House_R01.jpg",
+   "alt": "Das Turtle House in El Gouna, ein rundliches Gebäude aus Naturstein mit runden Fenstern, unter blauem Himmel."
+  },
   "sofi/estepona": {
    "titel": "File:Calle aurora looking east - Estepona Garden of the Costa del Sol.jpg",
    "datei": "sofi/estepona.jpg",
@@ -168,6 +212,17 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Calle_aurora_looking_east_-_Estepona_Garden_of_the_Costa_del_Sol.jpg",
    "alt": "Weisse Gasse Calle Aurora in Estepona mit Blumentöpfen in Pink und Rot an den Hauswänden."
+  },
+  "sofi/fes": {
+   "titel": "File:Mausolée Moulay Idriss II Fès.jpg",
+   "datei": "sofi/fes.jpg",
+   "breite": 6016,
+   "hoehe": 4000,
+   "autor": "Oumaima Loudini",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Mausol%C3%A9e_Moulay_Idriss_II_F%C3%A8s.jpg",
+   "alt": "Reich verzierter Torbogen am Mausoleum Moulay Idriss II. in Fès mit Fliesen, Stuck und geschnitztem Holz."
   },
   "sofi/fuengirola": {
    "titel": "File:A view of Fuengirola (48829279762).jpg",
@@ -191,6 +246,28 @@
    "seite": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B8%D0%B1%D1%80%D0%B0%D0%BB%D1%82%D0%B0%D1%80._%D0%91%D0%B0%D1%80-%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD_%22The_Royal_Calpe%22_-_panoramio.jpg",
    "alt": "Fassade des Pubs The Royal Calpe in Gibraltar mit grünem Schild, roten Holztüren und weinroter Markise."
   },
+  "sofi/granada": {
+   "titel": "File:Granada - View from Mirador de San Nicolás - 02.jpg",
+   "datei": "sofi/granada.jpg",
+   "breite": 6709,
+   "hoehe": 3770,
+   "autor": "Diego Delso",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Granada_-_View_from_Mirador_de_San_Nicol%C3%A1s_-_02.jpg",
+   "alt": "Die Alhambra in Granada vom Mirador de San Nicolás aus, dahinter die Berge der Sierra Nevada mit Schneeresten."
+  },
+  "sofi/hurghada": {
+   "titel": "File:Hurghada, Egypt (Unsplash).jpg",
+   "datei": "sofi/hurghada.jpg",
+   "breite": 3779,
+   "hoehe": 2530,
+   "autor": "Anastasia Fomina turbomauze",
+   "lizenz": "CC0",
+   "lizenz_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "seite": "https://commons.wikimedia.org/wiki/File:Hurghada,_Egypt_(Unsplash).jpg",
+   "alt": "Mehrere Boote liegen bei Hurghada nebeneinander im ruhigen Wasser des Roten Meers unter bewölktem Himmel."
+  },
   "sofi/jerez": {
    "titel": "File:Iglesia de San Miguel, Jerez de la Frontera, España, 2015-12-07, DD 105-107 HDR.JPG",
    "datei": "sofi/jerez.jpg",
@@ -203,6 +280,18 @@
    "fokus": "50% 50%",
    "alt": "Blick hinauf in das gotische Sterngewölbe der Iglesia de San Miguel in Jerez de la Frontera."
   },
+  "sofi/kairo": {
+   "titel": "File:Kairo Ibn Tulun Moschee BW 5.jpg",
+   "datei": "sofi/kairo.jpg",
+   "breite": 3641,
+   "hoehe": 2378,
+   "autor": "Berthold Werner",
+   "lizenz": "CC BY 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Kairo_Ibn_Tulun_Moschee_BW_5.jpg",
+   "fokus": "50% 45%",
+   "alt": "Innenhof der Ibn-Tulun-Moschee in Kairo mit dem Kuppelbrunnen, dem Minarett und den Arkadengängen."
+  },
   "sofi/kairouan": {
    "titel": "File:Great Mosque of Kairouan mihrab view.jpg",
    "datei": "sofi/kairouan.jpg",
@@ -213,6 +302,17 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_Kairouan_mihrab_view.jpg",
    "alt": "Gebetssaal der Grossen Moschee von Kairouan mit Säulen, Kronleuchter und dem verzierten Mihrab."
+  },
+  "sofi/lampedusa": {
+   "titel": "File:Cala Uccello Lampedusa.jpg",
+   "datei": "sofi/lampedusa.jpg",
+   "breite": 5238,
+   "hoehe": 3929,
+   "autor": "kallerna",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Cala_Uccello_Lampedusa.jpg",
+   "alt": "Die Bucht Cala Uccello auf Lampedusa mit Felsküste, Sonnenschirmen am Ufer und tiefblauem Meer."
   },
   "sofi/luxor": {
    "titel": "File:Tumba de Ramsés V y de Ramsés VI, Valle de las Reyes, Luxor, Egipto, 2022-04-03, DD 69.jpg",
@@ -272,6 +372,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Homenaje_a_la_flota_pesquera_de_Melilla_en_la_plaza_de_los_Pescadores.jpg",
    "alt": "Denkmal für die Fischereiflotte von Melilla: ein rot-weiss-blaues Fischerboot auf der Plaza de los Pescadores vor den Festungsmauern."
   },
+  "sofi/monastir": {
+   "titel": "File:View of Monastir from the ribat tower.jpg",
+   "datei": "sofi/monastir.jpg",
+   "breite": 2048,
+   "hoehe": 1536,
+   "autor": "Gorik Francois",
+   "lizenz": "CC BY-SA 2.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:View_of_Monastir_from_the_ribat_tower.jpg",
+   "alt": "Blick vom Turm des Ribat über Monastir mit Palmenplatz, Strassen, einem Bus und einem Minarett im Hintergrund."
+  },
   "sofi/nador": {
    "titel": "File:Nador seafront.JPG",
    "datei": "sofi/nador.jpg",
@@ -294,6 +405,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:ORAN_City_%26_Coast.jpg",
    "alt": "Blick von oben über Oran mit weissem Turm und Kuppelbau im Vordergrund, langer Hafenmole und der Stadt an der Küste."
   },
+  "sofi/palma": {
+   "titel": "File:Feixina Park Torrent de Sa Riera Bastiò de Sant Pere Palma de Mallorca.jpg",
+   "datei": "sofi/palma.jpg",
+   "breite": 7360,
+   "hoehe": 4912,
+   "autor": "This Photo was taken by Wolfgang Moroder . Feel free to use my photos, but please mention me as the author and send me a",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Feixina_Park_Torrent_de_Sa_Riera_Basti%C3%B2_de_Sant_Pere_Palma_de_Mallorca.jpg",
+   "alt": "Steinbrücke über den Torrent de Sa Riera im Feixina-Park in Palma, dahinter die Mauer der Bastió de Sant Pere."
+  },
   "sofi/qena": {
    "titel": "File:Madinet Qaft, Qift, Qena Governorate, Egypt - panoramio (12).jpg",
    "datei": "sofi/qena.jpg",
@@ -304,6 +426,17 @@
    "lizenz_url": "https://creativecommons.org/licenses/by/3.0",
    "seite": "https://commons.wikimedia.org/wiki/File:Madinet_Qaft,_Qift,_Qena_Governorate,_Egypt_-_panoramio_(12).jpg",
    "alt": "Palmen und Häuser bei Qift im Gouvernement Qena spiegeln sich in der Abenddämmerung in einem Kanal."
+  },
+  "sofi/rom": {
+   "titel": "File:Rom (IT), Brücke „Ponte Vittorio Emanuele II“ -- 2024 -- 0732.jpg",
+   "datei": "sofi/rom.jpg",
+   "breite": 5888,
+   "hoehe": 3926,
+   "autor": "Anil Öztas",
+   "lizenz": "CC BY 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Rom_(IT),_Br%C3%BCcke_%E2%80%9EPonte_Vittorio_Emanuele_II%E2%80%9C_--_2024_--_0732.jpg",
+   "alt": "Die beleuchtete Ponte Vittorio Emanuele II in Rom in der Abenddämmerung, gespiegelt im Tiber."
   },
   "sofi/ronda": {
    "titel": "File:View of Puente Nuevo bridge in Ronda Spain.jpg",
@@ -316,6 +449,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:View_of_Puente_Nuevo_bridge_in_Ronda_Spain.jpg",
    "fokus": "50% 35%",
    "alt": "Die Puente Nuevo von Ronda spannt sich zwischen steilen Felswänden über die Schlucht, oben die Häuser der Altstadt."
+  },
+  "sofi/safaga": {
+   "titel": "File:Red Sea - panoramio (2).jpg",
+   "datei": "sofi/safaga.jpg",
+   "breite": 2143,
+   "hoehe": 922,
+   "autor": "ebazyli",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Red_Sea_-_panoramio_(2).jpg",
+   "alt": "Weisse Motoryachten liegen nebeneinander im Roten Meer bei Safaga, dahinter Berge im rötlichen Licht."
   },
   "sofi/sevilla": {
    "titel": "File:Seville, Spain (Unsplash 0BmkJ72gd-0).jpg",
@@ -396,6 +540,17 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Tetuan_vista_desde_un_tejado.JPG",
    "alt": "Blick von einem Dach über die dicht gebauten weissen Häuser von Tétouan mit grünen Hügeln dahinter."
   },
+  "sofi/tunis": {
+   "titel": "File:Reflet sur le lac de Tunis.jpg",
+   "datei": "sofi/tunis.jpg",
+   "breite": 5892,
+   "hoehe": 3388,
+   "autor": "Smailtn Camera location 36° 48′ 10.53″ N, 10° 13′ 12.12″ E View this and other nearby images on: OpenStreetMap 36.802924",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Reflet_sur_le_lac_de_Tunis.jpg",
+   "alt": "Die Skyline von Tunis spiegelt sich im ruhigen Wasser des Sees von Tunis."
+  },
   "sofi/vejer": {
    "titel": "File:La Cobijada y el monumento a la mujer vejeriega (33085324551).jpg",
    "datei": "sofi/vejer.jpg",
@@ -418,6 +573,18 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Castillo_-_Zahara_de_los_Atunes_-_01.jpg",
    "fokus": "50% 45%",
    "alt": "Steinmauer mit grossem Torbogen und grünem Tor der Burg in Zahara de los Atunes an einer Strasse."
+  },
+  "sofi/zuerich": {
+   "titel": "File:Zuerich Fraumuenster St Peter.jpg",
+   "datei": "sofi/zuerich.jpg",
+   "breite": 2629,
+   "hoehe": 1753,
+   "autor": "Ikiwaner",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenz_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "seite": "https://commons.wikimedia.org/wiki/File:Zuerich_Fraumuenster_St_Peter.jpg",
+   "fokus": "50% 35%",
+   "alt": "Fraumünster und St. Peter in Zürich am Abend, davor die beleuchtete Münsterbrücke über der Limmat."
   },
   "nordlicht/abisko": {
    "titel": "File:20221226 - Abisko - Aurore boréale 2.jpg",

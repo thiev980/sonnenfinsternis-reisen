@@ -1,11 +1,1 @@
-sofi/zuerich
-  Wikidata Q72 → Zuerich Fraumuenster St Peter.jpg
-sofi/zuerich: 8 Kandidaten (von 151 Dateien)
-sofi/bern
-  Wikidata Q70 → Bern luftaufnahme.png
-sofi/bern: 8 Kandidaten (von 151 Dateien)
-sofi/rom
-  Wikidata Q220 → Rome Skyline (8012016319).jpg
-sofi/rom: 8 Kandidaten (von 151 Dateien)
-Vorschau: 566 Dateien
-Bilder: 57 Headerbilder
+Bilder: 72 Headerbilder
