@@ -26,6 +26,10 @@ sofi/algeciras:
   datei: "File:Parque María Cristina Algeciras 2024 (1).jpg"
   alt: "Palmen und hohe Laubbäume im Parque María Cristina in Algeciras, davor ein breiter Kiesplatz mit gekachelten Beeteinfassungen."
   gewaehlt: "2026-10-27T13:52:13.749Z"
+sofi/algier:
+  datei: "File:Streets in Algiers 2024 02.jpg"
+  alt: "Strasse in Algier mit hellen Wohnhäusern, roten Wimpelketten über der Fahrbahn und einem grossen Baum an einer Natursteinmauer."
+  gewaehlt: "2026-11-04T07:58:13.231Z"
 sofi/almeria:
   datei: "File:Almeria. Vista desde Alcazaba.jpg"
   alt: "Blick von der Alcazaba über die hellen Häuser von Almería bis zum Hafen und zum Mittelmeer."
@@ -34,10 +38,18 @@ sofi/asilah:
   datei: "File:Assilah Waterfront2.jpg"
   alt: "Weisse Häuser der Medina von Asilah hinter der Stadtmauer, davor Felsen, Sandstrand und Brandung des Atlantiks."
   gewaehlt: "2026-10-26T08:55:55.680Z"
+sofi/assuan:
+  datei: "File:Assuan Mausoleum Aga Khan III. 13.JPG"
+  alt: "Das Mausoleum von Aga Khan III. in Assuan mit Kuppel und Zinnenmauer auf einem Sandhügel, im Vordergrund Palmen und Büsche."
+  gewaehlt: "2026-11-04T07:58:22.980Z"
 sofi/benghazi:
   datei: "File:ميدان السلفيوم.jpg"
   alt: "Silphium-Platz in Bengasi: Denkmalsäule mit Brunnenbecken, Palmen und ein weisses Gebäude mit Turm unter Gewitterwolken."
   gewaehlt: "2026-10-23T06:47:08.611Z"
+sofi/bern:
+  datei: "File:Bern Panorama von Rosengarten 20211007.jpg"
+  alt: "Blick vom Rosengarten über die Altstadt von Bern mit dem Münsterturm und der Aare, im Vordergrund grüne Baumkronen."
+  gewaehlt: "2026-11-04T07:58:31.331Z"
 sofi/cadiz:
   datei: "File:Puente de la Constitución de 1812, Cádiz, España, 2015-12-08, DD 21-24 HDR.JPG"
   alt: "Die beleuchtete Puente de la Constitución de 1812 in Cádiz bei Nacht, ihre Lichter spiegeln sich im Wasser."
@@ -64,10 +76,18 @@ sofi/dschidda:
   datei: "File:Prince Mohammed Bin Abdulaziz St. near Le Mall, Tahlia, Jeddah.jpg"
   alt: "Nächtliche Prince Mohammed Bin Abdulaziz Street bei Le Mall in Dschidda mit beleuchteten Geschäften, Hochhaus und fahrenden Autos."
   gewaehlt: "2026-10-24T18:46:57.937Z"
+sofi/el-gouna:
+  datei: "File:El Gouna Turtle House R01.jpg"
+  alt: "Das Turtle House in El Gouna, ein rundliches Gebäude aus Naturstein mit runden Fenstern, unter blauem Himmel."
+  gewaehlt: "2026-11-04T07:58:47.908Z"
 sofi/estepona:
   datei: "File:Calle aurora looking east - Estepona Garden of the Costa del Sol.jpg"
   alt: "Weisse Gasse Calle Aurora in Estepona mit Blumentöpfen in Pink und Rot an den Hauswänden."
   gewaehlt: "2026-10-22T21:31:33.294Z"
+sofi/fes:
+  datei: "File:Mausolée Moulay Idriss II Fès.jpg"
+  alt: "Reich verzierter Torbogen am Mausoleum Moulay Idriss II. in Fès mit Fliesen, Stuck und geschnitztem Holz."
+  gewaehlt: "2026-11-04T07:59:11.057Z"
 sofi/fuengirola:
   datei: "File:A view of Fuengirola (48829279762).jpg"
   alt: "Blick von einem Hügel über Fuengirola mit Hochhäusern, langem Sandstrand und tiefblauem Mittelmeer."
@@ -79,15 +99,32 @@ sofi/gibraltar:
 sofi/girga:
   datei: "kein"
   gewaehlt: "2026-10-22T21:31:41.580Z"
+sofi/granada:
+  datei: "File:Granada - View from Mirador de San Nicolás - 02.jpg"
+  alt: "Die Alhambra in Granada vom Mirador de San Nicolás aus, dahinter die Berge der Sierra Nevada mit Schneeresten."
+  gewaehlt: "2026-11-04T07:59:15.158Z"
+sofi/hurghada:
+  datei: "File:Hurghada, Egypt (Unsplash).jpg"
+  alt: "Mehrere Boote liegen bei Hurghada nebeneinander im ruhigen Wasser des Roten Meers unter bewölktem Himmel."
+  gewaehlt: "2026-11-04T07:59:49.668Z"
 sofi/jerez:
   datei: "File:Iglesia de San Miguel, Jerez de la Frontera, España, 2015-12-07, DD 105-107 HDR.JPG"
   alt: "Blick hinauf in das gotische Sterngewölbe der Iglesia de San Miguel in Jerez de la Frontera."
   fokus: "50% 50%"
   gewaehlt: "2026-10-22T21:32:09.589Z"
+sofi/kairo:
+  datei: "File:Kairo Ibn Tulun Moschee BW 5.jpg"
+  alt: "Innenhof der Ibn-Tulun-Moschee in Kairo mit dem Kuppelbrunnen, dem Minarett und den Arkadengängen."
+  fokus: "50% 45%"
+  gewaehlt: "2026-11-04T08:00:08.589Z"
 sofi/kairouan:
   datei: "File:Great Mosque of Kairouan mihrab view.jpg"
   alt: "Gebetssaal der Grossen Moschee von Kairouan mit Säulen, Kronleuchter und dem verzierten Mihrab."
   gewaehlt: "2026-10-22T21:32:23.593Z"
+sofi/lampedusa:
+  datei: "File:Cala Uccello Lampedusa.jpg"
+  alt: "Die Bucht Cala Uccello auf Lampedusa mit Felsküste, Sonnenschirmen am Ufer und tiefblauem Meer."
+  gewaehlt: "2026-11-04T08:02:10.814Z"
 sofi/luxor:
   datei: "File:Tumba de Ramsés V y de Ramsés VI, Valle de las Reyes, Luxor, Egipto, 2022-04-03, DD 69.jpg"
   alt: "Bemalter Gang mit Säulen und Holztreppe im Grab von Ramses V. und Ramses VI. im Tal der Könige bei Luxor."
@@ -114,6 +151,10 @@ sofi/melilla:
   datei: "File:Homenaje a la flota pesquera de Melilla en la plaza de los Pescadores.jpg"
   alt: "Denkmal für die Fischereiflotte von Melilla: ein rot-weiss-blaues Fischerboot auf der Plaza de los Pescadores vor den Festungsmauern."
   gewaehlt: "2026-10-26T08:56:18.083Z"
+sofi/monastir:
+  datei: "File:View of Monastir from the ribat tower.jpg"
+  alt: "Blick vom Turm des Ribat über Monastir mit Palmenplatz, Strassen, einem Bus und einem Minarett im Hintergrund."
+  gewaehlt: "2026-11-04T08:02:51.012Z"
 sofi/nador:
   datei: "File:Nador seafront.JPG"
   alt: "Palmengesäumte Uferstrasse in Nador mit Promenade, Lagune und einem weissen Gebäude auf einer Mole, Hügel im Hintergrund."
@@ -122,15 +163,27 @@ sofi/oran:
   datei: "File:ORAN City & Coast.jpg"
   alt: "Blick von oben über Oran mit weissem Turm und Kuppelbau im Vordergrund, langer Hafenmole und der Stadt an der Küste."
   gewaehlt: "2026-10-24T18:47:52.387Z"
+sofi/palma:
+  datei: "File:Feixina Park Torrent de Sa Riera Bastiò de Sant Pere Palma de Mallorca.jpg"
+  alt: "Steinbrücke über den Torrent de Sa Riera im Feixina-Park in Palma, dahinter die Mauer der Bastió de Sant Pere."
+  gewaehlt: "2026-11-04T08:03:02.600Z"
 sofi/qena:
   datei: "File:Madinet Qaft, Qift, Qena Governorate, Egypt - panoramio (12).jpg"
   alt: "Palmen und Häuser bei Qift im Gouvernement Qena spiegeln sich in der Abenddämmerung in einem Kanal."
   gewaehlt: "2026-10-23T06:47:25.912Z"
+sofi/rom:
+  datei: "File:Rom (IT), Brücke „Ponte Vittorio Emanuele II“ -- 2024 -- 0732.jpg"
+  alt: "Die beleuchtete Ponte Vittorio Emanuele II in Rom in der Abenddämmerung, gespiegelt im Tiber."
+  gewaehlt: "2026-11-04T08:03:25.373Z"
 sofi/ronda:
   datei: "File:View of Puente Nuevo bridge in Ronda Spain.jpg"
   alt: "Die Puente Nuevo von Ronda spannt sich zwischen steilen Felswänden über die Schlucht, oben die Häuser der Altstadt."
   fokus: "50% 35%"
   gewaehlt: "2026-10-30T07:22:06.484Z"
+sofi/safaga:
+  datei: "File:Red Sea - panoramio (2).jpg"
+  alt: "Weisse Motoryachten liegen nebeneinander im Roten Meer bei Safaga, dahinter Berge im rötlichen Licht."
+  gewaehlt: "2026-11-04T08:04:30.734Z"
 sofi/sevilla:
   datei: "File:Seville, Spain (Unsplash 0BmkJ72gd-0).jpg"
   alt: "Blick nach oben in einen Innenhof mit reich verzierten maurischen Bögen und Stuckarbeiten in Sevilla."
@@ -164,6 +217,10 @@ sofi/tetouan:
   datei: "File:Tetuan vista desde un tejado.JPG"
   alt: "Blick von einem Dach über die dicht gebauten weissen Häuser von Tétouan mit grünen Hügeln dahinter."
   gewaehlt: "2026-10-24T18:48:08.536Z"
+sofi/tunis:
+  datei: "File:Reflet sur le lac de Tunis.jpg"
+  alt: "Die Skyline von Tunis spiegelt sich im ruhigen Wasser des Sees von Tunis."
+  gewaehlt: "2026-11-04T08:04:39.166Z"
 sofi/vejer:
   datei: "File:La Cobijada y el monumento a la mujer vejeriega (33085324551).jpg"
   alt: "Bronzestatue der verhüllten Cobijada unter einem Olivenbaum in Vejer de la Frontera, dahinter die weissen Häuser des Orts."
@@ -173,6 +230,11 @@ sofi/zahara:
   alt: "Steinmauer mit grossem Torbogen und grünem Tor der Burg in Zahara de los Atunes an einer Strasse."
   fokus: "50% 45%"
   gewaehlt: "2026-10-29T07:50:28.575Z"
+sofi/zuerich:
+  datei: "File:Zuerich Fraumuenster St Peter.jpg"
+  alt: "Fraumünster und St. Peter in Zürich am Abend, davor die beleuchtete Münsterbrücke über der Limmat."
+  fokus: "50% 35%"
+  gewaehlt: "2026-11-04T08:04:45.374Z"
 nordlicht/abisko:
   datei: "File:20221226 - Abisko - Aurore boréale 2.jpg"
   alt: "Schwaches grünes Polarlicht über einer Hütte mit kahlen Birken auf verschneitem Boden bei Abisko."
