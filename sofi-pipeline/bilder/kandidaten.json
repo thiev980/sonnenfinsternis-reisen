@@ -8604,5 +8604,115 @@
     "wertung": 5.0
    }
   ]
+ },
+ "sofi/berlin": {
+  "bereich": "Sonnenfinsternis-Orte",
+  "titel": "Berlin (Deutschland)",
+  "kandidaten": [
+   {
+    "datei": "File:S-Bahn at Hauptbahnhof Berlin.JPG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/S-Bahn_at_Hauptbahnhof_Berlin.JPG/1920px-S-Bahn_at_Hauptbahnhof_Berlin.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 5898,
+    "hoehe": 3932,
+    "autor": "Martin Falbisoner",
+    "lizenz": "CC BY-SA 4.0",
+    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "seite": "https://commons.wikimedia.org/wiki/File:S-Bahn_at_Hauptbahnhof_Berlin.JPG",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/S-Bahn_at_Hauptbahnhof_Berlin.JPG/500px-S-Bahn_at_Hauptbahnhof_Berlin.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "Suche «intitle:\"Berlin\"»",
+    "wertung": 5.0
+   },
+   {
+    "datei": "File:Cityscape Berlin.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Cityscape_Berlin.jpg/1920px-Cityscape_Berlin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4496,
+    "hoehe": 2300,
+    "autor": "Thomas Wolf , www.foto-tw.de",
+    "lizenz": "CC BY-SA 3.0",
+    "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "seite": "https://commons.wikimedia.org/wiki/File:Cityscape_Berlin.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Cityscape_Berlin.jpg/500px-Cityscape_Berlin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "Wikidata-Bild von Berlin",
+    "wertung": 4.0
+   },
+   {
+    "datei": "File:Fresh Bread (Unsplash).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Fresh_Bread_%28Unsplash%29.jpg/1920px-Fresh_Bread_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 7360,
+    "hoehe": 4912,
+    "autor": "Roman Kraft romankraft",
+    "lizenz": "CC0",
+    "lizenz_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "seite": "https://commons.wikimedia.org/wiki/File:Fresh_Bread_(Unsplash).jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Fresh_Bread_%28Unsplash%29.jpg/500px-Fresh_Bread_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 3 km um Berlin",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:Berlin Mitte June 2023 01.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Berlin_Mitte_June_2023_01.jpg/1920px-Berlin_Mitte_June_2023_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 4692,
+    "hoehe": 2933,
+    "autor": "ArildV",
+    "lizenz": "CC BY-SA 4.0",
+    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "seite": "https://commons.wikimedia.org/wiki/File:Berlin_Mitte_June_2023_01.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Berlin_Mitte_June_2023_01.jpg/500px-Berlin_Mitte_June_2023_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "Suche «intitle:\"Berlin\"»",
+    "wertung": 5.0
+   },
+   {
+    "datei": "File:Urban Shifting (Unsplash).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Urban_Shifting_%28Unsplash%29.jpg/1920px-Urban_Shifting_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 5322,
+    "hoehe": 3548,
+    "autor": "Andreas Kind jxndreas",
+    "lizenz": "CC0",
+    "lizenz_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "seite": "https://commons.wikimedia.org/wiki/File:Urban_Shifting_(Unsplash).jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Urban_Shifting_%28Unsplash%29.jpg/500px-Urban_Shifting_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 3 km um Berlin",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:Tempodrom, Berlín, Alemania, 2016-04-22, DD 01-03 HDR.JPG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Tempodrom%2C_Berl%C3%ADn%2C_Alemania%2C_2016-04-22%2C_DD_01-03_HDR.JPG/1920px-Tempodrom%2C_Berl%C3%ADn%2C_Alemania%2C_2016-04-22%2C_DD_01-03_HDR.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 8304,
+    "hoehe": 3778,
+    "autor": "Diego Delso",
+    "lizenz": "CC BY-SA 4.0",
+    "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "seite": "https://commons.wikimedia.org/wiki/File:Tempodrom,_Berl%C3%ADn,_Alemania,_2016-04-22,_DD_01-03_HDR.JPG",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Tempodrom%2C_Berl%C3%ADn%2C_Alemania%2C_2016-04-22%2C_DD_01-03_HDR.JPG/500px-Tempodrom%2C_Berl%C3%ADn%2C_Alemania%2C_2016-04-22%2C_DD_01-03_HDR.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "Suche «intitle:\"Berlin\"»",
+    "wertung": 5.0
+   },
+   {
+    "datei": "File:Berlin, Germany (Unsplash DErxVSSQNdM).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Berlin%2C_Germany_%28Unsplash_DErxVSSQNdM%29.jpg/1920px-Berlin%2C_Germany_%28Unsplash_DErxVSSQNdM%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 5472,
+    "hoehe": 3648,
+    "autor": "Artem Sapegin sapegin",
+    "lizenz": "CC0",
+    "lizenz_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "seite": "https://commons.wikimedia.org/wiki/File:Berlin,_Germany_(Unsplash_DErxVSSQNdM).jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Berlin%2C_Germany_%28Unsplash_DErxVSSQNdM%29.jpg/500px-Berlin%2C_Germany_%28Unsplash_DErxVSSQNdM%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "bis 3 km um Berlin",
+    "wertung": 1.0
+   },
+   {
+    "datei": "File:View from Park inn Berlin November 2013.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/View_from_Park_inn_Berlin_November_2013.jpg/1920px-View_from_Park_inn_Berlin_November_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "breite": 5969,
+    "hoehe": 3040,
+    "autor": "Arild Vågen",
+    "lizenz": "CC BY-SA 3.0",
+    "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "seite": "https://commons.wikimedia.org/wiki/File:View_from_Park_inn_Berlin_November_2013.jpg",
+    "vorschau": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/View_from_Park_inn_Berlin_November_2013.jpg/500px-View_from_Park_inn_Berlin_November_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "quelle": "Suche «intitle:\"Berlin\"»",
+    "wertung": 5.0
+   }
+  ]
  }
 }
