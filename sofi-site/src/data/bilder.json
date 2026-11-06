@@ -224,6 +224,18 @@
    "seite": "https://commons.wikimedia.org/wiki/File:Mausol%C3%A9e_Moulay_Idriss_II_F%C3%A8s.jpg",
    "alt": "Reich verzierter Torbogen am Mausoleum Moulay Idriss II. in Fès mit Fliesen, Stuck und geschnitztem Holz."
   },
+  "sofi/frankfurt": {
+   "titel": "File:Skyline Frankfurt am Main 2015.jpg",
+   "datei": "sofi/frankfurt.jpg",
+   "breite": 8003,
+   "hoehe": 5622,
+   "autor": "Christian Wolf ( www.c-w-design.de )",
+   "lizenz": "CC BY-SA 3.0 de",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+   "seite": "https://commons.wikimedia.org/wiki/File:Skyline_Frankfurt_am_Main_2015.jpg",
+   "fokus": "50% 52%",
+   "alt": "Skyline von Frankfurt am Main mit den Hochhäusern des Bankenviertels, davor eine Brücke über den Main und Bäume am Ufer."
+  },
   "sofi/fuengirola": {
    "titel": "File:A view of Fuengirola (48829279762).jpg",
    "datei": "sofi/fuengirola.jpg",
@@ -382,6 +394,18 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/2.0",
    "seite": "https://commons.wikimedia.org/wiki/File:View_of_Monastir_from_the_ribat_tower.jpg",
    "alt": "Blick vom Turm des Ribat über Monastir mit Palmenplatz, Strassen, einem Bus und einem Minarett im Hintergrund."
+  },
+  "sofi/muenchen": {
+   "titel": "File:Bayerische-Staatskanzlei-München-vom-Hofgarten-Gewitter-2025.jpg",
+   "datei": "sofi/muenchen.jpg",
+   "breite": 5816,
+   "hoehe": 3866,
+   "autor": "Tuxyso",
+   "lizenz": "CC BY-SA 4.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Bayerische-Staatskanzlei-M%C3%BCnchen-vom-Hofgarten-Gewitter-2025.jpg",
+   "fokus": "50% 40%",
+   "alt": "Bayerische Staatskanzlei in München mit Kuppel und Glasflügeln, vom Hofgarten aus gesehen, davor Rasen, Hecken und Spaziergänger unter dunklen Wolken."
   },
   "sofi/nador": {
    "titel": "File:Nador seafront.JPG",
@@ -561,6 +585,17 @@
    "lizenz_url": "https://creativecommons.org/licenses/by-sa/2.0",
    "seite": "https://commons.wikimedia.org/wiki/File:La_Cobijada_y_el_monumento_a_la_mujer_vejeriega_(33085324551).jpg",
    "alt": "Bronzestatue der verhüllten Cobijada unter einem Olivenbaum in Vejer de la Frontera, dahinter die weissen Häuser des Orts."
+  },
+  "sofi/wien": {
+   "titel": "File:Neue Donau mit der Fußgängerbrücke Ponte Cagrana in Wien.jpg",
+   "datei": "sofi/wien.jpg",
+   "breite": 9317,
+   "hoehe": 3625,
+   "autor": "Michael Gäbler",
+   "lizenz": "CC BY 3.0",
+   "lizenz_url": "https://creativecommons.org/licenses/by/3.0",
+   "seite": "https://commons.wikimedia.org/wiki/File:Neue_Donau_mit_der_Fu%C3%9Fg%C3%A4ngerbr%C3%BCcke_Ponte_Cagrana_in_Wien.jpg",
+   "alt": "Die Neue Donau in Wien mit der Fussgängerbrücke Ponte Cagrana, Booten und Lokalen am Ufer unter einem Wolkenhimmel."
   },
   "sofi/zahara": {
    "titel": "File:Castillo - Zahara de los Atunes - 01.jpg",

@@ -1,11 +1,1 @@
-sofi/muenchen
-  Wikidata Q1726 → Stadtbild München.jpg
-sofi/muenchen: 8 Kandidaten (von 150 Dateien)
-sofi/frankfurt
-  Wikidata Q1794 → Frankfurter Altstadt mit Skyline 2019 (100MP).jpg
-sofi/frankfurt: 8 Kandidaten (von 151 Dateien)
-sofi/wien
-  Wikidata Q1741 → Wien katedra sw Szczepana widok z wiezy 6.jpg
-sofi/wien: 8 Kandidaten (von 151 Dateien)
-Vorschau: 590 Dateien
-Bilder: 72 Headerbilder
+Bilder: 75 Headerbilder
