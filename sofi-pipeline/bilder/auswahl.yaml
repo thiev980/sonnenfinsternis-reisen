@@ -88,6 +88,11 @@ sofi/fes:
   datei: "File:Mausolée Moulay Idriss II Fès.jpg"
   alt: "Reich verzierter Torbogen am Mausoleum Moulay Idriss II. in Fès mit Fliesen, Stuck und geschnitztem Holz."
   gewaehlt: "2026-11-04T07:59:11.057Z"
+sofi/frankfurt:
+  datei: "File:Skyline Frankfurt am Main 2015.jpg"
+  alt: "Skyline von Frankfurt am Main mit den Hochhäusern des Bankenviertels, davor eine Brücke über den Main und Bäume am Ufer."
+  fokus: "50% 52%"
+  gewaehlt: "2026-11-05T08:28:19.103Z"
 sofi/fuengirola:
   datei: "File:A view of Fuengirola (48829279762).jpg"
   alt: "Blick von einem Hügel über Fuengirola mit Hochhäusern, langem Sandstrand und tiefblauem Mittelmeer."
@@ -155,6 +160,11 @@ sofi/monastir:
   datei: "File:View of Monastir from the ribat tower.jpg"
   alt: "Blick vom Turm des Ribat über Monastir mit Palmenplatz, Strassen, einem Bus und einem Minarett im Hintergrund."
   gewaehlt: "2026-11-04T08:02:51.012Z"
+sofi/muenchen:
+  datei: "File:Bayerische-Staatskanzlei-München-vom-Hofgarten-Gewitter-2025.jpg"
+  alt: "Bayerische Staatskanzlei in München mit Kuppel und Glasflügeln, vom Hofgarten aus gesehen, davor Rasen, Hecken und Spaziergänger unter dunklen Wolken."
+  fokus: "50% 40%"
+  gewaehlt: "2026-11-05T08:28:31.200Z"
 sofi/nador:
   datei: "File:Nador seafront.JPG"
   alt: "Palmengesäumte Uferstrasse in Nador mit Promenade, Lagune und einem weissen Gebäude auf einer Mole, Hügel im Hintergrund."
@@ -225,6 +235,10 @@ sofi/vejer:
   datei: "File:La Cobijada y el monumento a la mujer vejeriega (33085324551).jpg"
   alt: "Bronzestatue der verhüllten Cobijada unter einem Olivenbaum in Vejer de la Frontera, dahinter die weissen Häuser des Orts."
   gewaehlt: "2026-10-29T07:50:05.135Z"
+sofi/wien:
+  datei: "File:Neue Donau mit der Fußgängerbrücke Ponte Cagrana in Wien.jpg"
+  alt: "Die Neue Donau in Wien mit der Fussgängerbrücke Ponte Cagrana, Booten und Lokalen am Ufer unter einem Wolkenhimmel."
+  gewaehlt: "2026-11-05T08:28:55.753Z"
 sofi/zahara:
   datei: "File:Castillo - Zahara de los Atunes - 01.jpg"
   alt: "Steinmauer mit grossem Torbogen und grünem Tor der Burg in Zahara de los Atunes an einer Strasse."
