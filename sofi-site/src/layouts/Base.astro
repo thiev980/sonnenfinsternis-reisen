@@ -15,9 +15,10 @@ interface Props {
 }
 const { title, description, schema = [], noindex = false, bild } = Astro.props;
 const og = bild ? await getImage({ src: bild.src, width: 1200, height: 630, fit: 'cover', position: sharpPosition(bild.meta.fokus), format: 'jpg' }) : undefined;
-const canonicalPfad = Astro.url.pathname !== '/' && Astro.url.pathname.endsWith('/') ? Astro.url.pathname.slice(0, -1) : Astro.url.pathname;
+const sauber = Astro.url.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+const canonicalPfad = sauber !== '/' && sauber.endsWith('/') ? sauber.slice(0, -1) : sauber;
 const canonical = new URL(canonicalPfad, Astro.site);
-const pfad = Astro.url.pathname;
+const pfad = canonicalPfad;
 const inSofi = pfad.startsWith('/sonnenfinsternis');
 const inNordlicht = pfad.startsWith('/nordlichter');
 
